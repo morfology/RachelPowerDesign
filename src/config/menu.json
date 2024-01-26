@@ -9,11 +9,11 @@
       "url": "/about"
     },
     {
-      "name": "Elements",
+      "name": "Services",
       "url": "/elements"
     },
     {
-      "name": "Pages",
+      "name": "Projects",
       "url": "",
       "hasChildren": true,
       "children": [
@@ -42,8 +42,12 @@
           "url": "/404"
         }
       ]
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
     }
-  ],
+ ],
   "footer": [
     {
       "name": "Elements",

@@ -58,7 +58,9 @@ const Home = () => {
         </div>
       </section>
 
-      {features.map((feature, index: number) => (
+      {/* Don't break if "features" field missing ~MP */}
+
+      {features && features.map((feature, index: number) => (
         <section
           key={index}
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
@@ -112,8 +114,13 @@ const Home = () => {
         </section>
       ))}
 
-      <Testimonials data={testimonial} />
-      <CallToAction data={callToAction} />
+      {/**
+       * Remove the testimonials and CTA for now  ~MP
+       */
+      }
+
+      {/* <Testimonials data={testimonial} /> */}
+      {/* <CallToAction data={callToAction} /> */}
     </>
   );
 };

@@ -148,7 +148,7 @@ const Header = () => {
               <IoSearch />
             </button>
           )}
-          <ThemeSwitcher className="mr-5" />
+          {/* <ThemeSwitcher className="mr-5" /> */}
           {navigation_button.enable && (
             <Link
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"
@@ -159,6 +159,19 @@ const Header = () => {
           )}
         </div>
       </nav>
+
+
+
+
+
+
+      {/* <div
+        className="h-screen bg-no-repeat bg-cover" 
+        style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/fluid/city/018.jpg')"}}>
+        
+      </div> */}
+
+
     </header>
   );
 };

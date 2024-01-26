@@ -9,6 +9,10 @@ let h3 = h4 * font_scale;
 let h2 = h3 * font_scale;
 let h1 = h2 * font_scale;
 let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
+
+// Here is where this setup pulls out font weight etc.
+// but it does not seem to do anything with it. We may want
+// to add this in the nexjs way ~MP
 if (theme.fonts.font_family.primary) {
   fontPrimary = theme.fonts.font_family.primary
     .replace(/\+/g, " ")

@@ -16,7 +16,7 @@
     "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
   },
   "engines": {
-    "node": ">20.0.0"
+    "node": "18.x"
   },
   "dependencies": {
     "date-fns": "^3.0.6",

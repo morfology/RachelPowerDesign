@@ -13,10 +13,11 @@
     "lint": "next lint",
     "format": "prettier -w ./src",
     "generate-json": "node scripts/jsonGenerator.js",
-    "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
+    "remove-darkmode": "node scripts/removeDarkmode.js && yarn format",
+    "prod_start": "next start -p 3001"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">18.x"
   },
   "dependencies": {
     "date-fns": "^3.0.6",

@@ -1,13 +1,13 @@
 {
-  "name": "nextplate",
-  "version": "2.1.0",
+  "name": "rpd",
+  "version": "1.0.0",
   "description": "Nextjs and Tailwindcss boilerplate",
   "author": "zeon.studio",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "yarn generate-json && next dev",
-    "build": "yarn generate-json && next build",
+    "build": "echo 'starting RPD build' && yarn generate-json && next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
@@ -16,7 +16,7 @@
     "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">20.0.0"
   },
   "dependencies": {
     "date-fns": "^3.0.6",

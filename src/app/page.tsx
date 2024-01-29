@@ -24,7 +24,36 @@ const Home = () => {
   return (
     <>
       <SeoMeta />
-      <section className="section pt-14">
+
+      <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1615875474908-f403116f5287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Background Image" className="object-cover object-center w-full h-full" />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+      </div>
+
+    </>
+  );
+};
+
+export default Home;
+
+/*
+
+        --- NEW CONTENT
+        <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Background Image" className="object-cover object-center w-full h-full" />
+        <img src="https://images.unsplash.com/photo-1615875474908-f403116f5287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Background Image" className="object-cover object-center w-full h-full" />
+
+
+        <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
+          <h1 className="text-5xl font-bold leading-tight mb-4">Welcome to Our Awesome Website</h1>
+          <p className="text-lg text-gray-300 mb-8">Discover amazing features and services that await you.</p>
+          <a href="#" className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
+        </div>
+
+        --- PREVIOUS CONTENT
+
+        <section className="section pt-14">
         <div className="container">
           <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
@@ -58,70 +87,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Don't break if "features" field missing ~MP */}
 
-      {features && features.map((feature, index: number) => (
-          <section
-            key={index}
-            className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
-          >
-            <div className="container">
-              <div className="row items-center justify-between">
-                <div
-                  className={`mb:md-0 mb-6 md:col-5 ${
-                    index % 2 !== 0 && "md:order-2"
-                  }`}
-                >
-                  <ImageFallback
-                    src={feature.image}
-                    height={480}
-                    width={520}
-                    alt={feature.title}
-                  />
-                </div>
-                <div
-                  className={`md:col-7 lg:col-6 ${
-                    index % 2 !== 0 && "md:order-1"
-                  }`}
-                >
-                  <h2
-                    className="mb-4"
-                    dangerouslySetInnerHTML={markdownify(feature.title)}
-                  />
-                  <p
-                    className="mb-8 text-lg"
-                    dangerouslySetInnerHTML={markdownify(feature.content)}
-                  />
-                  <ul>
-                    {feature.bulletpoints.map((bullet: string) => (
-                      <li className="relative mb-4 pl-6" key={bullet}>
-                        <FaCheck className={"absolute left-0 top-1.5"} />
-                        <span dangerouslySetInnerHTML={markdownify(bullet)} />
-                      </li>
-                    ))}
-                  </ul>
-                  {feature.button.enable && (
-                    <Link
-                      className="btn btn-primary mt-5"
-                      href={feature.button.link}
-                    >
-                      {feature.button.label}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-        ))}
 
-      {/**
-       * Remove the testimonials and CTA for now  ~MP
-       */}
-
-      {/* <Testimonials data={testimonial} /> */}
-      {/* <CallToAction data={callToAction} /> */}
-    </>
-  );
-};
-
-export default Home;
+*/

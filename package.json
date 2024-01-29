@@ -16,7 +16,7 @@
     "remove-darkmode": "node scripts/removeDarkmode.js && yarn format",
     "prod_start": "next start -p 3001"
   },
-  "engines": {
+  "zzengines": {
     "node": "18.x"
   },
   "dependencies": {

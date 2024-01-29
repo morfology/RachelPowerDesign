@@ -1,3 +1,6 @@
+/**
+ * Pagination Component for blogs etc.
+ */
 import Link from "next/link";
 import React from "react";
 
@@ -34,7 +37,7 @@ const Pagination = ({
                   ? `${section ? "/" + section : "/"}`
                   : `${section ? "/" + section : ""}/page/${currentPage - 1}`
               }
-              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light"
+              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light  "
             >
               <span className="sr-only">Previous</span>
               <svg
@@ -76,7 +79,7 @@ const Pagination = ({
               {pagination === currentPage ? (
                 <span
                   aria-current="page"
-                  className="rounded bg-primary px-4 py-2 text-white dark:bg-darkmode-primary dark:text-dark"
+                  className="rounded bg-primary px-4 py-2 text-white  "
                 >
                   {pagination}
                 </span>
@@ -89,7 +92,7 @@ const Pagination = ({
                   }
                   passHref
                   aria-current="page"
-                  className="rounded px-4 py-2 text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light"
+                  className="rounded px-4 py-2 text-dark hover:bg-theme-light  "
                 >
                   {pagination}
                 </Link>
@@ -101,7 +104,7 @@ const Pagination = ({
           {hasNextPage ? (
             <Link
               href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
-              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light"
+              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light  "
             >
               <span className="sr-only">Next</span>
               <svg

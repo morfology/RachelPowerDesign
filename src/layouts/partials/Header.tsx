@@ -48,7 +48,7 @@ const Header = () => {
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           htmlFor="nav-toggle"
-          className="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1"
+          className="order-3 cursor-pointer flex items-center lg:hidden text-dark  lg:order-1"
         >
           <svg
             id="show-button"
@@ -141,14 +141,14 @@ const Header = () => {
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
           {settings.search && (
             <button
-              className="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r pr-5 text-xl dark:text-white dark:hover:text-darkmode-primary"
+              className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
               aria-label="search"
               data-search-trigger
             >
               <IoSearch />
             </button>
           )}
-          {/* <ThemeSwitcher className="mr-5" /> */}
+          <ThemeSwitcher className="mr-5" />
           {navigation_button.enable && (
             <Link
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"
@@ -160,18 +160,11 @@ const Header = () => {
         </div>
       </nav>
 
-
-
-
-
-
       {/* <div
         className="h-screen bg-no-repeat bg-cover" 
         style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/fluid/city/018.jpg')"}}>
         
       </div> */}
-
-
     </header>
   );
 };

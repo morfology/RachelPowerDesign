@@ -148,7 +148,7 @@ const Header = () => {
               <IoSearch />
             </button>
           )}
-          {/* <ThemeSwitcher className="mr-5" /> */}
+          <ThemeSwitcher className="mr-5" />
           {navigation_button.enable && (
             <Link
               className="btn btn-outline-primary btn-sm hidden lg:inline-block"

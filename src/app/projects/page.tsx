@@ -1,3 +1,6 @@
+/**
+ * Content of the /projects/ listing 
+ */
 import BlogCard from "@/components/BlogCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
@@ -8,16 +11,16 @@ import PageHeader from "@/partials/PageHeader";
 import PostSidebar from "@/partials/PostSidebar";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
-const { blog_folder, pagination } = config.settings;
+const { projects_folder, pagination } = config.settings;
 
 // for all regular pages
 const Posts = () => {
-  const postIndex: Post = getListPage(`${blog_folder}/_index.md`);
+  const postIndex: Post = getListPage(`${projects_folder}/_index.md`);
   const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: Post[] = getSinglePage(blog_folder);
-  const allCategories = getAllTaxonomy(blog_folder, "categories");
-  const categories = getTaxonomy(blog_folder, "categories");
-  const tags = getTaxonomy(blog_folder, "tags");
+  const posts: Post[] = getSinglePage(projects_folder);
+  const allCategories = getAllTaxonomy(projects_folder, "categories");
+  const categories = getTaxonomy(projects_folder, "categories");
+  const tags = getTaxonomy(projects_folder, "tags");
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = sortedPosts.slice(0, pagination);
@@ -43,7 +46,7 @@ const Posts = () => {
                 ))}
               </div>
               <Pagination
-                section={blog_folder}
+                section={projects_folder}
                 currentPage={1}
                 totalPages={totalPages}
               />

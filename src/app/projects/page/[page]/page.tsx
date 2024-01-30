@@ -9,14 +9,14 @@ import PostSidebar from "@/partials/PostSidebar";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 
-const { blog_folder, pagination } = config.settings;
+const { projects_folder, pagination } = config.settings;
 
 // remove dynamicParams
 export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams = () => {
-  const allPost: Post[] = getSinglePage(blog_folder);
+  const allPost: Post[] = getSinglePage(projects_folder);
   const allSlug: string[] = allPost.map((item) => item.slug!);
   const totalPages = Math.ceil(allSlug.length / pagination);
   let paths: { page: string }[] = [];
@@ -42,12 +42,12 @@ function spreadPages(num: number): number[] {
 
 // for all regular pages
 const Posts = ({ params }: { params: { page: number } }) => {
-  const postIndex: Post = getListPage(`${blog_folder}/_index.md`);
+  const postIndex: Post = getListPage(`${projects_folder}/_index.md`);
   const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: Post[] = getSinglePage(blog_folder);
-  const allCategories = getAllTaxonomy(blog_folder, "categories");
-  const categories = getTaxonomy(blog_folder, "categories");
-  const tags = getTaxonomy(blog_folder, "tags");
+  const posts: Post[] = getSinglePage(projects_folder);
+  const allCategories = getAllTaxonomy(projects_folder, "categories");
+  const categories = getTaxonomy(projects_folder, "categories");
+  const tags = getTaxonomy(projects_folder, "tags");
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPage =
@@ -77,7 +77,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
                 ))}
               </div>
               <Pagination
-                section={blog_folder}
+                section={projects_folder}
                 currentPage={currentPage}
                 totalPages={totalPages}
               />

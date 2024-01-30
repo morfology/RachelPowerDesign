@@ -7,7 +7,7 @@ import Link from "next/link";
 import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
 
 const BlogCard = ({ data }: { data: Post }) => {
-  const { summary_length, blog_folder } = config.settings;
+  const { summary_length, projects_folder } = config.settings;
   const { title, image, author, categories, date } = data.frontmatter;
   return (
     <div className="bg-body ">
@@ -21,7 +21,7 @@ const BlogCard = ({ data }: { data: Post }) => {
         />
       )}
       <h4 className="mb-3">
-        <Link href={`/${blog_folder}/${data.slug}`}>{title}</Link>
+        <Link href={`/${projects_folder}/${data.slug}`}>{title}</Link>
       </h4>
       <ul className="mb-4">
         <li className="mr-4 inline-block">
@@ -46,7 +46,7 @@ const BlogCard = ({ data }: { data: Post }) => {
       </p>
       <Link
         className="btn btn-outline-primary btn-sm"
-        href={`/${blog_folder}/${data.slug}`}
+        href={`/${projects_folder}/${data.slug}`}
       >
         read more
       </Link>

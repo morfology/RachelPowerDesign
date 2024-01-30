@@ -8,7 +8,7 @@ import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 
-const { blog_folder } = config.settings;
+const { projects_folder } = config.settings;
 type StaticParams = () => { single: string }[];
 
 // remove dynamicParams
@@ -16,7 +16,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: StaticParams = () => {
-  const categories = getTaxonomy(blog_folder, "categories");
+  const categories = getTaxonomy(projects_folder, "categories");
 
   const paths = categories.map((category) => ({
     single: category,
@@ -26,7 +26,7 @@ export const generateStaticParams: StaticParams = () => {
 };
 
 const CategorySingle = ({ params }: { params: { single: string } }) => {
-  const posts: Post[] = getSinglePage(blog_folder);
+  const posts: Post[] = getSinglePage(projects_folder);
   const filterByCategories = taxonomyFilter(posts, "categories", params.single);
 
   return (

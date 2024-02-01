@@ -4,7 +4,7 @@ internal: "Haslemere Jack and Amy"
 meta_title: ""
 description: "Haslemere Home Refurbishment"
 date: 2023-03-03T05:00:00Z
-image: "/images/haslemere/dining.jpg"
+image: "/images/haslemere/dining-1.jpg"
 categories: ["Kitchen", "Renovation"]
 author: "Rachel Power"
 tags: ["West Sussex", "Haslemere"]

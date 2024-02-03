@@ -15,9 +15,6 @@
     "generate-json": "node scripts/jsonGenerator.js",
     "prod_start": "npm run build && next start -p 3001"
   },
-  "zzengines": {
-    "node": "18.x"
-  },
   "dependencies": {
     "date-fns": "^3.0.6",
     "disqus-react": "^1.1.5",

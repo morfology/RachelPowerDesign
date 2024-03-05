@@ -28,12 +28,13 @@ if (theme.fonts.font_family.secondary) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,  // !important
   content: [
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
     "./src/content/**/*.{md,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: [{ pattern: /^swiper-/ }],
+  // safelist: [{ pattern: /^swiper-/ }],
   
   theme: {
     screens: {

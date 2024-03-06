@@ -6,7 +6,7 @@
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
-    "dev": "yarn generate-json && next dev",
+    "dev": "next dev",
     "build": "echo 'starting RPD build' && yarn generate-json && next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
@@ -19,7 +19,7 @@
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "marked": "^11.1.1",
-    "next": "13.5.3",
+    "next": "13.5.6",
     "next-mdx-remote": "^4.4.1",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",

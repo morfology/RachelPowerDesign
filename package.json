@@ -7,12 +7,13 @@
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "next dev",
-    "build": "echo 'starting RPD build' && next build",
+    "build": "echo 'starting RPD build' && yarn generate-json && next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "format": "prettier -w ./src",
-    "prod_start": "npm run build && next start -p 3001"
+    "prod_start": "npm run build && next start -p 3001",
+    "generate-json": "node scripts/jsonGenerator.js"
   },
   "dependencies": {
     "date-fns": "^3.0.6",

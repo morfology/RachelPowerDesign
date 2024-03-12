@@ -1,3 +1,4 @@
+// An actual project e.g. /projects/project-a
 import BlogCard from "@/components/BlogCard";
 import Share from "@/components/Share";
 import config from "@/config/config.json";
@@ -14,7 +15,9 @@ import {
   FaRegClock,
   FaRegFolder,
   FaRegUserCircle,
-} from "react-icons/fa/index.js";
+} from "react-icons/fa";
+import ImageSlider from "@/components/ImageSlider";
+import dataSlider from "@/app/data/slider-data.json";
 
 const { projects_folder } = config.settings;
 
@@ -49,6 +52,13 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   } = frontmatter;
   const similarPosts = similerItems(post, posts, post.slug!);
 
+  // #TBD temp hacks
+  //console.log(dataSlider)
+  let ds = dataSlider
+  if (image && image.indexOf('chip') >= 0) {
+    ds = []
+  }
+
   return (
     <>
       <SeoMeta
@@ -58,18 +68,20 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
         image={image}
       />
       <section className="section pt-7">
+      {/* {image} */}
         <div className="container">
           <div className="row justify-center">
             <article className="lg:col-10">
               {image && (
                 <div className="mb-10">
-                  <ImageFallback
+                  <ImageSlider data={ds} />
+                  {/* <ImageFallback
                     src={image}
                     height={500}
                     width={1200}
                     alt={title}
                     className="w-full rounded"
-                  />
+                  /> */}
                 </div>
               )}
               <h1

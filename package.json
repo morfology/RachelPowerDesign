@@ -7,7 +7,7 @@
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "next dev",
-    "build": "echo 'starting RPD build' && yarn generate-json && next build",
+    "build": "echo 'starting RPD build' && next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",

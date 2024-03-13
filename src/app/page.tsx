@@ -2,8 +2,6 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Button } from "@/types";
-import ImageSlider from "@/components/ImageSlider";
-import dataSlider from "./data/slider-data.json";
 
 
 const Home = () => {
@@ -27,7 +25,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
-        <ImageSlider data={dataSlider} />
+        {/* <ImageSlider data={dataSlider} /> */}
 
 
         {/**** Big Hero Text and strapline */}

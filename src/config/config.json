@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Rachel Power",
-    "base_url": "https://nextplate.netlify.app",
+    "base_url": "https://rpd.vercel.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",

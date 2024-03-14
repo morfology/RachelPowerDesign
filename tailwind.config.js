@@ -28,7 +28,8 @@ if (theme.fonts.font_family.secondary) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  important: true,  // !important
+  // NOTE: important:true + no safelist causes menu fail!!
+  ///important: true,  // !important
   content: [
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
     "./src/content/**/*.{md,mdx}",

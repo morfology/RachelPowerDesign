@@ -1,7 +1,7 @@
 "use client";
 
 import config from "@/config/config.json";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "next-themes"; // Nextjs abstraction for themes
 import { ReactNode } from "react";
 
 const Providers = ({ children }: { children: ReactNode }) => {

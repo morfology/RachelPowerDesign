@@ -23,33 +23,15 @@ const BlogCard = ({ data }: { data: Post }) => {
       <h4 className="mb-3">
         <Link href={`/${projects_folder}/${data.slug}`}>{title}</Link>
       </h4>
-      <ul className="mb-4">
-        <li className="mr-4 inline-block">
-          <Link href={`/authors/${slugify(author)}`}>
-            <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
-            {humanize(author)}
-          </Link>
-        </li>
-        <li className="mr-4 inline-block">
-          <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
-          {categories?.map((category: string, index: number) => (
-            <Link key={index} href={`/categories/${slugify(category)}`}>
-              {humanize(category)}
-              {index !== categories.length - 1 && ", "}
-            </Link>
-          ))}
-        </li>
-        {date && <li className="inline-block">{dateFormat(date)}</li>}
-      </ul>
-      <p className="mb-6">
+      {/* <p className="mb-6">
         {plainify(data.content!.slice(0, Number(summary_length)))}
-      </p>
-      <Link
+      </p> */}
+      {/* <Link
         className="btn btn-outline-primary btn-sm"
         href={`/${projects_folder}/${data.slug}`}
       >
         read more
-      </Link>
+      </Link> */}
     </div>
   );
 };

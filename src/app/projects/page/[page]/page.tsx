@@ -68,7 +68,9 @@ const Posts = ({ params }: { params: { page: number } }) => {
       <section className="section">
         <div className="container">
           <div className="row gx-5">
-            <div className="lg:col-8">
+            {/* rebalance the grid. */}
+            {/* <div className="lg:col-8"> */}
+            <div>
               <div className="row">
                 {currentPosts.map((post: any, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
@@ -83,11 +85,11 @@ const Posts = ({ params }: { params: { page: number } }) => {
               />
             </div>
 
-            <PostSidebar
+            {/* <PostSidebar
               categories={categories}
               tags={tags}
               allCategories={allCategories}
-            />
+            /> */}
           </div>
         </div>
       </section>

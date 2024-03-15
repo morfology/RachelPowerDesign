@@ -11,11 +11,6 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa";
 import ImageSlider from "@/components/ImageSlider";
 import dataSlider from "@/app/data/slider-data.json";
 
@@ -52,12 +47,26 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   } = frontmatter;
   const similarPosts = similerItems(post, posts, post.slug!);
 
-  // #TBD temp hacks
+  // #TBD temp hacks @MP
   //console.log(dataSlider)
-  let ds = dataSlider
-  if (image && image.indexOf('chip') >= 0) {
-    ds = []
+  let ds: any[] = [] //dataSlider
+
+  // Caclulate the location from the md image, for now @MP hack
+  let location = null;
+  const imgBase = '/images/';
+  if (image && image.startsWith(imgBase)) {
+    let folders = image.split('/')
+    location = folders[2] || null;
   }
+
+  // now use location to query the image slider
+  if (location) {
+    console.log(location)
+
+    // .......
+    ds = dataSlider;
+  }
+
 
   return (
     <>

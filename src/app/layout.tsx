@@ -54,6 +54,12 @@ export default function RootLayout({
           }&display=swap`}
           rel="stylesheet"
         />
+
+        {/* @MP Bauen - googlefonts tbd */}
+        {/* <link
+          href={`https://fonts.googleapis.com/css?family=Open%20Sans|Oswald:300,400`}
+          rel="stylesheet"
+        /> */}
       </head>
 
       <body suppressHydrationWarning={true}>

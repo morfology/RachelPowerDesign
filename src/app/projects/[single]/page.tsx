@@ -11,11 +11,6 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa";
 import ImageSlider from "@/components/ImageSlider";
 import dataSlider from "@/app/data/slider-data.json";
 
@@ -52,12 +47,42 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   } = frontmatter;
   const similarPosts = similerItems(post, posts, post.slug!);
 
-  // #TBD temp hacks
+  // #TBD temp hacks @MP
   //console.log(dataSlider)
-  let ds = dataSlider
-  if (image && image.indexOf('chip') >= 0) {
-    ds = []
+  let ds: any[] = [] //dataSlider
+
+  // Caclulate the location from the md image, for now @MP hack
+  let location: string = '';
+  const imgBase = '/images/';
+  if (image && image.startsWith(imgBase)) {
+    let folders = image.split('/')
+    location = folders[2] || '';
   }
+
+  // now use location to query the image slider
+  if (location) {
+    ds = dataSlider.filter((e) => {
+      //console.log(e.image)
+      return e.image && e.image.indexOf(location) > 0
+    })
+    ds = ds.map((e) => { return {id: 'any', image: e.image} })
+
+    console.log(location)
+    //console.log(dataSlider)
+    console.log(ds)
+
+    // .......
+    //ds = dataSlider;
+  }
+
+  /*  {
+    "id": 2,
+    "title": "TITLE",
+    "tagline": "TAGLINE",
+    "image": "/images/field-view/detail-colourpens-small.jpg",
+    "buttons": [
+    ]
+  } */
 
   return (
     <>

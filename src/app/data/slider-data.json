@@ -1,18 +1,18 @@
 [
   {
-    "id": 2,
-    "title": "TITLE",
-    "tagline": "TAGLINE",
-    "image": "/images/field-view/detail-colourpens-small.jpg",
-    "buttons": [
-    ]
+    "image": "/images/field-view/detail-colourpens-small.jpg"
   },
   {
-    "id": 1,
-    "title": "TITLE1",
-    "tagline": "TAG1",
-    "image": "/images/field-view/detail-chest.jpg",
-    "buttons": [
-    ]
+    "image": "/images/field-view/detail-chest.jpg"
+  },
+  {
+    "image": "/images/chipstead/hallway.jpg"
+  },
+  {
+    "image": "/images/lodge-hill/MB-14-2.jpg"
+  },
+  {
+    "image": "/images/chipstead/living-1.jpg"
   }
+  
 ]

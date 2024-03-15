@@ -52,21 +52,37 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   let ds: any[] = [] //dataSlider
 
   // Caclulate the location from the md image, for now @MP hack
-  let location = null;
+  let location: string = '';
   const imgBase = '/images/';
   if (image && image.startsWith(imgBase)) {
     let folders = image.split('/')
-    location = folders[2] || null;
+    location = folders[2] || '';
   }
 
   // now use location to query the image slider
   if (location) {
+    ds = dataSlider.filter((e) => {
+      //console.log(e.image)
+      return e.image && e.image.indexOf(location) > 0
+    })
+    ds = ds.map((e) => { return {id: 'any', image: e.image} })
+
     console.log(location)
+    //console.log(dataSlider)
+    console.log(ds)
 
     // .......
-    ds = dataSlider;
+    //ds = dataSlider;
   }
 
+  /*  {
+    "id": 2,
+    "title": "TITLE",
+    "tagline": "TAGLINE",
+    "image": "/images/field-view/detail-colourpens-small.jpg",
+    "buttons": [
+    ]
+  } */
 
   return (
     <>

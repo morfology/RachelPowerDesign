@@ -18,6 +18,10 @@ h6 {
 h1,
 .h1 {
   @apply text-h1-sm md:text-h1;
+  /* Style Bauen @MP */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
 }
 
 h2,

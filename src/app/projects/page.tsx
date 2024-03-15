@@ -37,8 +37,10 @@ const Posts = () => {
       <section className="section">
         <div className="container">
           <div className="row gx-5">
-            <div className="lg:col-8">
-              <div className="row">
+            {/* rebalance the grid. */}
+            {/* <div className="lg:col-8"> */}
+            <div>
+            <div className="row">
                 {currentPosts.map((post: any, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
                     <BlogCard data={post} />
@@ -52,11 +54,11 @@ const Posts = () => {
               />
             </div>
 
-            <PostSidebar
+            {/* <PostSidebar
               categories={categories}
               tags={tags}
               allCategories={allCategories}
-            />
+            /> */}
           </div>
         </div>
       </section>

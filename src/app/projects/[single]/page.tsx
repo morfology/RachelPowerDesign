@@ -88,7 +88,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 dangerouslySetInnerHTML={markdownify(title)}
                 className="h2 mb-4"
               />
-              <ul className="mb-4">
+              {/* <ul className="mb-4">
                 <li className="mr-4 inline-block">
                   <Link href={`/authors/${slugify(author)}`}>
                     <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
@@ -113,7 +113,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                     {dateFormat(date)}
                   </li>
                 )}
-              </ul>
+              </ul> */}
               <div className="content mb-10">
                 <MDXContent content={content} />
               </div>
@@ -133,7 +133,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                     ))}
                   </ul>
                 </div>
-                <div className="flex items-center lg:col-4">
+                {/* <div className="flex items-center lg:col-4">
                   <h5 className="mr-3">Share :</h5>
                   <Share
                     className="social-icons"
@@ -141,13 +141,13 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                     description={description}
                     slug={post.slug!}
                   />
-                </div>
+                </div> */}
               </div>
             </article>
           </div>
 
           {/* <!-- Related posts --> */}
-          <div className="section pb-0">
+          {/* <div className="section pb-0">
             <h2 className="h3 mb-12 text-center">Related Posts</h2>
             <div className="row justify-center">
               {similarPosts.map((post) => (
@@ -156,7 +156,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

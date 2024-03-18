@@ -32,6 +32,14 @@ const Header = () => {
   // @MP first attempt at closing men
   const checkboxRef = useRef<HTMLInputElement>(null);
 
+
+  function closeMenuOnAnyClick() { 
+    // @MP Close menu on click
+    if (checkboxRef.current) {
+      checkboxRef.current.checked = false;
+    }
+  }
+
   // scroll to top on route change
   useEffect(() => {
     window.scroll(0, 0);
@@ -47,7 +55,14 @@ const Header = () => {
           <Logo />
         </div>
         {/* navbar toggler @MP close menu */}
-        <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} />
+        <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} onChange={() => {
+
+          if (checkboxRef && checkboxRef.current && checkboxRef.current.checked === true) {
+
+            document.removeEventListener('mousedown', closeMenuOnAnyClick);
+            document.addEventListener('mousedown', closeMenuOnAnyClick);
+          }
+        }}/>
         <label
           htmlFor="nav-toggle"
           className="order-3 cursor-pointer flex items-center lg:hidden text-dark  lg:order-1"

@@ -33,17 +33,47 @@ const Header = () => {
   const checkboxRef = useRef<HTMLInputElement>(null);
 
 
-  function closeMenuOnAnyClick() { 
-    // @MP Close menu on click
-    if (checkboxRef.current) {
-      checkboxRef.current.checked = false;
-    }
+  function mouseDownHandler(e) { 
+    // if (checkboxRef.current) {
+    //   checkboxRef.current.checked = false;
+    // }
+    console.log('handler')
+    //document.removeEventListener('mousedown', closeMenuOnAnyClick);
+    //return true;
   }
+  //document.addEventListener('mousedown', mouseDownHandler);
+
+  const myRef = useRef(null);
+  const handleClick = (event) => {
+    console.log('Clicked!');
+  };
+
+  useEffect(() => {
+
+    const handleClick = (event) => {
+      if (checkboxRef.current && checkboxRef.current.checked) {
+        setTimeout(() => {
+          if (checkboxRef.current && checkboxRef.current) {
+            checkboxRef.current.checked = false;
+          }
+        },
+        100)
+      }
+    };
+
+    document.addEventListener('mousedown', handleClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    };
+
+
+  }, []);
 
   // scroll to top on route change
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scroll(0, 0);
+  // }, [pathname]);
 
   return (
     <header
@@ -57,11 +87,11 @@ const Header = () => {
         {/* navbar toggler @MP close menu */}
         <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} onChange={() => {
 
-          if (checkboxRef && checkboxRef.current && checkboxRef.current.checked === true) {
+          // if (checkboxRef && checkboxRef.current && checkboxRef.current.checked === true) {
 
-            document.removeEventListener('mousedown', closeMenuOnAnyClick);
-            document.addEventListener('mousedown', closeMenuOnAnyClick);
-          }
+          //   console.log('menu is open')
+            
+          // }
         }}/>
         <label
           htmlFor="nav-toggle"
@@ -99,12 +129,7 @@ const Header = () => {
               
                 <li className="nav-item">
                   <Link
-                    onClick={() => {
-                      // @MP Close menu on click
-                      if (checkboxRef.current) {
-                        checkboxRef.current.checked = false;
-                      }
-                    }}
+
                     href={menu.url}
                     className={`nav-link block ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&

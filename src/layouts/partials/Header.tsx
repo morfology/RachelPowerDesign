@@ -5,7 +5,7 @@ import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { IoSearch } from "react-icons/io5/index.js";
 
 //  child navigation link interface
@@ -29,6 +29,9 @@ const Header = () => {
   // get current path
   const pathname = usePathname();
 
+  // @MP first attempt at closing men
+  const checkboxRef = useRef<HTMLInputElement>(null);
+
   // scroll to top on route change
   useEffect(() => {
     window.scroll(0, 0);
@@ -43,8 +46,8 @@ const Header = () => {
         <div className="order-0">
           <Logo />
         </div>
-        {/* navbar toggler */}
-        <input id="nav-toggle" type="checkbox" className="hidden" />
+        {/* navbar toggler @MP close menu */}
+        <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} />
         <label
           htmlFor="nav-toggle"
           className="order-3 cursor-pointer flex items-center lg:hidden text-dark  lg:order-1"
@@ -81,6 +84,12 @@ const Header = () => {
               
                 <li className="nav-item">
                   <Link
+                    onClick={() => {
+                      // @MP Close menu on click
+                      if (checkboxRef.current) {
+                        checkboxRef.current.checked = false;
+                      }
+                    }}
                     href={menu.url}
                     className={`nav-link block ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&

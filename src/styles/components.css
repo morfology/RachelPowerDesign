@@ -86,6 +86,12 @@
   }
 }
 
+/* Menu active hack - enable to show selected @MP 
+.active {
+  @apply text-[#1B83E2] !important;
+}
+*/
+
 
 .tab {
   @apply overflow-hidden rounded-lg border border-border;

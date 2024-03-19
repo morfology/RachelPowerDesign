@@ -23,34 +23,23 @@ export interface INavigationLink {
 }
 
 const Header = () => {
+ 
   // distructuring the main menu from menu object
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
   // get current path
   const pathname = usePathname();
 
-  // @MP first attempt at closing men
+  // @MP reference the hidden checkbox which shows/hides the menu 
   const checkboxRef = useRef<HTMLInputElement>(null);
-
-
-  function mouseDownHandler(e) { 
-    // if (checkboxRef.current) {
-    //   checkboxRef.current.checked = false;
-    // }
-    console.log('handler')
-    //document.removeEventListener('mousedown', closeMenuOnAnyClick);
-    //return true;
-  }
-  //document.addEventListener('mousedown', mouseDownHandler);
-
-  const myRef = useRef(null);
-  const handleClick = (event) => {
-    console.log('Clicked!');
-  };
 
   useEffect(() => {
 
-    const handleClick = (event) => {
+    // scroll to top on route change
+    window.scroll(0, 0);
+
+    const handleClick = () => {
+ 
       if (checkboxRef.current && checkboxRef.current.checked) {
         setTimeout(() => {
           if (checkboxRef.current && checkboxRef.current) {
@@ -68,12 +57,7 @@ const Header = () => {
     };
 
 
-  }, []);
-
-  // scroll to top on route change
-  // useEffect(() => {
-  //   window.scroll(0, 0);
-  // }, [pathname]);
+  }, [pathname]);
 
   return (
     <header
@@ -84,15 +68,8 @@ const Header = () => {
         <div className="order-0">
           <Logo />
         </div>
-        {/* navbar toggler @MP close menu */}
-        <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} onChange={() => {
-
-          // if (checkboxRef && checkboxRef.current && checkboxRef.current.checked === true) {
-
-          //   console.log('menu is open')
-            
-          // }
-        }}/>
+        {/* navbar toggler @MP closes menu */}
+        <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} />
         <label
           htmlFor="nav-toggle"
           className="order-3 cursor-pointer flex items-center lg:hidden text-dark  lg:order-1"
@@ -117,8 +94,8 @@ const Header = () => {
             ></polygon>
           </svg>
         </label>
-        {/* /navbar toggler */}
 
+        {/* navbar menu */}
         <ul
           id="nav-menu"
           className="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"

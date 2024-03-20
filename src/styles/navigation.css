@@ -18,6 +18,7 @@ input#nav-toggle:checked ~ #nav-menu {
 /* navbar items */
 .navbar {
   @apply relative flex flex-wrap items-center justify-between /* font-light font-secondary @MP Bauen*/;
+
 }
 
 .navbar-brand {
@@ -31,9 +32,9 @@ input#nav-toggle:checked ~ #nav-menu {
   @apply text-center lg:text-left;
 }
 
-/* .nav-item {
-   @apply mx-10;
-} */
+.nav-item {
+  @apply text-sm font-light font-secondary uppercase tracking-[.3rem] /*@MP Bauen*/ ;
+}
 
 .nav-link {
   @apply text-dark hover:text-primary   block p-3 /*font-semibold*/ font-light transition lg:px-2 lg:py-3;

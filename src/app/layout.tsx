@@ -35,18 +35,18 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link
+        {/* <link
           href={`https://fonts.googleapis.com/css2?family=${pf}${
             sf ? "&family=" + sf : ""
           }&display=swap`}
           rel="stylesheet"
-        />
+        /> */}
 
         {/* @MP Bauen - googlefonts tbd */}
-        {/* <link
+        <link
           href={`https://fonts.googleapis.com/css?family=Open%20Sans|Oswald:300,400`}
           rel="stylesheet"
-        /> */}
+        />
       </head>
 
       <body suppressHydrationWarning={true}>

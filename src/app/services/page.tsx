@@ -7,7 +7,7 @@ import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 
 const About = () => {
-  const data: RegularPage = getListPage("about/_index.md");
+  const data: RegularPage = getListPage("pages/services.md");
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
 

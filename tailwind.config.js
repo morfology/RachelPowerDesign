@@ -64,6 +64,8 @@ module.exports = {
         'bauen-black': '#272727',
         'bauen-brown': '#b19777'
         
+        //  bauen bg col is #fff plain white
+        
       },
       fontSize: {
         base: font_base + "px",

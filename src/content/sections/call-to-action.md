@@ -1,8 +1,8 @@
 ---
 enable: true
-title: "Ready to build your next project with Next?"
-image: "/images/call-to-action.png"
-description: "Experience the future of web development with Nextplate and Next. Build lightning-fast static sites with ease and flexibility."
+title: "Interior Design"
+image: "/images/design-board.jpeg"
+description: "Are you planning a renovation or just feel that certain aspects of your home or business need a little bit of love?"
 button:
   enable: true
   label: "Get Started Now"

@@ -60,6 +60,7 @@ module.exports = {
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
+        'bauen-grey': '#777',
         
       },
       fontSize: {
@@ -80,6 +81,8 @@ module.exports = {
       },
     },
   },
+
+
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),

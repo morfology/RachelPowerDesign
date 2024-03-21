@@ -5,11 +5,13 @@ import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
+import CallToAction from "@/partials/CallToAction";
 
 const About = () => {
   const data: RegularPage = getListPage("pages/services.md");
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
+  const callToAction = getListPage("sections/call-to-action.md");
 
   return (
     <>
@@ -20,6 +22,7 @@ const About = () => {
         image={image}
       />
       <PageHeader title={title} />
+      <CallToAction data={callToAction} />
 
       <section className="section-sm">
         <div className="container">

@@ -61,6 +61,8 @@ module.exports = {
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
         'bauen-grey': '#777',
+        'bauen-black': '#272727',
+        'bauen-brown': '#b19777'
         
       },
       fontSize: {

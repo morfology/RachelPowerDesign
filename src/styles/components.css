@@ -162,6 +162,10 @@
 
 /* // content style */
 .content {
+  /* @MP use Bauen style font*/
+  font-family: 'Didact Gothic', sans-serif;  
+  color: #777;
+
   @apply prose max-w-none;
   @apply prose-headings:mb-[.3em] prose-headings:mt-[.6em] prose-headings:text-dark;
   @apply prose-h1:text-h1-sm md:prose-h1:text-h1;

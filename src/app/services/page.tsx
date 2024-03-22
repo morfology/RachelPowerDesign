@@ -5,11 +5,15 @@ import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
+import CallToAction from "@/partials/CallToAction";
 
-const About = () => {
-  const data: RegularPage = getListPage("about/_index.md");
+const Services = () => {
+  const data: RegularPage = getListPage("pages/services.md");
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
+  const ctaStyle = getListPage("sections/call-to-action-style.md");
+  const ctaDesign = getListPage("sections/call-to-action-design.md");
+  const ctaProject = getListPage("sections/call-to-action-project.md");
 
   return (
     <>
@@ -20,8 +24,12 @@ const About = () => {
         image={image}
       />
       <PageHeader title={title} />
+      <CallToAction data={ctaProject} />
+      <CallToAction data={ctaDesign} />
+      <CallToAction data={ctaStyle} />
 
       <section className="section-sm">
+
         <div className="container">
           <div className="row justify-center">
             <div className="text-center md:col-10 lg:col-7">
@@ -45,4 +53,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Services;

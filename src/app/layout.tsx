@@ -44,9 +44,10 @@ export default function RootLayout({
 
         {/* @MP Bauen - googlefonts tbd */}
         <link
-          href={`https://fonts.googleapis.com/css?family=Open%20Sans|Oswald:300,400`}
+          href={`https://fonts.googleapis.com/css?family=Open%20Sans|Oswald:300,400,800`}
           rel="stylesheet"
         />
+        <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'></link>        
       </head>
 
       <body suppressHydrationWarning={true}>

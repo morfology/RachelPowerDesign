@@ -2,12 +2,12 @@
 # Banner
 banner:
   title: "Rachel Power Design"
-  content: "Transform your space with elegance and style. From selecting the perfect colour palette to curating exquisite decor, we bring your vision to life."
-  image: "/images/banner.png"
+  content: "From styling a single space or event to designing and managing an entire project our bespoke service means that you can achieve the look you want within a budget that works for you."
+  image: "/images/marcia-house/lighting-detail-1.jpg"
   button:
     enable: false
     label: "Contact"
-    link: "https://github.com/zeon-studio/nextplate"
+    link: "/contact"
 
 # Features
 # features:

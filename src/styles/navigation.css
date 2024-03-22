@@ -37,7 +37,9 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply text-dark hover:text-primary   block p-3 /*font-semibold*/ font-light transition lg:px-2 lg:py-3;
+  /* @MP Bauen colour*/
+  @apply text-bauen-grey hover:text-primary;
+  @apply block p-3 /*font-semibold*/ font-light transition lg:px-2 lg:py-3;
 }
 
 .nav-dropdown {

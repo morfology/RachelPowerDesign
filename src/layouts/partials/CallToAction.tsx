@@ -14,19 +14,28 @@ interface PageData {
 }
 
 const CallToAction = ({ data }: { data: PageData }) => {
+
+  // @MP Show scaled icons
+  const actualWidth = 268;
+  const actualHeight = 190;
+  const scale = 2;
+  let width = actualWidth / scale;
+  let height = actualHeight / scale;
+
   return (
     <>
       {data.frontmatter.enable && (
-        <section className="mb-28">
+        // <section className="mb-28">
+        <section className="mt-2">
           <div className="container">
-            <div className="rounded-xl bg-theme-light px-4 py-16  xl:p-20">
+            <div className="rounded-xl /*bg-theme-light*/ px-4 py-16  xl:p-20">
               <div className="row items-center justify-between">
                 <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
                   <ImageFallback
-                    className="w-full"
+                    className="rounded-md opacity-50 object-cover h-{height} w-{width}"
                     src={data.frontmatter.image}
-                    width={392}
-                    height={390}
+                    width={width}
+                    height={height}
                     alt="cta-image"
                   />
                 </div>

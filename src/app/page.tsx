@@ -23,7 +23,18 @@ const Home = () => {
 
         {/**** Big page image */}
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1615875474908-f403116f5287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Background Image" className="object-cover object-center w-full h-full" />
+          {/* <img 
+          src="https://images.unsplash.com/photo-1615875474908-f403116f5287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Background Image" 
+          className="object-cover object-center w-full h-full" /> */}
+
+
+          <ImageFallback
+            className="object-cover object-center w-full h-full"
+            src={'/images/oxstead/living-1.jpg'}
+            width={2000}
+            height={2000}
+            alt={''}
+          />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
@@ -32,12 +43,12 @@ const Home = () => {
 
         {/**** Big Hero Text and strapline */}
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-          <h1 className="mb-4 text-7xl leading-tight" 
+          <h1 className="mb-4 text-7xl leading-tight text-theme-light"  
             dangerouslySetInnerHTML={markdownify(banner.title)}
             />
-          <p className="text-lg text-gray-300 mb-8 max-w-prose"
+          {/* <p className="text-lg text-gray-300 mb-8 max-w-prose"
             dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
-            />
+            /> */}
         </div>
       </div>
 

@@ -11,7 +11,9 @@ const Services = () => {
   const data: RegularPage = getListPage("pages/services.md");
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
-  const callToAction = getListPage("sections/call-to-action.md");
+  const ctaStyle = getListPage("sections/call-to-action-style.md");
+  const ctaDesign = getListPage("sections/call-to-action-design.md");
+  const ctaProject = getListPage("sections/call-to-action-project.md");
 
   return (
     <>
@@ -22,9 +24,12 @@ const Services = () => {
         image={image}
       />
       <PageHeader title={title} />
-      <CallToAction data={callToAction} />
 
       <section className="section-sm">
+        <CallToAction data={ctaStyle} />
+        <CallToAction data={ctaDesign} />
+        <CallToAction data={ctaProject} />
+
         <div className="container">
           <div className="row justify-center">
             <div className="text-center md:col-10 lg:col-7">

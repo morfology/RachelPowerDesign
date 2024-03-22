@@ -1,6 +1,5 @@
 ---
-title: "Chipstead Extension & Renovation"
-internal_notes: "Chipstead Extension & Renovation"
+title: "Oxstead Renovation"
 meta_title: ""
 description: "Oxstead Extension & Renovation"
 date: 2024-03-03T05:00:00Z

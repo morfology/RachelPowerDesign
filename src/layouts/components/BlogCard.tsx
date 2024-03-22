@@ -12,9 +12,52 @@ const BlogCard = ({ data }: { data: Post }) => {
   return (
 
     <Link href={`/${projects_folder}/${data.slug}`}>
+      <div className="relative max-w-xl mx-auto mt-20">
+        {image && (
+          <ImageFallback
+            className="h-64 w-full object-cover rounded-md"
+            src={image}
+            alt={title}
+            width={445}
+            height={230}
+          />
+        )}
+
+        <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
+
+        <div className="absolute inset-0 flex items-center justify-center">
+            <h2 className="text-white text-3xl font-bold">{title}</h2>
+        </div>
+      </div>
+    </Link>
+
+  );
+};
+
+export default BlogCard;
+
+/*
+Original code:
+
+    <div className="bg-body ">
+      {image && (
+        <ImageFallback
+          className="mb-6 w-full rounded"
+          src={image}
+          alt={title}
+          width={445}
+          height={230}
+        />
+      )}
+      <h4 className="mb-3">
+        <Link href={`/${projects_folder}/${data.slug}`}>{title}</Link>
+      </h4>
+    </div>
+
+
+Variant "Paris":
+    <Link href={`/${projects_folder}/${data.slug}`}>
       <div className="relative flex flex-col px-8 pb-8 pt-40 max-w-sm mx-auto mb-10">
-        {/* <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a" alt="University of Southern California" 
-        className="absolute inset-0 h-full w-full object-cover"/> */}
         {image && (
           <ImageFallback
             xclassName="mb-6 w-full rounded"
@@ -31,29 +74,27 @@ const BlogCard = ({ data }: { data: Post }) => {
       </div>
     </Link>
 
+Variant 2: "Lost In Mountains":
+    <Link href={`/${projects_folder}/${data.slug}`}>
+      <div className="relative max-w-xl mx-auto mt-20">
+        {image && (
+          <ImageFallback
+            className="h-64 w-full object-cover rounded-md"
+            src={image}
+            alt={title}
+            width={445}
+            height={230}
+          />
+        )}
+
+        <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
+
+        <div className="absolute inset-0 flex items-center justify-center">
+            <h2 className="text-white text-3xl font-bold">{title}</h2>
+        </div>
+      </div>
+    </Link>
 
 
-  );
-};
-
-export default BlogCard;
-
-/*
-Previous code:
-
-    <div className="bg-body ">
-      {image && (
-        <ImageFallback
-          className="mb-6 w-full rounded"
-          src={image}
-          alt={title}
-          width={445}
-          height={230}
-        />
-      )}
-      <h4 className="mb-3">
-        <Link href={`/${projects_folder}/${data.slug}`}>{title}</Link>
-      </h4>
-    </div>
 
 */

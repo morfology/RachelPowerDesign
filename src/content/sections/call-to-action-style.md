@@ -1,8 +1,8 @@
 ---
 enable: true
-title: "Interior Styling"
+title: "Styling"
 image: "/images/icon-style.png"
-description: "Are you planning a renovation or just feel that certain aspects of your home or business need a little bit of love?"
+description: "Do you need help to bring your space to life? Do you have collections which you are not sure how to display?"
 button:
   enable: false
   label: "Get Started Now"

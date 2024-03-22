@@ -26,9 +26,9 @@ const Services = () => {
       <PageHeader title={title} />
 
       <section className="section-sm">
-        <CallToAction data={ctaStyle} />
-        <CallToAction data={ctaDesign} />
         <CallToAction data={ctaProject} />
+        <CallToAction data={ctaDesign} />
+        <CallToAction data={ctaStyle} />
 
         <div className="container">
           <div className="row justify-center">

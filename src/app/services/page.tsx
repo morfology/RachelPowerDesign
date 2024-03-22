@@ -24,11 +24,11 @@ const Services = () => {
         image={image}
       />
       <PageHeader title={title} />
+      <CallToAction data={ctaProject} />
+      <CallToAction data={ctaDesign} />
+      <CallToAction data={ctaStyle} />
 
       <section className="section-sm">
-        <CallToAction data={ctaProject} />
-        <CallToAction data={ctaDesign} />
-        <CallToAction data={ctaStyle} />
 
         <div className="container">
           <div className="row justify-center">

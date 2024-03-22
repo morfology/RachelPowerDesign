@@ -7,7 +7,7 @@ import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
 
-const About = () => {
+const Services = () => {
   const data: RegularPage = getListPage("pages/services.md");
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
@@ -48,4 +48,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Services;

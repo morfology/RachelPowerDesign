@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <SeoMeta />
 
-      <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+      <div className="relative h-screen text-white overflow-hidden">
 
         {/**** Big page image */}
         <div className="absolute inset-0">
@@ -33,6 +33,7 @@ const Home = () => {
             width={1200}
             height={500}
             alt={'Rachel Power Design'}
+            priority={true}
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>

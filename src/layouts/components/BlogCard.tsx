@@ -15,7 +15,7 @@ const BlogCard = ({ data }: { data: Post }) => {
       <div className="relative max-w-xl mx-auto mt-20">
         {image && (
           <ImageFallback
-            className="h-64 w-full object-cover rounded-md"
+            className="h-94 w-full object-cover rounded-md"
             src={image}
             alt={title}
             width={445}

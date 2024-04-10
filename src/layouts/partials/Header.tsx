@@ -6,7 +6,9 @@ import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
-import { IoSearch } from "react-icons/io5/index.js";
+
+import { FaSearch as IoSearch } from "react-icons/fa/index.js";
+import { FaPhone } from "react-icons/fa/index.js";
 
 //  child navigation link interface
 export interface IChildNavigationLink {
@@ -131,13 +133,22 @@ const Header = () => {
           )}
         </ul>
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-          {settings.search && (
+        {settings.search && (
             <button
               className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
               aria-label="search"
               data-search-trigger
             >
               <IoSearch />
+            </button>
+          )}
+          {settings.search && (
+            <button
+              className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
+              aria-label="search"
+              data-search-trigger
+            >
+              <FaPhone />
             </button>
           )}
           {/* <ThemeSwitcher className="mr-5" /> */}

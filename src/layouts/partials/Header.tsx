@@ -142,13 +142,16 @@ const Header = () => {
               <IoSearch />
             </button>
           )}
-          {settings.search && (
+          {(
             <button
               className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
-              aria-label="search"
-              data-search-trigger
+              aria-label="phone"
+              data-phone-trigger
             >
-              <FaPhone />
+            <a href="tel:+44-7480-488-209">
+            <FaPhone />
+            </a>          
+
             </button>
           )}
           {/* <ThemeSwitcher className="mr-5" /> */}

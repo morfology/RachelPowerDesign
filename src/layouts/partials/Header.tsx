@@ -165,6 +165,7 @@ const Header = () => {
               className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
               aria-label="phone"
               data-phone-trigger
+              onClick={() => window.analytics.track('click-phone', {})}
             >
             <a href="tel:+44-7480-488-209">
             <FaPhone />

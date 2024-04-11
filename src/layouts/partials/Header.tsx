@@ -6,9 +6,16 @@ import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
-
+import SegmentHTML from 'dangerously-set-html-content';
 import { FaSearch as IoSearch } from "react-icons/fa/index.js";
 import { FaPhone } from "react-icons/fa/index.js";
+
+// Tell the type system about the Segment object
+declare global {
+  interface Window {
+      analytics:any;
+  }
+}
 
 //  child navigation link interface
 export interface IChildNavigationLink {
@@ -41,7 +48,7 @@ const Header = () => {
     window.scroll(0, 0);
 
     const handleClick = () => {
- 
+
       if (checkboxRef.current && checkboxRef.current.checked) {
         setTimeout(() => {
           if (checkboxRef.current && checkboxRef.current) {
@@ -65,6 +72,16 @@ const Header = () => {
     <header
       className={`header z-30 ${settings.sticky_header && "sticky top-0"}`}
     >
+
+      {/** Using the snippet is the recommended approach of possible */}
+      <SegmentHTML html={`<script>` +
+        `!function(){var i="analytics",analytics=window[i]=window[i]||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","screen","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware","register"];analytics.factory=function(e){return function(){if(window[i].initialized)return window[i][e].apply(window[i],arguments);var n=Array.prototype.slice.call(arguments);if(["track","screen","alias","group","page","identify"].indexOf(e)>-1){var c=document.querySelector("link[rel='canonical']");n.push({__t:"bpc",c:c&&c.getAttribute("href")||void 0,p:location.pathname,u:location.href,s:location.search,t:document.title,r:document.referrer})}n.unshift(e);analytics.push(n);return analytics}};for(var n=0;n<analytics.methods.length;n++){var key=analytics.methods[n];analytics[key]=analytics.factory(key)}analytics.load=function(key,n){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.setAttribute("data-global-segment-analytics-key",i);t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r);analytics._loadOptions=n};analytics._writeKey="saYBHnKjyZtuwqR9t2ijXvwJoK9g6x9q";;analytics.SNIPPET_VERSION="5.2.0";` +
+        `analytics.load("saYBHnKjyZtuwqR9t2ijXvwJoK9g6x9q");` + 
+        `analytics.page();` +
+      `}}();` + 
+      `</script>`
+      } />
+
       <nav className="navbar container">
         {/* logo */}
         <div className="order-0">
@@ -138,6 +155,7 @@ const Header = () => {
               className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
               aria-label="search"
               data-search-trigger
+              onClick={() => window.analytics.track('click-search', {})}
             >
               <IoSearch />
             </button>
@@ -147,6 +165,7 @@ const Header = () => {
               className="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
               aria-label="phone"
               data-phone-trigger
+              onClick={() => window.analytics.track('click-phone', {})}
             >
             <a href="tel:+44-7480-488-209">
             <FaPhone />

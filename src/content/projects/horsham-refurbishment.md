@@ -1,5 +1,6 @@
 ---
 title: "Horsham Home Refurbishment"
+folder: horsham
 internal: "Horsham Jack and Amy"
 meta_title: ""
 description: "Horsham Home Refurbishment"

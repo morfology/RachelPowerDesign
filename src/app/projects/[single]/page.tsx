@@ -48,30 +48,18 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   } = frontmatter;
   const similarPosts = similerItems(post, posts, post.slug!);
 
-  // #TBD temp hacks @MP
   //console.log(dataSlider)
-  let ds: any[] = [] //dataSlider
 
-  // Caclulate the location from the md image, for now @MP hack
-  let location: string = '';
-  const imgBase = '/images/';
-  if (image && image.startsWith(imgBase)) {
-    let folders = image.split('/')
-    //location = folders[2] || '';
-    console.log(dataSlider);
-    console.log( folders[2] || '')
-  }
-  location = folder || '';
+  let ds: any[] = [];
 
   // now use location to query the image slider
-  if (location) {
-    ds = dataSlider.filter((e) => {
+  if (folder) {
+    ds = dataSlider.filter((el) => {
       //console.log(e.image)
-      return e.image && e.image.indexOf(location) > 0
-    })
-    ds = ds.map((e) => { return {id: 'any', image: e.image} })
+      return el.image && el.image.indexOf(folder) > 0
+    }).map((e) => { return {id: 'any', image: e.image} })
 
-    console.log(location)
+    console.log(folder)
     //console.log(dataSlider)
     console.log(ds)
 

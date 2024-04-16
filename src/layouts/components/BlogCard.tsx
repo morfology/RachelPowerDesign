@@ -23,7 +23,7 @@ const BlogCard = ({ data }: { data: Post }) => {
           />
         )}
 
-        <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
+        <div className="absolute inset-0 bg-gray-700 opacity-30 rounded-md"></div>
 
         <div className="absolute inset-0 flex items-center justify-center">
             <h2 className="text-white text-3xl font-bold">{title}</h2>

@@ -12,7 +12,7 @@ import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
-import dataSlider from "@/app/data/slider-data.json";
+import imageConfig from "@/config/images.json";
 
 const { projects_folder } = config.settings;
 
@@ -37,6 +37,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   const { frontmatter, content } = post;
   const {
     title,
+    folder,
     meta_title,
     description,
     image,
@@ -47,42 +48,20 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   } = frontmatter;
   const similarPosts = similerItems(post, posts, post.slug!);
 
-  // #TBD temp hacks @MP
   //console.log(dataSlider)
-  let ds: any[] = [] //dataSlider
 
-  // Caclulate the location from the md image, for now @MP hack
-  let location: string = '';
-  const imgBase = '/images/';
-  if (image && image.startsWith(imgBase)) {
-    let folders = image.split('/')
-    location = folders[2] || '';
-  }
+  let imageSliderData: any[] = [];
 
   // now use location to query the image slider
-  if (location) {
-    ds = dataSlider.filter((e) => {
-      //console.log(e.image)
-      return e.image && e.image.indexOf(location) > 0
-    })
-    ds = ds.map((e) => { return {id: 'any', image: e.image} })
+  if (folder) {
 
-    console.log(location)
-    //console.log(dataSlider)
-    console.log(ds)
-
-    // .......
-    //ds = dataSlider;
+    imageSliderData = imageConfig    
+      // Filter images that match the project
+      .filter(x => x.image && x.image.indexOf(`/images/${folder}/`) === 0)
+      // Image slider requires id, we don't use it so just add "any"
+      .map(y => ({ id: 'any', image: y.image}))
+    ;
   }
-
-  /*  {
-    "id": 2,
-    "title": "TITLE",
-    "tagline": "TAGLINE",
-    "image": "/images/field-view/detail-colourpens-small.jpg",
-    "buttons": [
-    ]
-  } */
 
   return (
     <>
@@ -93,52 +72,18 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
         image={image}
       />
       <section className="section pt-7">
-      {/* {image} */}
         <div className="container">
           <div className="row justify-center">
             <article className="lg:col-10">
               {image && (
                 <div className="mb-10">
-                  <ImageSlider data={ds} />
-                  {/* <ImageFallback
-                    src={image}
-                    height={500}
-                    width={1200}
-                    alt={title}
-                    className="w-full rounded"
-                  /> */}
+                  <ImageSlider data={imageSliderData} />
                 </div>
               )}
               <h1
                 dangerouslySetInnerHTML={markdownify(title)}
                 className="h2 mb-4"
               />
-              {/* <ul className="mb-4">
-                <li className="mr-4 inline-block">
-                  <Link href={`/authors/${slugify(author)}`}>
-                    <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
-                    {humanize(author)}
-                  </Link>
-                </li>
-                <li className="mr-4 inline-block">
-                  <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
-                  {categories?.map((category: string, index: number) => (
-                    <Link
-                      key={category}
-                      href={`/categories/${slugify(category)}`}
-                    >
-                      {humanize(category)}
-                      {index !== categories.length - 1 && ", "}
-                    </Link>
-                  ))}
-                </li>
-                {date && (
-                  <li className="mr-4 inline-block">
-                    <FaRegClock className="-mt-1 mr-2 inline-block" />
-                    {dateFormat(date)}
-                  </li>
-                )}
-              </ul> */}
               <div className="content mb-10">
                 <MDXContent content={content} />
               </div>
@@ -158,30 +103,9 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                     ))}
                   </ul>
                 </div>
-                {/* <div className="flex items-center lg:col-4">
-                  <h5 className="mr-3">Share :</h5>
-                  <Share
-                    className="social-icons"
-                    title={title}
-                    description={description}
-                    slug={post.slug!}
-                  />
-                </div> */}
               </div>
             </article>
           </div>
-
-          {/* <!-- Related posts --> */}
-          {/* <div className="section pb-0">
-            <h2 className="h3 mb-12 text-center">Related Posts</h2>
-            <div className="row justify-center">
-              {similarPosts.map((post) => (
-                <div key={post.slug} className="lg:col-4 mb-7">
-                  <BlogCard data={post} />
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
       </section>
     </>

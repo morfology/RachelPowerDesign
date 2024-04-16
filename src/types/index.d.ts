@@ -14,6 +14,7 @@ export type RegularPage = {
 export type Post = {
   frontmatter: {
     title: string;
+    folder?: string,
     meta_title?: string;
     description?: string;
     image?: string;

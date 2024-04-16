@@ -37,6 +37,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   const { frontmatter, content } = post;
   const {
     title,
+    folder,
     meta_title,
     description,
     image,
@@ -56,8 +57,11 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   const imgBase = '/images/';
   if (image && image.startsWith(imgBase)) {
     let folders = image.split('/')
-    location = folders[2] || '';
+    //location = folders[2] || '';
+    console.log(dataSlider);
+    console.log( folders[2] || '')
   }
+  location = folder || '';
 
   // now use location to query the image slider
   if (location) {

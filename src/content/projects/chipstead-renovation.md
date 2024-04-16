@@ -1,5 +1,6 @@
 ---
 title: "Chipstead Extension & Renovation"
+folder: chipstead
 internal_notes: "Chipstead Extension & Renovation"
 meta_title: ""
 description: "Chipstead Extension & Renovation"

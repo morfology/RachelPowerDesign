@@ -58,7 +58,26 @@ const dividedArrays = divideArrayIntoFour(data);
 export default Gallery;
 
 
-const Card = ({ data }: { data: any }) => {
+
+
+
+
+
+
+
+
+interface RPDImage {
+  image: string;
+}
+
+interface RPDImageDataProps {
+  data: RPDImage[];
+}
+
+//const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
+
+
+const Card = ( {data} : RPDImageDataProps) => {
   
   return (
     <div className="grid gap-4">
@@ -74,7 +93,7 @@ const Card = ({ data }: { data: any }) => {
 };
 
 
-function shuffleArray(array) {
+function shuffleArray(array :any[]) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements
@@ -82,7 +101,7 @@ function shuffleArray(array) {
   return array;
 }
 
-function divideArrayIntoFour(array) {
+function divideArrayIntoFour(array :any[]) {
   const length = array.length;
   const chunkSize = Math.ceil(length / 4);
   const result = [];

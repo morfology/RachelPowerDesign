@@ -18,7 +18,12 @@ const Gallery = () => {
     // Filter images that match the detail
     .filter(x => x.image && x.image.indexOf(`detail`) > 0)
   ;
+  data = shuffleArray(data);
+  
+// Example usage:
+const dividedArrays = divideArrayIntoFour(data);
 
+//console.log(dividedArrays);
 
 
 
@@ -39,43 +44,10 @@ const Gallery = () => {
 
           {/* Initial Content */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card data={data}/>
-
-
-            
-            <div className="grid gap-4">
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="" />
-              </div>
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="" />
-              </div>
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="" />
-              </div>
-            </div>
-            <div className="grid gap-4">
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
-              </div>
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="" />
-              </div>
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="" />
-              </div>
-            </div>
-            <div className="grid gap-4">
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="" />
-              </div>
-              <div>
-                <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="" />
-              </div>
-            </div>
-
-
-
+            <Card data={dividedArrays[0]}/>
+            <Card data={dividedArrays[1]}/>
+            <Card data={dividedArrays[2]}/>
+            <Card data={dividedArrays[3]}/>
           </div>
         </div>
       </section>
@@ -97,15 +69,28 @@ const Card = ({ data }: { data: any }) => {
 
 
 
-    <div>
-      <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
-    </div>
-    <div>
-      <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
-    </div>
-    <div>
-      <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
-    </div>
   </div>
   );
 };
+
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+  return array;
+}
+
+function divideArrayIntoFour(array) {
+  const length = array.length;
+  const chunkSize = Math.ceil(length / 4);
+  const result = [];
+
+  for (let i = 0; i < 4; i++) {
+    result.push(array.slice(i * chunkSize, (i + 1) * chunkSize));
+  }
+  return result;
+}
+
+

@@ -31,7 +31,6 @@
   { "image": "/images/lodge-hill/living-room-detail-4.jpg" },
   { "image": "/images/lodge-hill/living-room-detail-5.jpg" },
   { "image": "/images/lodge-hill/detail-ceiling.jpg" },
-  { "image": "/images/lodge-hill/detail-nursery.jpg" },
   { "image": "/images/lodge-hill/gues-room-detail-ls.jpg" },
   { "image": "/images/horsham/detail-stove.jpg" },
   { "image": "/images/horsham/detail-bedside.jpg" },
@@ -45,9 +44,6 @@
 
   {
     "image": "/images/field-view/detail-colourpens-small.jpg"
-  },
-  {
-    "image": "/images/field-view/detail-chest.jpg"
   },
   {
     "image": "/images/chipstead/hallway.jpg"
@@ -66,9 +62,6 @@
   },
   {
     "image": "/images/lodge-hill/freyas-room.jpg"
-  },
-  {
-    "image": "/images/lodge-hill/freyas-room-detail-ls.jpg"
   },
   {
     "image": "/images/lodge-hill/guest-bedroom.jpg"

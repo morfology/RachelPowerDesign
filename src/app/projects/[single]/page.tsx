@@ -113,3 +113,5 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
 };
 
 export default PostSingle;
+
+

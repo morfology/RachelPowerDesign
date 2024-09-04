@@ -51,7 +51,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-item {
-  @apply mb-2;
+  @apply mb-2; 
 }
 
 .nav-dropdown-link {
@@ -59,7 +59,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 /* theme-switcher */
-.theme-switcher {
+/* .theme-switcher {
   @apply inline-flex;
 
   label {
@@ -79,4 +79,4 @@ input#nav-toggle:checked ~ #nav-menu {
       @apply lg:left-4;
     }
   }
-}
+} */

@@ -124,12 +124,12 @@ const Header = () => {
               {(
               
                 <li className="nav-item">
-                  <Link
-
+                {/* Link, showing the "selected page" */}
+                <Link
                     href={menu.url}
-                    className={`nav-link block ${
+                    className={`nav-link block active ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&
-                      "active"
+                      "text-primary"
                     }`}
                   >
                     {menu.name}

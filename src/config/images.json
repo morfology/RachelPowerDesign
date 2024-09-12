@@ -31,17 +31,50 @@
   { "image": "/images/lodge-hill/gues-room-detail-ls.jpg" },
   { "image": "/images/horsham/detail-stove.jpg" },
   { "image": "/images/horsham/detail-bedside.jpg" },
-  { "image": "/images/chipstead/detail-wardrobe.jpg" },
-  { "image": "/images/chipstead/detail-wallpaper.jpg" },
-  { "image": "/images/chipstead/detail-light.jpg" },
   { "image": "/images/marcia-house/detail-kitchen.jpg" },
   { "image": "/images/marcia-house/detail-plants.jpg" },
   { "image": "/images/marcia-house/detail-mirror-plants.jpg" },
   { "image": "/images/marcia-house/lighting-detail-1.jpg" },
 
-  {
-    "image": "/images/chipstead/hallway.jpg"
-  },
+  { "image": "/images/chipstead/detail-wardrobe.jpg" },
+  { "image": "/images/chipstead/tv-room-2.jpg" },
+  { "image": "/images/chipstead/bedroom-2.jpg" },
+  { "image": "/images/chipstead/bedroom-3.jpg" },
+  { "image": "/images/chipstead/tv-room-3.jpg" },
+  { "image": "/images/chipstead/lounge.jpg" },
+  { "image": "/images/chipstead/detail-bath-tap.jpg" },
+  { "image": "/images/chipstead/bedroom-6.jpg" },
+  { "image": "/images/chipstead/bedroom.jpg" },
+  { "image": "/images/chipstead/detail-2.jpg" },
+  { "image": "/images/chipstead/kitchen-2.jpg" },
+  { "image": "/images/chipstead/detail-wallpaper.jpg" },
+  { "image": "/images/chipstead/bedroom-4.jpg" },
+  { "image": "/images/chipstead/bedroom-5.jpg" },
+  { "image": "/images/chipstead/detail-1.jpg" },
+  { "image": "/images/chipstead/detail-light.jpg" },
+  { "image": "/images/chipstead/tv-room.jpg" },
+  { "image": "/images/chipstead/bathroom-3.jpg" },
+  { "image": "/images/chipstead/bathroom-2.jpg" },
+  { "image": "/images/chipstead/gym.jpg" },
+  { "image": "/images/chipstead/hallway.jpg" },
+  { "image": "/images/chipstead/bathroom.jpg" },
+  { "image": "/images/chipstead/bathroom-4.jpg" },
+  { "image": "/images/chipstead/window-seat-3.jpg" },
+  { "image": "/images/chipstead/window-seat.jpg" },
+  { "image": "/images/chipstead/living-1.jpg" },
+  { "image": "/images/chipstead/sitting-room.jpg" },
+  { "image": "/images/chipstead/dressing.jpg" },
+  { "image": "/images/chipstead/back-garden.jpg" },
+  { "image": "/images/chipstead/toilet-2.jpg" },
+  { "image": "/images/chipstead/sitting-room-4.jpg" },
+  { "image": "/images/chipstead/kitchen.jpg" },
+  { "image": "/images/chipstead/stairs.jpg" },
+  { "image": "/images/chipstead/detail-light-2.jpg" },
+  { "image": "/images/chipstead/toilet.jpg" },
+  { "image": "/images/chipstead/sitting-room-3.jpg" },
+  { "image": "/images/chipstead/sitting-room-2.jpg" },
+  { "image": "/images/chipstead/detail-doorhandle.jpg" },
+
   {
     "image": "/images/lodge-hill/master-bedroom-1.jpg"
   },
@@ -77,9 +110,6 @@
   },
   {
     "image": "/images/lodge-hill/living-room-2.jpg"
-  },
-  {
-    "image": "/images/chipstead/living-1.jpg"
   },
   {
     "image": "/images/farnham/living-1.jpg"

@@ -57,7 +57,11 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
 
     imageSliderData = imageConfig    
       // Filter images that match the project
-      .filter(x => x.image && x.image.indexOf(`/images/${folder}/`) === 0)
+      .filter(obj => obj.image && obj.image.includes(`/images/${folder}/`))
+
+      // Filter out images that match the detail
+      .filter(obj => obj.image && !obj.image.includes(`detail`))
+
       // Image slider requires id, we don't use it so just add "any"
       .map(y => ({ id: 'any', image: y.image}))
     ;

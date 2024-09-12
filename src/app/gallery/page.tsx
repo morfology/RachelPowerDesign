@@ -16,7 +16,7 @@ const Gallery = () => {
   let data = null
   data  = imageConfig    
     // Filter images that match the detail
-    .filter(x => x.image && x.image.indexOf(`detail`) > 0)
+    .filter(obj => obj.image && obj.image.includes(`detail`))
   ;
   data = shuffleArray(data);
   

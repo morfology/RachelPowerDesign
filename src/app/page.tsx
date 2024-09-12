@@ -29,7 +29,7 @@ const Home = () => {
 
           <Image
             className="object-cover object-center w-full h-full"
-            src={'/images/oxstead/living-1.jpg'}
+            src={'/images/farnham/living-1.jpg'}
             width={1200}
             height={500}
             alt={'Rachel Power Design'}

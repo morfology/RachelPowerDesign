@@ -1,13 +1,13 @@
 ---
-title: "Oxstead Renovation"
-folder: oxstead
+title: "Farnham"
+folder: farnham
 meta_title: ""
-description: "Oxstead Extension & Renovation"
+description: "Farnham Extension & Renovation"
 date: 2024-03-03T05:00:00Z
-image: "/images/oxstead/living-1.jpg"
+image: "/images/farnham/living-1.jpg"
 categories: ["Extension", "Renovation"]
 author: "Rachel Power"
-tags: ["surrey", "oxstead"]
+tags: ["surrey", "farnham"]
 draft: false
 ---
 

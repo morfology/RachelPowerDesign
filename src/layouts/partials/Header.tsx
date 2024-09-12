@@ -9,6 +9,7 @@ import React, { useEffect, useState, useRef } from "react";
 import SegmentHTML from 'dangerously-set-html-content';
 import { FaSearch as IoSearch } from "react-icons/fa/index.js";
 import { FaPhone } from "react-icons/fa/index.js";
+import { RS_Track } from '@/lib/rudderAnalytics';
 
 // Tell the type system about the Segment object
 declare global {
@@ -60,6 +61,8 @@ const Header = () => {
     };
 
     document.addEventListener('mousedown', handleClick);
+
+    RS_Track('rs_test', {any: 1});
 
     return () => {
       document.removeEventListener('mousedown', handleClick);

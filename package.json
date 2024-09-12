@@ -16,6 +16,7 @@
     "generate-json": "node scripts/jsonGenerator.js"
   },
   "dependencies": {
+    "@rudderstack/analytics-js": "^3.7.12",
     "dangerously-set-html-content": "^1.1.0",
     "date-fns": "^3.0.6",
     "github-slugger": "^2.0.0",

@@ -21,6 +21,35 @@ const About = () => {
       />
       <PageHeader title={title} />
 
+      {/* <section className="section-sm">
+        <div className="bg-gray-900 text-white py-20">
+
+
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-8 lg:flex-row items-center">
+
+            <div className="lg:w-1/2 lg:ml-12">
+              <ImageFallback
+                className="mx-auto mb-6 zrounded-lg shadow-lg hover:shadow-xl transition duration-200"
+                src={image}
+                width={300}
+                height={300}
+                alt={title}
+              />
+            </div>
+
+            <div className="lg:w-1/2 prose">
+                <MDXContent content={content} />
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+
       <section className="section-sm">
         <div className="container">
           <div className="row justify-center">

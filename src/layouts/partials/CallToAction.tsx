@@ -18,17 +18,22 @@ const CallToAction = ({ data }: { data: PageData }) => {
   // @MP Show scaled icons
   const actualWidth = 268;
   const actualHeight = 190;
-  const scale = 2;
+  const scale = 1;
   let width = actualWidth / scale;
   let height = actualHeight / scale;
 
   return (
     <>
       {data.frontmatter.enable && (
-        // <section className="mb-28">
+
+        0 ? 
         <section className="mt-2">
-          <div className="container">
-            <div className="rounded-xl /*bg-theme-light*/ px-4 py-16  xl:p-20">
+          <div className="container text-center">
+            <div className="rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14  ">
+
+              <div className="rounded-2xl   ">
+                <h1>{data.frontmatter.title}<span className="text-bauen-brown"> .</span></h1>
+              </div>
               <div className="row items-center justify-between">
                 <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
                   <ImageFallback
@@ -39,8 +44,27 @@ const CallToAction = ({ data }: { data: PageData }) => {
                     alt="cta-image"
                   />
                 </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        :
+        <section className="mt-2">
+          <div className="container">
+            <div className="rounded-xl px-4 py-16  xl:p-20">
+              <div className="row items-center justify-between">
+                <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
+                  <ImageFallback
+                    className="rounded object-cover h-{height} w-{width}"
+                    src="/images/marcia-house/detail-kitchen.jpg"
+                    width={width}
+                    height={height}
+                    alt="cta-image"
+                  />
+                </div>
                 <div className="md:col-7 md:order-1">
-                  <h2
+                  <h1
                     dangerouslySetInnerHTML={markdownify(
                       data.frontmatter.title,
                     )}

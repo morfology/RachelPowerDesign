@@ -31,7 +31,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
       {/* Use flex to align the panels side by side with a gap */}
       <div className="flex flex-col md:flex-row items-stretch justify-between gap-8">
         {/* Image panel */}
-        <div className="mb-10 flex-1 md:order-2 md:mb-0">
+        <div className="mb-10 md:w-2/5 md:order-2 md:mb-0">
           <Image
             className="rounded object-cover h-full w-full"
             src={data.frontmatter.image}
@@ -41,7 +41,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
           />
         </div>
         {/* Content panel */}
-        <div className="flex-1 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light px-8 py-14">
+        <div className="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light px-8 py-14">
           <h1
             dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
             className="mb-2"

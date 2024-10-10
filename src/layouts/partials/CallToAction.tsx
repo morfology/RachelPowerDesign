@@ -6,6 +6,7 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Call_to_action } from "@/types";
 import Link from "next/link";
+import Image from "next/image";
 
 interface PageData {
   notFound?: boolean;
@@ -16,40 +17,14 @@ interface PageData {
 const CallToAction = ({ data }: { data: PageData }) => {
 
   // @MP Show scaled icons
-  const actualWidth = 268;
-  const actualHeight = 190;
-  const scale = 1;
-  let width = actualWidth / scale;
-  let height = actualHeight / scale;
+  const width =268;
+  const height = 190;
 
   return (
     <>
       {data.frontmatter.enable && (
 
-        0 ? 
-        <section className="mt-2">
-          <div className="container text-center">
-            <div className="rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14  ">
 
-              <div className="rounded-2xl   ">
-                <h1>{data.frontmatter.title}<span className="text-bauen-brown"> .</span></h1>
-              </div>
-              <div className="row items-center justify-between">
-                <div className="mb-10 md:col-5 lg:col-4 md:order-2 md:mb-0">
-                  <ImageFallback
-                    className="rounded-md object-cover h-{height} w-{width}"
-                    src={data.frontmatter.image}
-                    width={width}
-                    height={height}
-                    alt="cta-image"
-                  />
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-        :
 <section className="mt-2 w-full">
   <div className="container">
     <div className="rounded px-4 py-16 xl:p-20">
@@ -57,7 +32,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
       <div className="flex flex-col md:flex-row items-stretch justify-between gap-8">
         {/* Image panel */}
         <div className="mb-10 flex-1 md:order-2 md:mb-0">
-          <ImageFallback
+          <Image
             className="rounded object-cover h-full w-full"
             src={data.frontmatter.image}
             width={width}

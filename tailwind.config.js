@@ -67,30 +67,19 @@ module.exports = {
         //  bauen bg col is #fff plain white
         
       },
-      fontSize: {
-        base: font_base + "px",
-        h1: h1 + "rem",
-        "h1-sm": h1 * 0.8 + "rem",
-        h2: h2 + "rem",
-        "h2-sm": h2 * 0.8 + "rem",
-        h3: h3 + "rem",
-        "h3-sm": h3 * 0.8 + "rem",
-        h4: h4 + "rem",
-        h5: h5 + "rem",
-        h6: h6 + "rem",
-      },
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
       },
       // Claude addition 10/10/24
       fontSize: {
+        base: font_base + "px",
         'h1': ['2.5rem', { lineHeight: '1.2', letterSpacing: '0.7rem' }],
         'h2': ['2rem', { lineHeight: '1.2', letterSpacing: '0.5rem' }],
         'h3': ['1.75rem', { lineHeight: '1.2', letterSpacing: '0.3rem' }],
-        'h1-sm': ['2rem', { lineHeight: '1.2', letterSpacing: '0.5rem' }],
-        'h2-sm': ['1.75rem', { lineHeight: '1.2', letterSpacing: '0.4rem' }],
-        'h3-sm': ['1.5rem', { lineHeight: '1.2', letterSpacing: '0.3rem' }],
+        'h1-sm': ['1.8rem', { lineHeight: '1.2', letterSpacing: '0.5rem' }],
+        'h2-sm': ['1.5rem', { lineHeight: '1.2', letterSpacing: '0.4rem' }],
+        'h3-sm': ['1.3rem', { lineHeight: '1.2', letterSpacing: '0.3rem' }],
       },
     },
   },

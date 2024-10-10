@@ -83,6 +83,15 @@ module.exports = {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
       },
+      // Claude addition 10/10/24
+      fontSize: {
+        'h1': ['2.5rem', { lineHeight: '1.2', letterSpacing: '0.7rem' }],
+        'h2': ['2rem', { lineHeight: '1.2', letterSpacing: '0.5rem' }],
+        'h3': ['1.75rem', { lineHeight: '1.2', letterSpacing: '0.3rem' }],
+        'h1-sm': ['2rem', { lineHeight: '1.2', letterSpacing: '0.5rem' }],
+        'h2-sm': ['1.75rem', { lineHeight: '1.2', letterSpacing: '0.4rem' }],
+        'h3-sm': ['1.5rem', { lineHeight: '1.2', letterSpacing: '0.3rem' }],
+      },
     },
   },
 

@@ -6,6 +6,7 @@ import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
+import Script from 'next/script';
 import "@/styles/main.css";
 
 export default function RootLayout({
@@ -47,7 +48,8 @@ export default function RootLayout({
           href={`https://fonts.googleapis.com/css?family=Open%20Sans|Oswald:300,400,800`}
           rel="stylesheet"
         />
-        <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'></link>        
+        <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'></link>
+
       </head>
 
       <body suppressHydrationWarning={true}>
@@ -58,6 +60,24 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </Providers>
+
+        {/* Google Analytics. Using nextjs script loading we can load in <body>*/}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-TQ9WZXP0X9"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: 
+            `window.dataLayer = window.dataLayer || [];` +
+            `function gtag(){dataLayer.push(arguments);}` +
+            `gtag('js', new Date());` +
+            `gtag('config', 'G-TQ9WZXP0X9');`,
+          }}
+        />
+
       </body>
     </html>
   );

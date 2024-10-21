@@ -1,7 +1,22 @@
-const theme = require("./src/config/theme.json");
+const fontsTheme = {
+"fonts": {
+  "font_family": {
+    "primary": "open sans",
+    "primary_type": "sans-serif",
+    "secondary": "Oswald",
+    "secondary_type": "sans-serif"
+  },
+  "font_size": {
+    "base": "16",
+    "scale": "1.250"
+  }
+}
+};
 
-let font_base = Number(theme.fonts.font_size.base.replace("px", ""));
-let font_scale = Number(theme.fonts.font_size.scale);
+
+
+let font_base = Number(fontsTheme.fonts.font_size.base.replace("px", ""));
+let font_scale = Number(fontsTheme.fonts.font_size.scale);
 let h6 = font_base / font_base;
 let h5 = h6 * font_scale;
 let h4 = h5 * font_scale;
@@ -13,17 +28,17 @@ let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
 // Here is where this setup pulls out font weight etc.
 // but it does not seem to do anything with it. We may want
 // to add this in the nexjs way ~MP
-if (theme.fonts.font_family.primary) {
-  fontPrimary = theme.fonts.font_family.primary
+if (fontsTheme.fonts.font_family.primary) {
+  fontPrimary = fontsTheme.fonts.font_family.primary
     .replace(/\+/g, " ")
     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
-  fontPrimaryType = theme.fonts.font_family.primary_type;
+  fontPrimaryType = fontsTheme.fonts.font_family.primary_type;
 }
-if (theme.fonts.font_family.secondary) {
-  fontSecondary = theme.fonts.font_family.secondary
+if (fontsTheme.fonts.font_family.secondary) {
+  fontSecondary = fontsTheme.fonts.font_family.secondary
     .replace(/\+/g, " ")
     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
-  fontSecondaryType = theme.fonts.font_family.secondary_type;
+  fontSecondaryType = fontsTheme.fonts.font_family.secondary_type;
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -51,21 +66,21 @@ module.exports = {
     },
     extend: {
       colors: {
-        text: theme.colors.default.text_color.default,
-        light: theme.colors.default.text_color.light,
-        dark: theme.colors.default.text_color.dark,
-        primary: theme.colors.default.theme_color.primary,
-        secondary: theme.colors.default.theme_color.secondary,
-        body: theme.colors.default.theme_color.body,
-        border: theme.colors.default.theme_color.border,
-        "theme-light": theme.colors.default.theme_color.theme_light,
-        "theme-dark": theme.colors.default.theme_color.theme_dark,
+        "text": "#444444",  // => text-default
+        "light": "#717171",  // => text-light
+        "dark": "#272727",  // => text-dark
+        "primary": "#b19777", // => text-primary
+        //secondary: "#000"  // => text-secondary
+
+        "body": "#fff",  // => bg-body
+        "border": "#eaeaea",  // => border-border
+        "theme-light": "#f4f4f4",  // => bg-theme-light
+        "theme-dark": "#fff",  // => bg-theme-dark
+
         'bauen-grey': '#777',
         'bauen-black': '#272727',
         'bauen-brown': '#b19777'
-        
-        //  bauen bg col is #fff plain white
-        
+        //  bauen bg col is #fff plain white        
       },
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],

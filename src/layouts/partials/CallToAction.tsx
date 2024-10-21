@@ -41,7 +41,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
           />
         </div>
         {/* Content panel */}
-        <div className="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light p-12 md:p-16 lg:p-20">
+        <div className="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light p-12 lg:p-16 lg:p-20">
           <h2
             dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
             className="text-h2-sm md:text-h2 mb-6 uppercase"

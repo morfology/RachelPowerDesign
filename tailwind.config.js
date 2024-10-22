@@ -46,9 +46,8 @@ module.exports = {
   // NOTE: important:true + no safelist causes menu fail!!
   ///important: true,  // !important
   content: [
-    "./src/layouts/**/*.{js,ts,jsx,tsx}",
-    "./src/content/**/*.{md,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    // Add any other content sources
   ],
   // safelist: [{ pattern: /^swiper-/ }],
   
@@ -96,6 +95,39 @@ module.exports = {
         'h2-sm': ['1.5rem', { lineHeight: '1.2', letterSpacing: '0.4rem' }],
         'h3-sm': ['1.3rem', { lineHeight: '1.2', letterSpacing: '0.3rem' }],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: 'none', // Remove max-width constraint
+            //"textJustify": { textAlign: "justify" },
+            p: {
+              marginLeft: 0,
+              marginRight: 0,
+            },
+            // Add any other element styles you want to adjust
+          },
+        },
+        mine: {
+          css: {
+            '--tw-prose-body': theme('colors.pink[900]'),
+            '--tw-prose-headings': theme('colors.pink[900]'),
+            '--tw-prose-lead': theme('colors.gray[700]'),
+            '--tw-prose-links': theme('colors.pink[600]'),
+            '--tw-prose-bold': theme('colors.gray[900]'),
+            '--tw-prose-counters': theme('colors.pink[500]'),
+            '--tw-prose-bullets': theme('colors.pink[300]'),
+            '--tw-prose-hr': theme('colors.gray[200]'),
+            '--tw-prose-quotes': theme('colors.gray[900]'),
+            '--tw-prose-quote-borders': theme('colors.pink[300]'),
+            '--tw-prose-captions': theme('colors.gray[500]'),
+            '--tw-prose-code': theme('colors.gray[900]'),
+            '--tw-prose-pre-code': theme('colors.gray[100]'),
+            '--tw-prose-pre-bg': theme('colors.gray[900]'),
+            '--tw-prose-th-borders': theme('colors.gray[300]'),
+            '--tw-prose-td-borders': theme('colors.gray[200]'),
+          },
+        },
+      }),
     },
   },
 

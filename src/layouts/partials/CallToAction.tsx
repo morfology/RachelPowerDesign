@@ -48,7 +48,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
           />
           <p
             dangerouslySetInnerHTML={markdownify(data.frontmatter.description)}
-            className="mb-8"
+            className="mb-8 prose prose-mine"
           />
           {data.frontmatter.button.enable && (
             <Link className="btn btn-primary" href={data.frontmatter.button.link}>

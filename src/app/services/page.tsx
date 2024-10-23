@@ -26,8 +26,8 @@ const Services = () => {
         image={image}
       />
       <PageHeader title={title} />
-      <CallToAction data={ctaProject} />
       <CallToAction data={ctaDesign} />
+      <CallToAction data={ctaProject} />
       <CallToAction data={ctaStyle} />
 
     </>

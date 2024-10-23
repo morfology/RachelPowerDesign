@@ -1,6 +1,7 @@
 ---
 enable: true
-title: "Interior Design"
+# title: "Interior Design"
+title: "Design Services"
 image: "/images/marcia-house/detail-mirror-plants.jpg"
 description: "Are you planning a renovation or just feel that certain aspects of your home or business need a little bit of love?"
 button:

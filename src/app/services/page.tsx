@@ -17,9 +17,13 @@ const Services = () => {
   // Combine the CallToAction data into a single array
   const ctaData = [
     getListPage("sections/call-to-action-design-consult.md"),
-    getListPage("sections/call-to-action-style.md"),
     getListPage("sections/call-to-action-design.md"),
-    getListPage("sections/call-to-action-project.md"),
+    //getListPage("sections/call-to-action-project.md"),
+
+    getListPage("sections/call-to-action-architecture.md"),
+    getListPage("sections/call-to-action-procurement.md"),
+    getListPage("sections/call-to-action-style.md"),
+
   ];
 
   return (

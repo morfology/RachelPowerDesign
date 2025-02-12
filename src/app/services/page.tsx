@@ -13,9 +13,14 @@ const Services = () => {
 
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
-  const ctaStyle = getListPage("sections/call-to-action-style.md");
-  const ctaDesign = getListPage("sections/call-to-action-design.md");
-  const ctaProject = getListPage("sections/call-to-action-project.md");
+
+  // Combine the CallToAction data into a single array
+  const ctaData = [
+    getListPage("sections/call-to-action-design-consult.md"),
+    getListPage("sections/call-to-action-style.md"),
+    getListPage("sections/call-to-action-design.md"),
+    getListPage("sections/call-to-action-project.md"),
+  ];
 
   return (
     <>
@@ -26,10 +31,10 @@ const Services = () => {
         image={image}
       />
       <PageHeader title={title} />
-      <CallToAction data={ctaDesign} />
-      <CallToAction data={ctaProject} />
-      <CallToAction data={ctaStyle} />
-
+      {/* Iterate over the ctaData array to render CallToAction components */}
+      {ctaData.map((cta, index) => (
+        <CallToAction key={index} data={cta} />
+      ))}
     </>
   );
 };

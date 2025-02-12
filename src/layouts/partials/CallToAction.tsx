@@ -41,14 +41,14 @@ const CallToAction = ({ data }: { data: PageData }) => {
           />
         </div>
         {/* Content panel */}
-        <div className="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light p-12 md:p-16 lg:p-20">
+        <div className="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light p-12 lg:p-16">
           <h2
             dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
-            className="text-h2-sm md:text-h2 mb-6 uppercase"
+            className="text-h2-sm md:text-h2 mb-6 uppercase prose prose-headings:font-serif prose-headings:text-blue-800"
           />
           <p
             dangerouslySetInnerHTML={markdownify(data.frontmatter.description)}
-            className="mb-8"
+            className="mb-8 prose prose-mine"
           />
           {data.frontmatter.button.enable && (
             <Link className="btn btn-primary" href={data.frontmatter.button.link}>

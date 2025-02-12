@@ -3,7 +3,7 @@
  */
 
 import ImageFallback from "@/helpers/ImageFallback";
-import { markdownify } from "@/lib/utils/textConverter";
+import { markdownify, multimarkdownify } from "@/lib/utils/textConverter";
 import { Call_to_action } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
@@ -46,10 +46,16 @@ const CallToAction = ({ data }: { data: PageData }) => {
             dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
             className="text-h2-sm md:text-h2 mb-6 uppercase prose prose-headings:font-serif prose-headings:text-blue-800"
           />
-          <p
-            dangerouslySetInnerHTML={markdownify(data.frontmatter.description)}
-            className="mb-8 prose prose-mine"
-          />
+
+          {multimarkdownify(data.frontmatter.description).map((html, index) => (
+            <p
+              key={index}
+              dangerouslySetInnerHTML={html}
+              className="mb-8 prose prose-mine"
+            />
+          ))}
+
+
           {data.frontmatter.button.enable && (
             <Link className="btn btn-primary" href={data.frontmatter.button.link}>
               {data.frontmatter.button.label}

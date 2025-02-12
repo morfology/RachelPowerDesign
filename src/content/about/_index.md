@@ -1,7 +1,7 @@
 ---
 title: "Our Team"
 meta_title: "About"
-description: "this is meta description"
+description: "****** REMOVED *****"
 image: "/images/head-shots/rachel.jpg"
 draft: false
 ---

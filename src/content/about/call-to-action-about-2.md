@@ -2,7 +2,8 @@
 enable: true
 title: "Our Approach"
 image: "/images/lodge-hill/freyas-room-2.jpg"
-description: "At Rachel Power Design we specialise in residential interiors & events for both private clients and developers but also offer a commercial project service.  In both cases we offer a full bespoke service ranging from basic room styling to full project design and management."
+description: "Everything at Rachel Power Design is built on relationships and these are our main priority.  From our handpicked collection of skilled trades, artisans and craft people to the close bond we build with our clients every relationship matters and is a fundamental part of our success.
+|We believe that every project needs to start with a conversation.  To understand a clients vision we need to get to know them, their lifestyle and passions and what inspires them.  It is important we understand all of this to ensure we present ideas and designs which work for each individual client providing a fully bespoke solution."
 button:
   enable: false
   label: "Get Started Now"

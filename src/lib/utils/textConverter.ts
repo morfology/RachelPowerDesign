@@ -14,6 +14,14 @@ export const markdownify = (content: string, div?: boolean) => {
   return { __html: markdownContent };
 };
 
+// multimarkdownify
+export const multimarkdownify = (content: string, div?: boolean) => {
+  return content.split('|').map(paragraph => ({
+    __html: div ? marked.parse(paragraph) : marked.parseInline(paragraph)
+  }));
+};
+
+
 // humanize
 export const humanize = (content: string) => {
   return content

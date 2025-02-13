@@ -1,5 +1,5 @@
 ---
-title: "Horsham Home Refurbishment"
+title: "Horsham"
 folder: horsham
 internal: "Horsham Jack and Amy"
 meta_title: ""
@@ -12,8 +12,7 @@ tags: ["West Sussex", "Horsham"]
 draft: false
 ---
 
-Embarking on an extensive refurbishment journey for Jack and Amy in Horsham was a captivating experience. Our team dedicated meticulous attention to detail, transforming their residence into a haven of modern elegance and functional charm.
+Contemporary, understated style was the brief from our clients in Horsham.  Focusing on a neutral colour palette we combined textures and materials to create a cosy environment which provides the perfect balance of sophistication and comfort.  Colour also had a part to play in the overall scheme with a concise collection of colours being integrated into the designs.
 
-The heart of the refurbishment lies in the seamless integration of contemporary design elements, creating a home that resonates with Jack and Amy's lifestyle. The revitalized spaces boast a perfect balance of sophistication and comfort, achieved through a careful selection of materials and color palettes. Customized solutions, such as bespoke storage and innovative layouts, enhance the functionality of each room.
 
 > Absolutely thrilled with how our home was transformed!

@@ -1,5 +1,5 @@
 ---
-title: "Design Gallery"
+title: "Style Gallery"
 meta_title: ""
 description: "this is meta description"
 draft: false

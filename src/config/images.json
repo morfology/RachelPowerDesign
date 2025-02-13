@@ -12,10 +12,15 @@
   { "image": "/images/field-view/detail-style-3.jpg" },
   { "image": "/images/field-view/detail-corkboard.jpg" },
   { "image": "/images/field-view/detail-style-2.jpg" },
+
+
+  { "image": "/images/larkfield/cabinet.jpg" },
   { "image": "/images/larkfield/detail-cabinet.jpg" },
   { "image": "/images/larkfield/detail-plant.jpg" },
   { "image": "/images/larkfield/detail-seat.jpg" },
   { "image": "/images/larkfield/detail-lightbulb.jpg" },
+
+
   { "image": "/images/lodge-hill/detail-container.jpg" },
   { "image": "/images/lodge-hill/detail-plants.jpg" },
   { "image": "/images/lodge-hill/detail-chair.jpg" },
@@ -35,6 +40,9 @@
   { "image": "/images/marcia-house/detail-plants.jpg" },
   { "image": "/images/marcia-house/detail-mirror-plants.jpg" },
   { "image": "/images/marcia-house/lighting-detail-1.jpg" },
+  { "image": "/images/marcia-house/living-1.jpg" },
+
+ 
 
   { "image": "/images/chipstead/detail-wardrobe.jpg" },
   { "image": "/images/chipstead/tv-room-2.jpg" },

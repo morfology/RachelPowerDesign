@@ -1,15 +1,20 @@
 ---
-title: "Marcia House"
+title: "Farnham"
+folder: marcia-house
 meta_title: ""
-description: "Home Refurbishment"
+description: "Family Home Extension & Renovation"
 date: 2023-03-03T05:00:00Z
 image: "/images/marcia-house/living-1.jpg"
-categories: ["Extension", "Refurbishment"]
+categories: ["Extension", "Renovation"]
 author: "Rachel Power"
-tags: ["surrey", "Farnham"]
+tags: ["Surrey", "Farnham"]
 draft: false
+
+# Add this to main content for testimonial
+# > Absolutely thrilled with how our home was transformed!
 ---
 
-The heart of the refurbishment lies in the seamless integration of contemporary design elements, creating a home that resonates with Jack and Amy's lifestyle. The revitalized spaces boast a perfect balance of sophistication and comfort, achieved through a careful selection of materials and color palettes. Customized solutions, such as bespoke storage and innovative layouts, enhance the functionality of each room.
+A melting pot of cultures and tastes this home
+Marrying the tastes of these international clients we created a warm, sophisticated and inviting home that blended different elements of taste and culture.  The two storey extension and house renovation created a spacious home with light filled rooms perfect for entertaining and enjoying family life.
 
-> Absolutely thrilled with how our home was transformed!
+

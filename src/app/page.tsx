@@ -5,6 +5,7 @@ import { Button } from "@/types";
 import Link from "next/link";
 import ImageFallback from "@/helpers/ImageFallback";
 import Image from "next/image";
+import CallToAction from "@/partials/CallToAction";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -14,6 +15,22 @@ const Home = () => {
   }: {
     banner: { title: string; image: string; content?: string; button?: Button };
   } = frontmatter;
+
+
+  // Combine the CallToAction data into a single array
+  const ctaData = [
+    // getListPage("sections/call-to-action-design-consult.md"),
+    // getListPage("sections/call-to-action-design.md"),
+    // getListPage("sections/call-to-action-architecture.md"),
+    // getListPage("sections/call-to-action-procurement.md"),
+    getListPage("homepage/call-to-action-intro.md"),
+
+  ];
+
+
+
+
+
 
   return (
     <>
@@ -52,8 +69,18 @@ const Home = () => {
         </div>
       </div>
 
+
+      {/* Iterate over the ctaData array to render CallToAction components */}
+      {ctaData.map((cta, index) => (
+        <CallToAction key={index} data={cta} />
+      ))}
+
+
+
+
+
       {/* "banner" markup is used here */}
-      <section className="section pt-14">
+      {/* <section className="section pt-14">
         <div className="container">
           <div className="row justify-center">
             <div className="lg:col-7 md:col-9 mb-8 text-center">
@@ -92,7 +119,7 @@ const Home = () => {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
 
 
     </>

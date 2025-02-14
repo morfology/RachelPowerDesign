@@ -1,15 +1,16 @@
+"use client";
 /**
  * Gallery
  */
-import { getListPage } from "@/lib/contentParser";
-import PageHeader from "@/partials/PageHeader";
-import SeoMeta from "@/partials/SeoMeta";
+//import { getListPage } from "@/lib/contentParser";
 import { RegularPage } from "@/types";
 import imageConfig from "@/config/images.json";
+import Grid from "@/lib/Grid"
 
 // for all regular pages
 const Gallery = () => {
 
+  /*
   const pageData: RegularPage = getListPage("gallery/_index.md");
   const { title, meta_title, description, image } = pageData.frontmatter;
 
@@ -24,34 +25,15 @@ const Gallery = () => {
 const dividedArrays = divideArrayIntoFour(data);
 
 //console.log(dividedArrays);
-
+*/
 
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
-      <PageHeader title={pageData.frontmatter.title} />
-      <section className="section">
-        <div className="container">
-
-
-
-
-          {/* Initial Content */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card data={dividedArrays[0]}/>
-            <Card data={dividedArrays[1]}/>
-            <Card data={dividedArrays[2]}/>
-            <Card data={dividedArrays[3]}/>
-          </div>
-        </div>
-      </section>
-    </>
+    <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
+      <h1 style={{ textAlign: "center" }}>Infinite Scroll Grid</h1>
+      <Grid />
+    </div>    </>
   );
 };
 

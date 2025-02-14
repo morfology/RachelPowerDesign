@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import path from "path";
 
 const contentPath = "src/content";
+const appPath = "src/app";
+
 
 // Helper function to read file content
 const readFile = (filePath: string) => {
@@ -32,6 +34,26 @@ export const getListPage = (filePath: string) => {
     content,
   };
 };
+
+// get list page data, ex: _index.md
+export const getListPageApp = (filePath: string) => {
+  const pageDataPath = path.join(appPath, filePath);
+
+  if (!fs.existsSync(pageDataPath)) {
+    notFound();
+  }
+
+  const pageData = readFile(pageDataPath);
+  const { content, data: frontmatter } = matter(pageData);
+
+  return {
+    frontmatter: parseFrontmatter(frontmatter),
+    content,
+  };
+};
+
+
+
 
 // get all single pages, ex: blog/post.md
 export const getSinglePage = (folder: string) => {

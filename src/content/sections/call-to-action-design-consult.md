@@ -7,5 +7,5 @@ description: "If you have ideas of what you would like to do in your home but ar
 button:
   enable: true
   label: "More Details"
-  link: "/services"
+  link: "/services/design-consultation"
 ---

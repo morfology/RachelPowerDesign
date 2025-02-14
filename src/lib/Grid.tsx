@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import imageConfig from "@/config/images.json"; // Importing larger image list
 

@@ -4,6 +4,8 @@ meta_title: ""
 description: "this is meta description"
 draft: false
 ---
-Some info
-
+Some *info*
+- some bullets
 Some more
+
+### Heading

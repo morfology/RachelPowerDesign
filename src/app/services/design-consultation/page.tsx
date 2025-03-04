@@ -1,19 +1,13 @@
-import ImageFallback from "@/helpers/ImageFallback";
 import MDXContent from "@/helpers/MDXContent";
 import { getListPage, getListPageApp } from "@/lib/contentParser";
-import { markdownify } from "@/lib/utils/textConverter";
-import SeoMeta from "@/partials/SeoMeta";
-import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
-import CallToAction from "@/partials/CallToAction";
+import SeoMeta from "@/partials/SeoMeta";
 
-const Services = () => {
+export default () => {
 
   const data = getListPageApp("services/design-consultation/_index.md");
-
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
-
 
   return (
     <>
@@ -24,8 +18,18 @@ const Services = () => {
         image={image}
       />
       <PageHeader title={title} />
+
+      <section className="section pt-7">
+        <div className="container">
+          <div className="row justify-center">
+            <article className="lg:col-10">
+              <div className="content mb-10">
+                <MDXContent content={content} />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </>
   );
-};
-
-export default Services;
+}

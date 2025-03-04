@@ -1,11 +1,11 @@
 import MDXContent from "@/helpers/MDXContent";
-import { getListPage, getListPageApp } from "@/lib/contentParser";
+import { getListPage } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
 
 export default () => {
 
-  const data = getListPageApp("services/design-consultation/_index.md");
+  const data = getListPage("services/design-consultation/_index.md");
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
 

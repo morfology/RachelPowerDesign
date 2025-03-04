@@ -20,7 +20,12 @@ const parseFrontmatter = (frontmatter: any) => {
 
 // get list page data, ex: _index.md
 export const getListPage = (filePath: string) => {
-  const pageDataPath = path.join(contentPath, filePath);
+  let pageDataPath = path.join(contentPath, filePath);
+
+  // Fallback base for pages is the "app" folder
+  if (!fs.existsSync(pageDataPath)) {
+    pageDataPath = path.join(appPath, filePath);
+  }
 
   if (!fs.existsSync(pageDataPath)) {
     notFound();
@@ -33,27 +38,7 @@ export const getListPage = (filePath: string) => {
     frontmatter: parseFrontmatter(frontmatter),
     content,
   };
-};
-
-// get list page data, ex: _index.md
-export const getListPageApp = (filePath: string) => {
-  const pageDataPath = path.join(appPath, filePath);
-
-  if (!fs.existsSync(pageDataPath)) {
-    notFound();
-  }
-
-  const pageData = readFile(pageDataPath);
-  const { content, data: frontmatter } = matter(pageData);
-
-  return {
-    frontmatter: parseFrontmatter(frontmatter),
-    content,
-  };
-};
-
-
-
+}
 
 // get all single pages, ex: blog/post.md
 export const getSinglePage = (folder: string) => {

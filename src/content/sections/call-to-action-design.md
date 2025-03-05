@@ -12,5 +12,5 @@ Our interior design service works on the basis of providing a full design pack t
 button:
   enable: true
   label: "More Information"
-  link: "/contact"
+  link: "/services/interior-design/"
 ---

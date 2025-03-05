@@ -46,7 +46,6 @@ export default ({ params }: { params: { single: string } }) => {
         image={image}
       />
       <PageHeader title={title} />
-      ZZZ
       <section className="section">
         <div className="container">
           <div className="content">

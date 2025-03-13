@@ -7,12 +7,12 @@
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "next dev",
-    "build": "echo 'starting RPD build' && yarn generate-json && next build",
+    "build": "echo 'starting RPD build' && echo $NODE_OPTIONS && yarn generate-json && next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "format": "prettier -w ./src",
-    "start": "npm run build && next start -p 80",
+    "start": "NODE_OPTIONS='--max-old-space-size=512' npm run build && next start -p 80",
     "generate-json": "node scripts/jsonGenerator.js"
   },
   "dependencies": {

@@ -12,7 +12,7 @@
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "format": "prettier -w ./src",
-    "start": "NODE_OPTIONS='--max-old-space-size=512' npm run build && next start -p 80",
+    "start": "NODE_OPTIONS='--max-old-space-size=312' npm run build && next start -p 80",
     "generate-json": "node scripts/jsonGenerator.js"
   },
   "dependencies": {

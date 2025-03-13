@@ -12,7 +12,7 @@
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "format": "prettier -w ./src",
-    "prod_start": "npm run build && next start -p 3001",
+    "start": "npm run build && next start -p 80",
     "generate-json": "node scripts/jsonGenerator.js"
   },
   "dependencies": {

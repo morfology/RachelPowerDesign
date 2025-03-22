@@ -6,6 +6,7 @@ import Link from "next/link";
 import ImageFallback from "@/helpers/ImageFallback";
 import Image from "next/image";
 import CallToAction from "@/partials/CallToAction";
+import config from "@/config/config.json";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -57,13 +58,28 @@ const Home = () => {
 
 
         {/**** Big Hero Text and strapline */}
-        <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-          <h1 className="mb-4 text-7xl leading-tight text-theme-light"
+        <div style={{ color: 'red' }} className="relative z-10 flex flex-col justify-center items-center h-full text-center text-theme-light">
+          {/* <h1 className="mb-4 text-7xl leading-tight text-theme-light"
             dangerouslySetInnerHTML={markdownify(banner.title)}
-          />
-          {/* <p className="text-lg text-gray-300 mb-8 max-w-prose"
-            dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
-            /> */}
+          /> */}
+
+
+<div style={{ color: 'green' }}>
+  123
+<Image
+          width={800}
+          height={300}
+          src={config.site.logo}
+          alt={'test'}
+          
+          priority
+          
+        
+        />
+</div>
+
+
+
         </div>
       </div>
 

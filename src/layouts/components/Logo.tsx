@@ -35,7 +35,7 @@ const Logo = ({ src }: { src?: string }) => {
         <Image
           width={logo_width.replace("px", "") * 2}
           height={logo_height.replace("px", "") * 2}
-          src={logoPath}
+          src={logoPath + ''}
           alt={title}
           priority
           style={{

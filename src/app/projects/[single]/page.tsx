@@ -91,7 +91,23 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
               <div className="content mb-10">
                 <MDXContent content={content} />
               </div>
-              <div className="row items-start justify-between">
+
+              <div className=" mb-10">
+              
+                    {categories?.map((cat: string) => (
+                      <div key={cat} className="inline-block">
+                        <Link
+                          className="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white   "
+                          href={`/categories/${slugify(cat)}`}
+                        >
+                          {humanize(cat)}
+                        </Link>
+                      </div>
+                    ))}
+              </div>
+
+
+              {/* <div className="row items-start justify-between">
                 <div className="mb-10 flex items-center lg:col-5 lg:mb-0">
                   <h5 className="mr-3">Tags :</h5>
                   <ul>
@@ -107,7 +123,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </article>
           </div>
         </div>

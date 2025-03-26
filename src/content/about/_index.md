@@ -5,13 +5,8 @@ description: "****** REMOVED *****"
 image: "/images/head-shots/rachel.jpg"
 draft: false
 ---
-
-Based in Surrey Rachel Power Design is a design & build co-ordination company offering a comprehensive interior & event design and styling service across the Uk.  
-
-
-
-The business was born out of Rachel's passion for design, interiors and entertaining plus her desire to make stylish living accessible to everyone.  Coming from a background in accessory design & with experience in hospitality & events, Rachel retrained in interiors a few years ago and has now set up her own design practice combining all of her passions and years of knowledge and experience.
-
-At Rachel Power Design we specialise in residential interiors & events for both private clients and developers but also offer a commercial project service.  In both cases we offer a full bespoke service ranging from basic room styling to full project design and management.
+<Testimonial>
+We found Rachel on Google like many, but after our first meeting I knew she totally got what we were after. If you are looking for a friendly, creative, detailed perfectionist of a designer - then look no further. Rachel got our style straight away, seeing that we wanted a stylish but practical home for a family with young children. And my goodness she delivered.
+</Testimonial>
 
 

@@ -5,11 +5,11 @@ meta_title: ""
 description: "Family Home Refresh"
 date: 2023-03-03T05:00:00Z
 image: "/images/larkfield/detail-plant.jpg"
-categories: ["Refresh"]
+categories: ["Family Home Refresh"]
 author: "Rachel Power"
 tags: ["surrey", "Farnham"]
 draft: false
 #> Absolutely thrilled with how our home was transformed!
 ---
 
-This is one of a number of new build properties we have updated to help create a home.  Our brief here was to add personality to the ground floor of this Farnham home which had been newly built.  With the addition of new furniture pieces, lighting and a range of accessories and artwork we created the perfect balance between old and new.  The end result was a home full of personality and perfect for family nights and fun with friends.
+Our brief here was to add personality to the ground floor of this Farnham home which had been newly built.  With the addition of new furniture pieces, lighting and a range of accessories and artwork we created the perfect balance between old and new.  The end result was a home full of personality and perfect for family nights and fun with friends.

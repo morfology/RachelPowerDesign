@@ -174,7 +174,7 @@
   @apply prose-img:max-w-full prose-img:rounded;
   @apply prose-hr:border-border;
   @apply prose-p:text-base prose-p:text-text;
-  @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-[10px] prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:font-secondary prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-dark;
+  @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-[10px] prose-blockquote:border-primary prose-blockquote:bg-theme-light prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:font-primary prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-dark;
   @apply prose-pre:rounded-lg prose-pre:bg-theme-light;
   @apply prose-code:px-1 prose-code:text-primary;
   @apply prose-strong:text-dark;

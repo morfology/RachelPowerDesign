@@ -149,17 +149,13 @@ window.addEventListener("load", (e) => {
   This is a simple note.
 </Notice>
 
-<Notice type="tip">
-  This is a simple note.
-</Notice>
+---
 
-<Notice type="info">
-  This is a simple note.
-</Notice>
+### Testimonial
 
-<Notice type="warning">
-  This is a simple note.
-</Notice>
+<Testimonial link="https://www.bbc.co.uk">
+  This is a simple testimonial.
+</Testimonial>
 
 ---
 

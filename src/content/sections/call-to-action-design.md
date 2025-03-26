@@ -9,6 +9,6 @@ Our interior design service works on the basis of providing a full design pack t
 "
 button:
   enable: true
-  label: "More Information"
+  label: "More Details"
   link: "/services/interior-design/"
 ---

@@ -53,10 +53,10 @@ A detailed breakdown of all build costs including labour and material will be pr
 
 The design and build team will work together to manage the final phase.  This process will include:
 
-Placing and overseeing orders, storage and handling
-Site clearance
-Setting out of furniture
-Installation management and room dressing
+- Placing and overseeing orders, storage and handling
+- Site clearance
+- Setting out of furniture
+- Installation management and room dressing
 
 
 

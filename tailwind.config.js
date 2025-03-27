@@ -68,12 +68,12 @@ module.exports = {
         "text": "#444444",  // => text-default
         "light": "#717171",  // => text-light
         "dark": "#272727",  // => text-dark
-        "primary": "#b19777", // => text-primary
+        "primary": "rgb(174, 184, 155)", //"#717171", // => text-primary
         //secondary: "#000"  // => text-secondary
 
         "body": "#fff",  // => bg-body
         "border": "#eaeaea",  // => border-border
-        "theme-light": "#f4f4f4",  // => bg-theme-light
+        "theme-light": "#f1f1f1",  // => bg-theme-light
         "theme-dark": "#fff",  // => bg-theme-dark
 
         'bauen-grey': '#777',

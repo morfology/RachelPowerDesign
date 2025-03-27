@@ -11,7 +11,7 @@ const PageHeader = ({ title }: { title: string }) => {
     <section>
       <div className="container text-center">
         <div className="rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14  ">
-          <h1>{firstWords}<span className="text-bauen-brown"> {lastWord}</span></h1>
+          <h1>{firstWords}<span className="text-primary"> {lastWord}</span></h1>
         </div>
       </div>
     </section>

@@ -77,8 +77,8 @@ module.exports = {
         "theme-dark": "#fff",  // => bg-theme-dark
 
         'bauen-grey': '#777',
-        'bauen-black': '#272727',
-        'bauen-brown': '#b19777'
+        //'bauen-black': '#272727',
+        //'bauen-brown': '#b19777'
         //  bauen bg col is #fff plain white        
       },
       fontFamily: {

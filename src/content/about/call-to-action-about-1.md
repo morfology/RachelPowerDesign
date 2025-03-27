@@ -1,6 +1,6 @@
 ---
 enable: true
-title: "About Us"
+title: "Our Team"
 image: "/images/head-shots/rachel.jpg"
 # Following a successful career in fashion, Rachel retrained in interior design.  Combining all of her passions and years of knowledge and experience Rachel set up her own design practice specialising in residential interiors and events for both private clients and developers.
 # Our services are fully comprehensive and cover all aspects of home design and build, 

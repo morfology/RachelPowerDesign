@@ -1,5 +1,5 @@
 ---
-title: "Our Team"
+title: "About"
 meta_title: "About"
 description: "****** REMOVED *****"
 image: "/images/head-shots/rachel.jpg"

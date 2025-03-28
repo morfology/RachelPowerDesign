@@ -85,7 +85,7 @@ const Contact = () => {
 
 
       <Formik
-        initialValues={{ name: "", email: "m@xx.com" }}
+        initialValues={{ name: "", email: "m@xx.com", message: "" }}
         onSubmit={async (values) => {
           await new Promise((resolve) => setTimeout(resolve, 500));
           alert(JSON.stringify(values, null, 2));
@@ -109,7 +109,7 @@ const Contact = () => {
               <input type="text" id="name" 
                 onChange={handleChange}
                 value={values.name}
-                className="appearance-none block w-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                className="form-input" 
                 placeholder="Your name" required />
             </div>
 
@@ -118,71 +118,23 @@ const Contact = () => {
               <input type="email" id="email" 
                 onChange={handleChange}
                 value={values.email}
-                className="appearance-none block w-full py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                className="form-input" 
                 placeholder="name@company.com" required />
+            </div>
+
+            <div className="mb-5">
+              <label className="form-label" htmlFor="grid-first-name">Message</label>
+              <textarea id="message" 
+                onChange={handleChange}
+                value={values.message}
+                className="form-input" 
+                placeholder="Your message" required />
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
           </Form>
 
         )}
       </Formik>
-
-
-      <section className="section-sm">
-        <div className="container">
-          <div className="row">
-            <div className="mx-auto md:col-10 lg:col-6">
-
-
-              <div className="App">
-                <h1>Contact Us</h1>
-                <Formik
-                  initialValues={{ name: "", email: "" }}
-                  onSubmit={async (values) => {
-                    await new Promise((resolve) => setTimeout(resolve, 500));
-                    alert(JSON.stringify(values, null, 2));
-                  }}
-                >
-                  <Form>
-
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                      First Name
-                    </label>
-                    <Field name="name" type="text" />
-
-                    <div className="w-full md:w-1/2 px-3">
-                      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                        First Name
-                      </label>
-                      <Field name="name" type="text" />
-                    </div>
-
-
-
-                    <div className="w-full md:w-1/2 px-3">
-                      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                        Last Name
-                      </label>
-                      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" />
-                    </div>
-
-
-                    <Field name="email" type="email" />
-                    <button type="submit" className="btn btn-primary">Submit</button>
-
-
-
-
-
-
-
-                  </Form>
-                </Formik>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };

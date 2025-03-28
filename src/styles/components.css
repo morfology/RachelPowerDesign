@@ -25,7 +25,9 @@
 }
 
 .form-input  {
-  @apply uppercase;
+  @apply appearance-none block w-full py-3 px-4 leading-tight focus:outline-none
+   focus:bg-white focus:border-gray-500
+   ;
 }
 
 /* // social icons */

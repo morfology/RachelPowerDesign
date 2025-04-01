@@ -1,25 +1,20 @@
 "use client";
 import PageHeader from "@/partials/PageHeader";
-import ReactDOM from "react-dom";
-import { Formik, Field, Form } from "formik";
+import { Formik, Form } from "formik";
+import { useState } from "react";
 
 const Contact = () => {
-
-  const contact_form_action = 'https://form-handler-production.up.railway.app/submit-form'
+  const contact_form_action = "https://form-handler-production.up.railway.app/submit-form"
+  const [status, setStatus] = useState(null); // Track submission status
 
   return (
     <>
-      <PageHeader title={'Contact Us'} />
+      <PageHeader title={"Contact Us"} />
 
       <Formik
-        initialValues={{ name: "", email: "m@xx.com", message: "" }}
-        onSubmit={async (values) => {
-
-          console.log('submit')
-
-          await new Promise((resolve) => setTimeout(resolve, 500));
-          alert(JSON.stringify(values, null, 2));
-
+        initialValues={{ name: "", email: "", message: "" }}
+        onSubmit={async (values, { resetForm }) => {
+          setStatus(null); // Reset status before new submission
 
           try {
             const response = await fetch(contact_form_action, {
@@ -31,54 +26,74 @@ const Contact = () => {
             });
 
             console.log(response)
-
+            
+            if (response.ok) {
+              setStatus("success");
+              resetForm(); // Clear form after successful submission
+            } else {
+              setStatus("error");
+            }
           } catch (err) {
             console.error(err);
+            setStatus("error");
           }
         }}
       >
-
-        {({
-          handleChange,
-          values,
-          // touched,
-          // errors,
-          // handleBlur,
-          // handleSubmit,
-          // isSubmitting,
-        }) => (
-
-          <Form className="max-w-sm mx-auto" action="/action_page.php">
-
+        {({ handleChange, values }) => (
+          <Form className="max-w-sm mx-auto">
             <div className="mb-5">
-              <label className="form-label" htmlFor="grid-first-nam">Name</label>
-              <input type="text" id="name"
+              <label className="form-label" htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
                 onChange={handleChange}
                 value={values.name}
                 className="form-input"
-                placeholder="Your name" required />
+                placeholder="Your name"
+                required
+              />
             </div>
 
             <div className="mb-5">
-              <label className="form-label" htmlFor="grid-first-name">Email</label>
-              <input type="email" id="email"
+              <label className="form-label" htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
                 onChange={handleChange}
                 value={values.email}
                 className="form-input"
-                placeholder="name@company.com" required />
+                placeholder="name@company.com"
+                required
+              />
             </div>
 
             <div className="mb-5">
-              <label className="form-label" htmlFor="grid-first-name">Message</label>
-              <textarea id="message"
+              <label className="form-label" htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
                 onChange={handleChange}
                 value={values.message}
                 className="form-input"
-                placeholder="Your message" required />
+                placeholder="Your message"
+                required
+              />
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </Form>
 
+            <button type="submit" className="btn btn-primary">Submit</button>
+
+            {/* Success Message */}
+            {status === "success" && (
+              <p className="mt-4 text-green-500">Message sent successfully!</p>
+            )}
+
+            {/* Error Message */}
+            {status === "error" && (
+              <p className="mt-4 text-red-500">Something went wrong. Please try again.</p>
+            )}
+          </Form>
         )}
       </Formik>
     </>

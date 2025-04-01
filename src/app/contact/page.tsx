@@ -5,7 +5,8 @@ import { useState } from "react";
 
 const Contact = () => {
   const contact_form_action = "https://form-handler-production.up.railway.app/submit-form"
-  const [status, setStatus] = useState(null); // Track submission status
+  type StatusType = "success" | "error" | null;
+  const [status, setStatus] = useState<StatusType>(null); // Track submission status
 
   return (
     <>

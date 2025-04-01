@@ -1,73 +1,101 @@
-import config from "@/config/config.json";
-import { getListPage } from "@/lib/contentParser";
+"use client";
 import PageHeader from "@/partials/PageHeader";
-import SeoMeta from "@/partials/SeoMeta";
-import { RegularPage } from "@/types";
+import { Formik, Form } from "formik";
+import { useState } from "react";
 
-const Contact = async () => {
-  const data: RegularPage = getListPage("contact/_index.md");
-  const { frontmatter } = data;
-  const { title, description, meta_title, image } = frontmatter;
-  const { contact_form_action } = config.params;
+const Contact = () => {
+  const contact_form_action = "https://form-handler-production.up.railway.app/submit-form"
+  const [status, setStatus] = useState(null); // Track submission status
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
-      <PageHeader title={title} />
-      <section className="section-sm">
-        <div className="container">
-          <div className="row">
-            <div className="mx-auto md:col-10 lg:col-6">
-              <form action={contact_form_action} method="POST">
-                <div className="mb-6">
-                  <label htmlFor="name" className="form-label">
-                    Full Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    className="form-input"
-                    placeholder="John Doe"
-                    type="text"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="email" className="form-label">
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    className="form-input"
-                    placeholder="john.doe@email.com"
-                    type="email"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="message" className="form-label">
-                    Message <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className="form-input"
-                    placeholder="Message goes here..."
-                    rows={8}
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </form>
+      <PageHeader title={"Contact Us"} />
+
+      <Formik
+        initialValues={{ name: "", email: "", message: "" }}
+        onSubmit={async (values, { resetForm }) => {
+          setStatus(null); // Reset status before new submission
+
+          try {
+            const response = await fetch(contact_form_action, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams(values).toString(),
+            });
+
+            console.log(response)
+            
+            if (response.ok) {
+              setStatus("success");
+              resetForm(); // Clear form after successful submission
+            } else {
+              setStatus("error");
+            }
+          } catch (err) {
+            console.error(err);
+            setStatus("error");
+          }
+        }}
+      >
+        {({ handleChange, values }) => (
+          <Form className="max-w-sm mx-auto">
+            <div className="mb-5">
+              <label className="form-label" htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                onChange={handleChange}
+                value={values.name}
+                className="form-input"
+                placeholder="Your name"
+                required
+              />
             </div>
-          </div>
-        </div>
-      </section>
+
+            <div className="mb-5">
+              <label className="form-label" htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                onChange={handleChange}
+                value={values.email}
+                className="form-input"
+                placeholder="name@company.com"
+                required
+              />
+            </div>
+
+            <div className="mb-5">
+              <label className="form-label" htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                onChange={handleChange}
+                value={values.message}
+                className="form-input"
+                placeholder="Your message"
+                required
+              />
+            </div>
+
+            <button type="submit" className="btn btn-primary">Submit</button>
+
+            {/* Success Message */}
+            {status === "success" && (
+              <p className="mt-4 text-green-500">Message sent successfully!</p>
+            )}
+
+            {/* Error Message */}
+            {status === "error" && (
+              <p className="mt-4 text-red-500">Something went wrong. Please try again.</p>
+            )}
+          </Form>
+        )}
+      </Formik>
     </>
   );
 };

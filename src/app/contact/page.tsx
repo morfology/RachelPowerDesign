@@ -1,29 +1,14 @@
 "use client";
-//import config from "@/config/config.json";
-//import { getListPage } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
-//import SeoMeta from "@/partials/SeoMeta";
-//import { RegularPage } from "@/types";
-//import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
 
 const Contact = () => {
-  //const data: RegularPage = getListPage("contact/_index.md");
-  // const { frontmatter } = data;
-  // const { title, description, meta_title, image } = frontmatter;
-  // const { contact_form_action } = config.params;
 
   const contact_form_action = 'https://form-handler-production.up.railway.app/submit-form'
 
   return (
     <>
-      {/* <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      /> */}
       <PageHeader title={'Contact Us'} />
 
       <Formik

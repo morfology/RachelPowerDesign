@@ -14,7 +14,7 @@ const Contact = () => {
   // const { title, description, meta_title, image } = frontmatter;
   // const { contact_form_action } = config.params;
 
-  const contact_form_action = 'a'
+  const contact_form_action = 'https://form-handler-production.up.railway.app/submit-form'
 
   return (
     <>
@@ -26,69 +26,30 @@ const Contact = () => {
       /> */}
       <PageHeader title={'Contact Us'} />
 
-{/* 
-      <div>
-        <h1>Anywhere in your app!</h1>
-        <Formik
-          initialValues={{ email: '1234', password: '' }}
-          validate={values => {
-            const errors = {};
-            if (!values.email) {
-              errors.email = 'Required';
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = 'Invalid email address';
-            }
-            return errors;
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-          }) => (
-            <form onSubmit={handleSubmit}>
-              <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              {errors.email && touched.email && errors.email}
-              <input
-                type="password"
-                name="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />
-              {errors.password && touched.password && errors.password}
-              <button type="submit" disabled={isSubmitting}>
-                Submit
-              </button>
-            </form>
-          )}
-        </Formik>
-      </div> */}
-
-
       <Formik
         initialValues={{ name: "", email: "m@xx.com", message: "" }}
         onSubmit={async (values) => {
+
+          console.log('submit')
+
           await new Promise((resolve) => setTimeout(resolve, 500));
           alert(JSON.stringify(values, null, 2));
+
+
+          try {
+            const response = await fetch(contact_form_action, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams(values).toString(),
+            });
+
+            console.log(response)
+
+          } catch (err) {
+            console.error(err);
+          }
         }}
       >
 
@@ -102,32 +63,32 @@ const Contact = () => {
           // isSubmitting,
         }) => (
 
-          <Form className="max-w-sm mx-auto">
+          <Form className="max-w-sm mx-auto" action="/action_page.php">
 
             <div className="mb-5">
               <label className="form-label" htmlFor="grid-first-nam">Name</label>
-              <input type="text" id="name" 
+              <input type="text" id="name"
                 onChange={handleChange}
                 value={values.name}
-                className="form-input" 
+                className="form-input"
                 placeholder="Your name" required />
             </div>
 
             <div className="mb-5">
               <label className="form-label" htmlFor="grid-first-name">Email</label>
-              <input type="email" id="email" 
+              <input type="email" id="email"
                 onChange={handleChange}
                 value={values.email}
-                className="form-input" 
+                className="form-input"
                 placeholder="name@company.com" required />
             </div>
 
             <div className="mb-5">
               <label className="form-label" htmlFor="grid-first-name">Message</label>
-              <textarea id="message" 
+              <textarea id="message"
                 onChange={handleChange}
                 value={values.message}
-                className="form-input" 
+                className="form-input"
                 placeholder="Your message" required />
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>

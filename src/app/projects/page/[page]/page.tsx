@@ -5,7 +5,6 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
-import PostSidebar from "@/partials/PostSidebar";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 

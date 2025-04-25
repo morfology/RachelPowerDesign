@@ -12,7 +12,7 @@ import Image from "next/image";
 
 
 // Our custom button component
-import SliderButtons from "./SliderButtons";
+// import SliderButtons from "./SliderButtons";
 
 interface Slide {
   id: number;
@@ -60,8 +60,28 @@ export default DemoSlider;
 
 
 
-// Old <SwiperSlide:
+// SliderButton code:
+// import React from "react";
+// interface ButtonProps {
+//   id: number;
+//   text: string;
+//   link: string;
+//   type: string;
+// }
+//
+// const SliderButtons: React.FC<{ buttons: ButtonProps[] }> = ({ buttons }) => {
+//   return buttons.map(({ id, link, text }) => (
+//     <a target="_blank" key={id} href={link}>
+//       <span>{text}</span>
+//     </a>
+//   ));
+// };
+//
+// export default SliderButtons;
 
+
+
+// Old <SwiperSlide:
 //     <div
 //       className="h-full w-full absolute left-0 top-0"
 //       style={{
@@ -86,3 +106,5 @@ export default DemoSlider;
 //         ) : null}
 //       </div>
 //     </div>
+
+

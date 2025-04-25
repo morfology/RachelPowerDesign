@@ -25,7 +25,6 @@ const SeoMeta = ({
 
   return (
     <>
-      {/* title */}
       <title>
         {plainify(meta_title ? meta_title : title ? title : config.site.title)}
       </title>
@@ -42,14 +41,15 @@ const SeoMeta = ({
         content={plainify(description ? description : meta_description)}
       />
 
-      {/* author from config.json */}
       <meta name="author" content={meta_author} />
 
-      {/* og-title */}
+      {/* og stuff */}
+
       <meta
         property="og:title"
         content={plainify(
-          meta_title ? meta_title : title ? title : config.site.title,
+          meta_title ? meta_title : 
+                            title ? title : config.site.title,
         )}
       />
 

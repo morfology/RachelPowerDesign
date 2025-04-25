@@ -1,7 +1,7 @@
 /**
  * Content of the /projects/ listing 
  */
-import BlogCard from "@/components/BlogCard";
+import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
@@ -42,7 +42,7 @@ const Posts = () => {
             <div className="row">
                 {currentPosts.map((post: any, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
-                    <BlogCard data={post} />
+                    <ProjectCard data={post} />
                   </div>
                 ))}
               </div>

@@ -3,7 +3,7 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { Post } from "@/types";
 import Link from "next/link";
 
-const BlogCard = ({ data }: { data: Post }) => {
+const ProjectCard = ({ data }: { data: Post }) => {
   const { summary_length, projects_folder } = config.settings;
   const { title, image, author, categories, date } = data.frontmatter;
   return (
@@ -31,7 +31,7 @@ const BlogCard = ({ data }: { data: Post }) => {
   );
 };
 
-export default BlogCard;
+export default ProjectCard;
 
 /*
 Original code:

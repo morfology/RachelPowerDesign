@@ -1,4 +1,4 @@
-import BlogCard from "@/components/BlogCard";
+import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
 import { getSinglePage } from "@/lib/contentParser";
 import { getTaxonomy } from "@/lib/taxonomyParser";
@@ -38,7 +38,7 @@ const CategorySingle = ({ params }: { params: { single: string } }) => {
           <div className="row">
             {filterByCategories.map((post: Post, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
-                <BlogCard data={post} />
+                <ProjectCard data={post} />
               </div>
             ))}
           </div>

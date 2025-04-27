@@ -20,7 +20,7 @@ const { title, meta_title, description, image } = postIndex.frontmatter;
 
 //import ContactForm from "@/app/contact/ContactForm";
 
-export const metadata: Metadata = dateFormat();
+//export const metadata: Metadata = dateFormat();
 
 // for all regular pages
 const Posts = () => {

@@ -10,12 +10,20 @@ import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
+import { Metadata } from "next";
+import dateFormat from "@/lib/utils/dateFormat";
+
 const { projects_folder, pagination } = config.settings;
+const postIndex: Post = getListPage(`${projects_folder}/_index.md`);
+const { title, meta_title, description, image } = postIndex.frontmatter;
+
+
+//import ContactForm from "@/app/contact/ContactForm";
+
+export const metadata: Metadata = dateFormat();
 
 // for all regular pages
 const Posts = () => {
-  const postIndex: Post = getListPage(`${projects_folder}/_index.md`);
-  const { title, meta_title, description, image } = postIndex.frontmatter;
   const posts: Post[] = getSinglePage(projects_folder);
   const allCategories = getAllTaxonomy(projects_folder, "categories");
   const categories = getTaxonomy(projects_folder, "categories");
@@ -26,12 +34,12 @@ const Posts = () => {
 
   return (
     <>
-      <SeoMeta
+      {/* <SeoMeta
         title={title}
         meta_title={meta_title}
         description={description}
         image={image}
-      />
+      /> */}
       <PageHeader title={postIndex.frontmatter.title} />
       <section className="section">
         <div className="container">

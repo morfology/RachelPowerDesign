@@ -34,12 +34,12 @@ const Posts = () => {
 
   return (
     <>
-      {/* <SeoMeta
+      <SeoMeta
         title={title}
         meta_title={meta_title}
         description={description}
         image={image}
-      /> */}
+      />
       <PageHeader title={postIndex.frontmatter.title} />
       <section className="section">
         <div className="container">

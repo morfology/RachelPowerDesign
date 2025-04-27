@@ -1,5 +1,5 @@
 // An actual project e.g. /projects/project-a
-import BlogCard from "@/components/BlogCard";
+import ProjectCard from "@/components/ProjectCard";
 import Share from "@/components/Share";
 import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";

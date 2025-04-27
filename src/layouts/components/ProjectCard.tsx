@@ -1,12 +1,9 @@
 import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";
-import dateFormat from "@/lib/utils/dateFormat";
-import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Post } from "@/types";
 import Link from "next/link";
-import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
 
-const BlogCard = ({ data }: { data: Post }) => {
+const ProjectCard = ({ data }: { data: Post }) => {
   const { summary_length, projects_folder } = config.settings;
   const { title, image, author, categories, date } = data.frontmatter;
   return (
@@ -34,7 +31,7 @@ const BlogCard = ({ data }: { data: Post }) => {
   );
 };
 
-export default BlogCard;
+export default ProjectCard;
 
 /*
 Original code:

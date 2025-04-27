@@ -1,10 +1,10 @@
 {
   "site": {
-    "title": "Rachel Power",
-    "base_url": "https://rpd.vercel.app",
+    "title": "Rachel Power Design",
+    "base_url": "https://rachelpowerdesign-production.up.railway.app",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/favicon.ico",
     "logo": "/images/rpd-logo-v1.svg",
     "logo_width": "150",
     "logo_height": "",
@@ -34,7 +34,7 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Rachel Power",
     "meta_image": "/images/og-image.png",
     "meta_description": "Next Boilerplate"
   }

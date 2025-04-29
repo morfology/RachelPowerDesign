@@ -1,3 +1,4 @@
 node_modules
 .next
 .json
+.env.local

@@ -9,6 +9,35 @@ import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+export const metadata = {
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: config.site.title,
+    template: `%s | ${config.site.title}`,
+  },
+
+  description: config.metadata.meta_description,
+  openGraph: {
+    title: config.site.title,
+    description: "Welcome to My Awesome Site – learn, build, and grow.",
+    url: "/",
+    siteName: config.site.title,
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: config.site.title,
+      },
+    ],
+    type: "website",
+  }  
+}
+
 export default function RootLayout({
   children,
 }: {

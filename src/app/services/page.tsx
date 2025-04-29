@@ -1,9 +1,6 @@
-import ImageFallback from "@/helpers/ImageFallback";
-import MDXContent from "@/helpers/MDXContent";
+//=> app/services/page.tsx
+
 import { getListPage } from "@/lib/contentParser";
-import { markdownify } from "@/lib/utils/textConverter";
-import SeoMeta from "@/partials/SeoMeta";
-import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
 
@@ -28,12 +25,6 @@ const Services = () => {
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
       <PageHeader title={title} />
       {/* Iterate over the ctaData array to render CallToAction components */}
       {ctaData.map((cta, index) => (

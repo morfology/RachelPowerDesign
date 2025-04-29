@@ -1,3 +1,5 @@
+//=> app/categories/[single]/page.tsx
+
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
 import { getSinglePage } from "@/lib/contentParser";
@@ -5,7 +7,6 @@ import { getTaxonomy } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
-import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 
 const { projects_folder } = config.settings;
@@ -31,7 +32,6 @@ const CategorySingle = ({ params }: { params: { single: string } }) => {
 
   return (
     <>
-      <SeoMeta title={humanize(params.single)} />
       <PageHeader title={humanize(params.single)} />
       <div className="section-sm pb-0">
         <div className="container">

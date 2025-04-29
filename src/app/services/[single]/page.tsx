@@ -1,10 +1,11 @@
+//=> app/services/[single]/page.tsx
+
 // A dynamic route "services" page, using content from the markdown
 // file of the same name e.g. /services/service-a
 
 import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage } from "@/lib/contentParser";
-import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 
@@ -39,12 +40,6 @@ export default ({ params }: { params: { single: string } }) => {
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
       <PageHeader title={title} />
       <section className="section">
         <div className="container">

@@ -1,7 +1,8 @@
+//=> app/[regular]/page.tsx
+
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
-import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage } from "@/types";
 
 // remove dynamicParams
@@ -29,12 +30,6 @@ const RegularPages = ({ params }: { params: { regular: string } }) => {
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
       <PageHeader title={title} />
       <section className="section">
         <div className="container">

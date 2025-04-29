@@ -2,7 +2,6 @@
  * Gallery
  */
 import { getListPage } from "@/lib/contentParser";
-import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 import Grid from "@/lib/Grid"
@@ -16,12 +15,6 @@ const Gallery = () => {
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
       <PageHeader title={title} />
 
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>

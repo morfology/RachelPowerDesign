@@ -1,24 +1,28 @@
-/**
- * Content of the /projects/ listing 
- */
+// => /projects
+
 import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
-import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
-import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import { Metadata } from "next";
-import seoMetaData2 from "@/lib/utils/seo";
 
 const { projects_folder, pagination } = config.settings;
 const page: Post = getListPage(`${projects_folder}/_index.md`);
 const { title, meta_title, description, image } = page.frontmatter;
 
 
-export const metadata: Metadata = seoMetaData2(page);
+export function generateMetadata({  }): Metadata {
+  return {
+    openGraph: {
+      url: `/projects`,
+    }
+  };
+}
+
+
 
 // for all regular pages
 const Posts = () => {
@@ -29,12 +33,6 @@ const Posts = () => {
 
   return (
     <>
-      {/* <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      /> */}
       <PageHeader title={page.frontmatter.title} />
       <section className="section">
         <div className="container">

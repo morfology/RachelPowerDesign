@@ -1,22 +1,29 @@
-// An actual project e.g. /projects/project-a
-import ProjectCard from "@/components/ProjectCard";
-import Share from "@/components/Share";
+//=> /projects/the-project
+
 import config from "@/config/config.json";
-import ImageFallback from "@/helpers/ImageFallback";
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage } from "@/lib/contentParser";
 import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
 import imageConfig from "@/config/images.json";
+import { Metadata } from "next";
 
 const { projects_folder } = config.settings;
 
 // remove dynamicParams
 export const dynamicParams = false;
+
+export function generateMetadata({ params }: { params: { single: string } }): Metadata {
+  console.log(params)
+  return {
+    openGraph: {
+      url: `/projects/${params.single}`, // resolves to the project
+    }
+  };
+}
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
@@ -68,12 +75,6 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
 
   return (
     <>
-      <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
-      />
       <section className="section pt-7">
         <div className="container">
           <div className="row justify-center">

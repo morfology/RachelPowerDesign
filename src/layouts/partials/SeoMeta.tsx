@@ -31,23 +31,6 @@ const SeoMeta = ({
 
   return (
     <>
-      <title>
-        {plainify(title || config.site.title)}
-      </title>
-
-      <meta name="description" content={plainify(page_description)} />
-      <meta name="author" content={meta_author} />
-
-      <meta property="og:title" content={plainify(page_title)}/>
-      <meta property="og:description" content={plainify(page_description)} />
-      <meta property="og:image" content={`${base_url}${image || meta_image}`} />
-      <meta property="og:url" content={canonical_url}/>
-      <meta property="og:type" content="website" />
-
-      <link rel="canonical" href={canonical_url} itemProp="url" />
-
-      {/* noindex robots tbd*/}
-      {/* {noindex && <meta name="robots" content="noindex,nofollow" />} */}
     </>
   );
 };

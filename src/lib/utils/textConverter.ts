@@ -8,6 +8,8 @@ export const slugify = (content: string) => {
 
 // markdownify
 export const markdownify = (content: string, div?: boolean) => {
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const markdownContent: any = div
     ? marked.parse(content)
     : marked.parseInline(content);
@@ -43,6 +45,8 @@ export const titleify = (content: string) => {
 
 // plainify
 export const plainify = (content: string) => {
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const parseMarkdown: any = marked.parse(content);
   const filterBrackets = parseMarkdown.replace(/<\/?[^>]+(>|$)/gm, "");
   const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");

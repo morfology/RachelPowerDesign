@@ -3,7 +3,6 @@
 import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage } from "@/lib/contentParser";
-import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { Post } from "@/types";
 import Link from "next/link";
@@ -52,10 +51,10 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
     date,
     tags,
   } = frontmatter;
-  const similarPosts = similerItems(post, posts, post.slug!);
 
   //console.log(dataSlider)
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let imageSliderData: any[] = [];
 
   // now use location to query the image slider

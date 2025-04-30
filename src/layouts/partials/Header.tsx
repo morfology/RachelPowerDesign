@@ -7,8 +7,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
 import SegmentHTML from 'dangerously-set-html-content';
-import { FaSearch as IoSearch } from "react-icons/fa/index.js";
-import { FaPhone } from "react-icons/fa/index.js";
+import { FaPhone, FaSearch as IoSearch } from "react-icons/fa/index.js";
+//import { FaPhone } from "react-icons/fa/index.js";
 import { RS_Track } from '@/lib/rudderAnalytics';
 
 // Tell the type system about the Segment object

@@ -13,6 +13,7 @@ const readFile = (filePath: string) => {
 };
 
 // Helper function to parse frontmatter
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const parseFrontmatter = (frontmatter: any) => {
   const frontmatterString = JSON.stringify(frontmatter);
   return JSON.parse(frontmatterString);

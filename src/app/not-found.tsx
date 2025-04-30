@@ -1,6 +1,4 @@
-import SeoMeta from "@/partials/SeoMeta";
 import Link from "next/link";
-import { Metadata } from "next";
 
 // metadata - 404 don't want to inherit boilerplate
 export const metadata = {
@@ -29,7 +27,6 @@ export const metadata = {
 const NotFound = async () => {
   return (
     <>
-      <SeoMeta title={"Page Not Found"} />
       <section className="section-sm text-center">
         <div className="container">
           <div className="row justify-center">

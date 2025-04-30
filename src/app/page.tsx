@@ -1,12 +1,9 @@
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
-import SeoMeta from "@/partials/SeoMeta";
 import { Button } from "@/types";
-import Link from "next/link";
-import ImageFallback from "@/helpers/ImageFallback";
 import Image from "next/image";
 import CallToAction from "@/partials/CallToAction";
-import config from "@/config/config.json";
+//import config from "@/config/config.json";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -20,10 +17,6 @@ const Home = () => {
 
   // Combine the CallToAction data into a single array
   const ctaData = [
-    // getListPage("sections/call-to-action-design-consult.md"),
-    // getListPage("sections/call-to-action-design.md"),
-    // getListPage("sections/call-to-action-architecture.md"),
-    // getListPage("sections/call-to-action-procurement.md"),
     getListPage("homepage/call-to-action-intro.md"),
 
   ];
@@ -35,8 +28,7 @@ const Home = () => {
 
   return (
     <>
-      <SeoMeta />
-
+  
       <div className="relative h-screen text-white overflow-hidden">
 
         {/**** Big page image */}

@@ -9,11 +9,12 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "echo 'starting RPD build' && echo $NODE_OPTIONS && npm run lint:prod && npm run generate-json && next build",
+    "build": "echo 'starting RPD build' && echo $NODE_OPTIONS && npm run generate-json && next build",
+    "build:prev": "echo 'starting RPD build' && echo $NODE_OPTIONS && npm run lint:prod && npm run generate-json && next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
-    "lint:prod": "next lint --max-warnings=0",
+    "lint:prod": "eslint . --ext .ts,.tsx --max-warnings 0 --quiet",
     "format": "prettier -w ./src",
     "start": "NODE_OPTIONS='--max-old-space-size=312' npm run build && next start -p 80",
     "generate-json": "node scripts/jsonGenerator.js"

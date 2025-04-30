@@ -11,19 +11,7 @@ import "@/styles/main.css";
 import { Metadata } from "next";
 import siteConfig from '@/config/site';
 
-// Example usage
-console.log(siteConfig.title);
-console.log(siteConfig.social.instagram);
-
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL 
- || (process.env.RAILWAY_PUBLIC_DOMAIN ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}` : '')
- || "http://localhost:3000"
-;
-
-const isClient = (typeof window !== 'undefined');
-console.log(`${isClient ? 'Client' : 'Server'} Environment:`, process.env.NODE_ENV);
-console.log(`${isClient ? 'Client' : 'Server'} URL:`, siteUrl);
+const siteUrl = siteConfig.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

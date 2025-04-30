@@ -25,7 +25,7 @@ export const generateStaticParams: () => { single: string }[] = () => {
   return paths;
 };
 
-export default ({ params }: { params: { single: string } }) => {
+const ServicePage = ({ params }: { params: { single: string } }) /*: JSX.Element*/ => {
 
   const posts: Post[] = getSinglePage(services_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
@@ -50,6 +50,10 @@ export default ({ params }: { params: { single: string } }) => {
       </section>
     </>
   );
-}
+};
+
+//ServicePage.displayName = "ServicePage";
+
+export default ServicePage;
 
 

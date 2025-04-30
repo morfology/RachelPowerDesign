@@ -8,6 +8,8 @@ export const slugify = (content: string) => {
 
 // markdownify
 export const markdownify = (content: string, div?: boolean) => {
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const markdownContent: any = div
     ? marked.parse(content)
     : marked.parseInline(content);
@@ -43,6 +45,8 @@ export const titleify = (content: string) => {
 
 // plainify
 export const plainify = (content: string) => {
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const parseMarkdown: any = marked.parse(content);
   const filterBrackets = parseMarkdown.replace(/<\/?[^>]+(>|$)/gm, "");
   const filterSpaces = filterBrackets.replace(/[\r\n]\s*[\r\n]/gm, "");
@@ -52,7 +56,7 @@ export const plainify = (content: string) => {
 
 // strip entities for plainify
 const htmlEntityDecoder = (htmlWithEntities: string): string => {
-  let entityList: { [key: string]: string } = {
+  const entityList: { [key: string]: string } = {
     "&nbsp;": " ",
     "&lt;": "<",
     "&gt;": ">",
@@ -60,7 +64,7 @@ const htmlEntityDecoder = (htmlWithEntities: string): string => {
     "&quot;": '"',
     "&#39;": "'",
   };
-  let htmlWithoutEntities: string = htmlWithEntities.replace(
+  const htmlWithoutEntities: string = htmlWithEntities.replace(
     /(&amp;|&lt;|&gt;|&quot;|&#39;)/g,
     (entity: string): string => {
       return entityList[entity];

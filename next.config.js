@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const config = require("./src/config/config.json");
 
 /** @type {import('next').NextConfig} */

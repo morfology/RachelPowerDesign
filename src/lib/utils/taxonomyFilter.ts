@@ -1,10 +1,13 @@
 import { slugify } from "@/lib/utils/textConverter";
 import { Post } from "@/types";
 
-const taxonomyFilter = (posts: Post[], name: string, key: any) =>
+const taxonomyFilter = (
+  posts: Post[],
+  name: "categories" | "tags", // Restrict to valid keys in frontmatter
+  key: string
+): Post[] =>
   posts.filter((post) =>
-    //@ts-ignore
-    post.frontmatter[name].map((name: string) => slugify(name)).includes(key),
+    post.frontmatter[name]?.map((item: string) => slugify(item)).includes(key)
   );
 
 export default taxonomyFilter;

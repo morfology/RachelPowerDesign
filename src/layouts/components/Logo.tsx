@@ -16,8 +16,8 @@ const Logo = ({ src }: { src?: string }) => {
     title,
   }: {
     logo: string;
-    logo_width: any;
-    logo_height: any;
+    logo_width: string;
+    logo_height: string;
     logo_text: string;
     title: string;
   } = config.site;
@@ -33,14 +33,14 @@ const Logo = ({ src }: { src?: string }) => {
     <Link href="/" className="navbar-brand inline-block">
       {logoPath ? (
         <Image
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
+          width={Number(logo_width.replace("px", "")) * 2}
+          height={Number(logo_height.replace("px", "")) * 2}
           src={logoPath + ''}
           alt={title}
           priority
           style={{
-            height: logo_height.replace("px", "") + "px",
-            width: logo_width.replace("px", "") + "px",
+            height: Number(logo_height.replace("px", "")) + "px",
+            width: Number(logo_width.replace("px", "")) + "px",
           }}
         />
       ) : logo_text ? (

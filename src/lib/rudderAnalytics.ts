@@ -13,22 +13,22 @@
 // Some shorthand functions with console logs to
 // help in the debugging phase
 
-function RS_Identify(gradual_user_id: string, details: any) {
+function RS_Identify(gradual_user_id: string, details: Record<string, unknown>) : void {
 
   //rudderAnalytics.identify(gradual_user_id, details);
-  console.log(`RS identify() ${gradual_user_id}`, details);  
+  console.warn(`RS identify() ${gradual_user_id}`, details);  
 }
 
-function RS_Track(event: string, properties: any) {
+function RS_Track(event: string, properties: Record<string, unknown>) : void {
 
   //rudderAnalytics.track(event, properties);
-  console.log(`RS Track() ${event}: `, properties);  
+  console.warn (`RS Track() ${event}: `, properties);  
 }
 
-function RS_Page() {
+function RS_Page() : void {
 
   //rudderAnalytics.page();
-  console.log(`RS Page(${location})`);  
+  console.warn(`RS Page(${location})`);  
 }
 
 export { /*rudderAnalytics*/ RS_Identify, RS_Track, RS_Page };

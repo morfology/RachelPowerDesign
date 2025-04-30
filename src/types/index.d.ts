@@ -46,13 +46,13 @@ export type Author = {
   slug?: string;
 };
 
-export type Feature = {
-  button: button;
-  image: string;
-  bulletpoints: string[];
-  content: string;
-  title: string;
-};
+// export type Feature = {
+//   button: button;
+//   image: string;
+//   bulletpoints: string[];
+//   content: string;
+//   title: string;
+// };
 
 export type Testimonial = {
   name: string;

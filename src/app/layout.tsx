@@ -10,7 +10,10 @@ import Script from 'next/script';
 import "@/styles/main.css";
 import { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL 
+ || process.env.RAILWAY_PUBLIC_DOMAIN
+ || "http://localhost:3000"
+;
 
 const isClient = (typeof window !== 'undefined');
 console.log(`${isClient ? 'Client' : 'Server'} Environment:`, process.env.NODE_ENV);

@@ -9,8 +9,9 @@ import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { Metadata } from "next";
+import siteConfig from '@/config/site';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = siteConfig.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -46,6 +47,7 @@ export default function RootLayout({
   // import google font css
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
+
 
   return (
     <html suppressHydrationWarning={true} lang="en">

@@ -12,6 +12,10 @@ import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
+const isClient = (typeof window !== 'undefined');
+console.log(`${isClient ? 'Client' : 'Server'} Environment:`, process.env.NODE_ENV);
+console.log(`${isClient ? 'Client' : 'Server'} URL:`, siteUrl);
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 

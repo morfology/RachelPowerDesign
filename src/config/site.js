@@ -14,8 +14,8 @@ const siteConfig = {
 
 if (process.env.NODE_ENV !== 'development') {
   const isClient = (typeof window !== 'undefined');
-  console.log(`${isClient ? 'Client' : 'Server'} Environment:`, process.env.NODE_ENV);
-  console.log(`${isClient ? 'Client' : 'Server'} URL:`, siteConfig.siteUrl);
+  console.info(`${isClient ? 'Client' : 'Server'} Environment:`, process.env.NODE_ENV);
+  console.info(`${isClient ? 'Client' : 'Server'} URL:`, siteConfig.siteUrl);
   showInfo = false ;
 }
 

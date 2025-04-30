@@ -26,7 +26,6 @@ const ContactForm = () => {
               body: new URLSearchParams(values).toString(),
             });
 
-            console.log(response)
             
             if (response.ok) {
               setStatus("success");

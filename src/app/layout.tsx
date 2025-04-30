@@ -48,6 +48,7 @@ export default function RootLayout({
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
 
+
   return (
     <html suppressHydrationWarning={true} lang="en">
       <head>

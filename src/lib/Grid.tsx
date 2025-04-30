@@ -30,7 +30,7 @@ const Grid: React.FC = () => {
     );
 
     imageRefs.current.forEach((img) => {
-      if (img) observer.observe(img);
+      if (img) { observer.observe(img); }
     });
 
     return () => observer.disconnect();

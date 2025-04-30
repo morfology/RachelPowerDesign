@@ -9,21 +9,21 @@ import { Post } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
 import imageConfig from "@/config/images.json";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
 const { projects_folder } = config.settings;
 
 // remove dynamicParams
 export const dynamicParams = false;
 
-export function generateMetadata({ params }: { params: { single: string } }): Metadata {
-  console.log(params)
-  return {
-    openGraph: {
-      url: `/projects/${params.single}`, // resolves to the project
-    }
-  };
-}
+// export function generateMetadata({ params }: { params: { single: string } }): Metadata {
+//   console.log(params)
+//   return {
+//     openGraph: {
+//       url: `/projects/${params.single}`, // resolves to the project
+//     }
+//   };
+// }
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {

@@ -1,27 +1,27 @@
 import Link from "next/link";
 
 // metadata - 404 don't want to inherit boilerplate
-export const metadata = {
-  title: {
-    absolute: "404 - Page Not Found",
-  },
-  description: "Oops! This page doesn’t exist. Try heading back to the homepage.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-  openGraph: {
-    title: "404 - Page Not Found",
-    description: "This page couldn’t be found on Rachel Power Design.",
-    images: [], // Explicitly clears inherited images
-  },
-  twitter: {
-    card: "summary",
-    title: "404 - Page Not Found",
-    description: "This page couldn’t be found.",
-    images: [], // Explicitly clears inherited images
-  },
-};
+// export const metadata = {
+//   title: {
+//     absolute: "404 - Page Not Found",
+//   },
+//   description: "Oops! This page doesn’t exist. Try heading back to the homepage.",
+//   robots: {
+//     index: false,
+//     follow: false,
+//   },
+//   openGraph: {
+//     title: "404 - Page Not Found",
+//     description: "This page couldn’t be found on Rachel Power Design.",
+//     images: [], // Explicitly clears inherited images
+//   },
+//   twitter: {
+//     card: "summary",
+//     title: "404 - Page Not Found",
+//     description: "This page couldn’t be found.",
+//     images: [], // Explicitly clears inherited images
+//   },
+// };
 
 
 const NotFound = async () => {

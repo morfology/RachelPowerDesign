@@ -8,11 +8,11 @@ import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
-
+import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
@@ -23,7 +23,7 @@ export const metadata = {
   description: config.metadata.meta_description,
   openGraph: {
     title: config.site.title,
-    description: "Welcome to My Awesome Site – learn, build, and grow.",
+    description: "Welcome to My Awesome Site – learn, build, and grow...",
     url: "/",
     siteName: config.site.title,
     images: [

@@ -7,20 +7,20 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import { Post } from "@/types";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
 const { projects_folder, pagination } = config.settings;
 const page: Post = getListPage(`${projects_folder}/_index.md`);
 const { title, meta_title, description, image } = page.frontmatter;
 
 
-export function generateMetadata({  }): Metadata {
-  return {
-    openGraph: {
-      url: `/projects`,
-    }
-  };
-}
+// export function generateMetadata({  }): Metadata {
+//   return {
+//     openGraph: {
+//       url: `/projects`,
+//     }
+//   };
+// }
 
 
 

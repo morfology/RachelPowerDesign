@@ -9,6 +9,12 @@ import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { Metadata } from "next";
+import siteConfig from '@/config/site';
+
+// Example usage
+console.log(siteConfig.title);
+console.log(siteConfig.social.instagram);
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL 
  || (process.env.RAILWAY_PUBLIC_DOMAIN ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}` : '')

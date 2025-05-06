@@ -10,10 +10,13 @@ import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { Metadata } from "next";
-import siteConfig from '@/config/site';
+
+
+// import dynamicConfig from '@/config/dynamic.js';
+// const siteUrl = dynamicConfig.siteUrl;
+import {siteUrl} from '@/config/dynamic.js';
 
 import config from "@/config/config.json";
-const siteUrl = siteConfig.siteUrl;
 
 
 //console.info(siteConfig.imageConfig)

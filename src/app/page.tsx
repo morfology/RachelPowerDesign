@@ -3,7 +3,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { Button } from "@/types";
 import Image from "next/image";
 import CallToAction from "@/partials/CallToAction";
-//import config from "@/config/config.json";
+
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");

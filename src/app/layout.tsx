@@ -1,7 +1,7 @@
 // Globally used layout.tsx
 import React from 'react';
+
 import SearchModal from "@/components/SearchModal";
-import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
 import Footer from "@/partials/Footer";
@@ -12,7 +12,12 @@ import "@/styles/main.css";
 import { Metadata } from "next";
 import siteConfig from '@/config/site';
 
+import config from "@/config/config.json";
 const siteUrl = siteConfig.siteUrl;
+
+
+//console.info(siteConfig.imageConfig)
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

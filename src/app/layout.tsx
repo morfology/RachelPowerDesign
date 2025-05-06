@@ -47,12 +47,7 @@ export const metadata: Metadata = {
     type: "website",
   }  
 }
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({children}: {children: React.ReactNode}) {
   // import google font css
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;

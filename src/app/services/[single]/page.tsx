@@ -31,12 +31,7 @@ const ServicePage = ({ params }: { params: { single: string } }) /*: JSX.Element
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;
-  const {
-    title,
-    meta_title,
-    description,
-    image
-  } = frontmatter;
+  const { title } = frontmatter;
 
   return (
     <>

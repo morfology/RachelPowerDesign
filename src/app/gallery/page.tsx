@@ -11,7 +11,7 @@ const Gallery = () => {
 
 
   const pageData: RegularPage = getListPage("gallery/_index.md");
-  const { title, meta_title, description, image } = pageData.frontmatter;
+  const { title } = pageData.frontmatter;
 
   return (
     <>

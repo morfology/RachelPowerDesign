@@ -1,6 +1,6 @@
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
-import { Button, PostContent } from "@/types";
+import { PostContent } from "@/types";
 import Image from "next/image";
 import CallToAction from "@/partials/CallToAction";
 

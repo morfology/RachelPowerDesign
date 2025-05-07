@@ -28,7 +28,7 @@ const RegularPages = ({ params }: { params: { regular: string } }) => {
   )[0];
 
   const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
+  const { title } = frontmatter;
 
   return (
     <>

@@ -43,13 +43,8 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   const {
     title,
     folder,
-    meta_title,
-    description,
     image,
-    author,
     categories,
-    date,
-    tags,
   } = frontmatter;
 
   //console.log(dataSlider)

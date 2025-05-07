@@ -2,7 +2,7 @@ import { slug } from "github-slugger";
 import { marked } from "marked";
 
 // slugify
-export const slugify = (content: string) => {
+export const slugify = (content: string): string => {
   return slug(content);
 };
 
@@ -25,7 +25,7 @@ export const multimarkdownify = (content: string, div?: boolean) => {
 
 
 // humanize
-export const humanize = (content: string) => {
+export const humanize = (content: string) : string => {
   return content
     .replace(/^[\s_]+|[\s_]+$/g, "")
     .replace(/[_\s]+/g, " ")
@@ -35,7 +35,7 @@ export const humanize = (content: string) => {
 };
 
 // titleify
-export const titleify = (content: string) => {
+export const titleify = (content: string) : string => {
   const humanized = humanize(content);
   return humanized
     .split(" ")
@@ -44,7 +44,7 @@ export const titleify = (content: string) => {
 };
 
 // plainify
-export const plainify = (content: string) => {
+export const plainify = (content: string) : string => {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const parseMarkdown: any = marked.parse(content);

@@ -1,7 +1,7 @@
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 
 // sort by date
-export const sortByDate = (array: Post[]) : Post[] => {
+export const sortByDate = (array: PostContent[]) : PostContent[] => {
   const sortedArray = array.sort(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (a: any, b: any) =>

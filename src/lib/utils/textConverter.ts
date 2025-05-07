@@ -10,6 +10,8 @@ export const slugify = (content: string): string => {
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const markdownify = (content: string, div?: boolean) => {
 
+  console.log("markdownify", content);
+  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const markdownContent: any = div
     ? marked.parse(content)

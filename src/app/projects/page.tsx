@@ -6,11 +6,11 @@ import config from "@/config/config.json";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 // import { Metadata } from "next";
 
 const { projects_folder, pagination } = config.settings;
-const page: Post = getListPage(`${projects_folder}/_index.md`);
+const page: PostContent = getListPage(`${projects_folder}/_index.md`);
 const { title, meta_title, description, image } = page.frontmatter;
 
 
@@ -26,7 +26,7 @@ const { title, meta_title, description, image } = page.frontmatter;
 
 // for all regular pages
 const Posts = () => {
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getSinglePage(projects_folder);
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = sortedPosts.slice(0, pagination);
@@ -41,7 +41,7 @@ const Posts = () => {
             {/* <div className="lg:col-8"> */}
             <div>
             <div className="row">
-                {currentPosts.map((post: Post, index: number) => (
+                {currentPosts.map((post: PostContent, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
                     <ProjectCard data={post} />
                   </div>

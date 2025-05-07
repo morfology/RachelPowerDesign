@@ -7,7 +7,7 @@ import { getTaxonomy } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 
 const { projects_folder } = config.settings;
 type StaticParams = () => { single: string }[];
@@ -27,7 +27,7 @@ export const generateStaticParams: StaticParams = () => {
 };
 
 const CategorySingle = ({ params }: { params: { single: string } }) => {
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getSinglePage(projects_folder);
   const filterByCategories = taxonomyFilter(posts, "categories", params.single);
 
   return (
@@ -36,7 +36,7 @@ const CategorySingle = ({ params }: { params: { single: string } }) => {
       <div className="section-sm pb-0">
         <div className="container">
           <div className="row">
-            {filterByCategories.map((post: Post, index: number) => (
+            {filterByCategories.map((post: PostContent, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
                 <ProjectCard data={post} />
               </div>

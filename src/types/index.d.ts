@@ -11,22 +11,28 @@ export type RegularPage = {
   slug?: string;
 };
 
-export type Post = {
-  frontmatter: {
-    title: string;
-    folder?: string,
-    meta_title?: string;
-    description?: string;
-    image?: string;
-    categories: string[];
-    author: string;
-    tags: string[];
-    date?: string;
-    draft?: boolean;
-  };
+export type PostContent = {
+  frontmatter: Frontmatter;
+  content: string;
   slug?: string;
-  content?: string;
 };
+
+// export type Post = {
+//   frontmatter: {
+//     title: string;
+//     folder?: string,
+//     meta_title?: string;
+//     description?: string;
+//     image?: string;
+//     categories: string[];
+//     author: string;
+//     tags: string[];
+//     date?: string;
+//     draft?: boolean;
+//   };
+//   slug?: string;
+//   content?: string;
+// };
 
 export type Author = {
   frontmatter: {
@@ -61,13 +67,13 @@ export type Testimonial = {
   content: string;
 };
 
-export type Call_to_action = {
-  enable?: boolean;
-  title: string;
-  description: string;
-  image: string;
-  button: Button;
-};
+// export type Call_to_action = {
+//   enable?: boolean;
+//   title: string;
+//   description: string;
+//   image: string;
+//   button: Button;
+// };
 
 export type Button = {
   enable: boolean;
@@ -77,15 +83,19 @@ export type Button = {
 
 export type Frontmatter = {
   title: string;
-  date: string;
+  date?: string;
   tags: string[];
   draft?: boolean;
 
   meta_title?: string;
+  description?: string;
+  image?: string;
+
+  folder?: string,
+  categories: string[];
+  author: string;
+  button: Button;
+
+
 };
 
-export type PostContent = {
-  frontmatter: Frontmatter;
-  content: string;
-  slug?: string;
-};

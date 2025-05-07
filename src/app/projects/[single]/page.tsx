@@ -4,7 +4,7 @@ import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage } from "@/lib/contentParser";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
 import imageConfig from "@/config/images.json";
@@ -26,7 +26,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getSinglePage(projects_folder);
 
   const paths = posts.map((post) => ({
     single: post.slug || '',
@@ -36,7 +36,7 @@ export const generateStaticParams: () => { single: string }[] = () => {
 };
 
 const PostSingle = ({ params }: { params: { single: string } }) => {
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getSinglePage(projects_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;
@@ -84,7 +84,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 </div>
               )}
               <h1
-                dangerouslySetInnerHTML={markdownify(title)}
+                dangerouslySetInnerHTML={markdownify(title || 'TEST2')}
                 className="h2 mb-4"
               />
               <div className="content mb-10">

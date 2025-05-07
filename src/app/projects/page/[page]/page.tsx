@@ -7,7 +7,7 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 
 const { projects_folder, pagination } = config.settings;
 
@@ -16,7 +16,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams = () => {
-  const allPost: Post[] = getSinglePage(projects_folder);
+  const allPost: PostContent[] = getSinglePage(projects_folder);
   const allSlug: string[] = allPost.map((item) => item.slug || '');
   const totalPages = Math.ceil(allSlug.length / pagination);
   const paths: { page: string }[] = [];
@@ -42,9 +42,9 @@ function spreadPages(num: number): number[] {
 
 // for all regular pages
 const Posts = ({ params }: { params: { page: number } }) => {
-  const postIndex: Post = getListPage(`${projects_folder}/_index.md`);
+  const postIndex: PostContent = getListPage(`${projects_folder}/_index.md`);
   const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getSinglePage(projects_folder);
   // const allCategories = getAllTaxonomy(projects_folder, "categories");
   // const categories = getTaxonomy(projects_folder, "categories");
 
@@ -67,7 +67,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
             {/* <div className="lg:col-8"> */}
             <div>
               <div className="row">
-                {currentPosts.map((post: Post, index: number) => (
+                {currentPosts.map((post: PostContent, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
                     <ProjectCard data={post} />
                   </div>

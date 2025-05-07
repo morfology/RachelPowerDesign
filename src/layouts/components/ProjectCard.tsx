@@ -1,9 +1,9 @@
 import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 import Link from "next/link";
 
-const ProjectCard = ({ data }: { data: Post }) => {
+const ProjectCard = ({ data }: { data: PostContent }) => {
   const { summary_length, projects_folder } = config.settings;
   const { title, image, author, categories, date } = data.frontmatter;
   return (

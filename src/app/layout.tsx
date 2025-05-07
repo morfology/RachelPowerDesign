@@ -12,8 +12,6 @@ import "@/styles/main.css";
 import { Metadata } from "next";
 
 
-// import dynamicConfig from '@/config/dynamic.js';
-// const siteUrl = dynamicConfig.siteUrl;
 import {siteUrl} from '@/config/dynamic.js';
 
 import config from "@/config/config.json";

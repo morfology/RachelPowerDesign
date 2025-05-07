@@ -5,6 +5,7 @@ import { Formik, Form } from "formik";
 import { useState } from "react";
 
 const ContactForm = () => {
+  // @MP Use config file for this
   const contact_form_action = "https://form-handler-production.up.railway.app/submit-form"
   type StatusType = "success" | "error" | null;
   const [status, setStatus] = useState<StatusType>(null);

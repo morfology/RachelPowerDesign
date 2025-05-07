@@ -1,7 +1,7 @@
 // Globally used layout.tsx
 import React from 'react';
+
 import SearchModal from "@/components/SearchModal";
-import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
 import Footer from "@/partials/Footer";
@@ -10,9 +10,15 @@ import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { Metadata } from "next";
-import siteConfig from '@/config/site';
 
-const siteUrl = siteConfig.siteUrl;
+
+import {siteUrl} from '@/config/dynamic.js';
+
+import config from "@/config/config.json";
+
+
+//console.info(siteConfig.imageConfig)
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,12 +45,7 @@ export const metadata: Metadata = {
     type: "website",
   }  
 }
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({children}: {children: React.ReactNode}) {
   // import google font css
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;

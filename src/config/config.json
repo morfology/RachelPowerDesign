@@ -1,9 +1,6 @@
 {
   "site": {
     "title": "Rachel Power Design",
-    "base_url": "https://rachelpowerdesign-production.up.railway.app",
-    "base_path": "/",
-    "trailing_slash": false,
     "favicon": "/images/favicon.ico",
     "logo": "/images/rpd-logo-v1.svg",
     "logo_width": "150",
@@ -20,11 +17,6 @@
     "summary_length": 200,
     "projects_folder": "projects",
     "services_folder": "services"
-  },
-
-  "params": {
-    "contact_form_action": "#",
-    "copyright": "Designed And Developed by [MPC Solutions](https://www.linkedin.com/in/marcpowerlink/)"
   },
 
   "navigation_button": {

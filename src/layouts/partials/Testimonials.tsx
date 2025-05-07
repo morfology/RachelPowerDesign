@@ -32,7 +32,7 @@ const Testimonials = ({ data }: { data: PageData }) => {
                 />
                 <p
                   dangerouslySetInnerHTML={markdownify(
-                    data.frontmatter.description!,
+                    data.frontmatter.description || '',
                   )}
                 />
               </div>

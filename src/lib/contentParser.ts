@@ -8,18 +8,19 @@ const appPath = "src/app";
 
 
 // Helper function to read file content
-const readFile = (filePath: string) => {
+const readFile = (filePath: string): string => {
   return fs.readFileSync(filePath, "utf-8");
 };
 
 // Helper function to parse frontmatter
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const parseFrontmatter = (frontmatter: any) => {
+const parseFrontmatter = (frontmatter: any): any => {
   const frontmatterString = JSON.stringify(frontmatter);
   return JSON.parse(frontmatterString);
 };
 
 // get list page data, ex: _index.md
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const getListPage = (filePath: string) => {
   let pageDataPath = path.join(contentPath, filePath);
 
@@ -42,6 +43,7 @@ export const getListPage = (filePath: string) => {
 }
 
 // get all single pages, ex: blog/post.md
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const getSinglePage = (folder: string) => {
   const folderPath = path.join(contentPath, folder);
 

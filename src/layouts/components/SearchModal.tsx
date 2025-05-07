@@ -61,14 +61,14 @@ const SearchModal = () => {
     searchModalTriggers.forEach((button) => {
       button.addEventListener("click", function () {
         const searchModal = document.getElementById("searchModal");
-        searchModal!.classList.add("show");
-        searchInput!.focus();
+        searchModal?.classList.add("show");
+        searchInput?.focus();
       });
     });
 
     // search modal close
-    searchModalOverlay!.addEventListener("click", function () {
-      searchModal!.classList.remove("show");
+    searchModalOverlay?.addEventListener("click", function () {
+      searchModal?.classList.remove("show");
     });
 
     // keyboard navigation
@@ -91,8 +91,8 @@ const SearchModal = () => {
 
     document.addEventListener("keydown", function (event) {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
-        searchModal!.classList.add("show");
-        searchInput!.focus();
+        searchModal?.classList.add("show");
+        searchInput?.focus();
         updateSelection();
       }
 
@@ -101,7 +101,7 @@ const SearchModal = () => {
       }
 
       if (event.key === "Escape") {
-        searchModal!.classList.remove("show");
+        searchModal?.classList.remove("show");
       }
 
       if (event.key === "ArrowUp" && selectedIndex > 0) {
@@ -117,7 +117,7 @@ const SearchModal = () => {
         ) as HTMLAnchorElement;
         if (activeLink) {
           activeLink?.click();
-          searchModal!.classList.remove("show");
+          searchModal?.classList.remove("show");
         }
       }
 

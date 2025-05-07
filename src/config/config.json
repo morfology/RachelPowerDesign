@@ -1,7 +1,6 @@
 {
   "site": {
     "title": "Rachel Power Design",
-    "base_url": "https://rachelpowerdesign-production.up.railway.app",
     "favicon": "/images/favicon.ico",
     "logo": "/images/rpd-logo-v1.svg",
     "logo_width": "150",

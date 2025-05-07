@@ -2,7 +2,6 @@
 import React from 'react';
 
 import SearchModal from "@/components/SearchModal";
-import theme from "@/config/theme.json";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
@@ -46,10 +45,10 @@ export const metadata: Metadata = {
   }  
 }
 export default function RootLayout({children}: {children: React.ReactNode}) {
-  // import google font css
-  const pf = theme.fonts.font_family.primary;
-  const sf = theme.fonts.font_family.secondary;
 
+  // import google font css
+  // const pf = theme.fonts.font_family.primary;
+  // const sf = theme.fonts.font_family.secondary;
 
   return (
     <html suppressHydrationWarning={true} lang="en">

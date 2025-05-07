@@ -17,7 +17,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: StaticParams = () => {
-  const categories = getTaxonomy(projects_folder, "categories");
+  const categories: Array<string> = getTaxonomy(projects_folder, "categories");
 
   const paths = categories.map((category) => ({
     single: category,

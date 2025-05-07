@@ -80,6 +80,8 @@ export type Frontmatter = {
   date: string;
   tags: string[];
   draft?: boolean;
+
+  meta_title?: string;
 };
 
 export type PostContent = {

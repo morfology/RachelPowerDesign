@@ -3,7 +3,7 @@
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
-import { RegularPage } from "@/types";
+import { PostContent, RegularPage } from "@/types";
 
 // remove dynamicParams
 export const dynamicParams = false;
@@ -21,10 +21,12 @@ export const generateStaticParams = () => {
 
 // for all regular pages
 const RegularPages = ({ params }: { params: { regular: string } }) => {
-  const regularData = getSinglePage("pages");
-  const data = regularData.filter(
+
+  const regularData: Array<PostContent> = getSinglePage("pages");
+  const data: PostContent = regularData.filter(
     (page: RegularPage) => page.slug === params.regular,
   )[0];
+
   const { frontmatter, content } = data;
   const { title, meta_title, description, image } = frontmatter;
 

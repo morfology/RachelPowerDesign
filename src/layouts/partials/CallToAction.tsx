@@ -2,7 +2,6 @@
  * CallToAction (Partial)
  */
 
-import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify, multimarkdownify } from "@/lib/utils/textConverter";
 import { Frontmatter } from "@/types";
 import Link from "next/link";

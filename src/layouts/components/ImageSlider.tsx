@@ -1,62 +1,13 @@
 "use client"; // <===== REQUIRED
 
-import React from "react";
+
 
 // Swiper components, modules and styles
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Image from "next/image";
 
 
-// Our custom button component
-// import SliderButtons from "./SliderButtons";
-
-interface Slide {
-  id: number;
-  title: string;
-  tagline: string;
-  image: string;
-  buttons: ButtonProps[];
-}
-
-interface ButtonProps {
-  id: number;
-  text: string;
-  link: string;
-  type: string;
-}
-
-interface DemoSliderProps {
-  data: Slide[];
-}
-
-const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
-  return (
-          <Swiper
-            navigation
-            pagination={{ type: "bullets", clickable: true }}
-            autoplay={false}
-            loop={true}
-            modules={[Autoplay, Navigation, Pagination]}
-          >
-            {data.map(({ id, image, tagline, title, buttons }) => (
-              <SwiperSlide key={id}>
-                <Image
-                    height={500}
-                    width={1200}
-                    alt={title}
-                    className="w-full rounded"
-                    src={image} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-  );
-};
-
-export default DemoSlider;
 
 
 

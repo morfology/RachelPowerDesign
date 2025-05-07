@@ -8,8 +8,8 @@ const Services = () => {
   //const data: RegularPage = getListPage("pages/services.md");
   const data = getListPage("services/_index.md");
 
-  const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
+  const { frontmatter } = data;
+  const { title } = frontmatter;
 
   // Combine the CallToAction data into a single array
   const ctaData = [

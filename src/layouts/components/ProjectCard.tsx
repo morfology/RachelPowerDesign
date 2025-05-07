@@ -4,8 +4,8 @@ import { PostContent } from "@/types";
 import Link from "next/link";
 
 const ProjectCard = ({ data }: { data: PostContent }) => {
-  const { summary_length, projects_folder } = config.settings;
-  const { title, image, author, categories, date } = data.frontmatter;
+  const { projects_folder } = config.settings;
+  const { title, image } = data.frontmatter;
   return (
 
     <Link href={`/${projects_folder}/${data.slug}`}>

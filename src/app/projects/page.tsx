@@ -11,8 +11,6 @@ import { PostContent } from "@/types";
 
 const { projects_folder, pagination } = config.settings;
 const page: PostContent = getListPage(`${projects_folder}/_index.md`);
-const { title, meta_title, description, image } = page.frontmatter;
-
 
 // export function generateMetadata({  }): Metadata {
 //   return {

@@ -17,6 +17,7 @@ export const getTaxonomy = (folder: string, name: string): Array<string> => {
   return taxonomy;
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const getAllTaxonomy = (folder: string, name: string) => {
   const singlePages = getSinglePage(folder);
   const taxonomyPages = singlePages.map((page) => page.frontmatter[name]);

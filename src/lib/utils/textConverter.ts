@@ -7,6 +7,7 @@ export const slugify = (content: string): string => {
 };
 
 // markdownify
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const markdownify = (content: string, div?: boolean) => {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,6 +18,7 @@ export const markdownify = (content: string, div?: boolean) => {
 };
 
 // multimarkdownify
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const multimarkdownify = (content: string, div?: boolean) => {
   return content.split('|').map(paragraph => ({
     __html: div ? marked.parse(paragraph) : marked.parseInline(paragraph)

@@ -29,7 +29,7 @@ export const generateStaticParams: () => { single: string }[] = () => {
   const posts: Post[] = getSinglePage(projects_folder);
 
   const paths = posts.map((post) => ({
-    single: post.slug!,
+    single: post.slug || '',
   }));
 
   return paths;

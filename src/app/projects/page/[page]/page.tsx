@@ -17,7 +17,7 @@ export const dynamicParams = false;
 // generate static params
 export const generateStaticParams = () => {
   const allPost: Post[] = getSinglePage(projects_folder);
-  const allSlug: string[] = allPost.map((item) => item.slug!);
+  const allSlug: string[] = allPost.map((item) => item.slug || '');
   const totalPages = Math.ceil(allSlug.length / pagination);
   const paths: { page: string }[] = [];
 

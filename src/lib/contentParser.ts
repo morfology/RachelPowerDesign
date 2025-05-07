@@ -2,10 +2,10 @@ import fs from "fs";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import path from "path";
+import { Frontmatter, PostContent } from "@/types";
 
 const contentPath = "src/content";
 const appPath = "src/app";
-
 
 // Helper function to read file content
 const readFile = (filePath: string): string => {
@@ -13,15 +13,14 @@ const readFile = (filePath: string): string => {
 };
 
 // Helper function to parse frontmatter
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const parseFrontmatter = (frontmatter: any): any => {
-  const frontmatterString = JSON.stringify(frontmatter);
-  return JSON.parse(frontmatterString);
+const parseFrontmatter = (raw: Record<string, unknown>): Frontmatter => {
+  const rawString = JSON.stringify(raw);
+  return JSON.parse(rawString) as Frontmatter;
 };
 
+
 // get list page data, ex: _index.md
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const getListPage = (filePath: string) => {
+export const getListPage = (filePath: string): PostContent => {
   let pageDataPath = path.join(contentPath, filePath);
 
   // Fallback base for pages is the "app" folder
@@ -38,13 +37,13 @@ export const getListPage = (filePath: string) => {
 
   return {
     frontmatter: parseFrontmatter(frontmatter),
-    content,
+    content
   };
 }
 
 // get all single pages, ex: blog/post.md
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const getSinglePage = (folder: string) => {
+export const getSinglePage = (folder: string): Array<PostContent> => {
+
   const folderPath = path.join(contentPath, folder);
 
   if (!fs.existsSync(folderPath) || !fs.lstatSync(folderPath).isDirectory()) {
@@ -57,7 +56,7 @@ export const getSinglePage = (folder: string) => {
     file.match(/^(?!_)/),
   );
 
-  const singlePages = filterSingleFiles.map((filename) => {
+  const singlePages = filterSingleFiles.map((filename): PostContent => {
     const slug = filename.replace(".md", "");
     const filePath = path.join(folderPath, filename);
     const pageData = readFile(filePath);
@@ -67,7 +66,7 @@ export const getSinglePage = (folder: string) => {
     return {
       frontmatter: parseFrontmatter(frontmatter),
       slug: url,
-      content,
+      content
     };
   });
 

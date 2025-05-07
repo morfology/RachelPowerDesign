@@ -74,3 +74,16 @@ export type Button = {
   label: string;
   link: string;
 };
+
+export type Frontmatter = {
+  title: string;
+  date: string;
+  tags: string[];
+  draft?: boolean;
+};
+
+export type PostContent = {
+  frontmatter: Frontmatter;
+  content: string;
+  slug?: string;
+};

@@ -19,11 +19,6 @@
     "services_folder": "services"
   },
 
-  "params": {
-    "contact_form_action": "#",
-    "copyright": "Designed And Developed by [MPC Solutions](https://www.linkedin.com/in/marcpowerlink/)"
-  },
-
   "navigation_button": {
     "enable": true,
     "label": "Contact Us",

@@ -2,7 +2,7 @@
 
 import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
-import { getSinglePage } from "@/lib/contentParser";
+import { getAllSinglePages } from "@/lib/contentParser";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 import Link from "next/link";
@@ -26,7 +26,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
-  const posts: PostContent[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
 
   const paths = posts.map((post) => ({
     single: post.slug || '',
@@ -36,7 +36,7 @@ export const generateStaticParams: () => { single: string }[] = () => {
 };
 
 const PostSingle = ({ params }: { params: { single: string } }) => {
-  const posts: PostContent[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;

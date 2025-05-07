@@ -2,7 +2,7 @@
 
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser";
+import { getAllSinglePages } from "@/lib/contentParser";
 import { getTaxonomy } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
@@ -27,7 +27,7 @@ export const generateStaticParams: StaticParams = () => {
 };
 
 const CategorySingle = ({ params }: { params: { single: string } }) => {
-  const posts: PostContent[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
   const filterByCategories = taxonomyFilter(posts, "categories", params.single);
 
   return (

@@ -5,7 +5,7 @@
 
 import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
-import { getSinglePage } from "@/lib/contentParser";
+import { getAllSinglePages } from "@/lib/contentParser";
 import { PostContent } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 
@@ -16,7 +16,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
-  const posts: PostContent[] = getSinglePage(services_folder);
+  const posts: PostContent[] = getAllSinglePages(services_folder);
 
   const paths = posts.map((post) => ({
     single: post.slug || '',
@@ -27,7 +27,7 @@ export const generateStaticParams: () => { single: string }[] = () => {
 
 const ServicePage = ({ params }: { params: { single: string } }) /*: JSX.Element*/ => {
 
-  const posts: PostContent[] = getSinglePage(services_folder);
+  const posts: PostContent[] = getAllSinglePages(services_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;

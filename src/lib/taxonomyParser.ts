@@ -1,6 +1,6 @@
-import { getSinglePage } from "@/lib/contentParser";
+import { getAllSinglePages } from "@/lib/contentParser";
 import { slugify } from "@/lib/utils/textConverter";
-
+import { PostContent } from "@/types";
 
 // get all taxonomies from frontmatter
 export const getTaxonomy = (folder: string, name: string): Array<string> => {
@@ -16,7 +16,9 @@ export const getTaxonomy = (folder: string, name: string): Array<string> => {
 // @MP 2024-01-02 tags[] to by dynamic based on name?
 export const getAllTaxonomy = (folder: string, name: string): Array<string> => {
 
-  const singlePages = getSinglePage(folder);
+  const singlePages: PostContent[] = getAllSinglePages(folder);
+
+
   const taxonomyPages = singlePages.map((page) => page.frontmatter.categories);
   const taxonomies = [];
   for (let i = 0; i < taxonomyPages?.length; i++) {

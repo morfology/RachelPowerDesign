@@ -3,7 +3,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
-import { getListPage, getSinglePage } from "@/lib/contentParser";
+import { getListPage, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
@@ -26,7 +26,7 @@ const { title, meta_title, description, image } = page.frontmatter;
 
 // for all regular pages
 const Posts = () => {
-  const posts: PostContent[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = sortedPosts.slice(0, pagination);

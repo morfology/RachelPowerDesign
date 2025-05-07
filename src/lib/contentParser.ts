@@ -42,7 +42,7 @@ export const getListPage = (filePath: string): PostContent => {
 }
 
 // get all single pages, ex: blog/post.md
-export const getSinglePage = (folder: string): Array<PostContent> => {
+export const getAllSinglePages = (folder: string): Array<PostContent> => {
 
   const folderPath = path.join(contentPath, folder);
 
@@ -56,7 +56,7 @@ export const getSinglePage = (folder: string): Array<PostContent> => {
     file.match(/^(?!_)/),
   );
 
-  const singlePages = filterSingleFiles.map((filename): PostContent => {
+  const singlePages: Array<PostContent> = filterSingleFiles.map((filename): PostContent => {
     const slug = filename.replace(".md", "");
     const filePath = path.join(folderPath, filename);
     const pageData = readFile(filePath);

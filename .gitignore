@@ -2,3 +2,4 @@ node_modules
 .next
 .json
 .env.local
+tsconfig.tsbuildinfo

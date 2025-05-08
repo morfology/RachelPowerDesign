@@ -30,3 +30,61 @@ export const getAllTaxonomy = (folder: string, _uname: string): Array<string> =>
 
   return taxonomies;
 };
+
+export type CountedItem = {
+  name: string;
+  count: number;
+};
+
+// @MP 2024-01-02 tags[] to by dynamic based on name?
+export const getTags = (folder: string): CountedItem[] => {
+
+  const singlePages: PostContent[] = getAllSinglePages(folder);
+  
+  //console.warn(singlePages);
+
+  // Here wa simplify the pages creating a new array of objects
+  // with only the properties we need.
+  // [ { tags: [ ], categories: [ ] } ]
+
+  const mappedPages: Record<string, unknown>[] = singlePages.map(
+    ({ frontmatter: { title, tags, categories }, slug }) => 
+      ({ title, tags, categories, slug: slug + ".md" }))
+  ;
+
+  //console.warn(mappedPages)
+
+  const tagCounts = countItems(mappedPages, "tags");
+  //const categoryCounts = countItems(mapped, "categories");
+
+  //console.warn(tagCounts)
+
+  return tagCounts;
+};
+
+
+/**
+ * Counts the occurrences of items in a specific key of an array of objects.
+ * @param items - The array of objects to count items from.
+ * @param key   - The key whose values will be counted (an array)
+ * @returns An array of objects with the name and count of each item.
+ */
+function countItems(items: Array<Record<string, unknown>>, key: string) : CountedItem[] {
+
+  const counts = new Map<string, number>();
+
+  for (const item of items) {
+
+    const values = item[key];
+    if (Array.isArray(values)) {
+
+      for (const value of values) {
+        //value.toLowerCase();
+        const name = value.toLowerCase();
+        counts.set(name, (counts.get(name) ?? 0) + 1);
+      }
+    }
+  }
+
+  return Array.from(counts.entries()).map(([name, count]) => ({ name, count }));
+}

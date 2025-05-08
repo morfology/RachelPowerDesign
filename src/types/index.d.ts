@@ -82,6 +82,7 @@ export type Button = {
 };
 
 export type Frontmatter = {
+
   title: string;
   date?: string;
   tags: string[];
@@ -96,6 +97,7 @@ export type Frontmatter = {
   author: string;
   button: Button;
 
+  banner?: Record<string, string>;
 
 };
 

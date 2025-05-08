@@ -14,7 +14,7 @@ export const getTaxonomy = (folder: string, name: string): Array<string> => {
 };
 
 // @MP 2024-01-02 tags[] to by dynamic based on name?
-export const getAllTaxonomy = (folder: string, name: string): Array<string> => {
+export const getAllTaxonomy = (folder: string, _uname: string): Array<string> => {
 
   const singlePages: PostContent[] = getAllSinglePages(folder);
 

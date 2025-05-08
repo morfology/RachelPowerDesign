@@ -2,16 +2,9 @@
 import { getListPage } from "@/lib/contentParser";
 import { Metadata } from "next";
 import { siteUrl } from "@/config/dynamic.js";
-import { Frontmatter } from "@/types"; // Adjust the path if needed
 import config from "@/config/config.json";
 
-
-export const getPageFrontmatter = (slug: string): Frontmatter => {
-  const data = getListPage(slug);
-  return data.frontmatter as Frontmatter;
-};
-
-
+// Default metadata for the site
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
@@ -38,6 +31,7 @@ export const defaultMetadata: Metadata = {
   }  
 }
 
+// Metadata for a page
 export const getPageMetadata = (slug: string): Metadata => {
   const {
     meta_title,

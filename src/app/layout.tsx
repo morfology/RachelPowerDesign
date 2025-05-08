@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   description: config.metadata.meta_description,
   openGraph: {
     title: config.site.title,
-    description: "Welcome to My Awesome Site – learn, build, and grow...",
-    url: "/",
+    description: config.metadata.meta_description,
+    url: siteUrl,
     siteName: config.site.title,
     images: [
       {

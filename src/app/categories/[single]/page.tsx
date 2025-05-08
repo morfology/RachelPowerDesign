@@ -3,7 +3,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
 import { getAllSinglePages } from "@/lib/contentParser";
-import { getTaxonomy } from "@/lib/taxonomyParser";
+import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
@@ -17,8 +17,9 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: StaticParams = () => {
-  const categories: Array<string> = getTaxonomy(projects_folder, "categories");
+  const categories: Array<string> = getTaxonomyAggr(projects_folder, "categories").map((item) => item.name);
 
+  console.warn("cats", categories)
   const paths = categories.map((category) => ({
     single: category,
   }));
@@ -28,7 +29,9 @@ export const generateStaticParams: StaticParams = () => {
 
 const CategorySingle = ({ params }: { params: { single: string } }) => {
   const posts: PostContent[] = getAllSinglePages(projects_folder);
-  const filterByCategories = taxonomyFilter(posts, "categories", params.single);
+  const filterByTags = taxonomyFilter(posts, "categories", params.single);
+
+console.warn("filterByTags", filterByTags);
 
   return (
     <>
@@ -36,7 +39,7 @@ const CategorySingle = ({ params }: { params: { single: string } }) => {
       <div className="section-sm pb-0">
         <div className="container">
           <div className="row">
-            {filterByCategories.map((post: PostContent, index: number) => (
+            {filterByTags.map((post: PostContent, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
                 <ProjectCard data={post} />
               </div>

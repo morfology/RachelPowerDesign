@@ -1,15 +1,14 @@
 //=> app/categories/page.tsx
 
 import config from "@/config/config.json";
-import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
+import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
 import Link from "next/link";
 
 const Categories = () => {
   const { projects_folder } = config.settings;
-  const categories = getTaxonomy(projects_folder, "categories");
-  const allCategories = getAllTaxonomy(projects_folder, "categories");
+  const countedItem = getTaxonomyAggr(projects_folder, "categories");
 
   return (
     <>
@@ -17,17 +16,17 @@ const Categories = () => {
       <section className="section">
         <div className="container text-center">
           <ul>
-            {categories.map((category: string) => {
-              const count = allCategories.filter(
-                (c: string) => c === category,
-              ).length;
+            {countedItem.map((item) => {
+
+              const count = item.count;
+              const cat = item.name;
               return (
-                <li className="m-3 inline-block" key={category}>
+                <li className="m-3 inline-block" key={cat}>
                   <Link
-                    href={`/categories/${category}`}
+                    href={`/categories/${cat}`}
                     className="block rounded bg-theme-light px-4 py-2 text-xl text-dark  "
                   >
-                    {humanize(category)}{" "}
+                    {humanize(cat)}
                     <span className="ml-2 rounded bg-body px-2 ">{count}</span>
                   </Link>
                 </li>

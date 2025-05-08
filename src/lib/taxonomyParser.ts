@@ -3,33 +3,33 @@ import { slugify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 
 // get all taxonomies from frontmatter
-export const getTaxonomy = (folder: string, name: string): Array<string> => {
+// export const getTaxonomy = (folder: string, name: string): Array<string> => {
 
-  const taxonomies = getAllTaxonomy(folder, name);
+//   const taxonomies = getAllTaxonomy(folder, name);
 
-  // Dedupe
-  const taxonomy = [...new Set(taxonomies)];
+//   // Dedupe
+//   const taxonomy = [...new Set(taxonomies)];
 
-  return taxonomy;
-};
+//   return taxonomy;
+// };
 
-// @MP 2024-01-02 tags[] to by dynamic based on name?
-export const getAllTaxonomy = (folder: string, _uname: string): Array<string> => {
+// // @MP 2024-01-02 tags[] to by dynamic based on name?
+// export const getAllTaxonomy = (folder: string, _uname: string): Array<string> => {
 
-  const singlePages: PostContent[] = getAllSinglePages(folder);
+//   const singlePages: PostContent[] = getAllSinglePages(folder);
 
 
-  const taxonomyPages = singlePages.map((page) => page.frontmatter.categories);
-  const taxonomies = [];
-  for (let i = 0; i < taxonomyPages?.length; i++) {
-    const taxonomyArray = taxonomyPages[i];
-    for (let j = 0; j < taxonomyArray?.length; j++) {
-      taxonomies.push(slugify(taxonomyArray[j]));
-    }
-  }
+//   const taxonomyPages = singlePages.map((page) => page.frontmatter.categories);
+//   const taxonomies = [];
+//   for (let i = 0; i < taxonomyPages?.length; i++) {
+//     const taxonomyArray = taxonomyPages[i];
+//     for (let j = 0; j < taxonomyArray?.length; j++) {
+//       taxonomies.push(slugify(taxonomyArray[j]));
+//     }
+//   }
 
-  return taxonomies;
-};
+//   return taxonomies;
+// };
 
 export type CountedItem = {
   name: string;
@@ -37,7 +37,7 @@ export type CountedItem = {
 };
 
 // @MP 2024-01-02 tags[] to by dynamic based on name?
-export const getTags = (folder: string, taxonomy: string): CountedItem[] => {
+export const getTaxonomyAggr = (folder: string, taxonomy: string): CountedItem[] => {
 
   const singlePages: PostContent[] = getAllSinglePages(folder);
   
@@ -72,7 +72,7 @@ function countItems(items: Array<Record<string, unknown>>, key: string) : Counte
 
       for (const value of values) {
         //value.toLowerCase();
-        const name = value.toLowerCase();
+        const name = slugify(value.toLowerCase());
         counts.set(name, (counts.get(name) ?? 0) + 1);
       }
     }

@@ -3,7 +3,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
 import { getAllSinglePages } from "@/lib/contentParser";
-import { getTags, CountedItem } from "@/lib/taxonomyParser";
+import { getTaxonomyAggr, CountedItem } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
@@ -18,7 +18,7 @@ export const dynamicParams = false;
 // generate static params
 export const generateStaticParams: StaticParams = () => {
 
-  const countedItems: CountedItem[] = getTags(projects_folder, 'tags');
+  const countedItems: CountedItem[] = getTaxonomyAggr(projects_folder, 'tags');
   const uniqueTags = countedItems.map((item) => item.name);
 
   console.warn("tagsx", uniqueTags);

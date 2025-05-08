@@ -11,10 +11,8 @@
   "settings": {
     "search": true,
     "sticky_header": true,
-    "theme_switcher": true,
     "default_theme": "system",
     "pagination": 8,
-    "summary_length": 200,
     "projects_folder": "projects",
     "services_folder": "services"
   },

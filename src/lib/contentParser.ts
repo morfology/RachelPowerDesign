@@ -7,19 +7,12 @@ import { Frontmatter, PostContent } from "@/types";
 const contentPath = "src/content";
 const appPath = "src/app";
 
-// Helper function to read file content
-const readFile = (filePath: string): string => {
-  return fs.readFileSync(filePath, "utf-8");
-};
 
-// Helper function to parse frontmatter
-const parseFrontmatter = (raw: Record<string, unknown>): Frontmatter => {
-  const rawString = JSON.stringify(raw);
-  return JSON.parse(rawString) as Frontmatter;
-};
-
-
-// get list page data, ex: _index.md
+/**
+ * This function gets the specified page data from the content folder.
+ * @param filePath - relative path to the file e.g. _index.md
+ * @returns object with frontmatter and content
+ */
 export const getListPage = (filePath: string): PostContent => {
   let pageDataPath = path.join(contentPath, filePath);
 
@@ -41,7 +34,11 @@ export const getListPage = (filePath: string): PostContent => {
   };
 }
 
-// get all single pages, ex: blog/post.md
+/**
+ * This function gets all single pages from the specified folder.
+ * @param folder - The folder where the pages are located.
+ * @returns An array of objects with frontmatter and content
+ */
 export const getAllSinglePages = (folder: string): Array<PostContent> => {
 
   const folderPath = path.join(contentPath, folder);
@@ -78,4 +75,15 @@ export const getAllSinglePages = (folder: string): Array<PostContent> => {
   );
 
   return filterByDate;
+};
+
+// Helper function to read file content
+const readFile = (filePath: string): string => {
+  return fs.readFileSync(filePath, "utf-8");
+};
+
+// Helper function to parse frontmatter
+const parseFrontmatter = (raw: Record<string, unknown>): Frontmatter => {
+  const rawString = JSON.stringify(raw);
+  return JSON.parse(rawString) as Frontmatter;
 };

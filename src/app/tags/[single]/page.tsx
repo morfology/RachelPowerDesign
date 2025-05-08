@@ -3,7 +3,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
 import { getAllSinglePages } from "@/lib/contentParser";
-import { getTaxonomy } from "@/lib/taxonomyParser";
+import { getTags, CountedItem } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
@@ -17,11 +17,13 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: StaticParams = () => {
-  const tags = getTaxonomy(projects_folder, "tags");
 
-  const paths = tags.map((tag) => ({
-    single: tag,
-  }));
+  const countedItems: CountedItem[] = getTags(projects_folder, 'tags');
+  const uniqueTags = countedItems.map((item) => item.name);
+
+  console.warn("tagsx", uniqueTags);
+
+  const paths = uniqueTags.map((tag) => ({single: tag,}));
 
   return paths;
 };

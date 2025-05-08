@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const tags = () => {
   const { projects_folder } = config.settings;
-  const countedItem: CountedItem[] = getTags(projects_folder);
+  const countedItem: CountedItem[] = getTags(projects_folder, 'tags');
 
   console.warn(tags)
 

@@ -37,29 +37,21 @@ export type CountedItem = {
 };
 
 // @MP 2024-01-02 tags[] to by dynamic based on name?
-export const getTags = (folder: string): CountedItem[] => {
+export const getTags = (folder: string, taxonomy: string): CountedItem[] => {
 
   const singlePages: PostContent[] = getAllSinglePages(folder);
   
-  //console.warn(singlePages);
-
-  // Here wa simplify the pages creating a new array of objects
+  // Here we simplify the pages creating a new array of objects
   // with only the properties we need.
   // [ { tags: [ ], categories: [ ] } ]
 
   const mappedPages: Record<string, unknown>[] = singlePages.map(
-    ({ frontmatter: { title, tags, categories }, slug }) => 
-      ({ title, tags, categories, slug: slug + ".md" }))
+    ({ frontmatter: { title, tags, categories } }) => 
+      ({ title, tags, categories }))
   ;
 
-  //console.warn(mappedPages)
-
-  const tagCounts = countItems(mappedPages, "tags");
-  //const categoryCounts = countItems(mapped, "categories");
-
-  //console.warn(tagCounts)
-
-  return tagCounts;
+  const taxCounts = countItems(mappedPages, taxonomy);
+  return taxCounts;
 };
 
 

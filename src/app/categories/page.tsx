@@ -12,7 +12,7 @@ const Categories = () => {
 
   return (
     <>
-      <PageHeader title={"Categories"} />
+      <PageHeader heading={"Categories"} />
       <section className="section">
         <div className="container text-center">
           <ul>

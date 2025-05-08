@@ -34,7 +34,7 @@ const TagSingle = ({ params }: { params: { single: string } }) => {
 
   return (
     <>
-      <PageHeader title={humanize(params.single)} />
+      <PageHeader heading={humanize(params.single)} />
       <div className="section-sm pb-0">
         <div className="container">
           <div className="row">

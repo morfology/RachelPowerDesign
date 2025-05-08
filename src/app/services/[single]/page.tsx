@@ -35,7 +35,7 @@ const ServicePage = ({ params }: { params: { single: string } }) /*: JSX.Element
 
   return (
     <>
-      <PageHeader title={heading || '?'} />
+      <PageHeader heading={heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">

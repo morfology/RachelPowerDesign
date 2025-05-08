@@ -32,7 +32,7 @@ const RegularPages = ({ params }: { params: { regular: string } }) => {
 
   return (
     <>
-      <PageHeader title={heading || '?'} />
+      <PageHeader heading={heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">

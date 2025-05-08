@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <>
-      <PageHeader title={heading || '?'} />
+      <PageHeader heading={heading || '?'} />
 
       <CallToAction data={ctaAbout1} />
       <CallToAction data={ctaAbout2} />

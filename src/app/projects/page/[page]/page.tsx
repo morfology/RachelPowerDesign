@@ -44,7 +44,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
 
   return (
     <>
-      <PageHeader title={postIndex.frontmatter.heading || '?'} />
+      <PageHeader heading={postIndex.frontmatter.heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="row gx-5">

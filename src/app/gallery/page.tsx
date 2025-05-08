@@ -15,7 +15,7 @@ const Gallery = () => {
 
   return (
     <>
-      <PageHeader title={'Gallery'} />
+      <PageHeader heading={'Gallery'} />
 
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
         <Grid />

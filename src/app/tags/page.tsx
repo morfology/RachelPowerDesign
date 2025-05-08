@@ -14,7 +14,7 @@ const tags = () => {
 
   return (
     <>
-      <PageHeader title={"Tags"} />
+      <PageHeader heading={"Tags"} />
       <section className="section">
         <div className="container text-center">
           <ul>

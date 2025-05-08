@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <>
-      <PageHeader title={heading || '?'} />
+      <PageHeader heading={heading || '?'} />
       {/* Iterate over the ctaData array to render CallToAction components */}
       {ctaData.map((cta, index) => (
         <CallToAction key={index} data={cta} />

@@ -1,5 +1,7 @@
 ---
-# Banner
+heading: "Rachel Power Design"
+
+# Banner??
 banner:
   heading: "Rachel Power Design"
   content: "From styling a single space or event to designing and managing an entire project our bespoke service means that you can achieve the look you want within a budget that works for you."

@@ -8,23 +8,19 @@ import CallToAction from "@/partials/CallToAction";
 const Home = () => {
   const homepage: PostContent = getListPage("homepage/_index.md");
   const { frontmatter } = homepage;
+
   // const {
   //   banner,
   // }: {
   //   banner: { title: string; image: string; content?: string; button?: Button };
   // } = frontmatter;
-  const banner = frontmatter.banner;
+  // const banner = frontmatter.banner;
 
   // Combine the CallToAction data into a single array
   const ctaData = [
     getListPage("homepage/call-to-action-intro.md"),
 
   ];
-
-
-
-
-
 
   return (
     <>
@@ -52,7 +48,7 @@ const Home = () => {
         {/**** Big Hero Text and strapline */}
         <div  className="relative z-10 flex flex-col justify-center items-center h-full text-center text-theme-light">
           <h1 style={{ color: 'rgba(244, 244, 244, 0.60)' }} className="mb-4 text-7xl leading-tight text-theme-light"
-            dangerouslySetInnerHTML={markdownify(banner?.title || 'test')}
+            dangerouslySetInnerHTML={markdownify(frontmatter.heading || 'test')}
           />
 
 

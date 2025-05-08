@@ -1,6 +1,6 @@
 ---
-title: "Interior Design"
-meta_title: ""
+heading: "Interior Design"
+title: ""
 description: "this is meta description"
 draft: false
 ---

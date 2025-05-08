@@ -28,11 +28,11 @@ const RegularPages = ({ params }: { params: { regular: string } }) => {
   )[0];
 
   const { frontmatter, content } = data;
-  const { title } = frontmatter;
+  const { heading } = frontmatter;
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader title={heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">

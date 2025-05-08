@@ -1,6 +1,6 @@
 ---
-title: "Design Consultation"
-meta_title: ""
+heading: "Design Consultation"
+title: ""
 description: "this is meta description"
 draft: false
 ---

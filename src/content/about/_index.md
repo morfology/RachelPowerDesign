@@ -1,6 +1,6 @@
 ---
-title: "About (H1)"
-meta_title: "About Us"
+heading: "About (heading)"
+title: "About Us (title)"
 description: "About (description)"
 image: "/images/head-shots/rachel.jpg"
 draft: false

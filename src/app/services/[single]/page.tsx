@@ -31,11 +31,11 @@ const ServicePage = ({ params }: { params: { single: string } }) /*: JSX.Element
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;
-  const { title } = frontmatter;
+  const { heading } = frontmatter;
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader title={heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">

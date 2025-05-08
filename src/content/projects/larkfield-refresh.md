@@ -1,7 +1,7 @@
 ---
-title: "Farnham"
+heading: "Farnham"
 folder: larkfield
-meta_title: ""
+title: ""
 description: "Family Home Refresh"
 date: 2023-03-03T05:00:00Z
 image: "/images/larkfield/detail-plant.jpg"

@@ -9,7 +9,7 @@ const Services = () => {
   const data = getListPage("services/_index.md");
 
   const { frontmatter } = data;
-  const { title } = frontmatter;
+  const { heading } = frontmatter;
 
   // Combine the CallToAction data into a single array
   const ctaData = [
@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader title={heading || '?'} />
       {/* Iterate over the ctaData array to render CallToAction components */}
       {ctaData.map((cta, index) => (
         <CallToAction key={index} data={cta} />

@@ -1,6 +1,6 @@
 ---
-title: "Privacy"
-meta_title: ""
+heading: "Privacy"
+title: ""
 description: "this is meta description"
 draft: false
 ---

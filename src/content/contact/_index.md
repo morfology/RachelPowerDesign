@@ -1,6 +1,6 @@
 ---
-title: "Contact us"
-meta_title: ""
+heading: "Contact us"
+title: ""
 description: "this is meta description"
 draft: false
 ---

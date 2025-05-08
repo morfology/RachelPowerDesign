@@ -1,3 +1,3 @@
 ---
-title: "Authors"
+heading: "Authors"
 ---

@@ -83,6 +83,7 @@ export type Button = {
 
 export type Frontmatter = {
 
+  heading?: string;
   title: string;
   date?: string;
   tags: string[];

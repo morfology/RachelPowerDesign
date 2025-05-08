@@ -1,6 +1,6 @@
 ---
-title: "Our Services"
-meta_title: ""
+heading: "Our Services"
+title: ""
 description: "this is meta description"
 draft: false
 ---

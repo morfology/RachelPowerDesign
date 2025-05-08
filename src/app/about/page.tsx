@@ -13,7 +13,7 @@ export const generateMetadata = (): Metadata => getPageMetadata("about/_index.md
 const About = () => {
   const data = getListPage("about/_index.md");
   const { frontmatter, content } = data;
-  const { title /*, meta_title, description, image* --- Meta */ } = frontmatter;
+  const { heading /*, meta_title, description, image* --- Meta */ } = frontmatter;
 
   const ctaAbout1 = getListPage("about/call-to-action-about-1.md");
   const ctaAbout2 = getListPage("about/call-to-action-about-2.md");
@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader title={heading || '?'} />
 
       <CallToAction data={ctaAbout1} />
       <CallToAction data={ctaAbout2} />

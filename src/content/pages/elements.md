@@ -1,6 +1,6 @@
 ---
-title: "Elements"
-meta_title: ""
+heading: "Elements"
+title: ""
 description: "this is meta description"
 draft: false
 ---

@@ -1,7 +1,7 @@
 ---
-title: "Farnham"
+heading: "Farnham"
 folder: marcia-house
-meta_title: ""
+title: ""
 description: "Family Home Extension & Renovation"
 date: 2023-03-03T05:00:00Z
 image: "/images/marcia-house/living-1.jpg"

@@ -41,7 +41,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
 
   const { frontmatter, content } = post;
   const {
-    title,
+    heading,
     folder,
     image,
     categories,
@@ -79,7 +79,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 </div>
               )}
               <h1
-                dangerouslySetInnerHTML={markdownify(title || 'TEST2')}
+                dangerouslySetInnerHTML={markdownify(heading || '?')}
                 className="h2 mb-4"
               />
               <div className="content mb-10">

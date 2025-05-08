@@ -1,8 +1,8 @@
 ---
-title: "Horsham"
+heading: "Horsham"
 folder: horsham
 internal: "Horsham Jack and Amy"
-meta_title: ""
+title: ""
 description: "Horsham Home Refurbishment"
 date: 2023-03-03T05:00:00Z
 image: "/images/horsham/kitchen.jpg"

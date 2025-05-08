@@ -31,7 +31,7 @@ const Posts = () => {
 
   return (
     <>
-      <PageHeader title={page.frontmatter.title} />
+      <PageHeader title={page.frontmatter.heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="row gx-5">

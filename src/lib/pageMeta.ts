@@ -6,6 +6,7 @@ import config from "@/config/config.json";
 
 // Default metadata for the site
 export const defaultMetadata: Metadata = {
+
   metadataBase: new URL(siteUrl),
 
   title: {
@@ -14,6 +15,7 @@ export const defaultMetadata: Metadata = {
   },
 
   description: config.metadata.meta_description,
+
   openGraph: {
     title: config.site.title,
     description: config.metadata.meta_description,

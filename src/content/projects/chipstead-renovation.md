@@ -1,8 +1,8 @@
 ---
-title: "Chipstead"
+heading: "Chipstead"
 folder: chipstead
 internal_notes: "Chipstead Extension & Renovation"
-meta_title: ""
+title: ""
 description: "Chipstead Extension & Renovation"
 date: 2023-03-03T05:00:00Z
 image: "/images/chipstead/living-1.jpg"

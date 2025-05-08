@@ -2,61 +2,40 @@ import { getAllSinglePages } from "@/lib/contentParser";
 import { slugify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 
-// get all taxonomies from frontmatter
-// export const getTaxonomy = (folder: string, name: string): Array<string> => {
-
-//   const taxonomies = getAllTaxonomy(folder, name);
-
-//   // Dedupe
-//   const taxonomy = [...new Set(taxonomies)];
-
-//   return taxonomy;
-// };
-
-// // @MP 2024-01-02 tags[] to by dynamic based on name?
-// export const getAllTaxonomy = (folder: string, _uname: string): Array<string> => {
-
-//   const singlePages: PostContent[] = getAllSinglePages(folder);
-
-
-//   const taxonomyPages = singlePages.map((page) => page.frontmatter.categories);
-//   const taxonomies = [];
-//   for (let i = 0; i < taxonomyPages?.length; i++) {
-//     const taxonomyArray = taxonomyPages[i];
-//     for (let j = 0; j < taxonomyArray?.length; j++) {
-//       taxonomies.push(slugify(taxonomyArray[j]));
-//     }
-//   }
-
-//   return taxonomies;
-// };
+/**
+ * This function is used to aggregate the taxonomy items (tags or categories) across all pages
+ * in a specified folder. It returns an array of objects, each containing the name of the item
+ * and its count.
+ * 
+ * @param folder - The folder where the pages are located.
+ * @param taxonomy - The taxonomy to be aggregated (e.g., "tags" or "categories").
+ * @returns An array of objects with the name and count of each item
+ *          [ { name: 'tag-1', count: 5 } , ... ]
+ */
 
 export type CountedItem = {
   name: string;
   count: number;
 };
 
-// @MP 2024-01-02 tags[] to by dynamic based on name?
 export const getTaxonomyAggr = (folder: string, taxonomy: string): CountedItem[] => {
 
-  const singlePages: PostContent[] = getAllSinglePages(folder);
+  const pages: PostContent[] = getAllSinglePages(folder);
   
-  // Here we simplify the pages creating a new array of objects
-  // with only the properties we need.
-  // [ { tags: [ ], categories: [ ] } ]
+  // Here we simplify the pages as a flat array of objects with the properties
+  // we may use: [ { title, tags: [ ], categories: [ ] }, .. ]
 
-  const mappedPages: Record<string, unknown>[] = singlePages.map(
+  const simplerPages: Record<string, unknown>[] = pages.map(
     ({ frontmatter: { title, tags, categories } }) => 
       ({ title, tags, categories }))
   ;
 
-  const taxCounts = countItems(mappedPages, taxonomy);
-  return taxCounts;
+  // Now get each distinct item and count
+  return countItems(simplerPages, taxonomy);
 };
 
-
 /**
- * Counts the occurrences of items in a specific key of an array of objects.
+ * This function counts the occurrences of items in a specific key of an array of objects.
  * @param items - The array of objects to count items from.
  * @param key   - The key whose values will be counted (an array)
  * @returns An array of objects with the name and count of each item.

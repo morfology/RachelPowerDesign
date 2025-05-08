@@ -2,8 +2,13 @@
 
 import MDXContent from "@/helpers/MDXContent";
 import { getListPage } from "@/lib/contentParser";
+import { getPageMetadata } from "@/lib/pageMeta";
 import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
+import { Metadata } from "next";
+
+
+export const generateMetadata = (): Metadata => getPageMetadata("about/_index.md");
 
 const About = () => {
   const data = getListPage("about/_index.md");

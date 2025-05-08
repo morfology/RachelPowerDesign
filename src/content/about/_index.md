@@ -1,7 +1,7 @@
 ---
-title: "About"
-meta_title: "About"
-description: "****** REMOVED *****"
+title: "About (H1)"
+meta_title: "About Us"
+description: "About (description)"
 image: "/images/head-shots/rachel.jpg"
 draft: false
 ---

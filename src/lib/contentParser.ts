@@ -7,7 +7,6 @@ import { Frontmatter, PostContent } from "@/types";
 const contentPath = "src/content";
 const appPath = "src/app";
 
-
 /**
  * This function gets the specified page data from the content folder.
  * @param filePath - relative path to the file e.g. _index.md

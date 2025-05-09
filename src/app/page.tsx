@@ -1,4 +1,4 @@
-import { getListPage } from "@/lib/contentParser";
+import { getPageFromPath } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import CallToAction from "@/partials/CallToAction";
 
 
 const Home = () => {
-  const homepage: PostContent = getListPage("homepage/_index.md");
+  const homepage: PostContent = getPageFromPath("homepage/_index.md");
   const { frontmatter } = homepage;
 
   // const {
@@ -18,7 +18,7 @@ const Home = () => {
 
   // Combine the CallToAction data into a single array
   const ctaData = [
-    getListPage("homepage/call-to-action-intro.md"),
+    getPageFromPath("homepage/call-to-action-intro.md"),
 
   ];
 

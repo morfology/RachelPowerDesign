@@ -3,7 +3,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
-import { getListPage, getAllSinglePages } from "@/lib/contentParser";
+import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
@@ -31,7 +31,7 @@ export const generateStaticParams = () => {
 
 // for all regular pages
 const Posts = ({ params }: { params: { page: number } }) => {
-  const postIndex: PostContent = getListPage(`${projects_folder}/_index.md`);
+  const postIndex: PostContent = getPageFromPath(`${projects_folder}/_index.md`);
   const posts: PostContent[] = getAllSinglePages(projects_folder);
 
   const sortedPosts = sortByDate(posts);

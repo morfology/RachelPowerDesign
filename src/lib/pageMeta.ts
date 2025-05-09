@@ -1,5 +1,5 @@
 // lib/pageMeta.ts
-import { getListPage } from "@/lib/contentParser";
+import { getPageFromPath } from "@/lib/contentParser";
 import { Metadata } from "next";
 import { siteUrl } from "@/config/dynamic.js";
 import config from "@/config/config.json";
@@ -50,7 +50,7 @@ export const getPageMetadata = (slug: string): Metadata => {
     title,
     description,
     //image,
-  } = getListPage(slug).frontmatter;
+  } = getPageFromPath(slug).frontmatter;
 
   const md = {
     title: title || defaultTitle,

@@ -1,24 +1,24 @@
 //=> app/services/page.tsx
 
-import { getListPage } from "@/lib/contentParser";
+import { getPageFromPath } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
 
 const Services = () => {
-  const data = getListPage("services/_index.md");
+  const data = getPageFromPath("services/_index.md");
 
   const { frontmatter } = data;
   const { heading } = frontmatter;
 
   // Combine the CallToAction data into a single array
   const ctaData = [
-    getListPage("sections/call-to-action-design-consult.md"),
-    getListPage("sections/call-to-action-design.md"),
-    //getListPage("sections/call-to-action-project.md"),
+    getPageFromPath("sections/call-to-action-design-consult.md"),
+    getPageFromPath("sections/call-to-action-design.md"),
+    //getPageFromPath("sections/call-to-action-project.md"),
 
-    getListPage("sections/call-to-action-architecture.md"),
-    getListPage("sections/call-to-action-procurement.md"),
-    getListPage("sections/call-to-action-style.md"),
+    getPageFromPath("sections/call-to-action-architecture.md"),
+    getPageFromPath("sections/call-to-action-procurement.md"),
+    getPageFromPath("sections/call-to-action-style.md"),
 
   ];
 

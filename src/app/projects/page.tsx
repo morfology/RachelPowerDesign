@@ -3,14 +3,14 @@
 import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
-import { getListPage, getAllSinglePages } from "@/lib/contentParser";
+import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
 // import { Metadata } from "next";
 
 const { projects_folder, pagination } = config.settings;
-const page: PostContent = getListPage(`${projects_folder}/_index.md`);
+const page: PostContent = getPageFromPath(`${projects_folder}/_index.md`);
 
 // export function generateMetadata({  }): Metadata {
 //   return {

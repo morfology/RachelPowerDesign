@@ -12,7 +12,7 @@ const appPath = "src/app";
  * @param filePath - relative path to the file e.g. _index.md
  * @returns object with frontmatter and content
  */
-export const getListPage = (filePath: string): PostContent => {
+export const getPageFromPath = (filePath: string): PostContent => {
   let pageDataPath = path.join(contentPath, filePath);
 
   // Fallback base for pages is the "app" folder

@@ -1,4 +1,4 @@
-// => /projects
+// projects/page.tsx => https://localhost:3000/projects
 
 import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";

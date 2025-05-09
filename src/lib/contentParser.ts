@@ -35,13 +35,21 @@ export const getPageFromPath = (filePath: string): PostContent => {
 }
 
 /**
- * Find page withe the specified slug
+ * Find page for the specified slug
  */
 export const findPageForSlug = (slug: string, folder: string): PostContent => {
 
-  return getAllSinglePages(folder)
+  const page = getAllSinglePages(folder)
     .filter((page) => page.slug === slug) [ 0 ]
   ;
+
+  // The returned slug is single level, but we need to add the folder
+  // name to the slug for the projects @MP 2023-10-01 Find a better way
+  if (folder === "projects") {
+    page.slug = `projects/${page.slug}`;
+  }
+
+  return page;
 }
 
 

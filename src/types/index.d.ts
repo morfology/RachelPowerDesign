@@ -1,14 +1,4 @@
-export type RegularPage = {
-  frontmatter: {
-    title: string;
-    image?: string;
-    description?: string;
-    layout?: string;
-    draft?: boolean;
-  };
-  content: string;
-  slug?: string;
-};
+// TypeScript declaration file for the project
 
 export type PostContent = {
   frontmatter: Frontmatter;

@@ -1,17 +1,13 @@
+// http://localhost:3000/gallery
+
 /**
  * Gallery
  */
-// import { getListPage } from "@/lib/contentParser";
-// import { RegularPage } from "@/types";
 import PageHeader from "@/partials/PageHeader";
 import Grid from "@/lib/Grid"
 
 // for all regular pages
 const Gallery = () => {
-
-
-  //const pageData: RegularPage = getListPage("gallery/_index.md");
-  //const { heading } = pageData.frontmatter;
 
   return (
     <>

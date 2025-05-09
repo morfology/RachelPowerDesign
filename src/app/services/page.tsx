@@ -5,7 +5,6 @@ import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
 
 const Services = () => {
-  //const data: RegularPage = getListPage("pages/services.md");
   const data = getListPage("services/_index.md");
 
   const { frontmatter } = data;

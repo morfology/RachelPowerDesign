@@ -1,22 +1,21 @@
-//=> app/[regular]/page.tsx
+// src/app/[regular]/page.tsx => http://localhost:3000/elements
+// "pages" folder
 
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
-import { PostContent, RegularPage } from "@/types";
+import { PostContent } from "@/types";
 
 // remove dynamicParams
 export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams = () => {
-  const getRegularPages = getAllSinglePages("pages");
+  const pages = getAllSinglePages("pages");
 
-  const regularPages = getRegularPages.map((page: RegularPage) => ({
+  return pages.map((page) => ({
     regular: page.slug,
   }));
-
-  return regularPages;
 };
 
 // for all regular pages
@@ -24,7 +23,7 @@ const RegularPages = ({ params }: { params: { regular: string } }) => {
 
   const regularData: Array<PostContent> = getAllSinglePages("pages");
   const data: PostContent = regularData.filter(
-    (page: RegularPage) => page.slug === params.regular,
+    (page) => page.slug === params.regular,
   )[0];
 
   const { frontmatter, content } = data;

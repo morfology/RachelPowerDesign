@@ -17,9 +17,6 @@ const About = () => {
   const ctaAbout1 = getListPage("about/call-to-action-about-1.md");
   const ctaAbout2 = getListPage("about/call-to-action-about-2.md");
 
-  //const data: RegularPage = getListPage("pages/services.md");
-  // @MP CTA could be inline in MDX file
-
   return (
     <>
       <PageHeader heading={heading || '?'} />

@@ -1,7 +1,7 @@
 ---
-heading: "Privacy"
-title: ""
-description: "this is meta description"
+heading: "Privacy Policy"
+title: "Privacy Policy Title"
+description: "Privacy Policy (TODO)"
 draft: false
 ---
 

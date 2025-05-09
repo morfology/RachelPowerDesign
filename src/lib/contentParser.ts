@@ -34,6 +34,17 @@ export const getPageFromPath = (filePath: string): PostContent => {
 }
 
 /**
+ * Find page withe the specified slug
+ */
+export const findPageForSlug = (slug: string, folder: string): PostContent => {
+
+  return getAllSinglePages(folder)
+    .filter((page) => page.slug === slug) [ 0 ]
+  ;
+}
+
+
+/**
  * This function gets all single pages from the specified folder.
  * @param folder - The folder where the pages are located.
  * @returns An array of objects with frontmatter and content

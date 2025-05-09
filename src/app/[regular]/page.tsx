@@ -2,40 +2,25 @@
 // "pages" folder
 
 import MDXContent from "@/helpers/MDXContent";
-import { getAllSinglePages } from "@/lib/contentParser";
+import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
-import { PostContent } from "@/types";
-import { getPageMetadata } from "@/lib/pageMeta";
+import { getPostMetadata } from "@/lib/pageMeta";
 
 const folder = "pages";
 
 // remove dynamicParams
 export const dynamicParams = false;
 
-export const generateMetadata = ({ params }: { params: { regular: string } }) => {
-
-  console.warn("gmd params: ", params);
-
-  const page = findPageForSlug(params.regular, folder);
-  // @MP TODO: generate based on param
-  return getPageMetadata("pages/elements.md");
-}
+// get metadata for the page
+export const generateMetadata = ({ params }: { params: { regular: string } }) => 
+  getPostMetadata(findPageForSlug(params.regular, folder))
+;
 
 // generate static params
 export const generateStaticParams = () => {
 
   return getAllSinglePages(folder)
     .map((page) => ({regular: page.slug}))
-  ;
-}
-
-/**
- * Find page withe the specified slug
- */
-function findPageForSlug(slug: string, folder: string): PostContent {
-
-  return getAllSinglePages(folder)
-    .filter((page) => page.slug === slug) [ 0 ]
   ;
 }
 

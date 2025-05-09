@@ -1,8 +1,17 @@
 ---
-heading: "Elements"
-title: ""
-description: "this is meta description"
+heading: "Elements Heading"
+title: "Elements Title"
+description: "Elements Description"
 draft: false
+# Example of structuring frontmatter
+social:
+  - name: github
+    icon: FaGithub
+    link: https://github.com
+
+  - name: twitter
+    icon: FaTwitter
+    link: https://twitter.com
 ---
 
 # Heading 1

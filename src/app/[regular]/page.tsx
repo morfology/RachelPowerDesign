@@ -5,9 +5,12 @@ import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
+import { getPageMetadata } from "@/lib/pageMeta";
 
 // remove dynamicParams
 export const dynamicParams = false;
+
+export const generateMetadata = () => getPageMetadata("pages/elements.md");
 
 // generate static params
 export const generateStaticParams = () => {

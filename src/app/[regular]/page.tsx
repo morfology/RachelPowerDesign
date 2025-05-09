@@ -1,4 +1,4 @@
-// src/app/[regular]/page.tsx => http://localhost:3000/elements
+// [regular]/page.tsx => http://localhost:3000/elements
 // "pages" folder
 
 import MDXContent from "@/helpers/MDXContent";
@@ -7,38 +7,50 @@ import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
 import { getPageMetadata } from "@/lib/pageMeta";
 
+const folder = "pages";
+
 // remove dynamicParams
 export const dynamicParams = false;
 
-export const generateMetadata = () => getPageMetadata("pages/elements.md");
+export const generateMetadata = ({ params }: { params: { regular: string } }) => {
+
+  console.warn("gmd params: ", params);
+
+  const page = findPageForSlug(params.regular, folder);
+  // @MP TODO: generate based on param
+  return getPageMetadata("pages/elements.md");
+}
 
 // generate static params
 export const generateStaticParams = () => {
-  const pages = getAllSinglePages("pages");
 
-  return pages.map((page) => ({
-    regular: page.slug,
-  }));
-};
+  return getAllSinglePages(folder)
+    .map((page) => ({regular: page.slug}))
+  ;
+}
+
+/**
+ * Find page withe the specified slug
+ */
+function findPageForSlug(slug: string, folder: string): PostContent {
+
+  return getAllSinglePages(folder)
+    .filter((page) => page.slug === slug) [ 0 ]
+  ;
+}
 
 // for all regular pages
 const RegularPages = ({ params }: { params: { regular: string } }) => {
 
-  const regularData: Array<PostContent> = getAllSinglePages("pages");
-  const data: PostContent = regularData.filter(
-    (page) => page.slug === params.regular,
-  )[0];
-
-  const { frontmatter, content } = data;
-  const { heading } = frontmatter;
+  const page = findPageForSlug(params.regular, folder);
 
   return (
     <>
-      <PageHeader heading={heading || '?'} />
+      <PageHeader heading={page.frontmatter.heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">
-            <MDXContent content={content} />
+            <MDXContent content={page.content} />
           </div>
         </div>
       </section>

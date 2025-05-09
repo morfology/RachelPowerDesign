@@ -6,9 +6,12 @@ import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
 import Link from "next/link";
 
+const categories_taxonomy = "categories";
+const projects_folder = config.settings.projects_folder;
+
 const Categories = () => {
-  const { projects_folder } = config.settings;
-  const countedItem = getTaxonomyAggr(projects_folder, "categories");
+  console.warn("/categories");
+  const countedItems = getTaxonomyAggr(projects_folder, categories_taxonomy);
 
   return (
     <>
@@ -16,7 +19,7 @@ const Categories = () => {
       <section className="section">
         <div className="container text-center">
           <ul>
-            {countedItem.map((item) => {
+            {countedItems.map((item) => {
 
               const count = item.count;
               const cat = item.name;

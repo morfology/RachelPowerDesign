@@ -48,6 +48,9 @@ export const findPageForSlug = (slug: string, folder: string): PostContent => {
   if (folder === "projects") {
     page.slug = `projects/${page.slug}`;
   }
+  if (folder === "services") {
+    page.slug = `services/${page.slug}`;
+  }
 
   return page;
 }

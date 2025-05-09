@@ -1,8 +1,7 @@
 ---
-heading: "Design Consultation"
-title: ""
-description: "this is meta description"
-draft: false
+title: "Design Consultation Service" # <head:title> : search engine results, social shares
+heading: "Design Consultation" # 👈 <h1>: Visible on page, help user on the page
+description: "Find out more about our Design Consultation service" # seo/social preview
 ---
 ##### 2 hour in person or online with follow up information pack
 

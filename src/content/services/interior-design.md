@@ -1,8 +1,7 @@
 ---
-heading: "Interior Design"
-title: ""
-description: "this is meta description"
-draft: false
+title: "Interior Design Service" # <head:title> : search engine results, social shares
+heading: "Interior Design Service" # 👈 <h1>: Visible on page, help user on the page
+description: "Find out more about our Interior Design service" # seo/social preview
 ---
 Our full interior design service is perfect for people looking to build a new house, renovate an existing property or simply update certain areas of their home.
 

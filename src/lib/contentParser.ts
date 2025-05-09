@@ -65,6 +65,7 @@ export const getAllSinglePages = (folder: string): Array<PostContent> => {
   );
 
   const singlePages: Array<PostContent> = filterSingleFiles.map((filename): PostContent => {
+  //console.warn(filename, folderPath)
     const slug = filename.replace(".md", "");
     const filePath = path.join(folderPath, filename);
     const pageData = readFile(filePath);

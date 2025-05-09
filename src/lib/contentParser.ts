@@ -29,7 +29,8 @@ export const getPageFromPath = (filePath: string): PostContent => {
 
   return {
     frontmatter: parseFrontmatter(frontmatter),
-    content
+    content,
+    slug: filePath.replace("_index.md", "").replace(/\/$/, "") //@MP create a default slug
   };
 }
 

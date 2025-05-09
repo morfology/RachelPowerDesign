@@ -1,7 +1,7 @@
 ---
-heading: "About (heading)"
-title: "About Us (title)"
-description: "About (description)"
+title: "About Us" # <title>
+heading: "About Us" # <h1>
+description: "Learn more about our mission and team."
 image: "/images/head-shots/rachel.jpg"
 draft: false
 ---

@@ -1,4 +1,4 @@
-//=> app/categories/page.tsx
+// [src/app/categories/page.tsx] => http://localhost:3000/categories
 
 import config from "@/config/config.json";
 import { getTaxonomyAggr } from "@/lib/taxonomyParser";

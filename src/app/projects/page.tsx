@@ -7,23 +7,17 @@ import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
-// import { Metadata } from "next";
+import { getPostMetadata } from "@/lib/pageMeta";
 
 const { projects_folder, pagination } = config.settings;
 const page: PostContent = getPageFromPath(`${projects_folder}/_index.md`);
 
-// export function generateMetadata({  }): Metadata {
-//   return {
-//     openGraph: {
-//       url: `/projects`,
-//     }
-//   };
-// }
-
-
+// Get metadata for the page
+export const generateMetadata = () => getPostMetadata(page);
 
 // for all regular pages
 const Posts = () => {
+
   const posts: PostContent[] = getAllSinglePages(projects_folder);
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);

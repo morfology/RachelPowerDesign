@@ -1,4 +1,4 @@
-//=> app/categories/[single]/page.tsx
+// categories/[single]/page.tsx => http://localhost:3000/categories/family-home-refresh
 
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
@@ -9,29 +9,27 @@ import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
 
-const { projects_folder } = config.settings;
+const categories_taxonomy = "categories";
+const projects_folder = config.settings.projects_folder;
+
 type StaticParams = () => { single: string }[];
 
 // remove dynamicParams
 export const dynamicParams = false;
 
 // generate static params
-export const generateStaticParams: StaticParams = () => {
-  const categories: Array<string> = getTaxonomyAggr(projects_folder, "categories").map((item) => item.name);
-
-  console.warn("cats", categories)
-  const paths = categories.map((category) => ({
-    single: category,
-  }));
-
-  return paths;
-};
+export const generateStaticParams: StaticParams = () =>
+  getTaxonomyAggr(projects_folder, categories_taxonomy)
+    .map((item) => item.name).map((category) => 
+      ({single: category}))
+    ;
 
 const CategorySingle = ({ params }: { params: { single: string } }) => {
-  const posts: PostContent[] = getAllSinglePages(projects_folder);
-  const filterByTags = taxonomyFilter(posts, "categories", params.single);
 
-console.warn("filterByTags", filterByTags);
+  console.warn(`/categories/${params.single}`)
+
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
+  const filterByTags = taxonomyFilter(posts, categories_taxonomy, params.single);
 
   return (
     <>

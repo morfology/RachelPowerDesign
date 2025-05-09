@@ -72,11 +72,6 @@ export const getPageMetadata = (slug: string): Metadata => {
 
 // Metadata for a page
 export const getPostMetadata = (post: PostContent): Metadata => {
-  // const {
-  //   title,
-  //   description,
-  //   //image,
-  // } = getPageFromPath(slug).frontmatter;
 
   const md = {
     title: post.frontmatter.title || defaultTitle,
@@ -84,7 +79,6 @@ export const getPostMetadata = (post: PostContent): Metadata => {
     openGraph: {
       title: post.frontmatter.title || defaultTitle,
       description: post.frontmatter.description,
-//      url: `${siteUrl}/${slug.replace("_index.md", "").replace(/\/$/, "")}`,
       url: `${siteUrl}/${post.slug}`,
       siteName: defaultTitle,
       images:[ 
@@ -92,7 +86,5 @@ export const getPostMetadata = (post: PostContent): Metadata => {
       ]
     },
   };
-  //console.warn("md", md);
-
   return md
 };

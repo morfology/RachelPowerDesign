@@ -1,5 +1,5 @@
 // [regular]/page.tsx => http://localhost:3000/elements
-// "pages" folder
+//                       http://localhost:3000/privacy-policy
 
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
@@ -17,12 +17,10 @@ export const generateMetadata = ({ params }: { params: { regular: string } }) =>
 ;
 
 // generate static params
-export const generateStaticParams = () => {
-
-  return getAllSinglePages(folder)
+export const generateStaticParams = () => 
+  getAllSinglePages(folder)
     .map((page) => ({regular: page.slug}))
-  ;
-}
+;
 
 // for all regular pages
 const RegularPages = ({ params }: { params: { regular: string } }) => {

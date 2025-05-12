@@ -1,42 +1,50 @@
-//=> app/categories/[single]/page.tsx
+// categories/[single]/page.tsx => http://localhost:3000/categories/family-home-refresh
 
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser";
-import { getTaxonomy } from "@/lib/taxonomyParser";
+import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
+import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
+import { getPostMetadata } from "@/lib/pageMeta";
 
-const { projects_folder } = config.settings;
+const categories_taxonomy = "categories";
+const categories_folder = "categories";
+const projects_folder = config.settings.projects_folder;
+
 type StaticParams = () => { single: string }[];
 
 // remove dynamicParams
 export const dynamicParams = false;
 
+// get metadata for the page
+export const generateMetadata = ({ params }: { params: { single: string } }) => 
+  getPostMetadata(findPageForSlug(params.single, categories_folder))
+;
+
 // generate static params
-export const generateStaticParams: StaticParams = () => {
-  const categories = getTaxonomy(projects_folder, "categories");
-
-  const paths = categories.map((category) => ({
-    single: category,
-  }));
-
-  return paths;
-};
+export const generateStaticParams: StaticParams = () =>
+  getTaxonomyAggr(projects_folder, categories_taxonomy)
+    .map((item) => item.name).map((category) => 
+      ({single: category}))
+    ;
 
 const CategorySingle = ({ params }: { params: { single: string } }) => {
-  const posts: Post[] = getSinglePage(projects_folder);
-  const filterByCategories = taxonomyFilter(posts, "categories", params.single);
+
+  console.warn(`/categories/${params.single}`)
+
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
+  const filterByTags = taxonomyFilter(posts, categories_taxonomy, params.single);
 
   return (
     <>
-      <PageHeader title={humanize(params.single)} />
+      <PageHeader heading={humanize(params.single)} />
       <div className="section-sm pb-0">
         <div className="container">
           <div className="row">
-            {filterByCategories.map((post: Post, index: number) => (
+            {filterByTags.map((post: PostContent, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
                 <ProjectCard data={post} />
               </div>

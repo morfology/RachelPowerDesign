@@ -2,16 +2,15 @@
  * CallToAction (Partial)
  */
 
-import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify, multimarkdownify } from "@/lib/utils/textConverter";
-import { Call_to_action } from "@/types";
+import { Frontmatter } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 
 interface PageData {
   notFound?: boolean;
   content?: string;
-  frontmatter: Call_to_action;
+  frontmatter: Frontmatter;
 }
 
 const CallToAction = ({ data }: { data: PageData }) => {
@@ -22,7 +21,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
 
   return (
     <>
-      {data.frontmatter.enable && (
+      {true && (
 
 
 <section className="mt-2 w-full">
@@ -34,7 +33,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
         <div className="mb-10 md:w-2/5 md:order-2 md:mb-0">
           <Image
             className="rounded object-cover h-full w-full"
-            src={data.frontmatter.image}
+            src={data.frontmatter.image || ''}
             width={width}
             height={height}
             alt="cta-image"
@@ -43,11 +42,11 @@ const CallToAction = ({ data }: { data: PageData }) => {
         {/* Content panel */}
         <div className="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light p-12 lg:p-16">
           <h2
-            dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
+            dangerouslySetInnerHTML={markdownify(data.frontmatter.heading || '?')}
             className="text-h2-sm md:text-h2 mb-6 uppercase prose prose-headings:font-serif prose-headings:text-blue-800"
           />
 
-          {multimarkdownify(data.frontmatter.description).map((html, index) => (
+          {multimarkdownify(data.frontmatter.description || 'TEST4').map((html, index) => (
             <p
               key={index}
               dangerouslySetInnerHTML={html}

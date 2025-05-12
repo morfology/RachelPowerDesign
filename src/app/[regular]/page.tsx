@@ -1,40 +1,39 @@
-//=> app/[regular]/page.tsx
+// [regular]/page.tsx => http://localhost:3000/elements
+//                       http://localhost:3000/privacy-policy
 
 import MDXContent from "@/helpers/MDXContent";
-import { getSinglePage } from "@/lib/contentParser";
+import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
-import { RegularPage } from "@/types";
+import { getPostMetadata } from "@/lib/pageMeta";
+
+const folder = "pages";
 
 // remove dynamicParams
 export const dynamicParams = false;
 
+// get metadata for the page
+export const generateMetadata = ({ params }: { params: { regular: string } }) => 
+  getPostMetadata(findPageForSlug(params.regular, folder))
+;
+
 // generate static params
-export const generateStaticParams = () => {
-  const getRegularPages = getSinglePage("pages");
-
-  const regularPages = getRegularPages.map((page: RegularPage) => ({
-    regular: page.slug,
-  }));
-
-  return regularPages;
-};
+export const generateStaticParams = () => 
+  getAllSinglePages(folder)
+    .map((page) => ({regular: page.slug}))
+;
 
 // for all regular pages
 const RegularPages = ({ params }: { params: { regular: string } }) => {
-  const regularData = getSinglePage("pages");
-  const data = regularData.filter(
-    (page: RegularPage) => page.slug === params.regular,
-  )[0];
-  const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
+
+  const page = findPageForSlug(params.regular, folder);
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader heading={page.frontmatter.heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">
-            <MDXContent content={content} />
+            <MDXContent content={page.content} />
           </div>
         </div>
       </section>

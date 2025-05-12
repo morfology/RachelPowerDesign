@@ -10,6 +10,7 @@ export const slugify = (content: string): string => {
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const markdownify = (content: string, div?: boolean) => {
 
+  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const markdownContent: any = div
     ? marked.parse(content)
@@ -31,6 +32,7 @@ export const humanize = (content: string) : string => {
   return content
     .replace(/^[\s_]+|[\s_]+$/g, "")
     .replace(/[_\s]+/g, " ")
+    .replace(/-+/g, " ")
     .replace(/^[a-z]/, function (m) {
       return m.toUpperCase();
     });

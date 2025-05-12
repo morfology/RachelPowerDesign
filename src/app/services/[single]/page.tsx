@@ -5,9 +5,10 @@
 
 import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
-import { getSinglePage } from "@/lib/contentParser";
-import { Post } from "@/types";
+import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
+import { PostContent } from "@/types";
 import PageHeader from "@/partials/PageHeader";
+import { getPostMetadata } from "@/lib/pageMeta";
 
 const { services_folder } = config.settings;
 
@@ -15,32 +16,34 @@ const { services_folder } = config.settings;
 export const dynamicParams = false;
 
 // generate static params
-export const generateStaticParams: () => { single: string }[] = () => {
-  const posts: Post[] = getSinglePage(services_folder);
+// export const generateStaticParams: () => { single: string }[] = () => {
+//   const posts: PostContent[] = getAllSinglePages(services_folder);
 
-  const paths = posts.map((post) => ({
-    single: post.slug || '',
-  }));
+//   const paths = posts.map((post) => ({
+//     single: post.slug || '',
+//   }));
 
-  return paths;
-};
+//   return paths;
+// };
+
+// get metadata for the page
+export const generateMetadata = ({ params }: { params: { single: string } }) => 
+  getPostMetadata(findPageForSlug(params.single, services_folder))
+;
+
+
 
 const ServicePage = ({ params }: { params: { single: string } }) /*: JSX.Element*/ => {
 
-  const posts: Post[] = getSinglePage(services_folder);
+  const posts: PostContent[] = getAllSinglePages(services_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;
-  const {
-    title,
-    meta_title,
-    description,
-    image
-  } = frontmatter;
+  const { heading } = frontmatter;
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader heading={heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="content">

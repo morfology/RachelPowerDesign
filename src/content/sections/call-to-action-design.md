@@ -1,6 +1,6 @@
 ---
 enable: true
-title: "Interior Design"
+heading: "Interior Design"
 image: "/images/marcia-house/detail-mirror-plants.jpg"
 description: "Our full interior design service is perfect for people looking to build a new house, renovate an existing property or simply update certain areas of their home.
 

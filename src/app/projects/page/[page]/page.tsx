@@ -3,11 +3,10 @@
 import ProjectCard from "@/components/ProjectCard";
 import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
-import { getListPage, getSinglePage } from "@/lib/contentParser";
-import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
+import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 
 const { projects_folder, pagination } = config.settings;
 
@@ -16,7 +15,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams = () => {
-  const allPost: Post[] = getSinglePage(projects_folder);
+  const allPost: PostContent[] = getAllSinglePages(projects_folder);
   const allSlug: string[] = allPost.map((item) => item.slug || '');
   const totalPages = Math.ceil(allSlug.length / pagination);
   const paths: { page: string }[] = [];
@@ -30,25 +29,11 @@ export const generateStaticParams = () => {
   return paths;
 };
 
-function spreadPages(num: number): number[] {
-  const pages = [];
-
-  for (let i = 2; i <= num; i++) {
-    pages.push(i);
-  }
-
-  return pages;
-}
-
 // for all regular pages
 const Posts = ({ params }: { params: { page: number } }) => {
-  const postIndex: Post = getListPage(`${projects_folder}/_index.md`);
-  const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: Post[] = getSinglePage(projects_folder);
-  // const allCategories = getAllTaxonomy(projects_folder, "categories");
-  // const categories = getTaxonomy(projects_folder, "categories");
+  const postIndex: PostContent = getPageFromPath(`${projects_folder}/_index.md`);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
 
-  const tags = getTaxonomy(projects_folder, "tags");
   const sortedPosts = sortByDate(posts);
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPage =
@@ -59,7 +44,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
 
   return (
     <>
-      <PageHeader title={postIndex.frontmatter.title} />
+      <PageHeader heading={postIndex.frontmatter.heading || '?'} />
       <section className="section">
         <div className="container">
           <div className="row gx-5">
@@ -67,7 +52,7 @@ const Posts = ({ params }: { params: { page: number } }) => {
             {/* <div className="lg:col-8"> */}
             <div>
               <div className="row">
-                {currentPosts.map((post: Post, index: number) => (
+                {currentPosts.map((post: PostContent, index: number) => (
                   <div key={index} className="mb-14 md:col-6">
                     <ProjectCard data={post} />
                   </div>

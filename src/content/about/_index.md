@@ -1,7 +1,7 @@
 ---
-title: "About"
-meta_title: "About"
-description: "****** REMOVED *****"
+title: "About Us" # <title>
+heading: "About Us" # <h1>
+description: "Learn more about our mission and team." # seo/social preview
 image: "/images/head-shots/rachel.jpg"
 draft: false
 ---

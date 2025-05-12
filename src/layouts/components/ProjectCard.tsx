@@ -1,11 +1,11 @@
 import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 import Link from "next/link";
 
-const ProjectCard = ({ data }: { data: Post }) => {
-  const { summary_length, projects_folder } = config.settings;
-  const { title, image, author, categories, date } = data.frontmatter;
+const ProjectCard = ({ data }: { data: PostContent }) => {
+  const { projects_folder } = config.settings;
+  const { heading, image } = data.frontmatter;
   return (
 
     <Link href={`/${projects_folder}/${data.slug}`}>
@@ -14,7 +14,7 @@ const ProjectCard = ({ data }: { data: Post }) => {
           <ImageFallback
             className="h-94 w-full object-cover rounded-md"
             src={image}
-            alt={title}
+            alt={heading}
             width={445}
             height={230}
           />
@@ -23,7 +23,7 @@ const ProjectCard = ({ data }: { data: Post }) => {
         <div className="absolute inset-0 bg-gray-700 opacity-30 rounded-md"></div>
 
         <div className="absolute inset-0 flex items-center justify-center">
-            <h2 className="text-white text-3xl font-bold">{title}</h2>
+            <h2 className="text-white text-3xl font-bold">{heading}</h2>
         </div>
       </div>
     </Link>

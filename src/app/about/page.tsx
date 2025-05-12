@@ -1,24 +1,22 @@
-//=> app/about/page.tsx
+// [/src/app/about/page.tsx] => http://localhost:3000/about
 
 import MDXContent from "@/helpers/MDXContent";
-import { getListPage } from "@/lib/contentParser";
+import { getPageFromPath } from "@/lib/contentParser";
+import { getPostMetadata } from "@/lib/pageMeta";
 import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
 
+export const generateMetadata = () => getPostMetadata(getPageFromPath("about/_index.md"));
+
 const About = () => {
-  const data = getListPage("about/_index.md");
-  const { frontmatter, content } = data;
-  const { title /*, meta_title, description, image* --- Meta */ } = frontmatter;
 
-  const ctaAbout1 = getListPage("about/call-to-action-about-1.md");
-  const ctaAbout2 = getListPage("about/call-to-action-about-2.md");
-
-  //const data: RegularPage = getListPage("pages/services.md");
-  // @MP CTA could be inline in MDX file
+  const page = getPageFromPath("about/_index.md");
+  const ctaAbout1 = getPageFromPath("about/call-to-action-about-1.md");
+  const ctaAbout2 = getPageFromPath("about/call-to-action-about-2.md");
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader heading={page.frontmatter.heading || '?'} />
 
       <CallToAction data={ctaAbout1} />
       <CallToAction data={ctaAbout2} />
@@ -26,12 +24,10 @@ const About = () => {
       <section className="section">
         <div className="container">
           <div className="content">
-            <MDXContent content={content} />
+            <MDXContent content={page.content} />
           </div>
         </div>
       </section>
-
-
     </>
   );
 };

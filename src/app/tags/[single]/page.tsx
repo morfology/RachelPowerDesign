@@ -2,12 +2,12 @@
 
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser";
-import { getTaxonomy } from "@/lib/taxonomyParser";
+import { getAllSinglePages } from "@/lib/contentParser";
+import { getTaxonomyAggr, CountedItem } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 
 const { projects_folder } = config.settings;
 type StaticParams = () => { single: string }[];
@@ -17,26 +17,28 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: StaticParams = () => {
-  const tags = getTaxonomy(projects_folder, "tags");
 
-  const paths = tags.map((tag) => ({
-    single: tag,
-  }));
+  const countedItems: CountedItem[] = getTaxonomyAggr(projects_folder, 'tags');
+  const uniqueTags = countedItems.map((item) => item.name);
+
+  console.warn("tagsx", uniqueTags);
+
+  const paths = uniqueTags.map((tag) => ({single: tag,}));
 
   return paths;
 };
 
 const TagSingle = ({ params }: { params: { single: string } }) => {
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
   const filterByTags = taxonomyFilter(posts, "tags", params.single);
 
   return (
     <>
-      <PageHeader title={humanize(params.single)} />
+      <PageHeader heading={humanize(params.single)} />
       <div className="section-sm pb-0">
         <div className="container">
           <div className="row">
-            {filterByTags.map((post: Post, index: number) => (
+            {filterByTags.map((post: PostContent, index: number) => (
               <div className="mb-14 md:col-6 lg:col-4" key={index}>
                 <ProjectCard data={post} />
               </div>

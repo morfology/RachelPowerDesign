@@ -28,7 +28,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <PageHeader title={"Contact Us"} />
+      <PageHeader heading={"Contact Us"} />
       <Formik
         initialValues={{ name: "", email: "", message: "" }}
         onSubmit={async (values, { resetForm }) => {

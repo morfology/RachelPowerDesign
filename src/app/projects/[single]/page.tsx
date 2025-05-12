@@ -1,58 +1,43 @@
-//=> /projects/the-project
+// projects/[single]/page.tsx => http://localhost:3000/projects/chipstead-renovation
 
 import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
-import { getSinglePage } from "@/lib/contentParser";
+import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
 import imageConfig from "@/config/images.json";
-// import { Metadata } from "next";
+import { getPostMetadata } from "@/lib/pageMeta";
 
 const { projects_folder } = config.settings;
 
 // remove dynamicParams
 export const dynamicParams = false;
 
-// export function generateMetadata({ params }: { params: { single: string } }): Metadata {
-//   console.log(params)
-//   return {
-//     openGraph: {
-//       url: `/projects/${params.single}`, // resolves to the project
-//     }
-//   };
-// }
+// get metadata for the page
+export const generateMetadata = ({ params }: { params: { single: string } }) => 
+  getPostMetadata(findPageForSlug(params.single, projects_folder))
+;
 
 // generate static params
-export const generateStaticParams: () => { single: string }[] = () => {
-  const posts: Post[] = getSinglePage(projects_folder);
-
-  const paths = posts.map((post) => ({
-    single: post.slug || '',
-  }));
-
-  return paths;
-};
+export const generateStaticParams: () => { single: string }[] = () =>
+  getAllSinglePages(projects_folder)
+    .map((post) => ({single: post.slug || ''}));
 
 const PostSingle = ({ params }: { params: { single: string } }) => {
-  const posts: Post[] = getSinglePage(projects_folder);
+  const posts: PostContent[] = getAllSinglePages(projects_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;
   const {
-    title,
+    heading,
     folder,
-    meta_title,
-    description,
     image,
-    author,
     categories,
-    date,
-    tags,
   } = frontmatter;
 
-  //console.log(dataSlider)
+  console.warn(`/projects/${params.single}`);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let imageSliderData: any[] = [];
@@ -84,7 +69,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 </div>
               )}
               <h1
-                dangerouslySetInnerHTML={markdownify(title)}
+                dangerouslySetInnerHTML={markdownify(heading || '?')}
                 className="h2 mb-4"
               />
               <div className="content mb-10">

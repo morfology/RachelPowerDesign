@@ -23,7 +23,7 @@ const Logo = ({ src }: { src?: string }) => {
   } = config.site;
 
   //const { theme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
   const resolvedLogo = logo;

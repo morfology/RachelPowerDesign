@@ -1,7 +1,7 @@
 ---
-title: "Haslemere Home Refurbishment"
+heading: "Haslemere Home Refurbishment"
 internal: "Haslemere Jack and Amy"
-meta_title: ""
+title: ""
 description: "Haslemere Home Refurbishment"
 date: 2020-03-03T05:00:00Z
 image: "/images/haslemere/dining-1.jpg"

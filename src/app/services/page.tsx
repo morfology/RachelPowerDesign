@@ -1,31 +1,30 @@
-//=> app/services/page.tsx
+// services/page.tsx => http://localhost:3000/services
 
-import { getListPage } from "@/lib/contentParser";
+import { getPageFromPath } from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
 import CallToAction from "@/partials/CallToAction";
+import { getPostMetadata } from "@/lib/pageMeta";
+
+const page = getPageFromPath(`services/_index.md`);
+
+// Get metadata for the page
+export const generateMetadata = () => getPostMetadata(page);
 
 const Services = () => {
-  //const data: RegularPage = getListPage("pages/services.md");
-  const data = getListPage("services/_index.md");
-
-  const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
 
   // Combine the CallToAction data into a single array
   const ctaData = [
-    getListPage("sections/call-to-action-design-consult.md"),
-    getListPage("sections/call-to-action-design.md"),
-    //getListPage("sections/call-to-action-project.md"),
-
-    getListPage("sections/call-to-action-architecture.md"),
-    getListPage("sections/call-to-action-procurement.md"),
-    getListPage("sections/call-to-action-style.md"),
-
+    getPageFromPath("sections/call-to-action-design-consult.md"),
+    getPageFromPath("sections/call-to-action-design.md"),
+    //getPageFromPath("sections/call-to-action-project.md"),
+    getPageFromPath("sections/call-to-action-architecture.md"),
+    getPageFromPath("sections/call-to-action-procurement.md"),
+    getPageFromPath("sections/call-to-action-style.md"),
   ];
 
   return (
     <>
-      <PageHeader title={title} />
+      <PageHeader heading={page.frontmatter.heading || '?'} />
       {/* Iterate over the ctaData array to render CallToAction components */}
       {ctaData.map((cta, index) => (
         <CallToAction key={index} data={cta} />

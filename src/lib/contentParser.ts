@@ -2,26 +2,17 @@ import fs from "fs";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import path from "path";
+import { Frontmatter, PostContent } from "@/types";
 
 const contentPath = "src/content";
 const appPath = "src/app";
 
-
-// Helper function to read file content
-const readFile = (filePath: string): string => {
-  return fs.readFileSync(filePath, "utf-8");
-};
-
-// Helper function to parse frontmatter
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const parseFrontmatter = (frontmatter: any): any => {
-  const frontmatterString = JSON.stringify(frontmatter);
-  return JSON.parse(frontmatterString);
-};
-
-// get list page data, ex: _index.md
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const getListPage = (filePath: string) => {
+/**
+ * This function gets the specified page data from the content folder.
+ * @param filePath - relative path to the file e.g. _index.md
+ * @returns object with frontmatter and content
+ */
+export const getPageFromPath = (filePath: string): PostContent => {
   let pageDataPath = path.join(contentPath, filePath);
 
   // Fallback base for pages is the "app" folder
@@ -39,12 +30,41 @@ export const getListPage = (filePath: string) => {
   return {
     frontmatter: parseFrontmatter(frontmatter),
     content,
+    slug: filePath.replace("_index.md", "").replace(/\/$/, "") //@MP create a default slug
   };
 }
 
-// get all single pages, ex: blog/post.md
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const getSinglePage = (folder: string) => {
+/**
+ * Find page for the specified slug
+ */
+export const findPageForSlug = (slug: string, folder: string): PostContent => {
+
+  const page = getAllSinglePages(folder)
+    .filter((page) => page.slug === slug) [ 0 ]
+  ;
+
+  if (!page) { throw new Error(`Post ${folder}/${slug} not found`); }
+
+  // The returned slug is single level, but we need to add the folder
+  // name to the slug for the projects @MP 2023-10-01 Find a better way
+  if (folder === "projects") {
+    page.slug = `projects/${page.slug}`;
+  }
+  if (folder === "services") {
+    page.slug = `services/${page.slug}`;
+  }
+
+  return page;
+}
+
+
+/**
+ * This function gets all single pages from the specified folder.
+ * @param folder - The folder where the pages are located.
+ * @returns An array of objects with frontmatter and content
+ */
+export const getAllSinglePages = (folder: string): Array<PostContent> => {
+
   const folderPath = path.join(contentPath, folder);
 
   if (!fs.existsSync(folderPath) || !fs.lstatSync(folderPath).isDirectory()) {
@@ -57,7 +77,8 @@ export const getSinglePage = (folder: string) => {
     file.match(/^(?!_)/),
   );
 
-  const singlePages = filterSingleFiles.map((filename) => {
+  const singlePages: Array<PostContent> = filterSingleFiles.map((filename): PostContent => {
+  //console.warn(filename, folderPath)
     const slug = filename.replace(".md", "");
     const filePath = path.join(folderPath, filename);
     const pageData = readFile(filePath);
@@ -67,7 +88,7 @@ export const getSinglePage = (folder: string) => {
     return {
       frontmatter: parseFrontmatter(frontmatter),
       slug: url,
-      content,
+      content
     };
   });
 
@@ -79,4 +100,15 @@ export const getSinglePage = (folder: string) => {
   );
 
   return filterByDate;
+};
+
+// Helper function to read file content
+const readFile = (filePath: string): string => {
+  return fs.readFileSync(filePath, "utf-8");
+};
+
+// Helper function to parse frontmatter
+const parseFrontmatter = (raw: Record<string, unknown>): Frontmatter => {
+  const rawString = JSON.stringify(raw);
+  return JSON.parse(rawString) as Frontmatter;
 };

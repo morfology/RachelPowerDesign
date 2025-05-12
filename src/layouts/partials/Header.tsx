@@ -5,7 +5,7 @@ import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 //import SegmentHTML from 'dangerously-set-html-content';
 import { FaPhone, FaSearch as IoSearch } from "react-icons/fa/index.js";
 //import { FaPhone } from "react-icons/fa/index.js";

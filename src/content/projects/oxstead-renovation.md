@@ -1,7 +1,7 @@
 ---
-title: "Farnham"
+heading: "Farnham"
 folder: farnham
-meta_title: ""
+title: ""
 description: "Farnham Extension & Renovation"
 date: 2024-03-03T05:00:00Z
 image: "/images/farnham/living-1.jpg"

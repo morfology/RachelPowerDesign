@@ -1,11 +1,11 @@
 import { slugify } from "@/lib/utils/textConverter";
-import { Post } from "@/types";
+import { PostContent } from "@/types";
 
 const taxonomyFilter = (
-  posts: Post[],
+  posts: PostContent[],
   name: "categories" | "tags", // Restrict to valid keys in frontmatter
   key: string
-): Post[] =>
+): PostContent[] =>
   posts.filter((post) =>
     post.frontmatter[name]?.map((item: string) => slugify(item)).includes(key)
   );

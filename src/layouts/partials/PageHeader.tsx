@@ -1,9 +1,9 @@
 import { humanize } from "@/lib/utils/textConverter";
 
-const PageHeader = ({ title }: { title: string }) => {
+const PageHeader = ({ heading }: { heading: string }) => {
 
   // Make the last title word brown
-  const words = humanize(title).split(' ');
+  const words = humanize(heading).split(' ');
   const lastWord = words.pop();
   const firstWords = words.join(' ');
 

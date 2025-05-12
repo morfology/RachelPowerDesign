@@ -2,54 +2,22 @@
 import React from 'react';
 
 import SearchModal from "@/components/SearchModal";
-import theme from "@/config/theme.json";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
-import { Metadata } from "next";
-
-
-import {siteUrl} from '@/config/dynamic.js';
-
+import { defaultMetadata } from '@/lib/pageMeta';
 import config from "@/config/config.json";
 
+export const metadata = defaultMetadata;
 
-//console.info(siteConfig.imageConfig)
-
-
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-
-  title: {
-    default: config.site.title,
-    template: `%s | ${config.site.title}`,
-  },
-
-  description: config.metadata.meta_description,
-  openGraph: {
-    title: config.site.title,
-    description: "Welcome to My Awesome Site – learn, build, and grow...",
-    url: "/",
-    siteName: config.site.title,
-    images: [
-      {
-        url: siteUrl + "/og-default.png",
-        width: 1200,
-        height: 630,
-        alt: config.site.title,
-      },
-    ],
-    type: "website",
-  }  
-}
 export default function RootLayout({children}: {children: React.ReactNode}) {
-  // import google font css
-  const pf = theme.fonts.font_family.primary;
-  const sf = theme.fonts.font_family.secondary;
 
+  // import google font css
+  // const pf = theme.fonts.font_family.primary;
+  // const sf = theme.fonts.font_family.secondary;
 
   return (
     <html suppressHydrationWarning={true} lang="en">

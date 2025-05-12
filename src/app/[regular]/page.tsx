@@ -3,7 +3,7 @@
 
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { getPostMetadata } from "@/lib/pageMeta";
 
 const folder = "pages";

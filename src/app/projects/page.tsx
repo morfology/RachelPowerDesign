@@ -5,7 +5,7 @@ import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
 import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { PostContent } from "@/types";
 import { getPostMetadata } from "@/lib/pageMeta";
 

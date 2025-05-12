@@ -2,7 +2,7 @@ import { getPageFromPath } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 import Image from "next/image";
-import CallToAction from "@/partials/CallToAction";
+import CallToAction from "@/components/CallToAction";
 
 
 const Home = () => {

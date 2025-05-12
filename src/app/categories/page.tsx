@@ -3,7 +3,7 @@
 //import config from "@/config/config.json";
 import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import { humanize } from "@/lib/utils/textConverter";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
 import { getPostMetadata } from "@/lib/pageMeta";
 import { getPageFromPath } from "@/lib/contentParser";

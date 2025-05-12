@@ -7,7 +7,7 @@ import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import { PostContent } from "@/types";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { getPostMetadata } from "@/lib/pageMeta";
 
 const { services_folder } = config.settings;

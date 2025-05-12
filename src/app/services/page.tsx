@@ -1,8 +1,8 @@
 // services/page.tsx => http://localhost:3000/services
 
 import { getPageFromPath } from "@/lib/contentParser";
-import PageHeader from "@/partials/PageHeader";
-import CallToAction from "@/partials/CallToAction";
+import PageHeader from "@/components/PageHeader";
+import CallToAction from "@/components/CallToAction";
 import { getPostMetadata } from "@/lib/pageMeta";
 
 const page = getPageFromPath(`services/_index.md`);

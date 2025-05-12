@@ -3,8 +3,8 @@
 import MDXContent from "@/helpers/MDXContent";
 import { getPageFromPath } from "@/lib/contentParser";
 import { getPostMetadata } from "@/lib/pageMeta";
-import PageHeader from "@/partials/PageHeader";
-import CallToAction from "@/partials/CallToAction";
+import PageHeader from "@/components/PageHeader";
+import CallToAction from "@/components/CallToAction";
 
 export const generateMetadata = () => getPostMetadata(getPageFromPath("about/_index.md"));
 

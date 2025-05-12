@@ -8,7 +8,7 @@ import { PostContent } from "@/types";
 const defaultTitle = siteConfig.title;
 const defaultDescription = siteConfig.meta_description;
 const defaultOgImage = {
-  url: `${siteUrl}/images/og-default.png`,
+  url: `${siteUrl}/images/og-default.png?v=1.1`,
   width: 1200,
   height: 630,
   alt: defaultTitle

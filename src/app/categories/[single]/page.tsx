@@ -2,20 +2,27 @@
 
 import ProjectCard from "@/components/ProjectCard";
 import config from "@/config/config.json";
-import { getAllSinglePages } from "@/lib/contentParser";
+import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
 import { PostContent } from "@/types";
+import { getPostMetadata } from "@/lib/pageMeta";
 
 const categories_taxonomy = "categories";
+const categories_folder = "categories";
 const projects_folder = config.settings.projects_folder;
 
 type StaticParams = () => { single: string }[];
 
 // remove dynamicParams
 export const dynamicParams = false;
+
+// get metadata for the page
+export const generateMetadata = ({ params }: { params: { single: string } }) => 
+  getPostMetadata(findPageForSlug(params.single, categories_folder))
+;
 
 // generate static params
 export const generateStaticParams: StaticParams = () =>

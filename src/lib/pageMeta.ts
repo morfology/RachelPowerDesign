@@ -73,6 +73,8 @@ export const getPageMetadata = (slug: string): Metadata => {
 // Metadata for a page
 export const getPostMetadata = (post: PostContent): Metadata => {
 
+  if (!post) { throw new Error("Post not found"); }
+
   const md = {
     title: post.frontmatter.title || defaultTitle,
     description: post.frontmatter.description,

@@ -43,6 +43,8 @@ export const findPageForSlug = (slug: string, folder: string): PostContent => {
     .filter((page) => page.slug === slug) [ 0 ]
   ;
 
+  if (!page) { throw new Error(`Post ${folder}/${slug} not found`); }
+
   // The returned slug is single level, but we need to add the folder
   // name to the slug for the projects @MP 2023-10-01 Find a better way
   if (folder === "projects") {

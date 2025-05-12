@@ -1,14 +1,23 @@
 // [src/app/categories/page.tsx] => http://localhost:3000/categories
 
-import config from "@/config/config.json";
+//import config from "@/config/config.json";
 import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
 import Link from "next/link";
+import { getPostMetadata } from "@/lib/pageMeta";
+import { getPageFromPath } from "@/lib/contentParser";
 
 const categories_taxonomy = "categories";
-const projects_folder = config.settings.projects_folder;
+const categories_folder = "categories";
+const projects_folder = "categories";
 
+
+// Get metadata for the page
+export const generateMetadata = () => 
+  getPostMetadata(getPageFromPath(`${categories_folder}/_index.md`));
+
+// This is the main page for the categories taxonomy
 const Categories = () => {
   console.warn("/categories");
   const countedItems = getTaxonomyAggr(projects_folder, categories_taxonomy);

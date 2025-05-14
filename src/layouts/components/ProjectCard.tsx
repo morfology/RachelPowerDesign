@@ -1,10 +1,10 @@
-import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";
 import { PostContent } from "@/types";
 import Link from "next/link";
 
+const projects_folder = "projects";
+
 const ProjectCard = ({ data }: { data: PostContent }) => {
-  const { projects_folder } = config.settings;
   const { heading, image } = data.frontmatter;
   return (
 

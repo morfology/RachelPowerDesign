@@ -1,13 +1,5 @@
 {
-  "site": {
-    "title": "Rachel Power Design",
-    "meta_description": "Rachel Power Design transforms homes and spaces with timeless, elegant interiors tailored to your lifestyle. Based in the South East and working with clients across the UK.",
-    "favicon": "/images/favicon.ico",
-    "logo": "/images/rpd-logo-v1.svg",
-    "logo_width": "150",
-    "logo_height": "",
-    "logo_text": "Rachel Power"
-  },
+
 
   "settings": {
     "search": true,
@@ -18,18 +10,9 @@
       "enable": true,
       "label": "Contact Us",
       "link": "/contact/"
+
     },
 
-
-
-
-    "projects_folder": "projects",
-    "services_folder": "services"
-
-
-
-  
+    "contentPath": "src/content"
   }
-
-
 }

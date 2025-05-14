@@ -2,7 +2,7 @@
 import { getPageFromPath } from "@/lib/contentParser";
 import { Metadata } from "next";
 import { siteUrl } from "@/config/dynamic.js";
-import { site as siteConfig } from "@/config/config.json";
+import siteConfig from "@/config/site.json";
 import { PostContent } from "@/types";
 
 const defaultTitle = siteConfig.title;

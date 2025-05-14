@@ -3,9 +3,9 @@ import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import path from "path";
 import { Frontmatter, PostContent } from "@/types";
+import config from "@/config/config.json";
 
-const contentPath = "src/content";
-const appPath = "src/app";
+const contentPath = config.settings.contentPath;
 
 /**
  * This function gets the specified page data from the content folder.
@@ -13,12 +13,8 @@ const appPath = "src/app";
  * @returns object with frontmatter and content
  */
 export const getPageFromPath = (filePath: string): PostContent => {
-  let pageDataPath = path.join(contentPath, filePath);
 
-  // Fallback base for pages is the "app" folder
-  if (!fs.existsSync(pageDataPath)) {
-    pageDataPath = path.join(appPath, filePath);
-  }
+  const pageDataPath = path.join(contentPath, filePath);
 
   if (!fs.existsSync(pageDataPath)) {
     notFound();

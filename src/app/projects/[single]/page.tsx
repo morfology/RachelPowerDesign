@@ -1,6 +1,5 @@
 // projects/[single]/page.tsx => http://localhost:3000/projects/chipstead-renovation
 
-import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
@@ -10,7 +9,7 @@ import ImageSlider from "@/components/ImageSlider";
 import imageConfig from "@/config/images.json";
 import { getPostMetadata } from "@/lib/pageMeta";
 
-const { projects_folder } = config.settings;
+const projects_folder = "projects";
 
 // remove dynamicParams
 export const dynamicParams = false;

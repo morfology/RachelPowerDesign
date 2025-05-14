@@ -10,7 +10,7 @@ import { getPageFromPath } from "@/lib/contentParser";
 
 const categories_taxonomy = "categories";
 const categories_folder = "categories";
-const projects_folder = "categories";
+const projects_folder = "projects";
 
 
 // Get metadata for the page
@@ -19,8 +19,9 @@ export const generateMetadata = () =>
 
 // This is the main page for the categories taxonomy
 const Categories = () => {
-  console.warn("/categories");
   const countedItems = getTaxonomyAggr(projects_folder, categories_taxonomy);
+
+  console.warn("/categories...", countedItems[0]);
 
   return (
     <>

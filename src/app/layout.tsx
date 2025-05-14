@@ -9,7 +9,7 @@ import Providers from "@/components/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { defaultMetadata } from '@/lib/pageMeta';
-import config from "@/config/config.json";
+import siteConfig from "@/config/site.json";
 
 export const metadata = defaultMetadata;
 
@@ -29,7 +29,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         />
 
         {/* favicon */}
-        <link rel="shortcut icon" href={config.site.favicon} />
+        <link rel="shortcut icon" href={siteConfig.favicon} />
 
         {/* google font css */}
         <link

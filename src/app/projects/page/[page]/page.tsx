@@ -8,7 +8,8 @@ import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/components/PageHeader";
 import { PostContent } from "@/types";
 
-const { projects_folder, pagination } = config.settings;
+const { pagination } = config.settings;
+const projects_folder = "projects";
 
 // remove dynamicParams
 export const dynamicParams = false;

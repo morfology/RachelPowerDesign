@@ -1,15 +1,14 @@
 // app/tags/[single]/page.tsx : /tags/mytag
 
 import ProjectCard from "@/components/ProjectCard";
-import config from "@/config/config.json";
 import { getAllSinglePages } from "@/lib/contentParser";
 import { getTaxonomyAggr, CountedItem } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { PostContent } from "@/types";
 
-const { projects_folder } = config.settings;
+const projects_folder = "projects";
 type StaticParams = () => { single: string }[];
 
 // remove dynamicParams

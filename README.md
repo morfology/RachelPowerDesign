@@ -1,44 +1,21 @@
 # Rachel Power Design website
-Nextjs + Tailwind CSS + TypeScript 
- - [Starter](https://img.shields.io/github/license/zeon-studio/nextplate)
- - [PageSpeed 🚀](https://pagespeed.web.dev/analysis/https-rpd-vercel-app/kgoakwksu7?form_factor=mobile)
+Nextjs + Tailwind CSS + TypeScript
+
+ - Initially created [nexplate](https://github.com/zeon-studio/nextplate)
+ - [PageSpeed 🚀](https://pagespeed.web.dev/analysis/https-rachelpowerdesign-production-up-railway-app/fn7r87e4n0?form_factor=mobile)
 
 ## 📌 Key Features
-- 🎯 Similar Posts Suggestion
 - 🔍 Search Functionality
 - 🏷️ Tags & Categories
-- 🔗 Netlify setting pre-configured
 - 📞 Support contact form
 - 📱 Fully responsive
 - 📝 Write and update content in Markdown / MDX
-- 🔳 Syntax Highlighting
-- 👥 Multi-Authors
-
-### 📄 15+ Pre-designed Pages
-- 🏠 Homepage
-- 👤 About
-- 📞 Contact
-- 👥 Authors
-- 👤 Author Single
-- 📝 Blog
-- 📝 Blog Single
 - 🚫 Custom 404
-- 💡 Elements
 - 📄 Privacy Policy
-- 🏷️ Tags
-- 🏷️ Tag Single
-- 🗂️ Categories
-- 🗂️ Category Single
-- 🔍 Search
+- 🏠 Homepage
+- 💡 Elements
 
 ## 🚀 Getting Started
-
-### 📦 Dependencies
-
-- next 14.0+
-- node v20.10+
-- npm v10.2+
-- tailwind v3.3+
 
 ### 👉 Install Dependencies
 

@@ -1,13 +1,13 @@
-//=> app/tags/page.tsx : /tags
+// app/tags/page.tsx => http://localhost:3000/tags
 
-import config from "@/config/config.json";
 import { CountedItem, getTaxonomyAggr } from "@/lib/taxonomyParser";
 import { humanize } from "@/lib/utils/textConverter";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
 
+const projects_folder = "projects";
+
 const tags = () => {
-  const { projects_folder } = config.settings;
   const countedItem: CountedItem[] = getTaxonomyAggr(projects_folder, 'tags');
 
   console.warn(tags)

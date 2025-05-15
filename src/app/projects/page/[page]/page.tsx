@@ -5,10 +5,11 @@ import Pagination from "@/components/Pagination";
 import config from "@/config/config.json";
 import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { PostContent } from "@/types";
 
-const { projects_folder, pagination } = config.settings;
+const { pagination } = config.settings;
+const projects_folder = "projects";
 
 // remove dynamicParams
 export const dynamicParams = false;

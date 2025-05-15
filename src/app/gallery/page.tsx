@@ -3,7 +3,7 @@
 /**
  * Gallery
  */
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import Grid from "@/lib/Grid"
 
 // for all regular pages

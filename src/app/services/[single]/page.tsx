@@ -1,16 +1,12 @@
 //=> app/services/[single]/page.tsx
 
-// A dynamic route "services" page, using content from the markdown
-// file of the same name e.g. /services/service-a
-
-import config from "@/config/config.json";
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import { PostContent } from "@/types";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { getPostMetadata } from "@/lib/pageMeta";
 
-const { services_folder } = config.settings;
+const services_folder = "services";
 
 // remove dynamicParams
 export const dynamicParams = false;

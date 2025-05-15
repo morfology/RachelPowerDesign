@@ -1,7 +1,6 @@
 "use client";
 
-import config from "@/config/config.json";
-//import { useTheme } from "next-themes";
+import siteConfig from "@/config/site.json";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -20,7 +19,7 @@ const Logo = ({ src }: { src?: string }) => {
     logo_height: string;
     logo_text: string;
     title: string;
-  } = config.site;
+  } = siteConfig;
 
   //const { theme, resolvedTheme } = useTheme();
   const [, setMounted] = useState(false);

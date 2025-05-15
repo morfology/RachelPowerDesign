@@ -3,13 +3,13 @@ import React from 'react';
 
 import SearchModal from "@/components/SearchModal";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
-import Footer from "@/partials/Footer";
-import Header from "@/partials/Header";
-import Providers from "@/partials/Providers";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Providers from "@/components/Providers";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { defaultMetadata } from '@/lib/pageMeta';
-import config from "@/config/config.json";
+import siteConfig from "@/config/site.json";
 
 export const metadata = defaultMetadata;
 
@@ -29,7 +29,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         />
 
         {/* favicon */}
-        <link rel="shortcut icon" href={config.site.favicon} />
+        <link rel="shortcut icon" href={siteConfig.favicon} />
 
         {/* google font css */}
         <link

@@ -1,18 +1,17 @@
 // categories/[single]/page.tsx => http://localhost:3000/categories/family-home-refresh
 
 import ProjectCard from "@/components/ProjectCard";
-import config from "@/config/config.json";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
 import { getTaxonomyAggr } from "@/lib/taxonomyParser";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { PostContent } from "@/types";
 import { getPostMetadata } from "@/lib/pageMeta";
 
 const categories_taxonomy = "categories";
 const categories_folder = "categories";
-const projects_folder = config.settings.projects_folder;
+const projects_folder = "projects";
 
 type StaticParams = () => { single: string }[];
 

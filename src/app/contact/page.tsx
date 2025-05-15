@@ -17,7 +17,7 @@ export default function ContactPage() {
 }
 
 
-import PageHeader from "@/partials/PageHeader";
+import PageHeader from "@/components/PageHeader";
 import { Formik, Form } from "formik";
 import { useState } from "react";
 

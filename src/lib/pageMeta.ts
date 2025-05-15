@@ -2,13 +2,13 @@
 import { getPageFromPath } from "@/lib/contentParser";
 import { Metadata } from "next";
 import { siteUrl } from "@/config/dynamic.js";
-import config from "@/config/config.json";
+import siteConfig from "@/config/site.json";
 import { PostContent } from "@/types";
 
-const defaultTitle = config.site.title;
-const defaultDescription = config.metadata.meta_description;
+const defaultTitle = siteConfig.title;
+const defaultDescription = siteConfig.meta_description;
 const defaultOgImage = {
-  url: `${siteUrl}/og-default.png`,
+  url: `${siteUrl}/images/og-default.png?v=1.1`,
   width: 1200,
   height: 630,
   alt: defaultTitle
@@ -32,14 +32,7 @@ export const defaultMetadata: Metadata = {
     description: defaultDescription,
     url: siteUrl,
     siteName: defaultTitle,
-    images: [
-      {
-        url: `${siteUrl}/og-default.png`,
-        width: 1200,
-        height: 630,
-        alt: defaultTitle,
-      },
-    ],
+    images: [ defaultOgImage ],
     type: "website",
   }  
 }

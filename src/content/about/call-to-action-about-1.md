@@ -5,15 +5,15 @@ image: "/images/head-shots/rachel.jpg"
 # Following a successful career in fashion, Rachel retrained in interior design.  Combining all of her passions and years of knowledge and experience Rachel set up her own design practice specialising in residential interiors and events for both private clients and developers.
 # Our services are fully comprehensive and cover all aspects of home design and build, 
 
-description: "We are a design and build coordination company specialising in interior and event design.
+description: "We’re a design and build coordination company specializing in interior and event design.
 
-|Based in Farnham, Surrey, we primarily work across Hampshire, Surrey, Sussex, and London, but are happy to travel across the UK and internationally for the right project.
+|Based in Farnham, Surrey, we serve Hampshire, Surrey, Sussex, London, and beyond — happy to travel UK-wide and internationally for the right project.
 
-|The business was born out of Rachel's passion for design and interiors and her desire to make stylish living accessible to everyone. 
-|We offer a fully bespoke service to all our clients, ranging from design-only to full project design and build management. Taking you from concept to completion — helping you transform your home by enhancing its functionality, aesthetic appeal, and alignment with your lifestyle and taste.
-"
+|Founded by Rachel, driven by a passion to make stylish living accessible, we offer bespoke services ranging from design-only to full project management.
+
+|From concept to completion, we help you transform your home to suit your lifestyle with functional, beautiful spaces."
 button:
-  enable: true
+  enable: false
   label: "Our Services"
   link: "/services"
 ---

@@ -31,11 +31,12 @@ const Home = () => {
       <div className="absolute inset-0">
         <Image
           className="object-cover object-center"
-          src="/images/farnham/living-1.jpg"
+          src="/images/farnham/living-1.src.webp"
           alt="Rachel Power Design"
           priority
           placeholder="blur"
-          blurDataURL="/images/farnham/living-1-blur.jpg"
+          blurDataURL="data:image/webp;base64,UklGRuoBAABXRUJQVlA4IN4BAACQCQCdASouAB0APpE8mkiloyKhKrgMALASCWIAnTLtBZhaYbbNIq3W7TGQYIaL4hnBiKfwFr5RpLpJlkpOG4WtVap7J3CHZcLsDxyuQFyoWIfJXoQAAP7+hBTx2LLCxdpj6zoqdqR8o6I9r5beBle362clr1AEa+/Xkd59Mbr8yXTgSuGKVM3+Qb4+oMEwEjCa0Dh/6z1/O9mXjtzGLpGQTaN/AmnSXOl8noGi8hC8DTGHwKsjio+hj+Yr+TgZlzNjDLhSx97g/Uu1y3XVcmWxfiu/jDc7EwGnqk77kPfR1NbFTaQ+2a86ypqzFRSRFUcS24uNEDOS9wGWGpIKRX77+O/yAh1kkmBROzk+ZtKWuv+B3azWujMlwMdAncLKOoVDXla/lr5o0BDayAbSO4/iGJcZy96N8flOY01q712FQw3iLG8xwdKxPre7F/x/2Zq6lARamJqCIVIdFJzNBQy/6cHRB7I5uN4DOCKHMuXlszaUamoRCUsrFtsElfird2icWXm/g1gHJzjx8rvDkmVTjUGqQuUAMzydRQl8w4ZbZEiJCJAJzgI+9pNtMC2zv6BSGJCJkpYJNNzBSvYg0lKeBiIsBWh1Cx3Vss0bn1EhnxEdeHLmmVORNiptXAAA"
+
           fill
           sizes="100vw"
         />

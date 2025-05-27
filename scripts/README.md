@@ -6,6 +6,14 @@ WebP really helps
 - Set quality to 80% and export
   - `cwebp -q 80 input.jpg -o output.webp`
 
+
+
+# Imagemagick
+Use to output sizes etc.
+
+- `imagemagick`
+- `convert`
+
 # Blur an Image File
 
 - (Sqoosh)[https://sqoosh.app] the file

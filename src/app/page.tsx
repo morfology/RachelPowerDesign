@@ -31,7 +31,7 @@ const Home = () => {
       <div className="absolute inset-0">
         <Image
           className="object-cover object-center"
-          src="/images/farnham/living-1.src.webp"
+          src="/images/farnham/living-1-2880.webp"
           alt="Rachel Power Design"
           priority
           placeholder="blur"

@@ -5,7 +5,7 @@ folder: farnham
 title: ""
 description: "Farnham Extension & Renovation"
 date: 2024-03-03T05:00:00Z
-image: "/images/farnham/living-1.src.webp"
+image: "/images/farnham/living-1-2880.webp"
 categories: ["Extension", "Renovation"]
 author: "Rachel Power"
 tags: ["surrey", "farnham"]

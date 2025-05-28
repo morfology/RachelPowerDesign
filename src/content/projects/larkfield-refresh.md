@@ -4,7 +4,7 @@ folder: larkfield
 title: ""
 description: "Family Home Refresh"
 date: 2023-03-03T05:00:00Z
-image: "/images/larkfield/detail-plant.jpg"
+image: "/images/larkfield/RPDesign_-21.jpg"
 categories: ["Family Home Refresh"]
 author: "Rachel Power"
 tags: ["surrey", "Farnham"]

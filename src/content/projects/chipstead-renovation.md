@@ -5,7 +5,7 @@ internal_notes: "Chipstead Extension & Renovation"
 title: ""
 description: "Chipstead Extension & Renovation"
 date: 2023-03-03T05:00:00Z
-image: "/images/chipstead/living-1.jpg"
+image: "/images/chipstead/living-1.src.jpg"
 categories: ["Full Home Renovation"]
 author: "Rachel Power"
 tags: ["surrey", "chipstead"]

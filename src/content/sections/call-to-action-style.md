@@ -2,10 +2,9 @@
 enable: true
 heading: "Event Styling"
 image: "/images/larkfield/detail-lightbulb.jpg"
-description: "Working in conjunction with a carefully curated collection of creatives and party professionals we can stage any venue for your special events.  Focusing on contemporary styling, we can provide unique and stylish interior settings which create memorable occasions.  Our event styling service is available in private homes and commercial venues.
-"
+description: "We collaborate with a hand-picked team of creatives and party professionals to style venues for your special events. |Our event styling service is available for both private homes and commercial venues, tailored to fit your vision and needs."
 button:
-  enable: false
-  label: "Get Started Now"
-  link: "https://github.com/zeon-studio/nextplate"
+  enable: true
+  label: "Contact Us"
+  link: "/contact"
 ---

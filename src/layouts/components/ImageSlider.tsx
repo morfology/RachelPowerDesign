@@ -11,29 +11,14 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 
-// Our custom button component
-// import SliderButtons from "./SliderButtons";
-
-// interface Slide {
-//   id: number;
-//   title: string;
-//   tagline: string;
-//   image: string;
-//   buttons: ButtonProps[];
+// interface DemoSliderProps {
+//   data: string[];
 // }
 
-// interface ButtonProps {
-//   id: number;
-//   text: string;
-//   link: string;
-//   type: string;
-// }
+//const ImageSlider = ({ heading }: { heading: string }) => {
 
-interface DemoSliderProps {
-  data: string[];
-}
 
-const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
+const ImageSlider = ({ data }: { data: string[] }) => {
 
   console.warn('DATA', data)
 
@@ -61,4 +46,4 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
   );
 };
 
-export default DemoSlider;
+export default ImageSlider;

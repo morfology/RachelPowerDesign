@@ -6,7 +6,6 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
-import imageConfig from "@/config/images.json";
 import { getPostMetadata } from "@/lib/pageMeta";
 
 const projects_folder = "projects";
@@ -33,7 +32,6 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   const { frontmatter, content } = post;
   const {
     heading,
-    folder,
     image,
     categories,
     slideshow
@@ -41,30 +39,6 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
 
   console.warn(`/projects/${params.single}`);
   //console.warn('PostSingle', imageConfig);
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let imageSliderData: any[] = [];
-
-  // now use location to query the image slider
-  if (slideshow && slideshow.length > 0) {
-    //
-    // imageSliderData = {
-    //  image:  slideshow[0]
-    // }
-  }
-  else if (folder) {
-
-    imageSliderData = imageConfig    
-      // Filter images that match the project
-      .filter(obj => obj.image && obj.image.includes(`/images/${folder}/`))
-
-      // Filter out images that match the detail
-      .filter(obj => obj.image && !obj.image.includes(`detail`))
-
-      // Image slider requires id, we don't use it so just add "any"
-      .map(y => ({ id: 'any', image: y.image}))
-    ;
-  }
 
   return (
     <>

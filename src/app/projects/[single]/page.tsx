@@ -24,7 +24,9 @@ export const generateStaticParams: () => { single: string }[] = () =>
   getAllSinglePages(projects_folder)
     .map((post) => ({single: post.slug || ''}));
 
+// PostSingle component
 const PostSingle = ({ params }: { params: { single: string } }) => {
+
   const posts: PostContent[] = getAllSinglePages(projects_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
@@ -34,15 +36,23 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
     folder,
     image,
     categories,
+    slideshow
   } = frontmatter;
 
   console.warn(`/projects/${params.single}`);
+  //console.warn('PostSingle', imageConfig);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let imageSliderData: any[] = [];
 
   // now use location to query the image slider
-  if (folder) {
+  if (slideshow && slideshow.length > 0) {
+    //
+    // imageSliderData = {
+    //  image:  slideshow[0]
+    // }
+  }
+  else if (folder) {
 
     imageSliderData = imageConfig    
       // Filter images that match the project
@@ -64,7 +74,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
             <article className="lg:col-10">
               {image && (
                 <div className="mb-10">
-                  <ImageSlider data={imageSliderData} />
+                  <ImageSlider data={slideshow} />
                 </div>
               )}
               <h1
@@ -75,8 +85,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 <MDXContent content={content} />
               </div>
 
-              <div className=" mb-10">
-              
+              <div className=" mb-10">              
                     {categories?.map((cat: string) => (
                       <div key={cat} className="inline-block">
                         <Link
@@ -88,25 +97,6 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                       </div>
                     ))}
               </div>
-
-
-              {/* <div className="row items-start justify-between">
-                <div className="mb-10 flex items-center lg:col-5 lg:mb-0">
-                  <h5 className="mr-3">Tags :</h5>
-                  <ul>
-                    {tags?.map((tag: string) => (
-                      <li key={tag} className="inline-block">
-                        <Link
-                          className="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white   "
-                          href={`/tags/${slugify(tag)}`}
-                        >
-                          {humanize(tag)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div> */}
             </article>
           </div>
         </div>

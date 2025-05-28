@@ -1,9 +1,16 @@
 #!/bin/bash
 
-# Directory to search
-search_dir="/Users/marcpower/git/RPD/public/images"
+base_dir=~/git/RPD/public/images
 
-# Find all files with "detail" in their name
-find "$search_dir" -type f -name "*detail*" | while read -r file; do
-  echo "{ \"image\": \"$file\" },"
-done
+function find_images() {
+  if [ -z "$1" ]; then
+    echo "Usage: find_images <subdirectory>"
+    return 1
+  fi
+  
+  find "$base_dir/$1" -type f -name "*webp" | while read -r file; do
+    echo " - $file" | sed 's|.*\(/images.*\)| - \1|'
+  done
+}
+
+find_images "farnham"

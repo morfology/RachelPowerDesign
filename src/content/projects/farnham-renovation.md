@@ -10,6 +10,13 @@ categories: ["Extension", "Renovation"]
 author: "Rachel Power"
 tags: ["surrey", "farnham"]
 draft: false
+slideshow:
+  # - /images/farnham/living-1.blur.webp
+  # - /images/farnham/hallway-x800.webp
+  - /images/farnham/living-1-2880.webp
+  - /images/farnham/kitchen-sink-1200.webp
+  
+
 # We renovated a tired house transforming it into a modern family home giving new life to the outdated space. By updating the layout, incorporating contemporary design elements, and improving functionality, the badly designed house is now a stylish and comfortable haven. With careful planning and creative vision, we blended contemporary aesthetics with functional design  to revitalise the property.  We have created a beautiful, functional space that meets the families evolving  needs.
 ---
 We transformed a dated and poorly designed house into a stylish, functional family home. Through thoughtful reconfiguration of the layout, contemporary design elements, and a focus on livability, the once-tired space has been reimagined as a welcoming and modern sanctuary.

@@ -11,7 +11,9 @@ fi
 
 # Constants
 IDEAL_HERO_WIDTH=2880
+IDEAL_MEDIUM='1200'
 IDEAL_MEDIUM_PORTRAIT='x800'
+
 
 # Ensure the source and destination directories are set correctly
 # You can change these paths as needed 
@@ -34,7 +36,7 @@ processImg() {
 }
 
 
-#processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero "2880"
-processImg "$img_src/Boundstone/2qfiy6jyzatzd2u39lvd4o.jpg" $img_dest/farnham/hallway $IDEAL_MEDIUM_PORTRAIT
+# processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero "2880"
+# processImg "$img_src/Boundstone/2qfiy6jyzatzd2u39lvd4o.jpg" $img_dest/farnham/hallway $IDEAL_MEDIUM_PORTRAIT
 
-
+processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/kitchen-sink $IDEAL_MEDIUM

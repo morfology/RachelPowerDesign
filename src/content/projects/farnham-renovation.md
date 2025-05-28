@@ -13,7 +13,10 @@ draft: false
 slideshow:
   # - /images/farnham/living-1.blur.webp
   # - /images/farnham/hallway-x800.webp
-  # - /images/farnham/living-1-2880.webp
+  - /images/farnham/snug-1200.webp
+  - /images/farnham/kids-1200.webp
+  - /images/farnham/diner-1200.webp
+  - /images/farnham/living-1-1200.webp
   - /images/farnham/kitchen-sink-1200.webp
   
 

@@ -38,13 +38,12 @@ processImg() {
 
 # processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero "2880"
 # processImg "$img_src/Boundstone/2qfiy6jyzatzd2u39lvd4o.jpg" $img_dest/farnham/hallway $IDEAL_MEDIUM_PORTRAIT
+#processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/kitchen-sink $IDEAL_MEDIUM
 
-processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/kitchen-sink $IDEAL_MEDIUM
-
-# processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM
-# processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM
-# processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM
-# processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM
+# processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/living-1 $IDEAL_MEDIUM
+# processImg "$img_src/Boundstone/8g8mjq2oztq242adyxenvl.jpg" $img_dest/farnham/diner $IDEAL_MEDIUM
+# processImg "$img_src/Boundstone/8ifa2ry7oo6ewqaj63crrb.jpg" $img_dest/farnham/kids $IDEAL_MEDIUM
+processImg "$img_src/Boundstone/bcm0jkn4a6gwpon4088rw.jpg" $img_dest/farnham/snug $IDEAL_MEDIUM
 # processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM
 # processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM
 # processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/new $IDEAL_MEDIUM

@@ -11,8 +11,12 @@ author: "Rachel Power"
 tags: ["surrey", "farnham"]
 draft: false
 slideshow:
-  # - /images/farnham/living-1.blur.webp
-  # - /images/farnham/hallway-x800.webp
+
+  - /images/farnham/kitchen-1200.webp
+  - /images/farnham/living-2-1200.webp
+  - /images/farnham/teepee-1200.webp
+  - /images/farnham/rainbow-1200.webp
+  - /images/farnham/kids-2-1200.webp
   - /images/farnham/snug-1200.webp
   - /images/farnham/kids-1200.webp
   - /images/farnham/diner-1200.webp

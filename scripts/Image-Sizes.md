@@ -4,13 +4,13 @@
 
 Even with Next best not to bloat.
 
-| Use Case                      | Ideal Source Width          | Why                                            |
-| ----------------------------- | --------------------------- | ---------------------------------------------- |
-| **Hero image**                | \~2880px max                | High-res + full-width on desktops/retina       |
-| **Full-width content images** | 1600–1920px                 | For sharp visuals, keeps build size reasonable |
-| **Half-width / grid images**  | 800–1200px                  | Plenty of room for responsive needs            |
-| **Thumbnails**                | 400–600px                   | Avoid massive source files here                |
-| **Icons / logos**             | Vector (SVG) or \~100–300px | Tiny, crisp, and fast                          |
+| Use Case                      | Ideal Source Width (Landscape) | Ideal Source Height (Portrait) | Notes                                                                             |
+| ----------------------------- | ------------------------------ | ------------------------------ | --------------------------------------------------------------------------------- |
+| **Hero image**                | \~2880px max                   | \~1600-1800px max              | Wide heroes get full-width; portrait heroes use height cap to avoid excess height |
+| **Full-width content images** | 1600–1920px                    | 900–1200px                     | Balance sharpness and file size                                                   |
+| **Half-width / grid images**  | 800–1200px                     | 800–1000px                     | Grid can handle a bit more height for portraits                                   |
+| **Thumbnails**                | 400–600px                      | 400–600px                      | Keep thumbnails square-ish or max height same as width                            |
+| **Icons / logos**             | Vector (SVG) or \~100–300px    | Vector (SVG) or \~100–300px    | Vector preferred, else small raster images                                        |
 
 
 ## 💡  If Not Using next/image

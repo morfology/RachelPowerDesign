@@ -1,12 +1,26 @@
 #!/bin/bash
 
-# Directory to search
+# This script processes images using ImageMagick.
+# It resizes images to a specified width and saves them in a destination directory.
+# Ensure ImageMagick is installed
+# Usage: processImg <source_file_name> <dest_file_base> <width>
+if ! command -v magick &> /dev/null; then
+  echo "ImageMagick is not installed. Please install it to use this script."
+  exit 1
+fi
+
+# Constants
+IDEAL_HERO_WIDTH=2880
+IDEAL_MEDIUM_PORTRAIT='x800'
+
+# Ensure the source and destination directories are set correctly
+# You can change these paths as needed 
 img_src=~/Downloads/Website_photos
 img_dest=~/git/RPD/public/images
 
-myfn() {
+processImg() {
   if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-    echo "Usage: myfn <source_file_name> <dest_file_base> <width>"
+    echo "Usage: processImg <source_file_name> <dest_file_base> <width>"
     return 1
   fi
 
@@ -20,4 +34,7 @@ myfn() {
 }
 
 
-myfn "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero "2880"
+#processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero "2880"
+processImg "$img_src/Boundstone/2qfiy6jyzatzd2u39lvd4o.jpg" $img_dest/farnham/hero $IDEAL_MEDIUM_PORTRAIT
+
+

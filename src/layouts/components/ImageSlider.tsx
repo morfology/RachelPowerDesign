@@ -34,8 +34,9 @@ const ImageSlider = ({ data }: { data: string[] }) => {
       {data.map((url, index) => (
         <SwiperSlide key={index}>
           <Image
-            height={500}
+            // 3:2 Aspect Ratio of our ideal images e.g. "kitchen-sink-1200.webp"
             width={1200}
+            height={800}
             alt={`Slide ${index + 1}`}
             className="w-full rounded"
             src={url}

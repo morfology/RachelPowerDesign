@@ -21,3 +21,8 @@ Then yes — 2880px is probably overkill, and you should export versions like:
 768.webp (mobile)
 
 And use srcset.
+
+## Aspect Ratio
+
+Slider 3:2. 1200x800.
+

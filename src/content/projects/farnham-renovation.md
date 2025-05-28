@@ -12,6 +12,17 @@ tags: ["surrey", "farnham"]
 draft: false
 slideshow:
 
+  - /images/farnham/bathroom-1200.webp
+  - /images/farnham/living-3-1200.webp
+  - /images/farnham/bed-1200.webp
+  - /images/farnham/kitchen-2-1200.webp
+  - /images/farnham/seating-1200.webp
+  - /images/farnham/wardrobe-1200.webp
+  - /images/farnham/seating-2-1200.webp
+  - /images/farnham/bathroom-1200.webp
+  - /images/farnham/kichen-3-1200.webp
+  - /images/farnham/loo-1200.webp
+  - /images/farnham/kids-3-1200.webp
   - /images/farnham/kitchen-1200.webp
   - /images/farnham/living-2-1200.webp
   - /images/farnham/teepee-1200.webp

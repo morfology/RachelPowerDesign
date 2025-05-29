@@ -43,34 +43,44 @@ processChipsteadImg() {
   processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, $1.jpg" $img_dest/chipstead/$2 $3
 }
 
-processChipsteadImg UK_1 hall $IDEAL_LARGE
+processLodgeImg() {
+  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+    echo "Usage: processLodge <srcname e.g. UK_1> <destname e.g. hall>  <width e.g. 1200>"
+    return 1
+  fi
+  processImg "$img_dest/lodge-hill/$1.jpg" $img_dest/lodge-hill-rd/$2 $3
+}
 
-processChipsteadImg UK_2 living $IDEAL_LARGE
-processChipsteadImg UK_3 fireplace $IDEAL_LARGE
-processChipsteadImg UK_4 kitchen $IDEAL_LARGE
-processChipsteadImg UK_5 bathroom $IDEAL_LARGE
-processChipsteadImg UK_6 bathroom-2 $IDEAL_LARGE
-processChipsteadImg UK_7 bathroom-3 $IDEAL_LARGE
-processChipsteadImg UK_8 snug $IDEAL_LARGE
-processChipsteadImg UK_10 snug-2 $IDEAL_LARGE
-processChipsteadImg UK_11 kitchen-2 $IDEAL_LARGE
-processChipsteadImg UK_12 living-2 $IDEAL_LARGE
-processChipsteadImg UK_13 window-seat $IDEAL_LARGE
-processChipsteadImg UK_14 living-3 $IDEAL_LARGE
-processChipsteadImg UK_15 snug-3 $IDEAL_LARGE
-processChipsteadImg UK_17 stairwell $IDEAL_LARGE
-processChipsteadImg UK_19 bedroom $IDEAL_LARGE
-processChipsteadImg UK_20 bathroom-4 $IDEAL_LARGE
-processChipsteadImg UK_21 bathroom-5 $IDEAL_LARGE
-processChipsteadImg UK_22 makeup $IDEAL_LARGE
-processChipsteadImg UK_23 bathroom-6 $IDEAL_LARGE
-processChipsteadImg UK_24 kids $IDEAL_LARGE
-processChipsteadImg UK_26 kids-2 $IDEAL_LARGE
-processChipsteadImg UK_27 kids-3 $IDEAL_LARGE
-processChipsteadImg UK_28 bathroom-7 $IDEAL_LARGE
-processChipsteadImg UK_30 gym $IDEAL_LARGE
-processChipsteadImg UK_37 bedroom-detail-light $IDEAL_LARGE
-processChipsteadImg UK_38 bedroom-detail-wardrobe $IDEAL_LARGE
+processLodgeImg dressing-room-1 dressing-room-1 $IDEAL_LARGE
+
+# Process images for the 'chipstead' project
+# processChipsteadImg UK_1 hall $IDEAL_LARGE
+# processChipsteadImg UK_2 living $IDEAL_LARGE
+# processChipsteadImg UK_3 fireplace $IDEAL_LARGE
+# processChipsteadImg UK_4 kitchen $IDEAL_LARGE
+# processChipsteadImg UK_5 bathroom $IDEAL_LARGE
+# processChipsteadImg UK_6 bathroom-2 $IDEAL_LARGE
+# processChipsteadImg UK_7 bathroom-3 $IDEAL_LARGE
+# processChipsteadImg UK_8 snug $IDEAL_LARGE
+# processChipsteadImg UK_10 snug-2 $IDEAL_LARGE
+# processChipsteadImg UK_11 kitchen-2 $IDEAL_LARGE
+# processChipsteadImg UK_12 living-2 $IDEAL_LARGE
+# processChipsteadImg UK_13 window-seat $IDEAL_LARGE
+# processChipsteadImg UK_14 living-3 $IDEAL_LARGE
+# processChipsteadImg UK_15 snug-3 $IDEAL_LARGE
+# processChipsteadImg UK_17 stairwell $IDEAL_LARGE
+# processChipsteadImg UK_19 bedroom $IDEAL_LARGE
+# processChipsteadImg UK_20 bathroom-4 $IDEAL_LARGE
+# processChipsteadImg UK_21 bathroom-5 $IDEAL_LARGE
+# processChipsteadImg UK_22 makeup $IDEAL_LARGE
+# processChipsteadImg UK_23 bathroom-6 $IDEAL_LARGE
+# processChipsteadImg UK_24 kids $IDEAL_LARGE
+# processChipsteadImg UK_26 kids-2 $IDEAL_LARGE
+# processChipsteadImg UK_27 kids-3 $IDEAL_LARGE
+# processChipsteadImg UK_28 bathroom-7 $IDEAL_LARGE
+# processChipsteadImg UK_30 gym $IDEAL_LARGE
+# processChipsteadImg UK_37 bedroom-detail-light $IDEAL_LARGE
+# processChipsteadImg UK_38 bedroom-detail-wardrobe $IDEAL_LARGE
 
 
 

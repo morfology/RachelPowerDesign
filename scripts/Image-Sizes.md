@@ -4,13 +4,11 @@
 
 Even with Next best not to bloat.
 
-| Use Case                      | Ideal Source Width (Landscape) | Ideal Source Height (Portrait) | Notes                                                                             |
-| ----------------------------- | ------------------------------ | ------------------------------ | --------------------------------------------------------------------------------- |
-| **Hero image**                | \~2880px max                   | \~1600-1800px max              | Wide heroes get full-width; portrait heroes use height cap to avoid excess height |
-| **Full-width content images** | 1600–1920px                    | 900–1200px                     | Balance sharpness and file size                                                   |
-| **Half-width / grid images**  | 800–1200px                     | 800–1000px                     | Grid can handle a bit more height for portraits                                   |
-| **Thumbnails**                | 400–600px                      | 400–600px                      | Keep thumbnails square-ish or max height same as width                            |
-| **Icons / logos**             | Vector (SVG) or \~100–300px    | Vector (SVG) or \~100–300px    | Vector preferred, else small raster images                                        |
+| Source Image Use Case         | Ideal Width (Landscape) | Ideal Height (Portrait) | Notes                      |
+| ----------------------------- | ----------------------- | ----------------------- | -------------------------- |
+| Hero image                    | 2880 ("~2880px max")    | \~1600-1800px max       | Wide heroes get full-width |
+| Full-width ("LARGE")          | 1200 ("1600–1920px")    | 900–1200px              | Balance sharpness/size     |
+| Half-width ("REGULAR)         | 800  ("800–1200px")     | 800–1000p               | Mmore height for portraits |
 
 
 ## 💡  If Not Using next/image

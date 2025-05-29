@@ -43,15 +43,27 @@ processChipsteadImg() {
   processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, $1.jpg" $img_dest/chipstead/$2 $3
 }
 
-processChipsteadImg UK_1 hall 1200
-# processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, UK_1.jpg" $img_dest/chipstead/hero $IDEAL_LARGE
+processChipsteadImg UK_1 hall $IDEAL_LARGE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 # Process images for the 'farnham' project
 # processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero $IDEAL_HERO
-
 # processImg "$img_src/Boundstone/2qfiy6jyzatzd2u39lvd4o.jpg" $img_dest/farnham/hallway $IDEAL_LARGE_PORTRAIT
 # processImg "$img_src/Boundstone/4wqxncun6lj7ue67rikm69.jpg" $img_dest/farnham/kitchen-sink $IDEAL_LARGE
 # processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/living-1 $IDEAL_LARGE

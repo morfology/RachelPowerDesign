@@ -66,6 +66,17 @@ processLodgeImg master-bedroom-2 dummy $IDEAL_LARGE
 processLodgeImg master-bedroom-3 dummy $IDEAL_LARGE
 processLodgeImg master-bedroom-4 dummy $IDEAL_LARGE
 processLodgeImg Ollie-Room-9 dummy $IDEAL_LARGE
+processLodgeImg kitchen-1 dummy $IDEAL_LARGE
+processLodgeImg kitchen-2 dummy $IDEAL_LARGE
+processLodgeImg kitchen-3 dummy $IDEAL_LARGE
+processLodgeImg kitchen-4 dummy $IDEAL_LARGE
+processLodgeImg kitchen-5 dummy $IDEAL_LARGE
+processLodgeImg kitchen-6 dummy $IDEAL_LARGE
+processLodgeImg kitchen-7 dummy $IDEAL_LARGE
+processLodgeImg kitchen-8 dummy $IDEAL_LARGE
+processLodgeImg kitchen-9 dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
 # processLodgeImg name dummy $IDEAL_LARGE
 # processLodgeImg name dummy $IDEAL_LARGE
 # processLodgeImg name dummy $IDEAL_LARGE

@@ -48,10 +48,39 @@ processLodgeImg() {
     echo "Usage: processLodge <srcname e.g. UK_1> <destname e.g. hall>  <width e.g. 1200>"
     return 1
   fi
-  processImg "$img_dest/lodge-hill/$1.jpg" $img_dest/lodge-hill-rd/$2 $3
+  processImg "$img_dest/lodge-hill/$1.jpg" $img_dest/lodge-hill-rd/$1 $3
 }
 
-processLodgeImg dressing-room-1 dressing-room-1 $IDEAL_LARGE
+# processLodgeImg dressing-room-1 dummy $IDEAL_LARGE
+processLodgeImg dressing-room-1 dummy $IDEAL_LARGE
+processLodgeImg freyas-room dummy $IDEAL_LARGE
+processLodgeImg guest-bedroom dummy $IDEAL_LARGE
+processLodgeImg kitchen-dining-1 dummy $IDEAL_LARGE
+processLodgeImg kitchen dummy $IDEAL_LARGE
+processLodgeImg living-room-1 dummy $IDEAL_LARGE
+processLodgeImg living-room-2 dummy $IDEAL_LARGE
+processLodgeImg living-room-3 dummy $IDEAL_LARGE
+processLodgeImg living-room-4 dummy $IDEAL_LARGE
+processLodgeImg master-bedroom-1 dummy $IDEAL_LARGE
+processLodgeImg master-bedroom-2 dummy $IDEAL_LARGE
+processLodgeImg master-bedroom-3 dummy $IDEAL_LARGE
+processLodgeImg master-bedroom-4 dummy $IDEAL_LARGE
+processLodgeImg Ollie-Room-9 dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+# processLodgeImg name dummy $IDEAL_LARGE
+
+
+
+
+
+
+
 
 # Process images for the 'chipstead' project
 # processChipsteadImg UK_1 hall $IDEAL_LARGE

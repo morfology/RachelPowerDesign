@@ -35,6 +35,20 @@ processImg() {
   identify $dest
 }
 
+processChipsteadImg() {
+  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+    echo "Usage: processChipstead <srcname e.g. UK_1> <destname e.g. hall>  <width e.g. 1200>"
+    return 1
+  fi
+  processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, $1.jpg" $img_dest/chipstead/$2 $3
+}
+
+processChipsteadImg UK_1 hall 1200
+# processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, UK_1.jpg" $img_dest/chipstead/hero $IDEAL_LARGE
+
+
+
+
 # Process images for the 'farnham' project
 # processImg "$img_src/Boundstone/0mt9ad8vmi3ppd006jay8w.jpg" $img_dest/farnham/hero $IDEAL_HERO
 

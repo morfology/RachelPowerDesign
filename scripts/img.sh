@@ -14,4 +14,5 @@ function find_images() {
 }
 
 # find_images "farnham"
-find_images "chipstead"
+# find_images "chipstead"
+find_images "lodge-hill-rd"

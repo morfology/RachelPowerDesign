@@ -13,4 +13,5 @@ function find_images() {
   done
 }
 
-find_images "farnham"
+# find_images "farnham"
+find_images "chipstead"

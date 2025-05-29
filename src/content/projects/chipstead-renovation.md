@@ -10,6 +10,9 @@ categories: ["Full Home Renovation"]
 author: "Rachel Power"
 tags: ["surrey", "chipstead"]
 draft: false
+slideshow:
+  - /images/chipstead/hall-1200.webp
+
 ---
 This home bursts with life, and we wanted to create bold story of colour and pattern that reflected the homeowners' vibrant personalities. We included a range of bold wallpapers and balanced these with carefully selected paint colours to ensure the finished look was modern and exciting.
 

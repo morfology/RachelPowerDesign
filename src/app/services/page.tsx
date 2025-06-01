@@ -19,7 +19,7 @@ const Services = () => {
     //getPageFromPath("sections/call-to-action-project.md"),
     getPageFromPath("sections/call-to-action-architecture.md"),
     getPageFromPath("sections/call-to-action-procurement.md"),
-    getPageFromPath("sections/call-to-action-style.md"),
+    //getPageFromPath("sections/call-to-action-style.md"),
   ];
 
   return (

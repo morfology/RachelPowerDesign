@@ -83,7 +83,8 @@ processLarkfieldJpg() {
   processJpg "$img_src/Larkfield/RPDesign_-$1.jpg" $img_dest/larkfield/$2 $3
 }
 
-processLarkfieldJpg 16 lamp-detail $IDEAL_LARGE
+# processLarkfieldJpg 16 lamp-detail $IDEAL_LARGE
+processLarkfieldJpg 21 living $IDEAL_LARGE
 
 
 # Process images for the 'chipstead' project

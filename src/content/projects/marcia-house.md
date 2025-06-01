@@ -27,6 +27,7 @@ slideshow:
  - /images/marcia/table-detail-1200.jpg
  - /images/marcia/chair-detail-1200.jpg
  - /images/marcia/utility-1200.jpg
+ - /images/marcia/salon-1200.jpg
  
 ---
 

@@ -91,6 +91,7 @@ processMarciaImg() {
   processJpg "$img_src/Marcia/RPDesign Marcia's Home_-$1.jpg" $img_dest/marcia/$2 $3
 }
 
+# Process images for the 'marcia' project
 # processMarciaImg 3_2 light-detail $IDEAL_LARGE
 # processMarciaImg 5 utility $IDEAL_LARGE
 # processMarciaImg 7 bedroom $IDEAL_LARGE
@@ -98,9 +99,14 @@ processMarciaImg() {
 # processMarciaImg 12_2 dining $IDEAL_LARGE
 # processMarciaImg 12 kids $IDEAL_LARGE
 # processMarciaImg 13_2 sitting $IDEAL_LARGE
-processMarciaImg 14 kitchen $IDEAL_LARGE
-processMarciaImg 15_2 chair-detail $IDEAL_LARGE
-processMarciaImg 16_2 living-2 $IDEAL_LARGE
+# processMarciaImg 14 kitchen $IDEAL_LARGE
+# processMarciaImg 15_2 chair-detail $IDEAL_LARGE
+# processMarciaImg 16_2 living-2 $IDEAL_LARGE
+# processMarciaImg 19 kitchen-2 $IDEAL_LARGE
+# processMarciaImg 20 kitchen-3 $IDEAL_LARGE
+# processMarciaImg 21 kitchen-4 $IDEAL_LARGE
+# processMarciaImg 22 kitchen-detail $IDEAL_LARGE
+# processMarciaImg 23 table-detail $IDEAL_LARGE
 
 
 # Process images for the 'larkfield' project

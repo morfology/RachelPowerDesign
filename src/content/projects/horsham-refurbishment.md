@@ -5,7 +5,7 @@ internal: "Horsham Jack and Amy"
 title: ""
 description: "Horsham Home Refurbishment"
 date: 2023-03-03T05:00:00Z
-image: "/images/horsham/kitchen.jpg"
+image: "/images/horsham/kitchen-1200.webp"
 categories: ["Full Home Renovation"]
 author: "Rachel Power"
 tags: ["West Sussex", "Horsham"]

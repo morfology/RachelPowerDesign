@@ -17,4 +17,5 @@ function find_images() {
 # find_images "chipstead"
 # find_images "lodge-hill-rd"
 # find_images "horsham"
-find_images "larkfield"
+# find_images "larkfield"
+find_images "marcia"

@@ -35,6 +35,22 @@ processImg() {
   identify $dest
 }
 
+processJpg() {
+  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+    echo "Usage: processImg <source_file_name> <dest_file_base> <width>"
+    return 1
+  fi
+
+  width="$3"
+  src="$1"
+  dest="$2-$width.jpg"
+
+  rm -f $dest
+  magick  "$src" -resize "$width" "$dest"
+  identify $dest
+}
+
+
 processChipsteadImg() {
   if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
     echo "Usage: processChipstead <srcname e.g. UK_1> <destname e.g. hall>  <width e.g. 1200>"
@@ -59,32 +75,43 @@ processHorshamImg() {
   processImg "$img_src/Horsham/1 Tennyson Cl, Horsham RH12 5PN, UK_$1.jpg" $img_dest/horsham/$2 $3
 }
 
+processLarkfieldJpg() {
+  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+    echo "Usage: processLarkfieldImg <srcno e.g. 01> <destname e.g. hall>  <width e.g. 1200>"
+    return 1
+  fi
+  processJpg "$img_src/Larkfield/RPDesign_-$1.jpg" $img_dest/larkfield/$2 $3
+}
+
+processLarkfieldJpg 16 lamp-detail $IDEAL_LARGE
+
+
 # Process images for the 'chipstead' project
-processHorshamImg 01 living $IDEAL_LARGE
-processHorshamImg 02 kitchen-diner $IDEAL_LARGE
-processHorshamImg 03 kitchen $IDEAL_LARGE
-processHorshamImg 04 living-2 $IDEAL_LARGE
-processHorshamImg 05 bedroom $IDEAL_LARGE
-processHorshamImg 06 bedroom-2 $IDEAL_LARGE
-processHorshamImg 07 bathroom $IDEAL_LARGE
-processHorshamImg 08 bedroom-3 $IDEAL_LARGE
-processHorshamImg 09 bedroom-4 $IDEAL_LARGE
-processHorshamImg 10 dressing $IDEAL_LARGE
-processHorshamImg 11 dressing-2 $IDEAL_LARGE
-processHorshamImg 12 bedroom-5 $IDEAL_LARGE
-processHorshamImg 13 bedroom-6 $IDEAL_LARGE
-processHorshamImg 14 stairwell $IDEAL_LARGE
-processHorshamImg 15 snug $IDEAL_LARGE
-processHorshamImg 16 snug-1 $IDEAL_LARGE
-processHorshamImg 17 fireplace $IDEAL_LARGE
-processHorshamImg 18 winerack $IDEAL_LARGE
-processHorshamImg 19 gym $IDEAL_LARGE
-processHorshamImg 20 bedroom-7 $IDEAL_LARGE
-processHorshamImg 21 dressing-3 $IDEAL_LARGE
-processHorshamImg 22 bedroom-8 $IDEAL_LARGE
-processHorshamImg 23 bathroom-2 $IDEAL_LARGE
-processHorshamImg 24 living-3 $IDEAL_LARGE
-processHorshamImg 25 fireplace-2 $IDEAL_LARGE
+# processHorshamImg 01 living $IDEAL_LARGE
+# processHorshamImg 02 kitchen-diner $IDEAL_LARGE
+# processHorshamImg 03 kitchen $IDEAL_LARGE
+# processHorshamImg 04 living-2 $IDEAL_LARGE
+# processHorshamImg 05 bedroom $IDEAL_LARGE
+# processHorshamImg 06 bedroom-2 $IDEAL_LARGE
+# processHorshamImg 07 bathroom $IDEAL_LARGE
+# processHorshamImg 08 bedroom-3 $IDEAL_LARGE
+# processHorshamImg 09 bedroom-4 $IDEAL_LARGE
+# processHorshamImg 10 dressing $IDEAL_LARGE
+# processHorshamImg 11 dressing-2 $IDEAL_LARGE
+# processHorshamImg 12 bedroom-5 $IDEAL_LARGE
+# processHorshamImg 13 bedroom-6 $IDEAL_LARGE
+# processHorshamImg 14 stairwell $IDEAL_LARGE
+# processHorshamImg 15 snug $IDEAL_LARGE
+# processHorshamImg 16 snug-1 $IDEAL_LARGE
+# processHorshamImg 17 fireplace $IDEAL_LARGE
+# processHorshamImg 18 winerack $IDEAL_LARGE
+# processHorshamImg 19 gym $IDEAL_LARGE
+# processHorshamImg 20 bedroom-7 $IDEAL_LARGE
+# processHorshamImg 21 dressing-3 $IDEAL_LARGE
+# processHorshamImg 22 bedroom-8 $IDEAL_LARGE
+# processHorshamImg 23 bathroom-2 $IDEAL_LARGE
+# processHorshamImg 24 living-3 $IDEAL_LARGE
+# processHorshamImg 25 fireplace-2 $IDEAL_LARGE
 
 
 

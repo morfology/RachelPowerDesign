@@ -95,7 +95,7 @@ processMarciaImg() {
 
 
 
-
+processMarciaImg 18 dining $IDEAL_LARGE_PORTRAIT
 
 
 
@@ -104,15 +104,13 @@ processMarciaImg() {
 
 
 # Process portrait images for the 'farnham' project
-processImg "$img_src/Boundstone/7e2dkf6qcawnyn29udi20b.jpg" $img_dest/farnham/kids $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/acm4q77c5bh8hmyjnvnua7.jpg" $img_dest/farnham/kids-2 $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/c18fxubfuyekqgj7q4srn8.jpg" $img_dest/farnham/bathroom-shower $IDEAL_LARGE_PORTRAIT
-
-
-processImg "$img_src/Boundstone/e3j2dojhld2s4a21jp2g8.jpg" $img_dest/farnham/stairwell $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/ji5gxfoj54efrkmhfgsym.jpg" $img_dest/farnham/bathroom $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/l3klu8hx4vir6zqwxfpz2j.jpg" $img_dest/farnham/bathroom-shower-2 $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/lcbgvb11b11op8hdfaa0h.jpg" $img_dest/farnham/snug $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/y213eigq9txro955f3yin.jpg" $img_dest/farnham/snug-2 $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/q341pouzdvmjqt8n817mq.jpg" $img_dest/farnham/kids-3 $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/7e2dkf6qcawnyn29udi20b.jpg" $img_dest/farnham/kids $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/acm4q77c5bh8hmyjnvnua7.jpg" $img_dest/farnham/kids-2 $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/c18fxubfuyekqgj7q4srn8.jpg" $img_dest/farnham/bathroom-shower $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/e3j2dojhld2s4a21jp2g8.jpg" $img_dest/farnham/stairwell $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/ji5gxfoj54efrkmhfgsym.jpg" $img_dest/farnham/bathroom $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/l3klu8hx4vir6zqwxfpz2j.jpg" $img_dest/farnham/bathroom-shower-2 $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/lcbgvb11b11op8hdfaa0h.jpg" $img_dest/farnham/snug $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/y213eigq9txro955f3yin.jpg" $img_dest/farnham/snug-2 $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/q341pouzdvmjqt8n817mq.jpg" $img_dest/farnham/kids-3 $IDEAL_LARGE_PORTRAIT
 

@@ -107,7 +107,7 @@ processMarciaImg() {
 # processMarciaImg 21 kitchen-4 $IDEAL_LARGE
 # processMarciaImg 22 kitchen-detail $IDEAL_LARGE
 # processMarciaImg 23 table-detail $IDEAL_LARGE
-processMarciaImg 9538 salon $IDEAL_LARGE
+# processMarciaImg 9538 salon $IDEAL_LARGE
 
 
 # Process images for the 'larkfield' project

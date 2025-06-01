@@ -83,9 +83,26 @@ processLarkfieldJpg() {
   processJpg "$img_src/Larkfield/RPDesign_-$1.jpg" $img_dest/larkfield/$2 $3
 }
 
-# processLarkfieldJpg 16 lamp-detail $IDEAL_LARGE
-processLarkfieldJpg 23 hall $IDEAL_LARGE
+processMarciaImg() {
+  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+    echo "Usage: processMarciaImg <srcno e.g. 01> <destname e.g. hall>  <width e.g. 1200>"
+    return 1
+  fi
+  processJpg "$img_src/Marcia/RPDesign Marcia's Home_-$1.jpg" $img_dest/marcia/$2 $3
+}
 
+processMarciaImg 3_2 light-detail $IDEAL_LARGE
+processMarciaImg 5 utility $IDEAL_LARGE
+processMarciaImg 7 bedroom $IDEAL_LARGE
+processMarciaImg 11 living $IDEAL_LARGE
+processMarciaImg 12_2 dining $IDEAL_LARGE
+processMarciaImg 12 kids $IDEAL_LARGE
+processMarciaImg 13_2 sitting $IDEAL_LARGE
+
+
+# Process images for the 'larkfield' project
+# processLarkfieldJpg 16 lamp-detail $IDEAL_LARGE
+# processLarkfieldJpg 23 hall $IDEAL_LARGE
 
 # Process images for the 'chipstead' project
 # processHorshamImg 01 living $IDEAL_LARGE

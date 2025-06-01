@@ -4,11 +4,15 @@ folder: larkfield
 title: ""
 description: "Family Home Refresh"
 date: 2023-03-03T05:00:00Z
-image: "/images/larkfield/RPDesign_-21.jpg"
+image: "/images/larkfield/living-1200.jpg"
 categories: ["Family Home Refresh"]
 author: "Rachel Power"
 tags: ["surrey", "Farnham"]
 draft: false
+slideshow:
+  - /images/larkfield/living-1200.jpg
+  - /images/larkfield/hall-1200.jpg
+  - /images/larkfield/lamp-detail-1200.jpg
 #> Absolutely thrilled with how our home was transformed!
 ---
 

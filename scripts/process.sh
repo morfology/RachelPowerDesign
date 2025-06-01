@@ -84,7 +84,7 @@ processLarkfieldJpg() {
 }
 
 # processLarkfieldJpg 16 lamp-detail $IDEAL_LARGE
-processLarkfieldJpg 21 living $IDEAL_LARGE
+processLarkfieldJpg 23 hall $IDEAL_LARGE
 
 
 # Process images for the 'chipstead' project

@@ -8,7 +8,7 @@ function find_images() {
     return 1
   fi
   
-  find "$base_dir/$1" -type f -name "*webp" | while read -r file; do
+  find "$base_dir/$1" -type f -name "*jpg" | while read -r file; do
     echo " - $file" | sed 's|.*\(/images.*\)| - \1|'
   done
 }
@@ -16,4 +16,5 @@ function find_images() {
 # find_images "farnham"
 # find_images "chipstead"
 # find_images "lodge-hill-rd"
-find_images "horsham"
+# find_images "horsham"
+find_images "larkfield"

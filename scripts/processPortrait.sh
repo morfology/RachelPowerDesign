@@ -93,15 +93,16 @@ processMarciaImg() {
 
 
 
-
+processLarkfieldJpg 32 pots-square $IDEAL_LARGE_PORTRAIT
 
 # processMarciaImg 18 dining $IDEAL_LARGE_PORTRAIT
 
 
 # processLodgeImg dressing-room-1 dummy $IDEAL_LARGE_PORTRAIT
 
-processImg "$img_dest/lodge-hill/detail-drawings.jpg" $img_dest/farnham/plans $IDEAL_LARGE_PORTRAIT
-processImg "$img_dest/lodge-hill/gues-room-detail-ls.jpg" $img_dest/farnham/fox $IDEAL_LARGE_PORTRAIT
+# processImg "$img_dest/lodge-hill/detail-drawings.jpg" $img_dest/farnham/plans $IDEAL_LARGE_PORTRAIT
+# processImg "$img_dest/lodge-hill/gues-room-detail-ls.jpg" $img_dest/farnham/fox $IDEAL_LARGE_PORTRAIT
+processImg "$img_dest/lodge-hill/detail-ceiling.jpg" $img_dest/farnham/detail-ceiling $IDEAL_LARGE_PORTRAIT
 
 
 

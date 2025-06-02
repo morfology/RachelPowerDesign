@@ -1,6 +1,6 @@
 ---
 heading: "Interior Architecture"
-image: "/images/marcia-house/detail-mirror-plants.jpg"
+image: /images/farnham/detail-ceiling-x800.webp
 description: "Building on our Interior Design service, this offering includes expert guidance on reconfiguring or extending your property.|We collaborate with trusted architects, creatives, and structural engineers to unlock your home’s full potential — transforming limitations into opportunities for lasting, functional design."
 button:
   enable: true

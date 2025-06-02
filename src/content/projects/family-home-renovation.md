@@ -4,11 +4,36 @@ folder: lodge-hill
 title: ""
 description: "Home Refresh"
 date: 2023-03-03T05:00:00Z
-image: "/images/lodge-hill/kitchen-dining-1.jpg"
+image: /images/lodge-hill-rd/kitchen-dining-1-1200.webp
 categories: ["Full Home Renovation"]
 author: "Rachel Power"
 tags: ["Surrey", "Farnham"]
 draft: false
+slideshow:
+  # - /images/lodge-hill-rd/kitchen-3-1200.webp
+  # - /images/lodge-hill-rd/kitchen-dining-1-1200.webp
+  - /images/lodge-hill-rd/kitchen-9-1200.webp
+  - /images/lodge-hill-rd/kitchen-6-1200.webp
+  - /images/lodge-hill-rd/kitchen-4-1200.webp
+  - /images/lodge-hill-rd/kitchen-2-1200.webp
+  - /images/lodge-hill-rd/kitchen-7-1200.webp
+  - /images/lodge-hill-rd/kitchen-5-1200.webp
+
+  - /images/lodge-hill-rd/living-room-1-1200.webp
+  - /images/lodge-hill-rd/living-room-2-1200.webp
+  - /images/lodge-hill-rd/living-room-4-1200.webp
+  - /images/lodge-hill-rd/living-room-3-1200.webp
+  - /images/lodge-hill-rd/master-bedroom-4-1200.webp
+  - /images/lodge-hill-rd/master-bedroom-2-1200.webp
+  - /images/lodge-hill-rd/master-bedroom-3-1200.webp
+  - /images/lodge-hill-rd/master-bedroom-1-1200.webp
+
+  - /images/lodge-hill-rd/guest-bedroom-1200.webp
+  - /images/lodge-hill-rd/dressing-room-1-1200.webp
+  - /images/lodge-hill-rd/Ollie-Room-9-1200.webp
+  - /images/lodge-hill-rd/freyas-room-1200.webp
+  # - /images/lodge-hill-rd/kitchen-1200.webp
+  # - /images/lodge-hill-rd/kitchen-8-1200.webp
 #> Absolutely thrilled with how our home was transformed!
 ---
 

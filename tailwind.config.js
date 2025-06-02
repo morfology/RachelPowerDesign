@@ -55,9 +55,7 @@ module.exports = {
     screens: {
       sm: "540px",
       md: "924px",
-      lg: "1280px",
-      xl: "2800px",
-      "2xl": "3200px",
+      lg: "1280px"
     },
     container: {
       center: true,

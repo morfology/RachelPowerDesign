@@ -26,7 +26,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
 
 <section className="mt-2 w-full">
   <div className="container">
-    <div className="rounded px-4 py-16 xl:p-20">
+    <div className="rounded px-4 py-16">
       {/* Use flex to align the panels side by side with a gap */}
       <div className="flex flex-col md:flex-row items-stretch justify-between gap-8">
         {/* Image panel */}

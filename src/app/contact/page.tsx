@@ -29,88 +29,96 @@ const ContactForm = () => {
   return (
     <>
       <PageHeader heading={"Contact Us"} />
-      <Formik
-        initialValues={{ name: "", email: "", message: "" }}
-        onSubmit={async (values, { resetForm }) => {
-          setStatus(null);
+      <section className="contact">
+      <div className="container pt-10 pb-10">
+        <Formik
+          initialValues={{ name: "", email: "", message: "" }}
+          onSubmit={async (values, { resetForm }) => {
+            setStatus(null);
 
-          try {
-            const response = await fetch(contact_form_action, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-              body: new URLSearchParams(values).toString(),
-            });
-            
-            
-            if (response.ok) {
-              setStatus("success");
-              resetForm();
-            } else {
+            try {
+              const response = await fetch(contact_form_action, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: new URLSearchParams(values).toString(),
+              });
+
+
+              if (response.ok) {
+                setStatus("success");
+                resetForm();
+              } else {
+                setStatus("error");
+              }
+            } catch (err) {
+              console.error(err);
               setStatus("error");
             }
-          } catch (err) {
-            console.error(err);
-            setStatus("error");
-          }
-        }}
-      >
-        {({ handleChange, values }) => (
-          <Form className="max-w-sm mx-auto">
-            <div className="mb-5">
-              <label className="form-label" htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                onChange={handleChange}
-                value={values.name}
-                className="form-input"
-                placeholder="Your name"
-                required
-              />
-            </div>
+          }}
+        >
+          {({ handleChange, values }) => (
+            <Form className="max-w-sm mx-auto">
+              <div className="mb-5">
+                <label className="form-label" htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={handleChange}
+                  value={values.name}
+                  className="form-input"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
 
-            <div className="mb-5">
-              <label className="form-label" htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                onChange={handleChange}
-                value={values.email}
-                className="form-input"
-                placeholder="name@company.com"
-                required
-              />
-            </div>
+              <div className="mb-5">
+                <label className="form-label" htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={handleChange}
+                  value={values.email}
+                  className="form-input"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
 
-            <div className="mb-5">
-              <label className="form-label" htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                onChange={handleChange}
-                value={values.message}
-                className="form-input"
-                placeholder="Your message"
-                required
-              />
-            </div>
+              <div className="mb-5">
+                <label className="form-label" htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  onChange={handleChange}
+                  value={values.message}
+                  className="form-input"
+                  placeholder="Your message"
+                  required
+                />
+              </div>
 
-            <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary">Submit</button>
 
-            {status === "success" && (
-              <p className="mt-4 text-green-500">Message sent successfully!</p>
-            )}
+              <div className="h-16 w-full flex items-center justify-center overflow-hidden">
 
-            {status === "error" && (
-              <p className="mt-4 text-red-500">Something went wrong. Please try again.</p>
-            )}
-          </Form>
-        )}
-      </Formik>
+                {status === "success" && (
+                  <p className="mt-4 font-bold text-xl ">Message sent successfully!</p>
+                )}
+
+                {status === "error" && (
+                  <p className="mt-4 text-red-500">Something went wrong. Please try again.</p>
+                )}
+              </div>
+
+            </Form>
+          )}
+        </Formik>
+        </div>
+      </section>
     </>
   );
 };

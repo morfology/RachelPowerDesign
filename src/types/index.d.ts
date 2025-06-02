@@ -35,6 +35,7 @@ export type Frontmatter = {
   author: string;
   button: Button;
 
+  slideshow?: string[];
   banner?: Record<string, string>;
 
 };

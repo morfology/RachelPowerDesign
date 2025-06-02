@@ -6,7 +6,6 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
-import imageConfig from "@/config/images.json";
 import { getPostMetadata } from "@/lib/pageMeta";
 
 const projects_folder = "projects";
@@ -24,37 +23,22 @@ export const generateStaticParams: () => { single: string }[] = () =>
   getAllSinglePages(projects_folder)
     .map((post) => ({single: post.slug || ''}));
 
+// PostSingle component
 const PostSingle = ({ params }: { params: { single: string } }) => {
+
   const posts: PostContent[] = getAllSinglePages(projects_folder);
   const post = posts.filter((page) => page.slug === params.single)[0];
 
   const { frontmatter, content } = post;
   const {
     heading,
-    folder,
     image,
     categories,
+    slideshow
   } = frontmatter;
 
   console.warn(`/projects/${params.single}`);
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let imageSliderData: any[] = [];
-
-  // now use location to query the image slider
-  if (folder) {
-
-    imageSliderData = imageConfig    
-      // Filter images that match the project
-      .filter(obj => obj.image && obj.image.includes(`/images/${folder}/`))
-
-      // Filter out images that match the detail
-      .filter(obj => obj.image && !obj.image.includes(`detail`))
-
-      // Image slider requires id, we don't use it so just add "any"
-      .map(y => ({ id: 'any', image: y.image}))
-    ;
-  }
+  //console.warn('PostSingle', imageConfig);
 
   return (
     <>
@@ -64,7 +48,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
             <article className="lg:col-10">
               {image && (
                 <div className="mb-10">
-                  <ImageSlider data={imageSliderData} />
+                  <ImageSlider data={slideshow || []} />
                 </div>
               )}
               <h1
@@ -75,8 +59,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 <MDXContent content={content} />
               </div>
 
-              <div className=" mb-10">
-              
+              <div className=" mb-10">              
                     {categories?.map((cat: string) => (
                       <div key={cat} className="inline-block">
                         <Link
@@ -88,25 +71,6 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                       </div>
                     ))}
               </div>
-
-
-              {/* <div className="row items-start justify-between">
-                <div className="mb-10 flex items-center lg:col-5 lg:mb-0">
-                  <h5 className="mr-3">Tags :</h5>
-                  <ul>
-                    {tags?.map((tag: string) => (
-                      <li key={tag} className="inline-block">
-                        <Link
-                          className="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white   "
-                          href={`/tags/${slugify(tag)}`}
-                        >
-                          {humanize(tag)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div> */}
             </article>
           </div>
         </div>

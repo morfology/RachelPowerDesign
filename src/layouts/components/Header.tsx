@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/components/Logo";
+// import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Link from "next/link";

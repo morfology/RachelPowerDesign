@@ -76,9 +76,8 @@ const Header = () => {
 
       <nav className="navbar container">
 
-        <div className="order-0">
-          <Logo />
-        </div>
+        {/* hidden block 👉 https://chatgpt.com/share/683d753c-ecb0-8004-852b-de1a97783384 */}
+        <div className="order-0 hidden lg:block w-[160px]" />
 
         <input id="nav-toggle" type="checkbox" className="hidden" ref={checkboxRef} />
         <label
@@ -108,7 +107,7 @@ const Header = () => {
 
         <ul
           id="nav-menu"
-          className="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0"
+          className="navbar-nav order-3 hidden w-full pb-6 text-center lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 lg:mx-auto"
         >
           {main.map((menu, i) => (
             <React.Fragment key={`menu-${i}`}>

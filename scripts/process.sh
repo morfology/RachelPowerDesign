@@ -91,6 +91,10 @@ processMarciaImg() {
   processJpg "$img_src/Marcia/RPDesign Marcia's Home_-$1.jpg" $img_dest/marcia/$2 $3
 }
 
+# processImg "$img_dest/farnham/bath-1.jpg" $img_dest/farnham/bathroom-2 $IDEAL_LARGE
+
+# public/images/farnham/bath-1.jpg
+
 # Process images for the 'marcia' project
 # processMarciaImg 3_2 light-detail $IDEAL_LARGE
 # processMarciaImg 5 utility $IDEAL_LARGE

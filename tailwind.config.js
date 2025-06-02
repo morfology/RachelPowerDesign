@@ -49,7 +49,7 @@ module.exports = {
     screens: {
       sm: "540px",
       md: "924px",
-      lg: "1280px"
+      lg: "1200px" // 1200px
     },
     container: {
       center: true,

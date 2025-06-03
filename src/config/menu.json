@@ -20,11 +20,5 @@
       "name": "Contact",
       "url": "/contact"
     }
- ],
-  "footer": [
-    {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
-    }
-  ]
+ ]
 }

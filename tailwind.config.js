@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const fontsTheme = {
 "fonts": {
   "font_family": {
@@ -15,14 +16,7 @@ const fontsTheme = {
 
 
 
-let font_base = Number(fontsTheme.fonts.font_size.base.replace("px", ""));
-let font_scale = Number(fontsTheme.fonts.font_size.scale);
-let h6 = font_base / font_base;
-let h5 = h6 * font_scale;
-let h4 = h5 * font_scale;
-let h3 = h4 * font_scale;
-let h2 = h3 * font_scale;
-let h1 = h2 * font_scale;
+const font_base = Number(fontsTheme.fonts.font_size.base.replace("px", ""));
 let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
 
 // Here is where this setup pulls out font weight etc.
@@ -55,7 +49,7 @@ module.exports = {
     screens: {
       sm: "540px",
       md: "924px",
-      lg: "1280px"
+      lg: "1200px" // 1200px
     },
     container: {
       center: true,

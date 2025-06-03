@@ -53,12 +53,20 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
       </head>
 
-      <body suppressHydrationWarning={true}>
+      <body
+        // 👉 Wrap page layout in a flex column to allow for sticky footer
+        // https://chatgpt.com/share/683d753c-ecb0-8004-852b-de1a97783384
+        className="flex min-h-screen flex-col"
+
+        suppressHydrationWarning={true}>
+      
         <TwSizeIndicator />
         <Providers>
           <Header />
           <SearchModal />
-          <main>{children}</main>
+          <main
+            // Make main take up remaining space - see ☝️
+            className="flex-grow">{children}</main>
           <Footer />
         </Providers>
 

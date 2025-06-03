@@ -12,27 +12,32 @@ tags: ["surrey", "farnham"]
 draft: false
 slideshow:
 
+  - /images/farnham/living-1-1200.webp
+  - /images/farnham/living-3-1200.webp
+  - /images/farnham/living-2-1200.webp
+
+  - /images/farnham/kichen-3-1200.webp
+  - /images/farnham/kitchen-1200.webp
   - /images/farnham/kitchen-2-1200.webp
   - /images/farnham/kitchen-sink-1200.webp
-  - /images/farnham/bathroom-1200.webp
 
-  - /images/farnham/kids-1200.webp
+
   - /images/farnham/diner-1200.webp
-  - /images/farnham/living-3-1200.webp
-  - /images/farnham/wardrobe-1200.webp
-  - /images/farnham/seating-2-1200.webp
-  - /images/farnham/kichen-3-1200.webp
-  - /images/farnham/kids-3-1200.webp
-  - /images/farnham/kitchen-1200.webp
-  - /images/farnham/living-2-1200.webp
+  - /images/farnham/snug-1200.webp
+
+  - /images/farnham/bathroom-1200.webp
+  - /images/farnham/bathroom-2-1200.webp
+
   - /images/farnham/teepee-1200.webp
   - /images/farnham/rainbow-1200.webp
   - /images/farnham/kids-2-1200.webp
-  - /images/farnham/living-1-1200.webp
-  - /images/farnham/snug-1200.webp
+  - /images/farnham/kids-1200.webp
+  - /images/farnham/kids-3-1200.webp
+  - /images/farnham/wardrobe-1200.webp
   - /images/farnham/bed-1200.webp
-  - /images/farnham/seating-1200.webp
+  - /images/farnham/seating-2-1200.webp
   - /images/farnham/loo-1200.webp
+  - /images/farnham/seating-1200.webp
   
 
 # We renovated a tired house transforming it into a modern family home giving new life to the outdated space. By updating the layout, incorporating contemporary design elements, and improving functionality, the badly designed house is now a stylish and comfortable haven. With careful planning and creative vision, we blended contemporary aesthetics with functional design  to revitalise the property.  We have created a beautiful, functional space that meets the families evolving  needs.

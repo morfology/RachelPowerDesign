@@ -1,6 +1,11 @@
 {
   "main": [
     {
+      "name": "houzz",
+      "icon": "FaHouzz",
+      "link": "https://www.houzz.com/professionals/interior-designers-and-decorators/rachel-power-design-pfvwus-pf~1166209749"
+    },
+    {
       "name": "instagram",
       "icon": "FaInstagram",
       "link": "https://www.instagram.com/style.design.create/"

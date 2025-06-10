@@ -103,7 +103,10 @@ processMarciaImg() {
 # processImg "$img_dest/lodge-hill/detail-ceiling.jpg" $img_dest/farnham/detail-ceiling $IDEAL_LARGE_PORTRAIT
 
 
-processImg "$img_src/Boundstone/pucu2t8whhovgkjv1xmbeg-square.jpg" $img_dest/farnham/seating-2 $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/pucu2t8whhovgkjv1xmbeg-square.jpg" $img_dest/farnham/seating-2 $IDEAL_LARGE_PORTRAIT
+processImg "$img_src/Boundstone/eydg6idp6ch8k5z8bo41c6-square.jpg" $img_dest/farnham/kitchen $IDEAL_LARGE_PORTRAIT
+
+
 
 
 # Process portrait images for the 'farnham' project

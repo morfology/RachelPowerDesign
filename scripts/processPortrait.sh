@@ -91,16 +91,12 @@ processMarciaImg() {
   processJpg "$img_src/Marcia/RPDesign Marcia's Home_-$1.jpg" $img_dest/marcia/$2 $3
 }
 
+processImg "$img_dest/farnham/bath-1-square.jpg" $img_dest/farnham/bathroom-2 $IDEAL_LARGE_PORTRAIT
 
 
-processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, UK_3 copy.jpg" $img_dest/chipstead/fireplace-crop $IDEAL_LARGE_PORTRAIT
-
-
+# processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, UK_3 copy.jpg" $img_dest/chipstead/fireplace-crop $IDEAL_LARGE_PORTRAIT
 # processLarkfieldJpg 32 pots-square $IDEAL_LARGE_PORTRAIT
-
 # processMarciaImg 18 dining $IDEAL_LARGE_PORTRAIT
-
-
 # processLodgeImg dressing-room-1 dummy $IDEAL_LARGE_PORTRAIT
 
 # processImg "$img_dest/lodge-hill/detail-drawings.jpg" $img_dest/farnham/plans $IDEAL_LARGE_PORTRAIT
@@ -108,6 +104,11 @@ processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, UK_3 copy.jpg"
 # processImg "$img_dest/lodge-hill/detail-ceiling.jpg" $img_dest/farnham/detail-ceiling $IDEAL_LARGE_PORTRAIT
 
 
+# processImg "$img_src/Boundstone/pucu2t8whhovgkjv1xmbeg-square.jpg" $img_dest/farnham/seating-2 $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/eydg6idp6ch8k5z8bo41c6-square.jpg" $img_dest/farnham/kitchen $IDEAL_LARGE_PORTRAIT
+
+# processImg "$img_dest/head-shots/rachel-square.jpg" $img_dest/head-shots/rachel $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Chipstead/Hazelwood Ln, Chipstead, Coulsdon, UK_2_square.jpg" $img_dest/chipstead/living $IDEAL_LARGE_PORTRAIT
 
 # Process portrait images for the 'farnham' project
 # processImg "$img_src/Boundstone/7e2dkf6qcawnyn29udi20b.jpg" $img_dest/farnham/kids $IDEAL_LARGE_PORTRAIT

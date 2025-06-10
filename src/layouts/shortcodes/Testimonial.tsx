@@ -6,7 +6,7 @@ function Testimonial({link, children} : {link: string; children: React.ReactNode
   //const ctaAbout1 = getPageFromPath("about/call-to-action-about-1.md");
 
   return (
-    <a style={{textDecoration: 'none'}} href={link || default_link}>
+    <a style={{textDecoration: 'none'}} href={link || default_link} target="_blank" rel="noopener noreferrer" className="block mb-10">
       {/* <CallToAction data={ctaAbout1} /> */}
       <blockquote>
         {children} 

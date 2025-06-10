@@ -2,9 +2,8 @@
 
 import MDXContent from "@/helpers/MDXContent";
 import { getAllSinglePages, findPageForSlug } from "@/lib/contentParser";
-import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+import { markdownify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
-import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
 import { getPostMetadata } from "@/lib/pageMeta";
 
@@ -33,12 +32,11 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
   const {
     heading,
     image,
-    categories,
+    // categories,
     slideshow
   } = frontmatter;
 
   console.warn(`/projects/${params.single}`);
-  //console.warn('PostSingle', imageConfig);
 
   return (
     <>

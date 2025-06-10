@@ -104,10 +104,9 @@ processMarciaImg() {
 
 
 # processImg "$img_src/Boundstone/pucu2t8whhovgkjv1xmbeg-square.jpg" $img_dest/farnham/seating-2 $IDEAL_LARGE_PORTRAIT
-processImg "$img_src/Boundstone/eydg6idp6ch8k5z8bo41c6-square.jpg" $img_dest/farnham/kitchen $IDEAL_LARGE_PORTRAIT
+# processImg "$img_src/Boundstone/eydg6idp6ch8k5z8bo41c6-square.jpg" $img_dest/farnham/kitchen $IDEAL_LARGE_PORTRAIT
 
-
-
+processImg "$img_dest/head-shots/rachel-square.jpg" $img_dest/head-shots/rachel $IDEAL_LARGE_PORTRAIT
 
 # Process portrait images for the 'farnham' project
 # processImg "$img_src/Boundstone/7e2dkf6qcawnyn29udi20b.jpg" $img_dest/farnham/kids $IDEAL_LARGE_PORTRAIT

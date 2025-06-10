@@ -59,7 +59,8 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                 <MDXContent content={content} />
               </div>
 
-              <div className=" mb-10">              
+              {/* ~~~ Commented out the Category buttons, this is probably just for SEO ~~~ */}
+              {/* <div className=" mb-10">              
                     {categories?.map((cat: string) => (
                       <div key={cat} className="inline-block">
                         <Link
@@ -70,7 +71,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                         </Link>
                       </div>
                     ))}
-              </div>
+              </div> */}
             </article>
           </div>
         </div>

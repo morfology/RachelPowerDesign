@@ -26,3 +26,8 @@ Areas which can be covered during the consultation include:
 - Room styling, soft furnishings and accessories
 
 In-person consultations are available within a 30 mile radius of Farnham, Surrey. For areas outside this radius additional travelling time will be charged.
+<Testimonial link="https://www.houzz.co.uk/viewReview/1671264/rachel-power-design-review">
+Rachel is a fantastic designer and has helped us create a wonderful family home. We bought our forever home which was much larger than our last one so we needed quite a bit of furniture, but also wanted to use what we had. I had met another designer before her who wanted to replace everything and refused to work just on refreshing any room but Rachel was the complete opposite. Some rooms she just suggested a light touch, such as painting or cushions which completely changed them but others were an entire design, from flooring to AV and all furniture. She really optimised our budget combining high street finds as well as designing beautiful bespoke units such as our media unit and dressing table.
+
+Rachel took time to really understand what we wanted (with 3 young children it had to be family friendly too) and made what seemed to be an overwhelming process very easy. We could not be happier with our home and would not hesitate to recommend her.
+</Testimonial>

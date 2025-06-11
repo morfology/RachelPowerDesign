@@ -1,30 +1,74 @@
 ---
 heading: "Privacy Policy"
 title: "Privacy Policy Title"
-description: "Privacy Policy (TODO)"
+description: "Privacy Policy"
 draft: false
 ---
 
-#### Responsibility of Contributors
+# Privacy Policy
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+**Effective Date:** June 2025  
+**Last Updated:** June 2025
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+At Rachel Power Design, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
 
-#### Gathering of Personal Information
+## 1. Who We Are
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+Rachel Power Design is an interior design business based in the UK. This website is intended to inform visitors about our services and provide a way to get in touch.
 
-#### Protection of Personal- Information
+## 2. Information We Collect
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+Currently, we do not collect any personal data through this website unless you choose to contact us directly via a contact form or email.
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+In that case, we may collect:
 
-#### Privacy Policy Changes
+- Your name
+- Your email address
+- Your phone number (if provided)
+- Any other information you include in your message
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+## 3. How We Use Your Information
+
+We use the information you provide to:
+
+- Respond to enquiries and provide information about our services
+- Manage appointments or consultations
+- Maintain basic business records
+
+We do not sell, rent, or trade your information to third parties.
+
+## 4. Cookies and Tracking Technologies
+
+At present, we do **not** use any tracking technologies or cookies that collect personal information.
+
+In future, we may implement **Google Analytics** to help understand website usage and improve our content. If this occurs, we will update this policy accordingly and provide a clear cookie notice.
+
+## 5. Your Rights
+
+As a UK or EU resident, you have rights under the UK GDPR and the Data Protection Act 2018. These include the right to:
+
+- Access the personal data we hold about you
+- Request correction or deletion of your data
+- Object to or restrict processing of your data
+
+To exercise these rights, please contact us using the details below.
+
+## 6. How We Store Your Data
+
+If you contact us, we may store your information securely in our email or business systems, solely for the purposes described above.
+
+## 7. Contact Us
+
+If you have any questions or concerns about this privacy policy, or the way your information is handled, please get in touch:
+
+**Rachel Power Design**  
+
+Phone: +44-7480-488-209
+
+Contact: [Contact Page](/contact)
+
+Website: https://www.rachelpowerdesign.com
+
+---
+
+This policy will be reviewed and updated as our services and technology evolve.

@@ -1,9 +1,11 @@
 // services/page.tsx => http://localhost:3000/services
 
+import MDXContent from "@/helpers/MDXContent";
 import { getPageFromPath } from "@/lib/contentParser";
 import PageHeader from "@/components/PageHeader";
 import CallToAction from "@/components/CallToAction";
 import { getPostMetadata } from "@/lib/pageMeta";
+
 
 const page = getPageFromPath(`services/_index.md`);
 
@@ -29,6 +31,16 @@ const Services = () => {
       {ctaData.map((cta, index) => (
         <CallToAction key={index} data={cta} />
       ))}
+
+      <section className="section">
+        <div className="container">
+          <div className="content">
+            <MDXContent content={page.content} />
+          </div>
+        </div>
+      </section>
+
+
     </>
   );
 };

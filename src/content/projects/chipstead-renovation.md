@@ -43,3 +43,8 @@ slideshow:
 This home bursts with life, and we wanted to create bold story of colour and pattern that reflected the homeowners' vibrant personalities. We included a range of bold wallpapers and balanced these with carefully selected paint colours to ensure the finished look was modern and exciting.
 
 Bold lighting paired with beautiful furniture creates the perfect balance between period charm and modern style.  The finished scheme resulted in a beautiful family home which reflected the exuberant and fun personalities of its owners.
+
+<Testimonial link="https://www.houzz.co.uk/viewReview/1847569/rachel-power-design-review">
+When we decided to totally refurbish our house, I found Rachel on Houzz. She has always been very responsive and has supported us in achieving our dream home. Over several visits Rachel totally understood the brief and our vision and put together fantastic mood boards which really help you see how each room will come together, from toilet roll holders to chandeliers, you name it, and she finds it! She was even kind enough to store some larger items of furniture whilst our house was a building site! I would 100% recommend her!
+
+</Testimonial>

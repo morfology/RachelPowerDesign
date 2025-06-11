@@ -10,6 +10,7 @@ import Script from 'next/script';
 import "@/styles/main.css";
 import { defaultMetadata } from '@/lib/pageMeta';
 import siteConfig from "@/config/site.json";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata = defaultMetadata;
 
@@ -87,6 +88,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           }}
         />
 
+        {/* <CookieBanner /> */}
       </body>
     </html>
   );

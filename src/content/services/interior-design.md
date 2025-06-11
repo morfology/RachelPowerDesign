@@ -56,13 +56,6 @@ The design and build team will work together to manage the final phase.  This pr
 - Site clearance
 - Setting out of furniture
 - Installation management and room dressing
-
-
-
-
-
-
-
-
-
-
+<Testimonial link="https://www.houzz.co.uk/hznb/professionals/interior-designers/rachel-power-design-pfvwus-pf~1166209749">
+We found Rachel on Google like many, but after our first meeting I knew she totally got what we were after. If you are looking for a friendly, creative, detailed perfectionist of a designer - then look no further. Rachel got our style straight away, seeing that we wanted a stylish but practical home for a family with young children. And my goodness she delivered.
+</Testimonial>

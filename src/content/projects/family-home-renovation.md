@@ -34,7 +34,10 @@ slideshow:
   - /images/lodge-hill-rd/freyas-room-1200.webp
   # - /images/lodge-hill-rd/kitchen-1200.webp
   # - /images/lodge-hill-rd/kitchen-8-1200.webp
-#> Absolutely thrilled with how our home was transformed!
+# REVIEW BELOW IS FOR LEATHERHEAD
 ---
 
 Respecting the character and age of the property this renovation seamlessly integrated timeless features with vintage details and modern twists.  Understanding our clients' passion for design and mid-century modern silhouettes, the curated scheme combined classic design elements with modern styling.  
+<Testimonial link="https://www.houzz.co.uk/viewReview/2121237/rachel-power-design-review">
+Rachel has helped us with the complete renovation of our 4 bedroom house over the past 14 months and she has been incredible at every step of the process.
+</Testimonial>

@@ -49,6 +49,7 @@ slideshow:
 Contemporary, understated style was the brief from our clients in Horsham.  Focusing on a neutral colour palette we combined textures and materials to create a cosy environment which provides the perfect balance of sophistication and comfort.  Colour also had a part to play in the overall scheme with a concise collection of colours being integrated into the designs.
 
 
-<Testimonial>
-Rachel has helped us with the complete renovation of our 4 bedroom house over the past 14 months and she has been incredible at every step of the process.
+<Testimonial link="https://www.houzz.co.uk/viewReview/1852179/rachel-power-design-review">
+Rachel brought a superb approach of thoughtful design and recommendations, from careful consideration of all we were hoping for.
+The project was a whole property redesign and furnish, with individual needs for each room. Having all aspect of the project handled so professionally was a weight off our minds. Thank you Rachel, you have designed us a wonderful family home.
 </Testimonial>

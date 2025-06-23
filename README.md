@@ -2,7 +2,7 @@
 Nextjs + Tailwind CSS + TypeScript
 
  - Initially created [nexplate](https://github.com/zeon-studio/nextplate)
- - [PageSpeed 🚀](https://pagespeed.web.dev/analysis/https-rachelpowerdesign-production-up-railway-app/fn7r87e4n0?form_factor=mobile)
+ - [PageSpeed 🚀](https://pagespeed.web.dev/analysis/https-rachelpowerdesign-com/qat2ig79vw?form_factor=mobile)
 
 ## 📌 Key Features
 - 🔍 Search Functionality

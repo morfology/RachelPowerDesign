@@ -4,6 +4,10 @@ import { CountedItem, getTaxonomyAggr } from "@/lib/taxonomyParser";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
+import { getPageFromPath } from "@/lib/contentParser";
+import { getPostMetadata } from "@/lib/pageMeta";
+
+export const generateMetadata = () => getPostMetadata(getPageFromPath("tags/_index.md"));
 
 const projects_folder = "projects";
 

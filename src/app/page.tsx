@@ -3,7 +3,10 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { PostContent } from "@/types";
 import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
+import { getPostMetadata } from "@/lib/pageMeta";
 
+
+export const generateMetadata = () => getPostMetadata(getPageFromPath("homepage/_index.md"));
 
 const Home = () => {
   const homepage: PostContent = getPageFromPath("homepage/_index.md");

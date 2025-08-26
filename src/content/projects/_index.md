@@ -1,5 +1,5 @@
 ---
 title: "Take a Look at our project portfolio" # <head:title> : search engine results, social shares
 heading: "Our Projects" # 👈 <h1>: Visible on page, help user on the page
-description: "Learn about projects that the team has completed" # seo/social preview
+description: "Explore our portfolio of completed interior design projects. From family home renovations to luxury refurbishments, see how we transform spaces across the South East UK." # seo/social preview
 ---

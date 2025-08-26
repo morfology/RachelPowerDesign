@@ -4,7 +4,11 @@
  * Gallery
  */
 import PageHeader from "@/components/PageHeader";
-import Grid from "@/lib/Grid"
+import Grid from "@/lib/Grid";
+import { getPageFromPath } from "@/lib/contentParser";
+import { getPostMetadata } from "@/lib/pageMeta";
+
+export const generateMetadata = () => getPostMetadata(getPageFromPath("gallery/_index.md"));
 
 // for all regular pages
 const Gallery = () => {

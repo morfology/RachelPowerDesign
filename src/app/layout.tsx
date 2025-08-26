@@ -31,6 +31,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
         {/* favicon */}
         <link rel="shortcut icon" href={siteConfig.favicon} />
+        <link rel="canonical" href="https://rachelpowerdesign.com/"/>
 
         {/* google font css */}
         <link

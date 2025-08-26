@@ -2,8 +2,8 @@
 # -------------------- BOUNDSTONE ROAD --------------------
 heading: "Farnham"
 folder: farnham
-title: ""
-description: "Farnham Extension & Renovation"
+title: "Farnham Extension & Renovation"
+description: "Discover this stunning Farnham home extension and renovation project. See how we transformed this family home with modern design and thoughtful space planning."
 date: 2024-03-03T05:00:00Z
 image: /images/farnham/living-2-1200.webp
 categories: ["Extension", "Renovation"]

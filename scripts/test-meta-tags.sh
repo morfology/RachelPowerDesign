@@ -49,6 +49,7 @@ pages=(
     "about:/about"
     "services:/services" 
     "projects:/projects"
+    "project-sample:/projects/farnham-renovation"
     "contact:/contact"
     "gallery:/gallery"
     "categories:/categories"

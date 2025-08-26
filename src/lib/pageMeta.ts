@@ -90,7 +90,10 @@ export const getPostMetadata = (post: PostContent): Metadata => {
       title: ogTitle,
       description: post.frontmatter.description,
       card: "summary_large_image",
-      images: [defaultOgImage.url],
+      images: [{
+        url: defaultOgImage.url,
+        alt: defaultOgImage.alt,
+      }],
     }
   };
 

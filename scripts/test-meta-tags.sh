@@ -31,7 +31,7 @@ extract_meta() {
     echo "  → $url"
     
     curl -s -L "$url" | \
-    grep -i '<meta' | \
+    grep -oE '<meta[^>]*>' | \
     sed 's/^[[:space:]]*//' | \
     sort > "./.tmp/$label/$filename"
     
@@ -44,19 +44,21 @@ extract_meta() {
 }
 
 # Test key pages
-declare -A pages=(
-    ["home"]=""
-    ["about"]="/about"
-    ["services"]="/services" 
-    ["projects"]="/projects"
-    ["contact"]="/contact"
-    ["gallery"]="/gallery"
-    ["categories"]="/categories"
-    ["tags"]="/tags"
+pages=(
+    "home:"
+    "about:/about"
+    "services:/services" 
+    "projects:/projects"
+    "contact:/contact"
+    "gallery:/gallery"
+    "categories:/categories"
+    "tags:/tags"
 )
 
-for page_name in "${!pages[@]}"; do
-    extract_meta "$base_url${pages[$page_name]}" "$page_name.txt"
+for page_entry in "${pages[@]}"; do
+    page_name="${page_entry%%:*}"
+    page_path="${page_entry#*:}"
+    extract_meta "$base_url$page_path" "$page_name.txt"
 done
 
 echo ""

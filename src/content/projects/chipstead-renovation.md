@@ -2,8 +2,8 @@
 heading: "Chipstead"
 folder: chipstead
 internal_notes: "Chipstead Extension & Renovation"
-title: "See this vibrant Chipstead home extension and renovation. Bold colors, striking patterns, and modern lighting create a stunning family home that perfectly reflects the owners' personalities." # 👈 <head:title>
-description: "Chipstead Extension & Renovation" # 👈 preview
+title: "Chipstead Extension & Renovation" # 👈 <head:title>
+description: "See this vibrant Chipstead home extension and renovation. Bold colors, striking patterns, and modern lighting create a stunning family home that perfectly reflects the owners' personalities." # 👈 preview
 date: 2023-03-03T05:00:00Z
 image: /images/chipstead/fireplace-1200.webp
 categories: ["Full Home Renovation"]

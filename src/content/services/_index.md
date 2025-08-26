@@ -1,7 +1,7 @@
 ---
 title: "Our Services" # <head:title> : search engine results, social shares
 heading: "Our Services" # 👈 <h1>: Visible on page, help user on the page
-description: "Professional interior design services including consultation, full home renovations, and bespoke design solutions. Transform your space with our expert team in the South East UK." # seo/social preview
+description: "Professional interior design services including consultation, full home renovations, and bespoke design solutions. Transform your space with our expert team across South East England." # seo/social preview
 ---
 <Testimonial link="https://www.houzz.co.uk/viewReview/1715815/rachel-power-design-review">
 We worked with Rachel on a whole house refurbishment for our 5 bedroom property and I can’t speak highly enough of Rachel’s services.

@@ -1,6 +1,6 @@
 ---
 title: "Interior Design Services - Rachel Power Design"
-description: "Transform your home with bespoke interior design services. From single room styling to complete renovations, we create timeless, elegant interiors tailored to your lifestyle in the South East UK."
+description: "Transform your home with bespoke interior design services. From single room styling to complete renovations, we create timeless, elegant interiors tailored to your lifestyle across the South East."
 heading: "Rachel Power Design"
 
 # Banner??

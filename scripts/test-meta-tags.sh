@@ -64,9 +64,19 @@ done
 echo ""
 echo "✅ Meta tag extraction complete!"
 echo "📁 Files saved in: ./.tmp/$label/"
+
+# If this is local, normalize URLs for better comparison
+if [[ "$label" == "local" ]]; then
+    echo "🔄 Normalizing URLs for comparison..."
+    sed -i '' 's|http://localhost:300[0-9]|https://rachelpowerdesign.com|g' ./.tmp/$label/*.txt
+    sed -i '' 's|http://localhost:3000/homepage|https://rachelpowerdesign.com/|g' ./.tmp/$label/*.txt
+    echo "   ✅ URLs normalized"
+fi
+
 echo ""
 echo "To compare with another environment:"
-echo "  diff ./.tmp/live/home.txt ./.tmp/local/home.txt"
+echo "  git diff --no-index ./.tmp/live/home.txt ./.tmp/local/home.txt"
+echo "  git diff --no-index ./.tmp/live/ ./.tmp/local/"
 echo ""
 echo "To see all meta descriptions:"
 echo "  grep -i 'name=\"description\"' ./.tmp/$label/*.txt"

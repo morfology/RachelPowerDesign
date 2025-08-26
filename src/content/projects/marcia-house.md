@@ -1,8 +1,8 @@
 ---
 heading: "Farnham"
 folder: marcia-house
-title: ""
-description: "Family Home Extension & Renovation"
+title: "Family Home Extension & Renovation" # 👈 <head:title>
+description: "See how we transformed this family home with a stunning extension and full renovation. Open plan living, natural light and elegant finishes create the perfect family space." # 👈 preview
 date: 2023-03-03T05:00:00Z
 image: /images/marcia/living-1200.jpg
 categories: ["Extension", "Full Home Renovation"]

@@ -2,8 +2,8 @@
 heading: "Horsham"
 folder: horsham
 internal: "Horsham Jack and Amy"
-title: ""
-description: "Horsham Home Refurbishment"
+title: "Horsham Home Refurbishment"  # 👈 <head:title>
+description: "Explore this comprehensive home refurbishment in Horsham. Complete renovation brings modern luxury and improved flow to this charming family property in West Sussex." # 👈 preview
 date: 2023-03-03T05:00:00Z
 image: "/images/horsham/kitchen-1200.webp"
 categories: ["Full Home Renovation"]

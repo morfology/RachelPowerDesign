@@ -1,8 +1,8 @@
 ---
 heading: "Farnham"
 folder: larkfield
-title: ""
-description: "Family Home Refresh"
+title: "Family Home Refresh" # 👈 <head:title>
+description: "Discover this elegant family home refresh. Contemporary design meets practical family living in this stunning transformation of kitchen, living and dining spaces." # 👈 preview
 date: 2023-03-03T05:00:00Z
 image: "/images/larkfield/living-1200.jpg"
 categories: ["Family Home Refresh"]

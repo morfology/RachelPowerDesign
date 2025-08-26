@@ -3,7 +3,7 @@ heading: "Chipstead"
 folder: chipstead
 internal_notes: "Chipstead Extension & Renovation"
 title: ""
-description: "Chipstead Extension & Renovation"
+description: "Chipstead Extension & Renovation" # @TODO
 date: 2023-03-03T05:00:00Z
 image: /images/chipstead/fireplace-1200.webp
 categories: ["Full Home Renovation"]

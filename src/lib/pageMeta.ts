@@ -68,11 +68,17 @@ export const getPostMetadata = (post: PostContent): Metadata => {
 
   if (!post) { throw new Error("Post not found"); }
 
-  const md = {
-    title: post.frontmatter.title || defaultTitle,
+  const pageTitle = post.frontmatter.title;
+  
+  // Create title for OpenGraph/Twitter (with template logic)
+  const ogTitle = pageTitle ? 
+    (pageTitle.includes("Rachel Power Design") ? pageTitle : `${pageTitle} | ${defaultTitle}`) 
+    : defaultTitle;
+  
+  const md: Metadata = {
     description: post.frontmatter.description,
     openGraph: {
-      title: post.frontmatter.title || defaultTitle,
+      title: ogTitle,
       description: post.frontmatter.description,
       url: `${siteUrl}/${post.slug}`,
       siteName: defaultTitle,
@@ -80,6 +86,18 @@ export const getPostMetadata = (post: PostContent): Metadata => {
         defaultOgImage 
       ]
     },
+    twitter: {
+      title: ogTitle,
+      description: post.frontmatter.description,
+      card: "summary_large_image",
+      images: [defaultOgImage.url],
+    }
   };
+
+  // Set the main title (Next.js template will handle this automatically)
+  if (pageTitle) {
+    md.title = pageTitle;
+  }
+
   return md
 };

@@ -1,7 +1,7 @@
 # CHAT.md - Rachel Power Design
 
 ## Business Overview
-**Rachel Power Design** - Bespoke interior design services in [Location]
+**Rachel Power Design** - Bespoke interior design services in Farnham, Surrey
 - **Services**: Single room updates to complete property redesigns
 - **Design Philosophy**: Creating inspiring, joyful spaces tailored to each client's lifestyle and personality
 - **Style Range**: Timeless classics to contemporary elegance
@@ -14,7 +14,7 @@
 - **Key Themes/Challenges**: Working with listed buildings, furniture supply
 
 ## Design Preferences & Style
-- **Signature Elements**: Blending timeless classics with contemporary elegance, bespoke design tailored to lifestyle, focus on spaces that inspire and uplift
+- **Signature Elements**: Blending modern and classic elements tailored to client style and practical lifestyle needs
 - **Preferred Suppliers**: [Key furniture/fabric/lighting sources]
 - **Go-to Materials**: [Preferred finishes, textiles, etc.]
 - **Avoided Styles/Elements**: [What doesn't align with the brand]

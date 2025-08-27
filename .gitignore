@@ -1,6 +1,6 @@
 node_modules
 .next
 .json
-.tmp
+.tmp*
 .env.local
 tsconfig.tsbuildinfo

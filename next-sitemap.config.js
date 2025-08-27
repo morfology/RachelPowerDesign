@@ -10,6 +10,7 @@ module.exports = {
   // Exclude development and utility pages
   exclude: [
     '/elements',
+    '/gallery',
     '/tags/sitemap.xml',
     '/categories/sitemap.xml',
     '/projects/sitemap.xml'
@@ -27,8 +28,8 @@ module.exports = {
       }
     }
 
-    // Core service and contact pages - very high priority
-    if (['/contact', '/services'].includes(path)) {
+    // Core service, contact and about pages - very high priority
+    if (['/contact', '/services', '/about'].includes(path)) {
       return {
         loc: path,
         changefreq: 'weekly',
@@ -47,8 +48,8 @@ module.exports = {
       }
     }
 
-    // About, Projects index, Gallery - high priority
-    if (['/about', '/projects', '/gallery'].includes(path)) {
+    // Projects index - high priority
+    if (['/projects'].includes(path)) {
       return {
         loc: path,
         changefreq: 'monthly',

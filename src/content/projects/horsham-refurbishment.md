@@ -3,7 +3,7 @@ heading: "Horsham"
 folder: horsham
 internal: "Horsham Jack and Amy"
 title: "Horsham Home Refurbishment"  # 👈 <head:title>
-description: "Explore this comprehensive home refurbishment in Horsham. Complete renovation brings modern luxury and improved flow to this charming family property in West Sussex." # 👈 preview
+description: "Discover this warm and sophisticated Farnham home transformation. A two-storey extension and full renovation create light-filled, spacious rooms perfect for international clients who love entertaining." # 👈 preview
 date: 2023-03-03T05:00:00Z
 image: "/images/horsham/kitchen-1200.webp"
 categories: ["Full Home Renovation"]
@@ -13,23 +13,17 @@ draft: false
 slideshow:
   - /images/horsham/kitchen-diner-1200.webp
   - /images/horsham/kitchen-1200.webp
-
   - /images/horsham/snug-1-1200.webp
   - /images/horsham/snug-1200.webp
   - /images/horsham/living-1200.webp
-
-
   - /images/horsham/fireplace-2-1200.webp
   - /images/horsham/living-3-1200.webp
   - /images/horsham/living-2-1200.webp
   - /images/horsham/stairwell-1200.webp
   - /images/horsham/winerack-1200.webp
   - /images/horsham/fireplace-1200.webp
-
   - /images/horsham/bathroom-1200.webp
   - /images/horsham/bathroom-2-1200.webp
-
-
   - /images/horsham/dressing-1200.webp
   - /images/horsham/dressing-2-1200.webp
   - /images/horsham/dressing-3-1200.webp

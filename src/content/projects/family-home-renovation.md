@@ -2,7 +2,7 @@
 heading: "Farnham"
 folder: lodge-hill
 title: "Home Refresh" # 👈 <head:title>
-description: "See this beautiful family home refresh project. Modern updates and thoughtful styling transform everyday living spaces while maintaining comfort and functionality." # 👈 preview
+description: "Discover this Farnham property renovation blending timeless features with mid-century modern elements. Vintage details and contemporary twists create a sophisticated home respecting the character of this period property." # 👈 preview
 date: 2023-03-03T05:00:00Z
 image: /images/lodge-hill-rd/kitchen-dining-1-1200.webp
 categories: ["Full Home Renovation"]

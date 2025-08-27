@@ -15,9 +15,6 @@
 
 ## Design Preferences & Style
 - **Signature Elements**: Blending modern and classic elements tailored to client style and practical lifestyle needs
-- **Preferred Suppliers**: [Key furniture/fabric/lighting sources]
-- **Go-to Materials**: [Preferred finishes, textiles, etc.]
-- **Avoided Styles/Elements**: [What doesn't align with the brand]
 
 ## Technical Details
 - **Website**: NextJS site at rachelpowerdesign.com
@@ -26,9 +23,9 @@
 - **Client Communication**: Mood boards for concept approval, detailed drawings for implementation
 
 ## Current Focus Areas
-- **Business Goals**: [Growing certain service areas, target markets, etc.]
-- **Learning/Development**: [New trends exploring, skills developing]
-- **Challenges**: [Common recurring issues in projects or business]
+- **Business Goals**: Moving upmarket - targeting bigger budget projects
+- **Learning/Development**: Developing skills in 3D rendering/visualization software
+- **Challenges**: Client budget vs wishlist reality - guiding difficult conversations
 
 ## Common AI Assistant Use Cases
 - **Project Planning**: Room layout suggestions, space optimization

@@ -16,6 +16,12 @@
     "name": "Rachel Power",
     "jobTitle": "Interior Designer"
   },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Farnham",
+    "addressRegion": "Surrey",
+    "addressCountry": "GB"
+  },
   "serviceType": "Interior Design",
   "category": "Interior Design Services",
   "areaServed": [

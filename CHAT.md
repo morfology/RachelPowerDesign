@@ -21,9 +21,9 @@
 
 ## Technical Details
 - **Website**: NextJS site at rachelpowerdesign.com
-- **Location**: [Business location for local supplier context]
-- **Project Management**: [How projects are tracked/managed]
-- **Client Communication**: [Preferred methods, presentation formats]
+- **Location**: Farnham, Surrey - serving South East England
+- **Project Management**: Traditional approach - phone calls and site visits, minimal software
+- **Client Communication**: Mood boards for concept approval, detailed drawings for implementation
 
 ## Current Focus Areas
 - **Business Goals**: [Growing certain service areas, target markets, etc.]
@@ -48,7 +48,6 @@
 - Interior design focus (NOT web design, graphic design, or branding)
 - Emphasis on residential spaces and client lifestyle integration
 - Mix of renovation/refurbishment work with new design projects
-- [Add any other key context that frequently gets missed]
 
 ---
 

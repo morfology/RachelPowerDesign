@@ -45,20 +45,26 @@ export const getPageMetadata = (slug: string): Metadata => {
     //image,
   } = getPageFromPath(slug).frontmatter;
 
+  // Generate clean canonical URL for static pages
+  const cleanPath = slug.replace("_index.md", "").replace(/\/$/, "");
+  const canonicalUrl = cleanPath ? `${siteUrl}/${cleanPath}` : siteUrl;
+
   const md = {
     title: title || defaultTitle,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: title,
       description,
-      url: `${siteUrl}/${slug.replace("_index.md", "").replace(/\/$/, "")}`,
+      url: canonicalUrl,
       siteName: defaultTitle,
       images:[ 
         defaultOgImage 
       ]
     },
   };
-  console.warn("md", md);
 
   return md
 };
@@ -75,12 +81,19 @@ export const getPostMetadata = (post: PostContent): Metadata => {
     (pageTitle.includes("Rachel Power Design") ? pageTitle : `${pageTitle} | ${defaultTitle}`) 
     : defaultTitle;
   
+  // Generate clean canonical URL
+  const canonicalPath = post.slug?.replace(/\/_index$/, '').replace(/^\//, '') || '';
+  const canonicalUrl = canonicalPath ? `${siteUrl}/${canonicalPath}` : siteUrl;
+
   const md: Metadata = {
     description: post.frontmatter.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: ogTitle,
       description: post.frontmatter.description,
-      url: `${siteUrl}/${post.slug}`,
+      url: canonicalUrl,
       siteName: defaultTitle,
       images:[ 
         defaultOgImage 

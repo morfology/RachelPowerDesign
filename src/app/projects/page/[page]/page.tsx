@@ -7,6 +7,9 @@ import { getPageFromPath, getAllSinglePages } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/components/PageHeader";
 import { PostContent } from "@/types";
+import { Metadata } from "next";
+import { siteUrl } from "@/config/dynamic.js";
+import siteConfig from "@/config/site.json";
 
 const { pagination } = config.settings;
 const projects_folder = "projects";
@@ -28,6 +31,29 @@ export const generateStaticParams = () => {
   }
 
   return paths;
+};
+
+// generate metadata for pagination pages
+export const generateMetadata = ({ params }: { params: { page: string } }): Metadata => {
+  const postIndex: PostContent = getPageFromPath(`${projects_folder}/_index.md`);
+  const currentPage = params.page && !isNaN(Number(params.page)) ? Number(params.page) : 1;
+  
+  const pageTitle = `${postIndex.frontmatter.title} - Page ${currentPage}`;
+  const canonicalUrl = `${siteUrl}/projects/page/${currentPage}`;
+  
+  return {
+    title: pageTitle,
+    description: postIndex.frontmatter.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${pageTitle} | ${siteConfig.title}`,
+      description: postIndex.frontmatter.description,
+      url: canonicalUrl,
+      siteName: siteConfig.title,
+    },
+  };
 };
 
 // for all regular pages

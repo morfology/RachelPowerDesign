@@ -7,16 +7,11 @@
 - **Style Range**: Timeless classics to contemporary elegance
 - **Target Clients**: [Add typical client profile - families, professionals, property developers, etc.]
 
-## Current Active Projects
-### [Project Name/Client Initial]
-- **Property Type**: [Victorian terrace/modern apartment/period home etc.]
-- **Scope**: [Single room/full renovation/specific areas]
-- **Stage**: [Initial consultation/design development/implementation/styling]
-- **Timeline**: [Key deadlines]
-- **Budget Range**: [If relevant for context]
-- **Key Challenges**: [Specific issues to work around]
-
-### [Add more projects as needed]
+## Current Project Focus
+- **Typical Projects**: See portfolio examples at rachelpowerdesign.com/projects
+- **Current Stage Mix**: [e.g., "2 projects in design development, 1 starting implementation"]
+- **Main Project Types This Quarter**: [e.g., "Period home renovations, contemporary kitchen updates"]
+- **Key Themes/Challenges**: [e.g., "Working with listed buildings, maximizing small spaces"]
 
 ## Design Preferences & Style
 - **Signature Elements**: [What Rachel is known for - color palettes, textures, mixing periods etc.]
@@ -45,8 +40,8 @@
 - **Supplier Research**: Finding specific items, alternative sources
 
 ## Communication Preferences
-- **Tone**: [Professional but approachable/creative/practical - however Rachel prefers]
-- **Detail Level**: [High-level concepts vs. specific implementation details]
+- **Tone**: Professional but approachable/creative/practical (as Rachel prefers)
+- **Detail Level**: Include enough detail for clients to visualize but avoid overwhelming them
 - **Visual References**: [Preference for mood boards, specific examples, etc.]
 
 ## Notes for Context
@@ -57,5 +52,5 @@
 
 ---
 
-*Last Updated: [Date]*
-*Next Review: [Date]*
+*Last Updated: 27 August 2025*
+*Next Review: November 2025*

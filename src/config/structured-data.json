@@ -10,7 +10,7 @@
     "https://rachelpowerdesign.com/images/portfolio-hero.jpg",
     "https://rachelpowerdesign.com/images/portfolio-gallery-1.jpg"
   ],
-  "description": "Bespoke interior design services in Farnham, Surrey. From single room updates to complete property redesigns, creating inspiring, joyful spaces tailored to each client's lifestyle and personality. Specializing in period home renovations and blending modern and classic elements.",
+  "description": "Bespoke interior design services in Farnham, Surrey. From single room updates to complete property redesigns, creating inspiring, joyful spaces tailored to each client's lifestyle and personality. Services include modern homes, period properties, and blending classic and contemporary elements.",
   "founder": {
     "@type": "Person",
     "name": "Rachel Power",
@@ -64,31 +64,31 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Period Home Renovations",
-          "description": "Specialist interior design for listed buildings and period properties, blending historical character with modern functionality."
+          "name": "Design Consultation",
+          "description": "Professional interior design consultation including mood boards, space planning, and design development."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Design Consultation",
-          "description": "Professional interior design consultation including mood boards, space planning, and design development."
+          "name": "Period Home Renovations",
+          "description": "Specialist interior design for listed buildings and period properties, blending historical character with modern functionality."
         }
       }
     ]
   },
   "knowsAbout": [
     "Interior Design",
-    "Period Home Renovation",
-    "Space Planning",
-    "Listed Buildings",
     "Residential Design",
+    "Space Planning",
+    "Room Layout",
     "Contemporary Design",
     "Classic Design",
-    "Room Layout",
     "Furniture Selection",
-    "Color Coordination"
+    "Color Coordination",
+    "Period Home Renovation",
+    "Listed Buildings"
   ],
   "sameAs": [
     "https://www.instagram.com/rachelpowerdesign",

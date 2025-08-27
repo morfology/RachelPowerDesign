@@ -6,6 +6,7 @@ import TwSizeIndicator from "@/helpers/TwSizeIndicator"; // debug indicator
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Providers from "@/components/Providers";
+import StructuredData from "@/components/StructuredData";
 import Script from 'next/script';
 import "@/styles/main.css";
 import { defaultMetadata } from '@/lib/pageMeta';
@@ -52,6 +53,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           rel="stylesheet"
         />
         <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'></link>
+
+        {/* Structured Data */}
+        <StructuredData />
 
       </head>
 

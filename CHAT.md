@@ -17,7 +17,7 @@
 - **Signature Elements**: Blending modern and classic elements tailored to client style and practical lifestyle needs
 
 ## Technical Details
-- **Website**: NextJS site at rachelpowerdesign.com
+- **Website**: NextJS site at rachelpowerdesign.com (TypeScript)
 - **Location**: Farnham, Surrey - serving South East England
 - **Project Management**: Traditional approach - phone calls and site visits, minimal software
 - **Client Communication**: Mood boards for concept approval, detailed drawings for implementation

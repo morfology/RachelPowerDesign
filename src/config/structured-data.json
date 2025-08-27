@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://rachelpowerdesign.com/#business",
+  "name": "Rachel Power Design",
+  "alternateName": "Rachel Power Interior Design",
+  "url": "https://rachelpowerdesign.com",
+  "logo": "https://rachelpowerdesign.com/logo.png",
+  "image": [
+    "https://rachelpowerdesign.com/images/portfolio-hero.jpg",
+    "https://rachelpowerdesign.com/images/portfolio-gallery-1.jpg"
+  ],
+  "description": "Bespoke interior design services in Farnham, Surrey. From single room updates to complete property redesigns, creating inspiring, joyful spaces tailored to each client's lifestyle and personality. Specializing in period home renovations and blending modern and classic elements.",
+  "founder": {
+    "@type": "Person",
+    "name": "Rachel Power",
+    "jobTitle": "Interior Designer"
+  },
+  "serviceType": "Interior Design",
+  "category": "Interior Design Services",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Farnham",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Surrey"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "South East England"
+    }
+  ],
+  "email": "rachel@rachelpowerdesign.com",
+  "priceRange": "$$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Interior Design Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Single Room Updates",
+          "description": "Transform individual rooms with tailored design solutions that reflect your lifestyle and personality."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Complete Property Redesigns",
+          "description": "Full home renovation and interior design services for entire properties."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Period Home Renovations",
+          "description": "Specialist interior design for listed buildings and period properties, blending historical character with modern functionality."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Design Consultation",
+          "description": "Professional interior design consultation including mood boards, space planning, and design development."
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Interior Design",
+    "Period Home Renovation",
+    "Space Planning",
+    "Listed Buildings",
+    "Residential Design",
+    "Contemporary Design",
+    "Classic Design",
+    "Room Layout",
+    "Furniture Selection",
+    "Color Coordination"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/rachelpowerdesign",
+    "https://www.facebook.com/rachelpowerdesign"
+  ],
+  "potentialAction": {
+    "@type": "ContactAction",
+    "target": "https://rachelpowerdesign.com/contact"
+  },
+  "mainEntityOfPage": "https://rachelpowerdesign.com",
+  "keywords": "interior designer Farnham, interior design Surrey, period home renovation, residential interior design, bespoke interior design South East England"
+}

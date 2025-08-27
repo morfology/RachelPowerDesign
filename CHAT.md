@@ -5,16 +5,16 @@
 - **Services**: Single room updates to complete property redesigns
 - **Design Philosophy**: Creating inspiring, joyful spaces tailored to each client's lifestyle and personality
 - **Style Range**: Timeless classics to contemporary elegance
-- **Target Clients**: [Add typical client profile - families, professionals, property developers, etc.]
+- **Target Clients**: Typical client profile - families, professionals. Aspiring to more commercial spaces.
 
 ## Current Project Focus
 - **Typical Projects**: See portfolio examples at rachelpowerdesign.com/projects
-- **Current Stage Mix**: [e.g., "2 projects in design development, 1 starting implementation"]
-- **Main Project Types This Quarter**: [e.g., "Period home renovations, contemporary kitchen updates"]
-- **Key Themes/Challenges**: [e.g., "Working with listed buildings, maximizing small spaces"]
+- **Current Stage Mix**: 2 projects in design development, 1 starting implementation
+- **Main Project Types This Quarter**: Period home renovations, Full home renovation
+- **Key Themes/Challenges**: Working with listed buildings, furniture supply
 
 ## Design Preferences & Style
-- **Signature Elements**: [What Rachel is known for - color palettes, textures, mixing periods etc.]
+- **Signature Elements**: Blending timeless classics with contemporary elegance, bespoke design tailored to lifestyle, focus on spaces that inspire and uplift
 - **Preferred Suppliers**: [Key furniture/fabric/lighting sources]
 - **Go-to Materials**: [Preferred finishes, textiles, etc.]
 - **Avoided Styles/Elements**: [What doesn't align with the brand]
@@ -42,7 +42,7 @@
 ## Communication Preferences
 - **Tone**: Professional but approachable/creative/practical (as Rachel prefers)
 - **Detail Level**: Include enough detail for clients to visualize but avoid overwhelming them
-- **Visual References**: [Preference for mood boards, specific examples, etc.]
+- **Visual References**: Use varied approaches as appropriate - familiar hotel/restaurant examples clients can relate to, accessible style comparisons ('like a boutique hotel lobby'), sensory descriptions of how spaces feel, lifestyle connections ('perfect for Sunday morning coffee'), specific designers/brands when relevant, historical periods for context, Pinterest-searchable terms for follow-up inspiration, detailed texture and material descriptions
 
 ## Notes for Context
 - Interior design focus (NOT web design, graphic design, or branding)

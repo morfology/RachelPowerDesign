@@ -1,61 +1,84 @@
 ---
-title: "Interior Design Service" # <head:title> : search engine results, social shares
-heading: "Interior Design Service" # 👈 <h1>: Visible on page, help user on the page
-description: "Find out more about our Interior Design service" # seo/social preview
+title: "Interior Design Service" # 👈 head>title
+heading: "Interior Design Service" # 👈 <h1>
+description: "Full interior design service in Surrey - from concept to completion. Bespoke design, project management, and styling for beautiful, functional homes." # 👈 preview
 ---
-Our full interior design service is perfect for people looking to build a new house, renovate an existing property or simply update certain areas of their home.
+## Transform Your Home with Complete Design Service
 
-Working together we will create your dream home which embodies the perfect balance between form and function.
-Our interior design service works on the basis of providing a full design pack taking you from concept to completion therefore ensuring all aspects of the design are fully integrated.
+Our full interior design service is perfect for creating your dream home, whether you're building new, renovating an existing property, or updating specific areas. We take you from initial concept through to final styling, ensuring every detail works beautifully together.
 
-We offer a highly personalised service, designing a beautiful interior which reflects each client's personal style and desires.  By working closely with you we are able to ensure that every detail is considered ensuring that your home is tailored to you.
+Working closely with you, we create a highly personalized design that reflects your style and desires while perfectly suiting your practical needs. Our integrated approach means every element is carefully considered and coordinated for a cohesive, stunning result.
 
-Our interior design service is made up of the following stages :
+## What's Included
 
-#### BRIEF
+**Complete Design Development**
+- Furniture layout planning and space optimization
+- Design concepts with product boards and sample packs
+- Detailed color, fabric, and finish coordination
+- Scale plans and concept sketches
+- Bespoke furniture and joinery design
 
-Discovery Call - This is a brief call to discuss your plans and understand more about your requirements, budget and timeframe.
+**Project Management & Implementation**
+- Full procurement of fixtures, fittings, and furniture
+- Coordination with builders and contractors
+- Project timeline management and progress updates
+- Quality control and installation oversight
 
-Initial Meeting - We will arrange an 1-2-1 meeting in your home to discuss your needs and aspirations for your home in greater detail.  You will have been provided with a questionnaire prior to this meeting to allow you to detail your key wants and ambitions for the design.
+**Final Styling & Completion**
+- Professional furniture placement and room dressing
+- Styling with accessories and soft furnishings
+- Final adjustments to ensure everything is perfect
 
-Property Survey - Once you have engaged our services we will complete a full property survey to ensure total accuracy on the scale plans and detailed drawings.  This will also be an opportunity to discuss any other design elements in more detail.
+## Our Design Process
 
+### **1. Brief & Discovery**
+**Discovery Call** - Initial discussion about your plans, requirements, budget, and timeframe
 
-#### CONCEPT
+**Initial Meeting** - In-depth 1-2-1 session in your home to understand your lifestyle and aspirations in detail
 
-Presentation of initial design concepts based on the brief given
+**Property Survey** - Complete measurement survey for accuracy, plus detailed discussion of specific design elements
 
-#### DESIGN DEVELOPMENT STAGE 1
+### **2. Concept Development**
+**Initial Design Concepts** - Creative direction and overall design approach based on your brief
 
-The design phase includes :
+**Presentation** - Visual concepts showing how your space could look and feel
 
-Furniture layout planning
-Design concepts including product boards and sample packs of colours, fabrics and general finishes
-Presentation pack including scale plans and concept sketches
-Accurate costing of all Fixtures, fittings & furniture for approval
+### **3. Design Development**
+**Stage 1: Foundation**
+- Detailed furniture layouts and space planning
+- Product boards showing proposed pieces
+- Color and material sample packs
+- Accurate costing for your approval
 
-#### DESIGN DEVELOPMENT STAGE 2
+**Stage 2: Refinement**  
+- Design revisions based on your feedback
+- Bespoke furniture design and development
+- Technical drawings for any custom elements
+- Complete specification package ready for implementation
 
-Revision of designs from stage 1
-Design & development of bespoke items
-Technical drawing packages produced
-Complete design pack produced for implementation of designs
+### **4. Implementation & Styling**
+**Project Management** - Handover to our project team who coordinate all aspects of the build phase
 
-#### IMPLEMENTATION
+**Procurement** - Professional ordering, delivery coordination, and storage management
 
-Once the designs have been approved the project will be handed over to the project management team who will oversee the renovation/build phase.  They will work in conjunction with the design team to ensure the designs are executed correctly.
+**Final Installation** - Furniture placement, styling, and final room dressing
 
-A detailed breakdown of all build costs including labour and material will be provided for full transparency.  The team will also provide a schedule of works and then manage all aspects of the build phase including procurement of all materials.
+## Why Our Approach Works
 
+**Fully Integrated Process** - Every element is designed to work together, from architectural details through to final accessories
 
-#### PROCUREMENT/FINAL STAGING
+**Budget Transparency** - Detailed costings at each stage so you're always informed and in control
 
-The design and build team will work together to manage the final phase.  This process will include:
+**Stress-Free Experience** - Professional project management means you can enjoy the transformation process
 
-- Placing and overseeing orders, storage and handling
-- Site clearance
-- Setting out of furniture
-- Installation management and room dressing
+**Personalized Design** - No house style imposed - every design is created specifically for your lifestyle and preferences
+
+## Investment & Timeline
+
+Our interior design projects vary significantly in scope and complexity. We provide detailed proposals including timelines and investment levels after our initial meeting, ensuring complete transparency before you commit.
+
+Most full home projects take 3-6 months from concept to completion, while single rooms typically complete within 6-8 weeks.
+
 <Testimonial link="https://www.houzz.co.uk/hznb/professionals/interior-designers/rachel-power-design-pfvwus-pf~1166209749">
 We found Rachel on Google like many, but after our first meeting I knew she totally got what we were after. If you are looking for a friendly, creative, detailed perfectionist of a designer - then look no further. Rachel got our style straight away, seeing that we wanted a stylish but practical home for a family with young children. And my goodness she delivered.
 </Testimonial>

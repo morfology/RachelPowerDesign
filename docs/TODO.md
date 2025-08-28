@@ -3,6 +3,12 @@
 ## TODO: Services > Interior Design sub-page
 Fix off formatting
 
+## TODO: Next.js Image Optimization
+
+- Ensure you're using Next.js Image component with automatic optimization Next.js
+- https://focusreactive.com/how-nextjs-can-improve-seo/
+- Add proper alt text and lazy loading
+
 ## TODO: Services sub-pages images
 Add images
 

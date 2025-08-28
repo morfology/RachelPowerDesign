@@ -22,25 +22,25 @@ Interior architecture focuses on the structural and spatial elements of your hom
 
 ### Our Interior Architecture Process
 
-**Initial Consultation**
+**Initial Consultation**  
 We start with a thorough assessment of your current space, lifestyle needs, and aspirations. This includes understanding planning constraints, structural limitations, and budget parameters.
 
 **Space Analysis & Concept Development**  
 Using our expertise in spatial planning, we explore multiple layout options and present concepts that show what's possible - often revealing potential you hadn't considered.
 
-**Technical Planning**
+**Technical Planning**  
 Working with trusted architects and structural engineers, we develop detailed plans that address both aesthetic and technical requirements, ensuring feasibility and compliance.
 
-**Design Integration**
+**Design Integration**  
 Once the structural elements are resolved, we seamlessly integrate the interior design, ensuring every element works together cohesively from concept to completion.
 
 ### When Interior Architecture Makes Sense
 
-**Growing families** who need more space but love their location
-**Period properties** where original layouts don't suit modern living
-**Awkward layouts** with poor flow or wasted space
-**Properties with potential** - high ceilings, large gardens, or unusual features
-**Before major renovations** - getting the structure right before decorating
+**Growing families** who need more space but love their location.  
+**Period properties** where original layouts don't suit modern living.  
+**Awkward layouts** with poor flow or wasted space.  
+**Properties with potential** - high ceilings, large gardens, or unusual features.  
+**Before major renovations** - getting the structure right before decorating.  
 
 ### Working with Planning and Building Regulations
 

@@ -224,6 +224,10 @@ export async function getStaticProps() {
 - Include local references naturally
 - Showcase expertise through case studies
 
+[ ] Some project pages might benefit from unique images in the og:image tags instead of the default og-default.png. Project-specific images could improve social media click-through rates.
+[ ] The testimonials on each page are valuable for SEO but aren't being leveraged in the meta descriptions. You could test adding brief credibility indicators like "award-winning" or "5-star rated" if appropriate.
+[ ] Consider adding location-specific schema markup if you haven't already, especially for the Farnham projects.
+
 ---
 
 *Last Updated: August 2025*

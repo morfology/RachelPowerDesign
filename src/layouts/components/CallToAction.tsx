@@ -19,6 +19,38 @@ const CallToAction = ({ data }: { data: PageData }) => {
   const width =268;
   const height = 190;
 
+  // Generate descriptive alt text from image path and heading
+  const generateAltText = (): string => {
+    const imagePath = data.frontmatter.image || '';
+    const heading = data.frontmatter.heading || '';
+    
+    // Extract context from image path
+    const filename = imagePath.split('/').pop()?.split('.')[0] || '';
+    const projectFolder = imagePath.split('/')[imagePath.split('/').length - 2] || '';
+    
+    const roomDescription = filename
+      .replace(/-\d+$/, '') // remove size suffixes
+      .replace(/-crop.*$/, '') // remove crop suffixes
+      .replace(/-x\d+$/, '') // remove resolution suffixes
+      .replace(/-/g, ' ')
+      .replace(/^\w/, c => c.toUpperCase());
+    
+    const projectName = projectFolder
+      .replace(/-/g, ' ')
+      .replace(/^\w/, c => c.toUpperCase());
+    
+    // Combine with heading context for meaningful alt text
+    if (heading && roomDescription && projectName) {
+      return `${roomDescription} from ${projectName} - ${heading} showcase`;
+    } else if (heading && roomDescription) {
+      return `${roomDescription} interior design - ${heading}`;
+    } else if (heading) {
+      return `Interior design showcase - ${heading}`;
+    } else {
+      return 'Interior design project showcase';
+    }
+  };
+
   return (
     <>
       {true && (
@@ -36,7 +68,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
             src={data.frontmatter.image || ''}
             width={width}
             height={height}
-            alt="cta-image"
+            alt={generateAltText()}
           />
         </div>
         {/* Content panel */}

@@ -46,7 +46,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
             <article className="lg:col-10">
               {image && (
                 <div className="mb-10">
-                  <ImageSlider data={slideshow || []} />
+                  <ImageSlider data={slideshow || []} projectTitle={heading} />
                 </div>
               )}
               <h1

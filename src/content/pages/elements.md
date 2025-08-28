@@ -213,4 +213,4 @@ window.addEventListener("load", (e) => {
 
 ### Image
 
-![image](/images/image-placeholder.png)
+![Sample image placeholder for interior design elements page](/images/image-placeholder.png)

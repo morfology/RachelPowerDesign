@@ -6,6 +6,20 @@ const projects_folder = "projects";
 
 const ProjectCard = ({ data }: { data: PostContent }) => {
   const { heading, image } = data.frontmatter;
+  
+  // Generate SEO-friendly alt text
+  const generateAltText = (): string => {
+    if (!heading) {return "Interior design project";}
+    
+    // If heading already mentions "interior design" or similar, use as-is
+    const lowerHeading = heading.toLowerCase();
+    if (lowerHeading.includes('design') || lowerHeading.includes('renovation') || lowerHeading.includes('refurbishment')) {
+      return heading;
+    }
+    
+    // Otherwise, add context for SEO
+    return `${heading} - Interior design project`;
+  };
 
   return (
     <Link href={`/${projects_folder}/${data.slug}`}>
@@ -13,7 +27,7 @@ const ProjectCard = ({ data }: { data: PostContent }) => {
         {image && (
           <Image
             src={image}
-            alt={heading || ""}
+            alt={generateAltText()}
             width={900}
             height={600} // 3:2 aspect ratio
             className="rounded-md object-cover"

@@ -12,6 +12,34 @@ const Grid: React.FC = () => {
   const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
 
+  // Generate descriptive alt text from image path
+  const generateAltText = (imagePath: string): string => {
+    const pathParts = imagePath.split('/');
+    const filename = pathParts[pathParts.length - 1]?.split('.')[0] || '';
+    const projectFolder = pathParts[pathParts.length - 2] || '';
+    
+    // Extract room/area from filename
+    const roomDescription = filename
+      .replace(/-\d+$/, '') // remove size suffixes
+      .replace(/detail-/, '') // remove detail prefix
+      .replace(/-/g, ' ') // replace hyphens with spaces
+      .replace(/^\w/, c => c.toUpperCase()); // capitalize first letter
+    
+    // Extract project name from folder
+    const projectName = projectFolder
+      .replace(/-/g, ' ')
+      .replace(/^\w/, c => c.toUpperCase());
+    
+    // Create descriptive alt text
+    if (filename.includes('detail-')) {
+      return `${roomDescription} detail - ${projectName} interior design project`;
+    } else if (roomDescription && projectName) {
+      return `${roomDescription} - ${projectName} interior design`;
+    } else {
+      return `Interior design from ${projectName} project`;
+    }
+  };
+
   // Lazy load images when they enter the viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,7 +76,7 @@ const Grid: React.FC = () => {
             className="lazy-image"
             data-src={item.image}
             src={isLoaded ? item.image : PLACEHOLDER_IMAGE}
-            alt="Gallery Image"
+            alt={generateAltText(item.image)}
             style={{
               width: "100%",
               height: "auto",

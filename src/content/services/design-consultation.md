@@ -47,17 +47,17 @@ Sometimes you know your home needs a change but you're not sure where to start. 
 
 ### How It Works
 
-**Book Your Session**
-Choose between online (via video call) or in-person consultation
+**Book Your Session**  
+Choose between online (via video call) or in-person consultation.
 
-**Pre-Session Preparation** 
-We'll send you a brief questionnaire to understand your specific needs and challenges
+**Pre-Session Preparation**  
+We'll send you a brief questionnaire to understand your specific needs and challenges.
 
-**Your 2-Hour Session**
-Focused, practical guidance tailored to your space and style preferences
+**Your 2-Hour Session**  
+Focused, practical guidance tailored to your space and style preferences.
 
-**Follow-Up Pack**
-Detailed document with all recommendations, supplier contacts, and your personal action plan
+**Follow-Up Pack**  
+Detailed document with all recommendations, supplier contacts, and your personal action plan.
 
 ### Service Areas
 

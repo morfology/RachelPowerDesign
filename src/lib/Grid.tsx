@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import imageConfig from "@/config/images.json"; // Importing larger image list
 
 const IMAGE_DATA = imageConfig;
@@ -10,7 +11,7 @@ const PLACEHOLDER_IMAGE =
 
 const Grid: React.FC = () => {
   const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
-  const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Generate descriptive alt text from image path
   const generateAltText = (imagePath: string): string => {
@@ -70,23 +71,34 @@ const Grid: React.FC = () => {
         const isLoaded = loadedImages[item.image];
 
         return (
-          <img
+          <div
             key={item.image}
             ref={(el) => (imageRefs.current[index] = el)}
-            className="lazy-image"
-            data-src={item.image}
-            src={isLoaded ? item.image : PLACEHOLDER_IMAGE}
-            alt={generateAltText(item.image)}
             style={{
               width: "100%",
-              height: "auto",
               aspectRatio: "1 / 1",
               borderRadius: "8px",
-              objectFit: "cover",
-              transition: "opacity 0.3s ease-in-out",
-              opacity: isLoaded ? 1 : 0.5, // Fade-in effect
+              overflow: "hidden",
+              position: "relative",
             }}
-          />
+          >
+            <Image
+              src={isLoaded ? item.image : PLACEHOLDER_IMAGE}
+              alt={generateAltText(item.image)}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{
+                objectFit: "cover",
+                transition: "opacity 0.3s ease-in-out",
+                opacity: isLoaded ? 1 : 0.5, // Fade-in effect
+              }}
+              className="lazy-image"
+              data-src={item.image}
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL={PLACEHOLDER_IMAGE}
+            />
+          </div>
         );
       })}
     </div>

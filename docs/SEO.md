@@ -18,7 +18,7 @@ Comprehensive SEO improvement plan for your Next.js interior design website, pri
 - [x] Add Service schema for individual service pages
 
 ### Next.js Image Optimization
-- [ ] Ensure all images use Next.js Image component
+- [x] Ensure all images use Next.js Image component
 - [x] Add proper alt text to all images
 - [ ] Implement lazy loading for images
 - [x] Verify WebP format usage (already implemented)

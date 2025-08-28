@@ -11,16 +11,16 @@ const services_folder = "services";
 // remove dynamicParams
 export const dynamicParams = false;
 
-// generate static params
-// export const generateStaticParams: () => { single: string }[] = () => {
-//   const posts: PostContent[] = getAllSinglePages(services_folder);
+// generate static params - makes sure we get the meta data for our service pages!
+export const generateStaticParams: () => { single: string }[] = () => {
+  const posts: PostContent[] = getAllSinglePages(services_folder);
 
-//   const paths = posts.map((post) => ({
-//     single: post.slug || '',
-//   }));
+  const paths = posts.map((post) => ({
+    single: post.slug || '',
+  }));
 
-//   return paths;
-// };
+  return paths;
+};
 
 // get metadata for the page
 export const generateMetadata = ({ params }: { params: { single: string } }) => 

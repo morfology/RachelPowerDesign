@@ -1,18 +1,25 @@
 #!/bin/bash
-# Usage: ./scripts/test-canonical-urls.sh <base-url> <label>
-# Script to extract and compare canonical URLs from pages
+# Usage: ./scripts/test-canonical-urls.sh <base-url> <label> [--use-local-sitemap]
+# Script to extract and compare canonical URLs from all pages in sitemap
 # Example: ./scripts/test-canonical-urls.sh https://rachelpowerdesign.com live
 # Example: ./scripts/test-canonical-urls.sh http://localhost:3000 local
+# Example: ./scripts/test-canonical-urls.sh http://localhost:3000 local --use-local-sitemap
 
 set -e
 
 base_url=$1
 label=$2
+use_local_sitemap=$3
 
 if [[ -z "$base_url" || -z "$label" ]]; then
-    echo "Usage: $0 <base-url> <label>"
+    echo "Usage: $0 <base-url> <label> [--use-local-sitemap]"
     echo "Example: $0 https://rachelpowerdesign.com live"
     echo "Example: $0 http://localhost:3000 local"
+    echo "Example: $0 http://localhost:3000 local --use-local-sitemap"
+    echo ""
+    echo "Options:"
+    echo "  --use-local-sitemap  Use local ./public/sitemap.xml instead of fetching from URL"
+    echo "                      (useful for testing local builds before deployment)"
     exit 1
 fi
 
@@ -24,25 +31,50 @@ echo "📝 Saving to: ./.tmp-canonical/$label/"
 
 mkdir -p ./.tmp-canonical/$label
 
-# Define pages to test (path:description format)
-pages=(
-    "/:Homepage"
-    "/about:About page"
-    "/services:Services page"
-    "/services/interior-design:Interior Design service"
-    "/services/project-management:Project Management service"
-    "/contact:Contact page"
-    "/projects:Projects index"
-    "/categories:Categories index"
-    "/tags:Tags index"
-    "/privacy-policy:Privacy Policy"
-)
+# Function to get sitemap URLs
+get_sitemap_urls() {
+    local sitemap_file="./.tmp-canonical/$label/sitemap.xml"
+    
+    if [[ "$use_local_sitemap" == "--use-local-sitemap" ]]; then
+        echo "📋 Using local sitemap from ./public/sitemap.xml"
+        if [[ ! -f "./public/sitemap.xml" ]]; then
+            echo "❌ Local sitemap not found. Please run 'npm run build' first to generate sitemap."
+            echo "   Or remove --use-local-sitemap flag to fetch from URL."
+            exit 1
+        fi
+        cp "./public/sitemap.xml" "$sitemap_file"
+    else
+        echo "📋 Fetching sitemap from: $base_url/sitemap.xml"
+        local response=$(curl -s -w "%{http_code}" "$base_url/sitemap.xml" -o "$sitemap_file")
+        local http_code="${response: -3}"
+        
+        if [[ "$http_code" != "200" ]]; then
+            echo "❌ Failed to fetch sitemap (HTTP $http_code)"
+            echo "   Try using --use-local-sitemap flag or ensure sitemap exists at $base_url/sitemap.xml"
+            exit 1
+        fi
+    fi
+    
+    # Extract URLs from sitemap
+    grep -o '<loc>[^<]*</loc>' "$sitemap_file" | sed 's/<loc>//g; s/<\/loc>//g' > "./.tmp-canonical/$label/sitemap-urls.txt"
+    
+    local url_count=$(wc -l < "./.tmp-canonical/$label/sitemap-urls.txt")
+    echo "✅ Found $url_count URLs in sitemap"
+    
+    # Clean up sitemap file
+    rm "$sitemap_file"
+}
 
 # Function to extract canonical URL from a page
 extract_canonical() {
     local url=$1
-    local page_name=$2
-    local file_prefix=$3
+    local file_prefix=$2
+    
+    # Generate a readable page name from URL
+    local page_name=$(echo "$url" | sed "s|$base_url||" | sed 's|^/||' | sed 's|/$||')
+    if [[ -z "$page_name" ]]; then
+        page_name="Homepage"
+    fi
     
     echo "  → Testing: $page_name ($url)"
     
@@ -80,20 +112,35 @@ extract_canonical() {
     rm -f "./.tmp-canonical/$label/${file_prefix}.html"
 }
 
+# Get URLs from sitemap
+get_sitemap_urls
+
 # Initialize results file
 echo "# Canonical URL Test Results for $label environment" > "./.tmp-canonical/$label/canonical-urls.txt"
 echo "# Format: PAGE_URL|CANONICAL_URL|PAGE_NAME" >> "./.tmp-canonical/$label/canonical-urls.txt"
 echo "" >> "./.tmp-canonical/$label/canonical-urls.txt"
 
-# Test each page
-for page_info in "${pages[@]}"; do
-    IFS=':' read -r path description <<< "$page_info"
-    file_prefix=$(echo "$path" | sed 's/[^a-zA-Z0-9]/_/g' | sed 's/^_//' | sed 's/_$//')
-    if [[ "$file_prefix" == "" ]]; then
+echo ""
+echo "🧪 Testing canonical URLs for each page..."
+
+# Test each URL from sitemap
+counter=1
+while read -r url; do
+    # Skip empty lines
+    [[ -z "$url" ]] && continue
+    
+    # Generate file prefix for temporary files
+    file_prefix=$(echo "$url" | sed "s|$base_url||" | sed 's|[^a-zA-Z0-9]|_|g' | sed 's/^_//' | sed 's/_$//')
+    if [[ -z "$file_prefix" ]]; then
         file_prefix="homepage"
     fi
-    extract_canonical "$base_url$path" "$description" "$file_prefix"
-done
+    
+    # Add counter for uniqueness and progress tracking
+    file_prefix="${counter}_${file_prefix}"
+    
+    extract_canonical "$url" "$file_prefix"
+    counter=$((counter + 1))
+done < "./.tmp-canonical/$label/sitemap-urls.txt"
 
 echo ""
 echo "✅ Canonical URL analysis complete!"
@@ -154,5 +201,14 @@ echo ""
 echo "📋 To see detailed results:"
 echo "  cat ./.tmp-canonical/$label/canonical-urls.txt"
 echo ""
+echo "📊 To see which URLs were tested from sitemap:"
+echo "  cat ./.tmp-canonical/$label/sitemap-urls.txt"
+echo ""
 echo "🔧 To test specific page manually:"
 echo "  curl -s \"$base_url/about\" | grep -o '<link rel=\"canonical\" href=\"[^\"]*\"'"
+echo ""
+echo "💡 Usage Tips:"
+echo "  • To test local build: npm run build && $0 http://localhost:3000 local --use-local-sitemap"
+echo "  • To test live site: $0 https://rachelpowerdesign.com live"
+echo "  • All URLs from sitemap.xml are automatically tested"
+echo "  • Use --use-local-sitemap to test before deployment"

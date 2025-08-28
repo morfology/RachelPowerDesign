@@ -32,11 +32,12 @@ Working closely with you, we create a highly personalized design that reflects y
 ## Our Design Process
 
 ### **1. Brief & Discovery**
-**Discovery Call** - Initial discussion about your plans, requirements, budget, and timeframe
 
-**Initial Meeting** - In-depth 1-2-1 session in your home to understand your lifestyle and aspirations in detail
+**Discovery Call:** Initial discussion about your plans, requirements, budget, and timeframe
 
-**Property Survey** - Complete measurement survey for accuracy, plus detailed discussion of specific design elements
+**Initial Meeting:** In-depth 1-2-1 session in your home to understand your lifestyle and aspirations in detail
+
+**Property Survey:** Complete measurement survey for accuracy, plus detailed discussion of specific design elements
 
 ### **2. Concept Development**
 **Initial Design Concepts** - Creative direction and overall design approach based on your brief

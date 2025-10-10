@@ -13,7 +13,7 @@ const ContactForm = () => {
     <>
       <div className="container pt-10 pb-10">
         <Formik
-          initialValues={{ name: "", email: "", message: "" }}
+          initialValues={{ name: "", email: "", phone: "", message: "" }}
           onSubmit={async (values, { resetForm }) => {
             setStatus(null);
 
@@ -65,6 +65,20 @@ const ContactForm = () => {
                   value={values.email}
                   className="form-input"
                   placeholder="name@company.com"
+                  required
+                />
+              </div>
+
+              <div className="mb-5">
+                <label className="form-label" htmlFor="phone">Mobile</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  onChange={handleChange}
+                  value={values.phone}
+                  className="form-input"
+                  placeholder="+44 100 000 000"
                   required
                 />
               </div>

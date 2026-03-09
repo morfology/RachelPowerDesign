@@ -1,0 +1,15 @@
+---
+interface Props {
+  link?: string;
+}
+
+const { link } = Astro.props;
+const defaultLink = 'https://www.houzz.com/professionals/interior-designers-and-decorators/rachel-power-design-pfvwus-pf~1166209749';
+const href = link || defaultLink;
+---
+
+<a style="text-decoration: none;" href={href} target="_blank" rel="noopener noreferrer" class="block mb-10">
+  <blockquote>
+    <slot />
+  </blockquote>
+</a>

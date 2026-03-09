@@ -2,7 +2,10 @@
 import "../styles/main.css";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import CookieBanner from "./CookieBanner.astro";
+import SearchModal from "../components/react/SearchModal";
 import siteConfig from "../config/site.json";
+import { getCollection } from "astro:content";
 
 interface Props {
   title?: string;
@@ -17,6 +20,23 @@ const siteUrl = import.meta.env.SITE_URL || import.meta.env.SITE || "https://rac
 const defaultTitle = siteConfig.title;
 const defaultDescription = siteConfig.meta_description;
 const defaultOgImage = `${siteUrl}/images/og-default.png?v=1.1`;
+
+// Build search data from content collections at build time
+const allProjects = (await getCollection("projects"))
+  .filter((p) => p.id !== "_index" && !p.data.draft);
+
+const searchData = allProjects.map((project) => ({
+  group: "projects",
+  slug: `projects/${project.id}`,
+  frontmatter: {
+    title: project.data.heading || project.data.title || "",
+    image: project.data.image,
+    description: project.data.description,
+    categories: project.data.categories,
+    tags: project.data.tags,
+  },
+  content: project.body || "",
+}));
 
 const {
   title,
@@ -68,11 +88,12 @@ const resolvedOgDescription = ogDescription || description;
 
   <body class="flex min-h-screen flex-col">
     <Header />
-    <slot name="search" />
+    <SearchModal client:load searchData={searchData} />
     <main class="flex-grow">
       <slot />
     </main>
     <Footer />
+    <CookieBanner />
 
     <!-- Google Analytics -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TQ9WZXP0X9"></script>

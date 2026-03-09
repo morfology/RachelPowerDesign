@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../layouts/PageHeader.astro";
+import ProjectCard from "../../layouts/ProjectCard.astro";
+import { getCollection } from "astro:content";
+import { slugify, humanize } from "../../lib/utils/textConverter";
+
+export async function getStaticPaths() {
+  const allProjects = (await getCollection("projects"))
+    .filter((p) => p.id !== "_index" && !p.data.draft);
+
+  const categorySet = new Set<string>();
+  for (const project of allProjects) {
+    for (const cat of project.data.categories || []) {
+      categorySet.add(slugify(cat.toLowerCase()));
+    }
+  }
+
+  return Array.from(categorySet).map((cat) => ({
+    params: { slug: cat },
+    props: {
+      category: cat,
+      projects: allProjects.filter((p) =>
+        p.data.categories?.map((c: string) => slugify(c)).includes(cat),
+      ),
+    },
+  }));
+}
+
+const { category, projects } = Astro.props;
+---
+
+<BaseLayout title={`Projects by Category: ${humanize(category)}`}>
+  <PageHeader heading={humanize(category)} />
+  <div class="section-sm pb-0">
+    <div class="container">
+      <div class="row">
+        {projects.map((post: any) => (
+          <div class="mb-14 md:col-6 lg:col-4">
+            <ProjectCard
+              heading={post.data.heading}
+              image={post.data.image}
+              slug={post.id}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

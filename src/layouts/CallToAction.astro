@@ -1,0 +1,89 @@
+---
+import { marked } from "marked";
+
+interface Props {
+  heading: string;
+  description?: string;
+  image?: string;
+  button?: {
+    enable: boolean;
+    label: string;
+    link: string;
+  };
+}
+
+const { heading, description, image, button } = Astro.props;
+
+const width = 268;
+const height = 190;
+
+// Generate descriptive alt text from image path and heading
+const generateAltText = (): string => {
+  const imagePath = image || "";
+  const filename = imagePath.split("/").pop()?.split(".")[0] || "";
+  const projectFolder = imagePath.split("/")[imagePath.split("/").length - 2] || "";
+
+  const roomDescription = filename
+    .replace(/-\d+$/, "")
+    .replace(/-crop.*$/, "")
+    .replace(/-x\d+$/, "")
+    .replace(/-/g, " ")
+    .replace(/^\w/, (c: string) => c.toUpperCase());
+
+  const projectName = projectFolder
+    .replace(/-/g, " ")
+    .replace(/^\w/, (c: string) => c.toUpperCase());
+
+  if (heading && roomDescription && projectName) {
+    return `${roomDescription} from ${projectName} - ${heading} showcase`;
+  } else if (heading && roomDescription) {
+    return `${roomDescription} interior design - ${heading}`;
+  } else if (heading) {
+    return `Interior design showcase - ${heading}`;
+  }
+  return "Interior design project showcase";
+};
+
+// Parse description paragraphs split by |
+const descriptionParagraphs = description
+  ? description.split("|").map((p) => marked.parseInline(p))
+  : [];
+
+const headingHtml = marked.parseInline(heading || "?");
+---
+
+<section class="mt-2 w-full">
+  <div class="container">
+    <div class="rounded px-4 py-16">
+      <div class="flex flex-col md:flex-row items-stretch justify-between gap-8">
+        <!-- Image panel -->
+        <div class="mb-10 md:w-2/5 md:order-2 md:mb-0">
+          {image && (
+            <img
+              class="rounded object-cover h-full w-full"
+              src={image}
+              width={width}
+              height={height}
+              alt={generateAltText()}
+            />
+          )}
+        </div>
+        <!-- Content panel -->
+        <div class="md:w-3/5 md:order-1 rounded bg-gradient-to-b from-[#fbfbfb] to-theme-light p-12 lg:p-16">
+          <h2
+            set:html={headingHtml}
+            class="text-h2-sm md:text-h2 mb-6 uppercase prose prose-headings:font-serif prose-headings:text-blue-800"
+          />
+          {descriptionParagraphs.map((html) => (
+            <p set:html={html} class="mb-8 prose prose-mine" />
+          ))}
+          {button?.enable && (
+            <a class="btn btn-primary" href={button.link}>
+              {button.label}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

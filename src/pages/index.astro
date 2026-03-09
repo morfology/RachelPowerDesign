@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CallToAction from "../layouts/CallToAction.astro";
+import { getEntry } from "astro:content";
+import { marked } from "marked";
+
+const homepage = await getEntry("homepage", "_index");
+const ctaIntro = await getEntry("homepage", "call-to-action-intro");
+
+const headingHtml = marked.parseInline(homepage?.data.heading || "Rachel Power Design");
+---
+
+<BaseLayout
+  title={homepage?.data.title}
+  description={homepage?.data.description}
+>
+  <div class="relative h-screen sm:min-h-[500px] text-white overflow-hidden">
+    <!-- Fullscreen Image with overlay -->
+    <div class="absolute inset-0">
+      <img
+        class="object-cover object-center w-full h-full"
+        src="/images/farnham/living-1-2880.webp"
+        alt="Rachel Power Design"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+
+    <!-- Foreground Text -->
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-theme-light">
+      <h1
+        style="color: rgba(244, 244, 244, 0.60)"
+        class="mb-4 text-7xl leading-tight text-theme-light"
+        set:html={headingHtml}
+      />
+    </div>
+  </div>
+
+  {ctaIntro && (
+    <CallToAction
+      heading={ctaIntro.data.heading}
+      description={ctaIntro.data.description}
+      image={ctaIntro.data.image}
+      button={ctaIntro.data.button}
+    />
+  )}
+</BaseLayout>

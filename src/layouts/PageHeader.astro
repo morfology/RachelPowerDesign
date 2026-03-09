@@ -1,0 +1,21 @@
+---
+import { humanize } from "../lib/utils/textConverter";
+
+interface Props {
+  heading: string;
+}
+
+const { heading } = Astro.props;
+
+const words = humanize(heading).split(" ");
+const lastWord = words.pop();
+const firstWords = words.join(" ");
+---
+
+<section>
+  <div class="container text-center">
+    <div class="rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14">
+      <h1>{firstWords}<span class="text-primary"> {lastWord}</span></h1>
+    </div>
+  </div>
+</section>

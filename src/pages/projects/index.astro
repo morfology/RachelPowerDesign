@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../layouts/PageHeader.astro";
+import ProjectCard from "../../layouts/ProjectCard.astro";
+import Pagination from "../../layouts/Pagination.astro";
+import { getCollection, getEntry } from "astro:content";
+import config from "../../config/config.json";
+
+const { pagination } = config.settings;
+
+const page = await getEntry("projects", "_index");
+if (!page) throw new Error("Projects index not found");
+
+const allProjects = (await getCollection("projects"))
+  .filter((p) => p.id !== "_index" && !p.data.draft)
+  .sort((a, b) => {
+    const dateA = a.data.date ? new Date(a.data.date).valueOf() : 0;
+    const dateB = b.data.date ? new Date(b.data.date).valueOf() : 0;
+    return dateB - dateA;
+  });
+
+const totalPages = Math.ceil(allProjects.length / pagination);
+const currentPosts = allProjects.slice(0, pagination);
+---
+
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <PageHeader heading={page.data.heading} />
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <div>
+          <div class="row">
+            {currentPosts.map((post) => (
+              <div class="mb-14 md:col-6">
+                <ProjectCard
+                  heading={post.data.heading}
+                  image={post.data.image}
+                  slug={post.id}
+                />
+              </div>
+            ))}
+          </div>
+          <Pagination section="projects" currentPage={1} totalPages={totalPages} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

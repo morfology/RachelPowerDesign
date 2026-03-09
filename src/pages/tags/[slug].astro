@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../layouts/PageHeader.astro";
+import ProjectCard from "../../layouts/ProjectCard.astro";
+import { getCollection } from "astro:content";
+import { slugify, humanize } from "../../lib/utils/textConverter";
+
+export async function getStaticPaths() {
+  const allProjects = (await getCollection("projects"))
+    .filter((p) => p.id !== "_index" && !p.data.draft);
+
+  const tagSet = new Set<string>();
+  for (const project of allProjects) {
+    for (const tag of project.data.tags || []) {
+      tagSet.add(slugify(tag.toLowerCase()));
+    }
+  }
+
+  return Array.from(tagSet).map((tag) => ({
+    params: { slug: tag },
+    props: {
+      tag,
+      projects: allProjects.filter((p) =>
+        p.data.tags?.map((t: string) => slugify(t)).includes(tag),
+      ),
+    },
+  }));
+}
+
+const { tag, projects } = Astro.props;
+---
+
+<BaseLayout title={`Projects by Tag: ${humanize(tag)}`}>
+  <PageHeader heading={humanize(tag)} />
+  <div class="section-sm pb-0">
+    <div class="container">
+      <div class="row">
+        {projects.map((post: any) => (
+          <div class="mb-14 md:col-6 lg:col-4">
+            <ProjectCard
+              heading={post.data.heading}
+              image={post.data.image}
+              slug={post.id}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

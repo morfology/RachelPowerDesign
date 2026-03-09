@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../layouts/PageHeader.astro";
+import ContactForm from "../components/react/ContactForm";
+import { getEntry, render } from "astro:content";
+
+const page = await getEntry("contact", "_index");
+if (!page) throw new Error("Contact page not found");
+const { Content } = await render(page);
+---
+
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <PageHeader heading={page.data.heading} />
+  <section class="contact">
+    <ContactForm client:visible />
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

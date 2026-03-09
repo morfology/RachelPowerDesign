@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../layouts/PageHeader.astro";
+import CallToAction from "../layouts/CallToAction.astro";
+import { getEntry, render } from "astro:content";
+
+const page = await getEntry("about", "_index");
+const ctaAbout1 = await getEntry("about", "call-to-action-about-1");
+const ctaAbout2 = await getEntry("about", "call-to-action-about-2");
+
+if (!page) throw new Error("About page not found");
+const { Content } = await render(page);
+---
+
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <PageHeader heading={page.data.heading} />
+
+  {ctaAbout1 && (
+    <CallToAction
+      heading={ctaAbout1.data.heading}
+      description={ctaAbout1.data.description}
+      image={ctaAbout1.data.image}
+      button={ctaAbout1.data.button}
+    />
+  )}
+
+  {ctaAbout2 && (
+    <CallToAction
+      heading={ctaAbout2.data.heading}
+      description={ctaAbout2.data.description}
+      image={ctaAbout2.data.image}
+      button={ctaAbout2.data.button}
+    />
+  )}
+
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

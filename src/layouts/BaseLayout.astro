@@ -1,0 +1,86 @@
+---
+import "../styles/main.css";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+import siteConfig from "../config/site.json";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+}
+
+const siteUrl = import.meta.env.SITE_URL || import.meta.env.SITE || "https://rachelpowerdesign.com";
+const defaultTitle = siteConfig.title;
+const defaultDescription = siteConfig.meta_description;
+const defaultOgImage = `${siteUrl}/images/og-default.png?v=1.1`;
+
+const {
+  title,
+  description = defaultDescription,
+  canonicalUrl = Astro.url.href,
+  ogTitle,
+  ogDescription,
+  ogImage = defaultOgImage,
+} = Astro.props;
+
+const fullTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
+const resolvedOgTitle = ogTitle || fullTitle;
+const resolvedOgDescription = ogDescription || description;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <link rel="shortcut icon" href={siteConfig.favicon} />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={resolvedOgTitle} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={defaultTitle} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedOgTitle} />
+    <meta name="twitter:description" content={resolvedOgDescription} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open%20Sans|Oswald:300,400,800"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Didact Gothic" rel="stylesheet" />
+  </head>
+
+  <body class="flex min-h-screen flex-col">
+    <Header />
+    <slot name="search" />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Google Analytics -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TQ9WZXP0X9"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TQ9WZXP0X9');
+    </script>
+  </body>
+</html>

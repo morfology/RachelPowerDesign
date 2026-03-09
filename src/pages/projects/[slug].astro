@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ImageSlider from "../../components/react/ImageSlider";
+import { getCollection, render } from "astro:content";
+import { marked } from "marked";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects
+    .filter((p) => p.id !== "_index")
+    .map((project) => ({
+      params: { slug: project.id },
+      props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { heading, image, slideshow } = project.data;
+const headingHtml = marked.parseInline(heading || "?");
+---
+
+<BaseLayout title={project.data.title} description={project.data.description}>
+  <section class="section pt-7">
+    <div class="container">
+      <div class="row justify-center">
+        <article class="lg:col-10">
+          {image && slideshow && slideshow.length > 0 && (
+            <div class="mb-10">
+              <ImageSlider client:visible data={slideshow} projectTitle={heading} />
+            </div>
+          )}
+          <h1 set:html={headingHtml} class="h2 mb-4" />
+          <div class="content mb-10">
+            <Content />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

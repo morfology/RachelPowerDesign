@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../layouts/PageHeader.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const services = await getCollection("services");
+  return services
+    .filter((s) => s.id !== "_index")
+    .map((service) => ({
+      params: { slug: service.id },
+      props: { service },
+    }));
+}
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+---
+
+<BaseLayout title={service.data.title} description={service.data.description}>
+  <PageHeader heading={service.data.heading} />
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

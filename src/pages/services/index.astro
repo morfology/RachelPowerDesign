@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../layouts/PageHeader.astro";
+import CallToAction from "../../layouts/CallToAction.astro";
+import { getEntry, render } from "astro:content";
+
+const page = await getEntry("services", "_index");
+if (!page) throw new Error("Services page not found");
+const { Content } = await render(page);
+
+const ctaDesignConsult = await getEntry("sections", "call-to-action-design-consult");
+const ctaDesign = await getEntry("sections", "call-to-action-design");
+const ctaArchitecture = await getEntry("sections", "call-to-action-architecture");
+const ctaProcurement = await getEntry("sections", "call-to-action-procurement");
+
+const ctaData = [ctaDesignConsult, ctaDesign, ctaArchitecture, ctaProcurement].filter(Boolean);
+---
+
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <PageHeader heading={page.data.heading} />
+
+  {ctaData.map((cta) => (
+    <CallToAction
+      heading={cta!.data.heading}
+      description={cta!.data.description}
+      image={cta!.data.image}
+      button={cta!.data.button}
+    />
+  ))}
+
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

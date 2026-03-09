@@ -83,9 +83,26 @@
 
 ## Phase 8: Images
 
-- [ ] Replace `<img>` tags with Astro `<Image />` or `<Picture />` component
-- [ ] Configure image optimization in `astro.config.mjs`
+- [x] Add `loading="lazy"`, `decoding="async"`, explicit `width`/`height` to all `<img>` tags
+- [x] Hero image: `fetchpriority="high"` + eager loading (above the fold)
 - [x] Ensure slideshow images in project pages work with ImageSlider island
+- [ ] **Convert 186 JPG/PNG files to WebP** (~240 MB → ~45 MB estimated)
+  - Currently: 147 `.jpg` + 22 `.JPG` + 16 `.png` + 1 `.jpeg` = 186 files, 240 MB total, avg 1.3 MB each
+  - Already WebP: 116 files, 26 MB total, avg 225 KB each — ~6x smaller
+  - Run: `find public/images -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" | while read f; do cwebp -q 80 "$f" -o "${f%.*}.webp" && rm "$f"; done`
+  - Then update any frontmatter/config referencing `.jpg`/`.png` paths to `.webp`
+- [ ] **Generate responsive srcset sizes** for key images (hero, project cards, gallery)
+  - Create 3 sizes per image: 480w, 960w, 1920w
+  - Use `<picture>` element with `srcset` and `sizes` attributes
+  - Consider a build-time script using `sharp` to batch-generate sizes
+- [ ] **Move images to `src/assets/`** for Astro `<Image />` optimization (optional)
+  - Astro only optimizes images imported from `src/`, not `public/`
+  - Would enable automatic format conversion, responsive srcset, and blur placeholders
+  - Requires updating all image references from `/images/...` to imports
+  - Biggest win for build-time optimization but largest refactoring effort
+- [ ] **Add blur-up placeholder** for lazy-loaded images (improves perceived performance)
+  - Generate tiny base64 thumbnails (e.g., 20px wide) at build time
+  - Show as CSS background while full image loads
 
 ## Phase 9: Search
 

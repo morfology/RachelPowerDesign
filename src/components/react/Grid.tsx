@@ -81,7 +81,10 @@ const Grid: React.FC = () => {
                 transition: "opacity 0.3s ease-in-out",
                 opacity: isLoaded ? 1 : 0.5,
               }}
+              width={400}
+              height={400}
               loading="lazy"
+              decoding="async"
             />
           </div>
         );

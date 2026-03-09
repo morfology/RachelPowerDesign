@@ -46,6 +46,7 @@ const ImageSlider = ({ data, projectTitle }: ImageSliderProps) => {
             src={url}
             onClick={() => swiperRef?.slideNext()}
             loading="lazy"
+            decoding="async"
           />
         </SwiperSlide>
       ))}

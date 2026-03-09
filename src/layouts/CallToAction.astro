@@ -65,6 +65,8 @@ const headingHtml = marked.parseInline(heading || "?");
               width={width}
               height={height}
               alt={generateAltText()}
+              loading="lazy"
+              decoding="async"
             />
           )}
         </div>

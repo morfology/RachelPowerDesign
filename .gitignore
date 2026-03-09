@@ -4,3 +4,5 @@ node_modules
 .tmp*
 .env.local
 tsconfig.tsbuildinfo
+.astro/
+dist/

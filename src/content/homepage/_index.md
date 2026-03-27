@@ -7,7 +7,7 @@ heading: "Rachel Power Design"
 banner:
   heading: "Rachel Power Design"
   content: "From styling a single space or event to designing and managing an entire project our bespoke service means that you can achieve the look you want within a budget that works for you."
-  image: "/images/marcia-house/lighting-detail-1.jpg"
+  image: "/images/marcia-house/lighting-detail-1.webp"
   button:
     enable: false
     label: "Contact"
@@ -16,7 +16,7 @@ banner:
 # Features
 # features:
 #   - heading: "What's Included in RPD"
-#     image: "/images/service-1.png"
+#     image: "/images/service-1.webp"
 #     content: "Lorem ipsum"
 #     bulletpoints:
 #       - "Bullet 1"

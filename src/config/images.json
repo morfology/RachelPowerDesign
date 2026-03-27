@@ -1,17 +1,17 @@
 [
-  { "image": "/images/field-view/detail-windowseats-1.jpg" },
-  { "image": "/images/field-view/detail-colourpens.jpg" },
-  { "image": "/images/field-view/detail-windowseats-2.jpg" },
-  { "image": "/images/field-view/detail-style.jpg" },
-  { "image": "/images/field-view/detail-map.jpg" },
-  { "image": "/images/field-view/detail-fabric.jpg" },
-  { "image": "/images/field-view/detail-chest.jpg" },
-  { "image": "/images/field-view/detail-style-4.jpg" },
-  { "image": "/images/field-view/detail-lights[hanging|vintage].jpg" },
-  { "image": "/images/field-view/detail-dollshouse.jpg" },
-  { "image": "/images/field-view/detail-style-3.jpg" },
-  { "image": "/images/field-view/detail-corkboard.jpg" },
-  { "image": "/images/field-view/detail-style-2.jpg" },
+  { "image": "/images/field-view/detail-windowseats-1.webp" },
+  { "image": "/images/field-view/detail-colourpens.webp" },
+  { "image": "/images/field-view/detail-windowseats-2.webp" },
+  { "image": "/images/field-view/detail-style.webp" },
+  { "image": "/images/field-view/detail-map.webp" },
+  { "image": "/images/field-view/detail-fabric.webp" },
+  { "image": "/images/field-view/detail-chest.webp" },
+  { "image": "/images/field-view/detail-style-4.webp" },
+  { "image": "/images/field-view/detail-lights[hanging|vintage].webp" },
+  { "image": "/images/field-view/detail-dollshouse.webp" },
+  { "image": "/images/field-view/detail-style-3.webp" },
+  { "image": "/images/field-view/detail-corkboard.webp" },
+  { "image": "/images/field-view/detail-style-2.webp" },
 
 
   { "image": "/images/larkfield/cabinet.jpg" },
@@ -21,26 +21,26 @@
   { "image": "/images/larkfield/detail-lightbulb.jpg" },
 
 
-  { "image": "/images/lodge-hill/detail-container.jpg" },
-  { "image": "/images/lodge-hill/detail-plants.jpg" },
-  { "image": "/images/lodge-hill/detail-chair.jpg" },
-  { "image": "/images/lodge-hill/freyas-room-detail-ls.jpg" },
-  { "image": "/images/lodge-hill/detail-cushions.jpg" },
-  { "image": "/images/lodge-hill/detail-classic.jpg" },
-  { "image": "/images/lodge-hill/living-room-detail-1.jpg" },
-  { "image": "/images/lodge-hill/detail-drawings.jpg" },
-  { "image": "/images/lodge-hill/detail-hallway.jpg" },
-  { "image": "/images/lodge-hill/living-room-detail-3.jpg" },
-  { "image": "/images/lodge-hill/living-room-detail-4.jpg" },
-  { "image": "/images/lodge-hill/detail-ceiling.jpg" },
-  { "image": "/images/lodge-hill/gues-room-detail-ls.jpg" },
+  { "image": "/images/lodge-hill/detail-container.webp" },
+  { "image": "/images/lodge-hill/detail-plants.webp" },
+  { "image": "/images/lodge-hill/detail-chair.webp" },
+  { "image": "/images/lodge-hill/freyas-room-detail-ls.webp" },
+  { "image": "/images/lodge-hill/detail-cushions.webp" },
+  { "image": "/images/lodge-hill/detail-classic.webp" },
+  { "image": "/images/lodge-hill/living-room-detail-1.webp" },
+  { "image": "/images/lodge-hill/detail-drawings.webp" },
+  { "image": "/images/lodge-hill/detail-hallway.webp" },
+  { "image": "/images/lodge-hill/living-room-detail-3.webp" },
+  { "image": "/images/lodge-hill/living-room-detail-4.webp" },
+  { "image": "/images/lodge-hill/detail-ceiling.webp" },
+  { "image": "/images/lodge-hill/gues-room-detail-ls.webp" },
   { "image": "/images/horsham/detail-stove.jpg" },
   { "image": "/images/horsham/detail-bedside.jpg" },
-  { "image": "/images/marcia-house/detail-kitchen.jpg" },
-  { "image": "/images/marcia-house/detail-plants.jpg" },
-  { "image": "/images/marcia-house/detail-mirror-plants.jpg" },
-  { "image": "/images/marcia-house/lighting-detail-1.jpg" },
-  { "image": "/images/marcia-house/living-1.jpg" },
+  { "image": "/images/marcia-house/detail-kitchen.webp" },
+  { "image": "/images/marcia-house/detail-plants.webp" },
+  { "image": "/images/marcia-house/detail-mirror-plants.webp" },
+  { "image": "/images/marcia-house/lighting-detail-1.webp" },
+  { "image": "/images/marcia-house/living-1.webp" },
 
  
 
@@ -84,52 +84,52 @@
   { "image": "/images/chipstead/detail-doorhandle.jpg" },
 
   {
-    "image": "/images/lodge-hill/master-bedroom-1.jpg"
+    "image": "/images/lodge-hill/master-bedroom-1.webp"
   },
   {
-    "image": "/images/lodge-hill/master-bedroom-2.jpg"
+    "image": "/images/lodge-hill/master-bedroom-2.webp"
   },
   {
-    "image": "/images/lodge-hill/master-bedroom-3.jpg"
+    "image": "/images/lodge-hill/master-bedroom-3.webp"
   },
   {
-    "image": "/images/lodge-hill/master-bedroom-close.jpg"
+    "image": "/images/lodge-hill/master-bedroom-close.webp"
   },
   {
-    "image": "/images/lodge-hill/freyas-room.jpg"
+    "image": "/images/lodge-hill/freyas-room.webp"
   },
   {
-    "image": "/images/lodge-hill/guest-bedroom.jpg"
+    "image": "/images/lodge-hill/guest-bedroom.webp"
   },
   {
-    "image": "/images/lodge-hill/dressing-room-1.jpg"
+    "image": "/images/lodge-hill/dressing-room-1.webp"
   },
   {
-    "image": "/images/lodge-hill/dressing-room-2.jpg"
+    "image": "/images/lodge-hill/dressing-room-2.webp"
   },
   {
     "image": "/images/lodge-hill/hallway.jpg"
   },
   {
-    "image": "/images/lodge-hill/kitchen-dining-1.jpg"
+    "image": "/images/lodge-hill/kitchen-dining-1.webp"
   },
   {
-    "image": "/images/lodge-hill/living-room-1.jpg"
+    "image": "/images/lodge-hill/living-room-1.webp"
   },
   {
-    "image": "/images/lodge-hill/living-room-2.jpg"
+    "image": "/images/lodge-hill/living-room-2.webp"
   },
   {
     "image": "/images/farnham/living-1.jpg"
   },
   {
-    "image": "/images/farnham/kitchen-1.jpg"
+    "image": "/images/farnham/kitchen-1.webp"
   },
   {
-    "image": "/images/farnham/bath-1.jpg"
+    "image": "/images/farnham/bath-1.webp"
   },
   {
-    "image": "/images/farnham/kids-1.jpg"
+    "image": "/images/farnham/kids-1.webp"
   }
   ,{
     "image": "/images/horsham/kitchen.jpg"

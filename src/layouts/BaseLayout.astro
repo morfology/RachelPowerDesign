@@ -2,7 +2,7 @@
 import "../styles/main.css";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
-import CookieBanner from "./CookieBanner.astro";
+
 import SearchModal from "../components/react/SearchModal";
 import siteConfig from "../config/site.json";
 import { getCollection } from "astro:content";
@@ -16,7 +16,7 @@ interface Props {
   ogImage?: string;
 }
 
-const siteUrl = import.meta.env.SITE_URL || import.meta.env.SITE || "https://rachelpowerdesign.com";
+const siteUrl = import.meta.env.SITE || "https://rachelpowerdesign.co.uk";
 const defaultTitle = siteConfig.title;
 const defaultDescription = siteConfig.meta_description;
 const defaultOgImage = `${siteUrl}/images/og-default.png?v=1.1`;
@@ -93,8 +93,6 @@ const resolvedOgDescription = ogDescription || description;
       <slot />
     </main>
     <Footer />
-    <CookieBanner />
-
     <!-- Google Analytics -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TQ9WZXP0X9"></script>
     <script is:inline>

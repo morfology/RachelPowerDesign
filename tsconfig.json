@@ -1,4 +1,5 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es6",
@@ -19,34 +20,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
-      "@/components/*": [
-        "./src/layouts/components/*"
-      ],
-      "@/shortcodes/*": [
-        "./src/layouts/shortcodes/*"
-      ],
-      "@/helpers/*": [
-        "./src/layouts/helpers/*"
-      ],
       "@/*": [
         "./src/*"
       ]
-    },
-    "incremental": true
+    }
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.astro"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

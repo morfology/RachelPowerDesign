@@ -1,34 +1,7 @@
+@import "base-layer.css";
+@import "components-layer.css";
+@import "utilities-layer.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  @import "base";
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-secondary /*font-bold*/ leading-tight text-dark;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    @apply text-h1-sm md:text-h1 uppercase;
-    /* letter-spacing: .7rem; */
-  }
-  h2 {
-    @apply text-h2-sm md:text-h2 uppercase;
-  }
-  h3 {
-    @apply text-h3-sm md:text-h3 uppercase;
-  }
-}
-
-@layer components {
-  @import "components";
-  @import "navigation";
-  @import "buttons";
-  @import "search";
-}
-
-@layer utilities {
-  @import "utilities";
-}

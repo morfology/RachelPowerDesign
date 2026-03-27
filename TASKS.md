@@ -114,7 +114,7 @@
 
 - [x] Port `generateMetadata()` logic to Astro `<head>` in layouts
 - [x] Set up canonical URLs using `Astro.url`
-- [x] Configure `@astrojs/sitemap` with correct site URL
+- [x] Configure `@astrojs/sitemap` with correct site URL (rachelpowerdesign.co.uk)
 - [x] Port OG image defaults (`/images/og-default.png`)
 - [x] Title template: `%s | Rachel Power Design`
 - [ ] Implement structured data (JSON-LD) in head
@@ -136,19 +136,24 @@
 
 ## Phase 13: Testing & QA
 
-- [ ] Visual comparison of all pages (Next.js vs Astro)
+- [x] Visual comparison of all pages (Next.js vs Astro) — structural match confirmed
 - [ ] Test all interactive components:
   - [ ] Image slider navigation
-  - [ ] Search modal (open, search, navigate, select)
+  - [x] Search modal (open, search, navigate, select) — fixed visibility, hidden by default
   - [ ] Contact form submission
-  - [ ] Cookie banner (accept, dismiss, persistence)
-  - [ ] Mobile navigation menu
+  - [x] Cookie banner — removed (1st party cookies only, cookie policy covers it)
+  - [x] Mobile navigation menu — working
   - [ ] Gallery lazy loading
   - [ ] Accordion expand/collapse
 - [ ] Test responsive design at all breakpoints
 - [ ] Lighthouse audit (performance, accessibility, SEO)
-- [ ] Verify all internal links work (no 404s)
+- [x] Verify all internal links work (no 404s) — all 29 pages pass
 - [x] Verify sitemap.xml generation
+- [x] Accessibility basics — all images have alt attributes
+- [ ] Fix ~195 missing image references:
+  - [ ] Directory name mismatches: content refs `/images/marcia/` but files in `/images/marcia-house/`; `/images/lodge-hill-rd/` vs `/images/lodge-hill/`
+  - [ ] Optimized variants (`*-1200.webp`, `*-x800.webp`, `*-2880.webp`) referenced but not generated
+  - [ ] Gallery page references original filenames that may not match actual files
 
 ## Phase 14: Cleanup & Cutover
 
@@ -162,3 +167,4 @@
 - [x] Update `CLAUDE.md` with new Astro commands
 - [x] Update `package.json` scripts for Astro
 - [ ] DNS cutover from Railway to Cloudflare Pages
+- [ ] Verify domain configuration — live site uses .co.uk, some refs use .com, confirm canonical domain and redirects

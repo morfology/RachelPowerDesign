@@ -40,7 +40,7 @@ module.exports = {
   // NOTE: important:true + no safelist causes menu fail!!
   ///important: true,  // !important
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{astro,js,ts,jsx,tsx,mdx}",
     // Add any other content sources
   ],
   // safelist: [{ pattern: /^swiper-/ }],

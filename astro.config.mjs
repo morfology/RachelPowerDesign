@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://rachelpowerdesign.com',
+  site: 'https://rachelpowerdesign.co.uk',
   integrations: [
     react(),
     tailwind(),

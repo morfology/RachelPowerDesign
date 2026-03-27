@@ -1,14 +1,13 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://rachelpowerdesign.com/#business",
+  "@id": "https://rachelpowerdesign.co.uk/#business",
   "name": "Rachel Power Design",
   "alternateName": "Rachel Power Interior Design",
-  "url": "https://rachelpowerdesign.com",
-  "logo": "https://rachelpowerdesign.com/logo.png",
+  "url": "https://rachelpowerdesign.co.uk",
+  "logo": "https://rachelpowerdesign.co.uk/images/rpd-logo-v1.svg",
   "image": [
-    "https://rachelpowerdesign.com/images/portfolio-hero.jpg",
-    "https://rachelpowerdesign.com/images/portfolio-gallery-1.jpg"
+    "https://rachelpowerdesign.co.uk/images/og-default.webp"
   ],
   "description": "Bespoke interior design services in Farnham, Surrey. From single room updates to complete property redesigns, creating inspiring, joyful spaces tailored to each client's lifestyle and personality. Services include modern homes, period properties, and blending classic and contemporary elements.",
   "founder": {
@@ -97,8 +96,8 @@
   ],
   "potentialAction": {
     "@type": "ContactAction",
-    "target": "https://rachelpowerdesign.com/contact"
+    "target": "https://rachelpowerdesign.co.uk/contact"
   },
-  "mainEntityOfPage": "https://rachelpowerdesign.com",
+  "mainEntityOfPage": "https://rachelpowerdesign.co.uk",
   "keywords": "interior designer Farnham, interior design Surrey, residential interior design, bespoke interior design South East England, period home renovation"
 }

@@ -46,4 +46,4 @@ If you have any questions about our use of cookies, feel free to contact us at:
 **Rachel Power Design**  
 Contact: [Contact Page](/contact)
 
-Website: https://www.rachelpowerdesign.com
+Website: https://www.rachelpowerdesign.co.uk

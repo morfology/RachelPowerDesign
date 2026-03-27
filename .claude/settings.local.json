@@ -24,7 +24,8 @@
       "Bash(find ./images -type f -exec ls -lS {} +)",
       "Bash(git add:*)",
       "Bash(grep -roh src=\"\"[^\"\"]*images/[^\"\"]*\"\" src/pages/ src/layouts/ src/components/)",
-      "Bash(find public/images -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.JPG\" \\\\\\) -exec du -ch {} +)"
+      "Bash(find public/images -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.JPG\" \\\\\\) -exec du -ch {} +)",
+      "Bash(git commit:*)"
     ]
   }
 }

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for dir:*)",
+      "Bash(do echo:*)",
+      "Bash(git ls-tree:*)",
+      "Read(//Users/marcpower/git/work/RachelPowerDesign/**)",
+      "Bash(done)",
+      "Bash(git show:*)",
+      "Bash(pkill -f \"astro dev\")",
+      "Bash(npx astro:*)",
+      "Bash(curl -s http://localhost:4321/)",
+      "Bash(curl -s http://localhost:4321/projects/)",
+      "Bash(curl -s http://localhost:4321/about)",
+      "Bash(curl -s http://localhost:4321/services/)",
+      "Bash(curl -s http://localhost:4321/contact)",
+      "WebFetch(domain:rachelpowerdesign.co.uk)",
+      "Bash(curl -s https://rachelpowerdesign.co.uk/)",
+      "Bash(find /Users/marcpower/git/work/RachelPowerDesign/dist -name *.css -o -name *.js)",
+      "Bash(echo \"/ -> ./index.html exists?\")",
+      "Bash(echo \"/about -> ./about/index.html exists?\")",
+      "Bash(echo \"/contact -> ./contact/index.html exists?\")",
+      "Bash(echo \"/projects -> ./projects/index.html exists?\")",
+      "Bash(find ./images -type f -exec ls -lS {} +)",
+      "Bash(git add:*)",
+      "Bash(grep -roh src=\"\"[^\"\"]*images/[^\"\"]*\"\" src/pages/ src/layouts/ src/components/)",
+      "Bash(find public/images -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.JPG\" \\\\\\) -exec du -ch {} +)"
+    ]
+  }
+}
